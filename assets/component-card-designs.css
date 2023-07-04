@@ -1,0 +1,398 @@
+.style-type--1 {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column
+}
+
+.style-type--1 .media--portrait {
+    padding-bottom: 136.5%
+}
+
+.style-type--1 .card-information {
+    padding: 4px 10px 6px;
+    background: rgba(0, 0, 0, .3);
+    height: 100%
+}
+
+.style-type--1 .card-information .card-information__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.style-type--1 .card-information .card-information__wrapper .stamped-product-reviews-badge {
+    display: none !important
+}
+
+.style-type--1 .card-information .card-information__wrapper .card-information__top {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline
+}
+
+.style-type--1 .card-information .card-information__wrapper .card-information__top .card-article-info {
+    font: 400 9px/14px "Quicksand", sans-serif;
+    color: #fff
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .card-information__top .card-article-info {
+        font-size: 10px;
+        line-height: 15px;
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .card-information__top .stamped-product-reviews-badge--customized {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important
+}
+
+.style-type--1 .card-information .card-information__wrapper .card-information__top .stamped-product-reviews-badge--customized .stamped-badge[data-rating="0.0"] {
+    display: block
+}
+
+.style-type--1 .card-information .card-information__wrapper .card-information__top .stamped-product-reviews-badge--customized .stamped-badge .stamped-starrating {
+    white-space: nowrap
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .card-information__top .stamped-product-reviews-badge--customized .stamped-badge {
+        min-width: 55px;
+        margin-left: 5px
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .card-information__top .stamped-product-reviews-badge--customized .stamped-fa:before {
+    color: rgba(255, 255, 255, .8) !important;
+    font-size: 11px;
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .card-information__top .stamped-product-reviews-badge--customized .stamped-fa:before {
+        font-size: 10px
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .card-information__text {
+    font: 700 15px/19px "Quicksand", sans-serif;
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    margin-top: 0;
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .card-information__text {
+        font-size: 14px;
+        line-height: 18px
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .price span,
+.style-type--1 .card-information .card-information__wrapper .price bdi {
+    color: #fff
+}
+
+.style-type--1 .card-information .card-information__wrapper .price>dl {
+    width: 100%
+}
+
+.style-type--1 .card-information .card-information__wrapper .price>dl>div {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.style-type--1 .card-information .card-information__wrapper .price>dl>div>dt {
+    display: none
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price__regular dd {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price__regular price-money bdi {
+    font: 700 28px/32px "Quicksand", sans-serif
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .price .price__regular price-money bdi {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price__sale {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: row-reverse wrap;
+    flex-flow: row-reverse wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price__sale .price-item--regular:before {
+    display: none
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price-item--regular price-money bdi {
+    font-size: 20px;
+    line-height: 26px
+}
+
+@media(min-width: 769px) {
+    .style-type--1 .card-information .card-information__wrapper .price .price-item--regular price-money bdi {
+        font: 700 21px/1.3 "Quicksand", sans-serif
+    }
+    
+    .template-collection .style-type--1 .card-information .card-information__wrapper .price .price-item--regular price-money bdi {
+        font: 700 18px/1.3 "Quicksand", sans-serif
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price__sale .price-item--sale {
+    text-decoration: line-through
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price__sale .price-item--sale price-money {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.style-type--1 .card-information .card-information__wrapper .price .price-item--sale price-money bdi {
+    font: 400 10px/1.3 "Quicksand", sans-serif
+}
+
+@media(min-width: 769px) {
+    .style-type--1 .card-information .card-information__wrapper .price .price-item--sale price-money bdi {
+        font-size: 12px;
+    }
+
+    .template-collection .style-type--1 .card-information .card-information__wrapper .price .price-item--sale price-money bdi {
+        font-size: 11px;
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .rating {
+    display: none
+}
+
+.style-type--1 .card-information .card-information__wrapper .Ship__product {
+    display: none
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-countdown__block {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-countdown__block .countdown-title {
+    font: 700 24px/36px "Quicksand", sans-serif;
+    background: -o-linear-gradient(0.22deg, #9D70AF 0.14%, #F188B7 72.52%);
+    background: linear-gradient(89.78deg, #9D70AF 0.14%, #F188B7 72.52%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    text-fill-color: rgba(0, 0, 0, 0)
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .custom-countdown__block .countdown-title {
+        font-size: 14px;
+        line-height: 36px
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-countdown__block .countdown {
+    background: -o-linear-gradient(0.22deg, #9D70AF 0.14%, #F188B7 72.52%);
+    background: linear-gradient(89.78deg, #9D70AF 0.14%, #F188B7 72.52%);
+    width: 126px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 20px
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-countdown__block .countdown .countdown__item span {
+    font: 700 32px/48px "Quicksand", sans-serif;
+    color: #000
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .custom-countdown__block .countdown .countdown__item span {
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff
+    }
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .custom-countdown__block .countdown {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 6px;
+        width: 70px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .custom-countdown__block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-mobile__buy-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-mobile__buy-btn add-to-cart {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    min-height: initial;
+    min-width: initial;
+    width: 100%
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-mobile__buy-btn add-to-cart svg {
+    display: none
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-mobile__buy-btn .button {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    min-height: initial;
+    min-width: initial;
+    width: 100%;
+    background-color: #ea1969;
+    font: 700 22px/33px "Quicksand", sans-serif;
+    color: #fff;
+    text-align: center
+}
+
+.style-type--1 .card-information .card-information__wrapper .custom-mobile__buy-btn .button svg {
+    display: none
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .custom-mobile__buy-btn .button {
+        font-size: 14px;
+        line-height: 21px
+    }
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__wrapper .custom-mobile__buy-btn {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important
+    }
+}
+
+.style-type--1 .card-information .card-information__button countdown-timer,
+.style-type--1 .card-information .card-information__button .button {
+    color: #fff;
+    font: 700 16px/24px "Quicksand", sans-serif;
+    background-color: #ea1969
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information .card-information__button {
+        display: none
+    }
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card-information {
+        padding: 7px
+    }
+}
+
+.style-type--1 .card__badge {
+    top: 10px;
+    left: 12px
+}
+
+.style-type--1 .card__badge span {
+    font: 700 10.5px/16px "Quicksand", sans-serif;
+    padding: 3px 12px;
+    background: -o-linear-gradient(0.22deg, #9D70AF 0.14%, #F188B7 72.52%);
+    background: linear-gradient(89.78deg, #9D70AF 0.14%, #F188B7 72.52%)
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card__badge span {
+        font-size: 10px;
+        line-height: 15px;
+        padding: 2px 8px
+    }
+}
+
+@media(max-width: 768px) {
+    .style-type--1 .card__badge {
+        top: 6px;
+        left: 6px
+    }
+}
+
+.style-type--1 .quick-view__summary svg circle,
+.style-type--1 .quick-view__summary svg path {
+    stroke: #000
+}
+
+.style-type--1 .quick-view__summary:after {
+    background: #fff
+}
+
+.style-type--1:hover .card-information__text {
+    background-size: 0 !important
+}

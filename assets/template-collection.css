@@ -1,0 +1,109 @@
+@media screen and (max-width: 749px) {
+  .collection .title:not(.title--no-heading) {
+    margin-top: -1rem;
+  }
+  .collection .product-grid.grid--2-col > .grid__item:not(.grid__item--promo-banner) {
+    width: calc(50% - 4px / 2);
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .collection .title-wrapper--no-heading {
+    margin-top: 6rem;
+  }
+}
+
+.collection {
+  position: relative;
+}
+
+.collection .loading-overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  padding: 0 5rem;
+  background-color: rgba(var(--color-background), 0.7);
+}
+
+.collection.loading .loading-overlay {
+  display: block;
+}
+
+.collection--empty .title-wrapper {
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}
+
+.collection--empty .title-wrapper .title {
+  text-transform: none;
+}
+
+.collection .product-grid {
+  margin-top: 15px;
+  gap: 7.8px 4px;
+  margin-bottom: 0;
+}
+.collection .grid__item--promo-banner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.collection .grid__item--promo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.collection .grid__item--promo-banner .mobile-image {
+  display: none;
+}
+@media(max-width: 768px) {
+  .collection .product-grid.grid--2-col > .grid__item.grid__item--promo-banner {
+    max-width: 100%;
+    width: 100%;
+  }
+  .collection .grid__item--promo-banner .mobile-image {
+    display: flex;
+  }
+  .collection .grid__item--promo-banner .desktop-image {
+    display: none;
+  }
+}
+
+.collection .product-grid .grid__item {
+  background:none;
+  flex-grow: 0;
+}
+
+.collection .product-grid.grid--3-col-tablet > .grid__item,
+.collection .product-grid.grid--4-col-tablet > .grid__item {
+  max-width: calc(50% - 4px / 2);
+  width: calc(50% - 4px / 2);
+}
+
+@media screen and (min-width: 750px) {
+  .collection .product-grid {
+    gap: 11px;
+    margin-bottom: 0;
+  }
+
+  .collection .product-grid.grid--2-col > .grid__item {
+    max-width: calc(50% - 11px / 2);
+    width: calc(50% - 11px / 2);
+  }
+  .collection .product-grid.grid--4-col-desktop > .grid__item {
+    max-width: calc(25% - 33px / 4);
+    width: calc(25% - 33px / 4);
+  }
+  .collection .product-grid.grid--3-col-desktop > .grid__item {
+    max-width: calc(33% - 16px / 3);
+    width: calc(33% - 16px / 3);
+  }
+}
+@media screen and (min-width: 989px) {
+  .collection .product-grid.grid--4-col-desktop>.grid__item, .collection .product-grid.grid--3-col-desktop>.grid__item, .collection .grid--2-col .grid__item {
+    background:none;
+  }
+}

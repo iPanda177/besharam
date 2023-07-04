@@ -1,0 +1,96 @@
+<div id="callback-popup" class="popup" style="display:none;">
+  <div class="popup-head">
+    <div class="popup-title">WE WILL CALL YOU BACK</div>
+    <a href="javascript:void(0)" class="popup-close"><i class="fa-solid fa-close"></i></a>
+  </div>
+  <div class="popup-body">
+    <div class="popup-scroll">
+
+      <script src="https://kwesforms.com/v2/kwes-script.js" defer></script>
+      <form class="kwes-form" action="https://kwesforms.com/api/foreign/forms/WrtyetFmqpklQskvvSCg" success-message="Thanks! We have got your CALL ME BACK request logged. One of our team mates will call you at the time requested. Happy Shopping!">
+        <div class="form-element">
+          <label for="name">Your Name</label>
+          <input type="text" name="name" rules="required|max:20">
+        </div>
+        <div class="form-element one-half">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" rules="required|regex:/^(\+)?(\d[\d\s\-]{8,})\d*$/">
+        </div>
+        <div class="form-element one-half">
+          <label for="email">Email</label>
+          <input type="email" name="email" rules="required|email">
+        </div>
+        <div class="form-element one-half">
+          <label for="reason">Reason For Call</label>
+          <select type="text" name="reason" rules="required">
+            <option value="">Please select...</option>
+            <option value="q_product">Q about a product</option>
+            <option value="q_existing_order">Q about an existing order</option>
+            <option value="q_new_order">Q about a new order</option>
+            <option value="q_shipping_customs">Q about shipping/customs</option>
+            <option value="q_returns">Q about returns</option>
+            <option value="q_payment_issues">Q about payment issues</option>
+            <option value="q_other">Other question/s</option>
+          </select>
+        </div>
+        <div class="form-element one-half">
+          <label for="when">When To Call</label>
+          <select type="text" name="when" rules="required">
+            <option value="">Please select...</option>
+            <option value="call_anytime">Call anytime</option>
+            <option value="9am_12pm_IST">Between 9am-12pm IST</option>
+            <option value="12pm_3pm_IST">Between 12pm-3pm IST</option>
+            <option value="3pm_6pm_IST">Between 3pm-6pm IST</option>
+          </select>
+        </div>
+        <div class="form-element">
+          <label for="message">Reason for Call Back</label>
+          <textarea name="message" rules="required"></textarea>
+        </div>
+        <div class="form-element">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      
+      {% comment %} <script type="text/javascript" src="https://form.jotform.com/jsform/231284908198466"></script> {% endcomment %}
+
+      {%- comment -%}
+      <div id="wufoo-z46snuq0khc395">
+        Fill out my <a href="https://besharam.wufoo.com/forms/z46snuq0khc395">online form</a>.
+      </div>
+      <script type="text/javascript">
+        var z46snuq0khc395;
+        (function (d, t) {
+          var s = d.createElement(t),
+            options = {
+              'userName': 'besharam',
+              'formHash': 'z46snuq0khc395',
+              'autoResize': false,
+              'height': '560',
+              'async': true,
+              'host': 'wufoo.com',
+              'header': 'hide',
+              'ssl': true
+            };
+          //s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+          s.src = "{{ 'wufoo.js' | asset_url }}";
+          s.onload = s.onreadystatechange = function () {
+            var rs = this.readyState;
+            if (rs)
+              if (rs != 'complete')
+                if (rs != 'loaded') return;
+            try {
+              z46snuq0khc395 = new WufooForm();
+              z46snuq0khc395.initialize(options);
+              //z46snuq0khc395.display();
+            } catch (e) {}
+          };
+          var scr = d.getElementsByTagName(t)[0],
+            par = scr.parentNode;
+          par.insertBefore(s, scr);
+        })(document, 'script');
+      </script>
+      {%- endcomment -%}
+    </div>
+  </div>
+</div>

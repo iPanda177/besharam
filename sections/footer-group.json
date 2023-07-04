@@ -1,0 +1,100 @@
+{
+  "name": "t:sections.footer-group.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "e87e5136-8bf2-4b11-af2c-50ffb1338696": {
+          "type": "social",
+          "settings": {
+            "social_img": "shopify:\/\/shop_images\/logo.svg"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "information",
+            "menu": "footer-new"
+          }
+        },
+        "4efc5081-7dc1-40cc-af72-3d7237d46d7d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/91.png",
+            "link": "",
+            "text": ""
+          }
+        },
+        "99d7007f-32b7-4364-b38a-f5fb1a1984d5": {
+          "type": "cta",
+          "settings": {
+            "heading": "Customer center",
+            "btn_1": "CALL US",
+            "btn_1_url": "tel:7274229111",
+            "btn_2": "EMAIL US",
+            "btn_2_url": "mailto:hello@imbesharam.com",
+            "btn_3": "LIVE CHAT",
+            "btn_3_url": "#",
+            "btn_4": "CALL BACK",
+            "btn_4_url": "#",
+            "btn_5": "RETURNS & EXCHANGE",
+            "btn_5_url": "#",
+            "btn_6": "FAQ's",
+            "btn_6_url": "#",
+            "btn_7": "TRACK",
+            "btn_7_url": "#",
+            "btn_8": "CANCELLATION",
+            "btn_8_url": "#",
+            "btn_9": "VIP SUPPORT",
+            "btn_9_url": "#",
+            "cta_1": "Email",
+            "cta_1_url": "mailto:hello@imbesharam.com",
+            "cta_1_img": "shopify:\/\/shop_images\/mail.svg",
+            "cta_2": "call us",
+            "cta_2_url": "tel:7274229111",
+            "cta_2_img": "shopify:\/\/shop_images\/telephone_2.svg",
+            "cta_3": "call me back",
+            "cta_3_url": "#",
+            "cta_3_img": "shopify:\/\/shop_images\/call.svg",
+            "cta_4": "live chat",
+            "cta_4_url": "#",
+            "cta_4_img": "shopify:\/\/shop_images\/chat.svg",
+            "cta_5": "whatsapp",
+            "cta_5_url": "#",
+            "cta_5_img": "shopify:\/\/shop_images\/whatsapp.svg"
+          }
+        }
+      },
+      "block_order": [
+        "e87e5136-8bf2-4b11-af2c-50ffb1338696",
+        "footer-0",
+        "4efc5081-7dc1-40cc-af72-3d7237d46d7d",
+        "99d7007f-32b7-4364-b38a-f5fb1a1984d5"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "show_divider": false,
+        "show_social": true,
+        "footer__bottom": true,
+        "review_stars": "5",
+        "trustpilot_text": "TrustScore <strong>4.7<\/strong>| <strong>418<\/strong> reviews",
+        "show_policy": true,
+        "policy_label": "Site Map",
+        "policy_url": "shopify:\/\/pages\/sitemap",
+        "copyright_text": "All Rights Reserved, Happy Birds USA",
+        "colors_text": "#ffffff",
+        "colors_heading": "#ffffff",
+        "colors_link": "#ffffff",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#26282c",
+        "gradient_background": ""
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

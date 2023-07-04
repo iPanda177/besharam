@@ -1,0 +1,313 @@
+{
+  "sections": {
+    "7a0d2bed-d44a-43b7-8dac-6e679a7d3ca7": {
+      "type": "video-hero-with-text",
+      "settings": {
+        "main_title": "Meet India’s Adult Superstore",
+        "subtitle": "Who is Besharam?",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/451bfb7964804fd08d9283d0867e6ab8.mp4",
+        "video_thumbnail": "shopify:\/\/shop_images\/image_1.jpg",
+        "image_ratio": "400px",
+        "show_text_box": true,
+        "layout_width": "layout_width_custom",
+        "show_divider": false,
+        "mobile_image_ratio": "auto",
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "24c432eb-eaeb-4ec5-bf00-f7cb08eadd6e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14573288489031__24c432eb-eaeb-4ec5-bf00-f7cb08eadd6e-168682818157b8b7c9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our mission",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14573288489031__24c432eb-eaeb-4ec5-bf00-f7cb08eadd6e-168682818157b8b7c9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We want to create a community and educate people about sex, give them tools to enjoy it in their privacy and comfort<\/p>",
+            "text_size": "typeset"
+          }
+        },
+        "0f868fda-77ed-4af7-b151-36ad2a871794": {
+          "type": "image",
+          "settings": {
+            "custom_image": "shopify:\/\/shop_images\/our_mission_b624163d-da8b-4997-bdc0-59e2f6164bdb.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--14573288489031__24c432eb-eaeb-4ec5-bf00-f7cb08eadd6e-168682818157b8b7c9-0",
+        "template--14573288489031__24c432eb-eaeb-4ec5-bf00-f7cb08eadd6e-168682818157b8b7c9-1",
+        "0f868fda-77ed-4af7-b151-36ad2a871794"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f73388ac-c410-48d7-89a2-1bab234498de": {
+      "type": "image-with-text",
+      "blocks": {
+        "f35a075c-3b18-4706-9d90-ce79991070c9": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Why the hell",
+            "subheading_size": "h3",
+            "secondary_color": false
+          }
+        },
+        "template--14573288489031__f73388ac-c410-48d7-89a2-1bab234498de-168683279151c840af-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Did we do it?",
+            "heading_size": "h0",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14573288489031__f73388ac-c410-48d7-89a2-1bab234498de-168683279151c840af-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because, <strong>WE BELIEVE<\/strong>. We believe that Indians have the same aspirations and dreams, the same wants and needs as anyone else in the world, so why do they not have access to products that provide pleasure to mind like food does to belly.Because, <strong>WE BELIEVE<\/strong>. We believe that Indians have the same aspirations and dreams, the same wants and needs as anyone else in the world, so why do they not have access to products that provide pleasure to mind like food does to belly.<\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "f35a075c-3b18-4706-9d90-ce79991070c9",
+        "template--14573288489031__f73388ac-c410-48d7-89a2-1bab234498de-168683279151c840af-0",
+        "template--14573288489031__f73388ac-c410-48d7-89a2-1bab234498de-168683279151c840af-1"
+      ],
+      "settings": {
+        "title": "our STORY",
+        "image": "shopify:\/\/shop_images\/1_1.png",
+        "image_position": "20% 50%",
+        "layout": "image_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "sticker_text_1": "Salim Rajan",
+        "sticker_instagram_url_1": "#",
+        "sticker_linkedin_url_1": "#",
+        "sticker_text_2": "Raj Armani",
+        "sticker_instagram_url_2": "#",
+        "sticker_linkedin_url_2": "#",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "9b6bb55c-7902-4914-a5ae-e731843ddec1": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "template--14573288489031__9b6bb55c-7902-4914-a5ae-e731843ddec1-168683968532d8d715-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Promise we make",
+            "heading_size": "h2",
+            "heading_tag": "h3"
+          }
+        },
+        "template--14573288489031__9b6bb55c-7902-4914-a5ae-e731843ddec1-168683968532d8d715-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14573288489031__9b6bb55c-7902-4914-a5ae-e731843ddec1-168683968532d8d715-0",
+        "template--14573288489031__9b6bb55c-7902-4914-a5ae-e731843ddec1-168683968532d8d715-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_109.jpg",
+        "image_position": "center center",
+        "text_box_position": "flex-start",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "full_width": false,
+        "show_divider": false,
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_overlay": "#f3f3f3",
+        "colors_overlay_opacity": 92,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "1f92776f-2783-4695-a675-03d4e18f85a9": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "template--14573288489031__1f92776f-2783-4695-a675-03d4e18f85a9-168683968532d8d715-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Promise we keep",
+            "heading_size": "h2",
+            "heading_tag": "h3"
+          }
+        },
+        "template--14573288489031__1f92776f-2783-4695-a675-03d4e18f85a9-168683968532d8d715-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14573288489031__1f92776f-2783-4695-a675-03d4e18f85a9-168683968532d8d715-0",
+        "template--14573288489031__1f92776f-2783-4695-a675-03d4e18f85a9-168683968532d8d715-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_108.jpg",
+        "image_position": "center center",
+        "text_box_position": "flex-end",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "full_width": false,
+        "show_divider": false,
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_overlay": "#f3f3f3",
+        "colors_overlay_opacity": 92,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "c1129eed-c2f4-4949-bf6f-5cbfa52bdf02": {
+      "type": "advantages",
+      "blocks": {
+        "template--14573288489031__c1129eed-c2f4-4949-bf6f-5cbfa52bdf02-1686907396cf468ecd-0": {
+          "type": "advantage",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/rocket_1.svg",
+            "text": "Founded in 2013"
+          }
+        },
+        "17e7748c-ed7f-4ff0-a870-c07a986709f4": {
+          "type": "advantage",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/airplane_1.svg",
+            "text": "Over 250k orders delivered"
+          }
+        },
+        "74fe9604-c93e-4a46-9264-118c1ef28bd1": {
+          "type": "advantage",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/search_1.svg",
+            "text": "2M Yearly traffic"
+          }
+        },
+        "47e77d95-5484-409f-b784-a8b01f2ebb10": {
+          "type": "advantage",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/love_1.svg",
+            "text": "India's most loved Adult Store"
+          }
+        },
+        "7bc4ab62-3a3b-45f9-beeb-e458b1c0a968": {
+          "type": "advantage",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/rating_1.svg",
+            "text": "15000 Online reviews"
+          }
+        }
+      },
+      "block_order": [
+        "template--14573288489031__c1129eed-c2f4-4949-bf6f-5cbfa52bdf02-1686907396cf468ecd-0",
+        "17e7748c-ed7f-4ff0-a870-c07a986709f4",
+        "74fe9604-c93e-4a46-9264-118c1ef28bd1",
+        "47e77d95-5484-409f-b784-a8b01f2ebb10",
+        "7bc4ab62-3a3b-45f9-beeb-e458b1c0a968"
+      ],
+      "settings": {
+        "title_image": "shopify:\/\/shop_images\/logo.svg",
+        "title": "Explained",
+        "image": "shopify:\/\/shop_images\/Group_3729.png",
+        "image_position": "20% 50%",
+        "layout": "image_first",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_mobile": "shopify:\/\/shop_images\/Group_3731.png",
+        "mobile_layout": "image_first",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "b3e1ace6-2e80-4a1c-abf2-99ad0ee1045e": {
+      "type": "follow-us",
+      "settings": {
+        "heading": "Follow us",
+        "image": "shopify:\/\/shop_images\/Tablet_Pro_Mockup_15__1.png",
+        "image_mobile": "shopify:\/\/shop_images\/Group_3732.png",
+        "narrow": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "7a0d2bed-d44a-43b7-8dac-6e679a7d3ca7",
+    "24c432eb-eaeb-4ec5-bf00-f7cb08eadd6e",
+    "f73388ac-c410-48d7-89a2-1bab234498de",
+    "9b6bb55c-7902-4914-a5ae-e731843ddec1",
+    "1f92776f-2783-4695-a675-03d4e18f85a9",
+    "c1129eed-c2f4-4949-bf6f-5cbfa52bdf02",
+    "b3e1ace6-2e80-4a1c-abf2-99ad0ee1045e"
+  ]
+}

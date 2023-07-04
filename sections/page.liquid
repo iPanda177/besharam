@@ -1,0 +1,216 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="section-page section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+  <div class="page-width">
+    <div class="title-wrapper {{ section.settings.heading_alignment }}">
+      <{{ section.settings.heading_tag }} class="title page-title page-title--desktop">{{ section.settings.heading | default: section.settings.page.title | escape }}</{{ section.settings.heading_tag }}>
+      <{{ section.settings.heading_tag }} class="title page-title page-title--mobile">{{ section.settings.heading_mobile | default: section.settings.page.title | escape }}</{{ section.settings.heading_tag }}>
+    </div>
+    
+    <div class="pages">
+      {%- if section.settings.page_1.content != blank -%}
+        <div class="rte page-1 small-hide">
+          {{ section.settings.page_1.content }}
+        </div>  
+      {%- endif -%}
+      {%- if section.settings.page_2.content != blank -%}
+        <div class="rte page-2 small-hide">
+          {{ section.settings.page_2.content }}
+        </div>  
+      {%- endif -%}
+      {%- if section.settings.page_3.content != blank -%}
+        <div class="rte page-3 small-hide">
+          {{ section.settings.page_3.content }}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.page_mobile.content != blank -%}
+        <div class="rte page-mobile medium-hide large-up-hide">
+          {{ section.settings.page_mobile.content }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="page-button--wrapper center">
+      <div class="button page-button medium-hide large-up-hide">{{ 'blogs.article.read_more' | t }}</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// read more button
+const button = document.querySelector('.section-page .page-button');
+const page = document.querySelector('.page-mobile');
+button.addEventListener('click', () => {
+  button.parentNode.classList.add('hidden');
+  toggleClass(page);
+})
+let toggleClass = (item) => item.classList.toggle('active');
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.page.name",
+  "tag": "section",
+  "class": "section section-about-toys",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": false,
+      "label": "t:sections.all.show_divider.label"
+    },
+    {
+      "type": "header",
+      "content": "Desktop pages (one page for one column)"
+    },
+    {
+      "type": "page",
+      "id": "page_1",
+      "label": "Page 1"
+    },
+    {
+      "type": "page",
+      "id": "page_2",
+      "label": "Page 2"
+    },
+    {
+      "type": "page",
+      "id": "page_3",
+      "label": "Page 3"
+    },
+    {
+      "type": "header",
+      "content": "Mobile page"
+    },
+    {
+      "type": "page",
+      "id": "page_mobile",
+      "label": "Page for mobile"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Page title",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading_mobile",
+      "default": "Page title mobile",
+      "label": "Mobile heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.all.heading_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_tag.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_tag.options__2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_tag.options__3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:sections.all.heading_tag.options__4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:sections.all.heading_tag.options__5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:sections.all.heading_tag.options__6.label"
+        },
+        {
+          "value": "div",
+          "label": "t:sections.all.heading_tag.options__7.label"
+        },
+        {
+          "value": "span",
+          "label": "t:sections.all.heading_tag.options__8.label"
+        },
+        {
+          "value": "p",
+          "label": "t:sections.all.heading_tag.options__9.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_tag.label",
+      "info": "t:sections.all.heading_tag.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.header.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_top.unit",
+      "label": "t:sections.all.padding.padding_top.label",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_bottom.unit",
+      "label": "t:sections.all.padding.padding_bottom.label",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.page.presets.name"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  }
+}
+{% endschema %}

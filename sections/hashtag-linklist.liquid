@@ -1,0 +1,71 @@
+{{ 'hashtag-linklist.css' | asset_url | stylesheet_tag }}
+
+
+<div class="hashtag-linklist__wrap">
+    <div class="hashtag-linklist__container page-width">
+        {% for link in section.blocks %}
+            <a href="{{ link.settings.collection.url }}" class="hashtag-linklist__link">
+                <h3>{{ link.settings.label }}</h3>
+                {% assign handle = forloop.index %}
+                {% case handle %}
+                    {% when 1 %}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="145" height="96" viewBox="0 0 198 132" fill="none">
+                            <path d="M50.361 29.5781C34.3769 36.6627 24.2756 53.0185 24.2756 69.3306C24.2756 94.8701 56.8422 130.06 111.451 130.06C141.419 130.06 195.97 117.888 195.97 76.8379C195.97 40.2342 162.95 1.69165 98.5323 1.69165C49.091 1.70623 2 31.5315 2 58.0477C2 77.3336 20.4656 97.5961 39.5444 104.36" stroke="white" stroke-width="2.43091" stroke-miterlimit="10" stroke-linecap="round"/>
+                        </svg>
+                    {% when 2 %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="148" height="111" viewBox="0 0 201 152" fill="none">
+                        <path d="M81.9905 13.2411C55.0461 10.8238 19.109 34.9118 22.3268 76.2755C30.3711 179.558 198.117 126.463 198.117 74.957C198.117 23.451 121.433 2 69.526 2C-35.8466 2 -12.3402 150.551 101.483 150.551C159.081 150.551 199.167 107.649 199.167 84.3387C199.167 24.1948 57.2139 -1.76956 52.5058 38.5292" stroke="white" stroke-width="2.43091" stroke-miterlimit="10" stroke-linecap="round"/>
+                    </svg>
+                    {% when 3 %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="145" height="96" viewBox="0 0 198 132" fill="none">
+                        <path d="M147.639 102.189C163.623 95.1041 173.724 78.7483 173.724 62.4363C173.724 36.8967 141.158 1.70698 86.5491 1.70698C56.5807 1.70697 2.03043 13.8791 2.03042 54.9289C2.03042 91.5326 35.0496 130.075 99.4677 130.075C148.909 130.061 196 100.235 196 73.7191C196 54.4333 177.534 34.1708 158.456 27.4069" stroke="white" stroke-width="2.43091" stroke-miterlimit="10" stroke-linecap="round"/>
+                    </svg>
+                    {% when 4 %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="130" height="102" viewBox="0 0 177 140" fill="none">
+                        <path d="M86.2147 18.1576C54.1452 28.8868 11.6003 60.3634 11.6003 96.4162C11.6003 132.469 44.1717 137.872 79.2526 137.872C146.184 137.872 170.03 101.109 170.03 77.026C170.03 47.734 144.022 1.89575 84.9664 1.89575C52.5237 1.89575 2 19.1917 2 57.4937C2 103.487 39.8477 131.396 85.4554 131.396C123.136 131.396 175.667 107.805 175.667 61.682C175.667 47.4496 169.837 33.8895 156.711 31.2524" stroke="white" stroke-width="2.43091" stroke-miterlimit="10" stroke-linecap="round"/>
+                    </svg>
+                    {% when 5 %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="170" height="111" viewBox="0 0 211 134" fill="none">
+                        <path d="M21.3737 25.3725C3.93204 32.6023 2 55.79 2 72.4365C2 98.4996 57.1127 132.603 116.701 132.603C149.402 132.603 209.456 114.328 209.456 72.4365C209.456 35.0823 172.896 1.60278 102.604 1.60278C48.6546 1.61766 2 31.5429 2 58.6028C2 78.284 7.10233 104.313 27.9208 111.216" stroke="white" stroke-width="2.43091" stroke-miterlimit="10" stroke-linecap="round"/>
+                    </svg>
+                    {% when 6 %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="153" height="101" viewBox="0 0 204 138" fill="none" style="&#10;">
+                        <path d="M2 72.8465C10.0444 174.123 201.617 123.352 201.617 72.8465C201.617 22.3408 124.933 1.3064 73.026 1.3064C-32.3466 1.3064 -10.8234 136.136 103 136.136C160.598 136.136 202.667 104.904 202.667 82.0459" stroke="#EA1969" stroke-width="2.43091" stroke-miterlimit="10" stroke-linecap="round" style="&#10;    stroke: #fff;&#10;"/>
+                    </svg>
+                {% endcase %}
+            </a>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Hashtag Link List",
+"tag": "section",
+"settings": [],
+"blocks": [
+{
+"name": "link",
+"type": "link",
+"limit":    6,
+"settings": [
+{
+"type": "text",
+"id": "label",
+"label": "Label"
+},
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+}]
+}
+],
+"presets": [
+{
+"name": "Hashtag Link List"
+}
+]
+}
+{% endschema %}

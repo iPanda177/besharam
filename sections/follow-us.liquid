@@ -1,0 +1,172 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+{{ 'section-follow-us.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.show_divider %}<div class="section--divider">{% endif -%}
+  <div class="page-width{% if section.settings.narrow %} page-width--inner{% endif %}">
+    <div class="rich-text section--padding">
+      <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %}">
+        <h2 class="title">{{ section.settings.heading | escape }}</h2>
+      </div>
+      {%- if section.settings.image != blank -%}
+      {%- assign image = section.settings.image -%}
+        <div class="follow-us__image">
+          <use-animate data-animate="zoom-fade">
+            {%- if section.settings.image_mobile != blank -%}
+              {%- assign image_mobile = section.settings.image_mobile -%}
+              <img srcset="{{ image_mobile | image_url: width: 750 }} 1x, {{ image_mobile | image_url: width: 1500 }} 2x"
+                src="{{ image_mobile | image_url: width: 750 }}"
+                loading="lazy"
+                width="{{ image_mobile.width }}"
+                height="{{ image_mobile.height }}"
+                alt="{{ image_mobile.alt }}"
+                class="medium-hide large-up-hide"
+              />
+              <img srcset="{{ image | image_url: width: 1360 }} 1x, {{ image | image_url: width: 2720 }} 2x"
+                src="{{ image | image_url: width: 1360 }}"
+                loading="lazy"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                alt="{{ image.alt }}"
+                class="small-hide"
+              />
+            {%- else -%}
+              <img srcset="{{ image | image_url: width: 1360 }} 1x, {{ image | image_url: width: 2720 }} 2x"
+                src="{{ image | image_url: width: 1360 }}"
+                loading="lazy"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                alt="{{ image.alt }}"
+              />
+            {%- endif -%}
+          </use-animate>
+          {%- if section.settings.fb_badge != blank -%}
+            <div class="image-badge">
+              <span>FANS ON FACEBOOK</span>
+              <a target="_blank" rel="noopener" href="{{ settings.social_facebook_link }}" class="list-social__link link link--text link-with-icon">
+                {% render 'icon-brand', icon: 'facebook' %}
+                <span>{{ section.settings.fb_badge }}</span>
+              </a>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.insta_badge != blank -%}
+            <div class="image-badge">
+              {% render 'icon', icon: 'follow-arrow' %}
+              <span>FANS ON INSTAGRAM</span>
+              <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" class="list-social__link link link--text link-with-icon">
+                {% render 'icon-brand', icon: 'instagram' %}
+                <span>{{ section.settings.insta_badge }}</span>
+              </a>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.twit_badge != blank -%}
+            <div class="image-badge">
+              <span>FANS ON TWITTER</span>
+              <a target="_blank" rel="noopener" href="{{ settings.social_twitter_link }}" class="list-social__link link link--text link-with-icon">
+                {% render 'icon-brand', icon: 'twitter' %}
+                <span>{{ section.settings.twit_badge }}</span>
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- if section.settings.show_divider %}</div>{% endif -%}
+
+{% schema %}
+{
+  "name": "Follow us",
+  "tag": "section",
+  "class": "section section--follow-us",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Follow us",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.all.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.all.image_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow",
+      "default": false,
+      "label": "t:sections.all.narrow.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": false,
+      "label": "t:sections.all.show_divider.label"
+    },
+    {
+      "type": "header",
+      "content": "Badges"
+    },
+    {
+      "type": "text",
+      "id": "fb_badge",
+      "default": "233k",
+      "label": "Facebook fans count"
+    },
+    {
+      "type": "text",
+      "id": "insta_badge",
+      "default": "91.3k",
+      "label": "Instagram fans count"
+    },
+    {
+      "type": "text",
+      "id": "twit_badge",
+      "default": "12k",
+      "label": "Twitter fans count"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.header.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_top.unit",
+      "label": "t:sections.all.padding.padding_top.label",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_bottom.unit",
+      "label": "t:sections.all.padding.padding_bottom.label",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Follow us"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  }
+}
+{% endschema %}

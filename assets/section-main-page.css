@@ -1,0 +1,188 @@
+.section-page {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg width='390' height='689' viewBox='0 0 390 689' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cg opacity='0.5' filter='url(%23filter0_d_1213_160655)'%3E%3Cpath d='M99.333 39.2638C72.2347 45.7157 23.0742 40.0703 1.88127 36.441L0 651.258C5.73508 653.005 21.4259 657.011 38.3086 659.054C59.4119 661.608 122.991 661.205 149.067 651.258C175.144 641.311 211.974 636.203 259.961 633.784C298.35 631.848 361.086 648.121 387.656 656.5V46.119C371.84 48.2696 332.438 52.8398 301.361 53.9151C262.515 55.2593 264.127 47.8664 203.639 32.8118C143.152 17.7572 133.206 31.1988 99.333 39.2638Z' fill='black' fill-opacity='0.5' shape-rendering='crispEdges'/%3E%3C/g%3E%3Cg opacity='0.5' filter='url(%23filter1_d_1213_160655)'%3E%3Cpath d='M64.1164 71.927C40.3517 78.2714 12.9039 78.6926 2.15063 78.1101L0.268921 625.01C4.52543 625.19 20.0818 626.838 48.2554 632C83.4724 638.452 138.449 639.527 165.869 636.705C193.29 633.882 233.884 625.279 276.359 620.843C310.34 617.295 365.343 622.322 388.597 625.279L388.597 65.0718C358.084 56.738 311.442 61.7113 292.758 65.0718C274.074 68.4322 241.68 68.4322 227.029 65.0718C212.377 61.7113 196.247 50.286 161.165 46.7912C126.082 43.2964 93.8224 63.9964 64.1164 71.927Z' fill='black' fill-opacity='0.8' shape-rendering='crispEdges'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_1213_160655' x='-26.8832' y='0.192123' width='441.422' height='688.148' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1.07533'/%3E%3CfeGaussianBlur stdDeviation='13.4416'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_1213_160655'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_1213_160655' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter1_d_1213_160655' x='-26.6143' y='20.5895' width='442.094' height='645.543' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1.07533'/%3E%3CfeGaussianBlur stdDeviation='13.4416'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_1213_160655'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_1213_160655' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.section-about-toys .section-page {
+  padding-top: 60px;
+}
+
+.section-page .title-wrapper .page-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 10vw;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: .2;
+}
+
+.section-page p {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.section-page img {
+  display: block;
+  margin: 1rem auto 0;
+  border-radius: 1rem;
+}
+
+.pages h2,
+.pages h3,
+.pages h4,
+.pages h5,
+.pages h6 {
+  font-weight: 700;
+  margin-top: 2.4rem !important;
+  margin-bottom: 1.8rem !important;
+}
+
+.pages h4,
+.pages h5,
+.pages h6 {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 750px) {
+  .section-page {
+    background-image: none;
+  }
+
+  .section-page .title-wrapper .page-title {
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 71px;
+    margin-bottom: -45px;
+  }
+
+  .pages {
+    position: relative;
+    display: flex;
+    column-gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .pages > * {
+    max-width: 33%;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 59;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .page-3 {
+    margin-top: -1rem;
+  }
+
+  .page-title--mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .pages > * {
+    -webkit-line-clamp: 49;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .pages > * {
+    -webkit-line-clamp: 32;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .section-page {
+    background-size: cover;
+    padding-bottom: 9rem;
+  }
+
+  .section-page .title-wrapper {
+    margin-top: -2rem;
+  }
+
+  .section-page .title-wrapper .page-title {
+    margin-top: 0.3rem;
+  }
+
+  .page-title--desktop {
+    display: none;
+  }
+
+  .page-mobile:not(.active) {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .page-mobile > h5:first-of-type {
+    margin-top: 0 !important;
+    margin-bottom: 1.3rem !important;
+  }
+
+  .section-page img {
+    margin-bottom: 1.4rem;
+  }
+
+  .page-button--wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-button {
+    min-width: 7.6rem;
+    min-height: 2.6rem;
+    opacity: .4;
+    padding: 0.5rem 0.6rem;
+    background-color: transparent;
+    border-color: var(--color-base-outline-button-labels);
+    color: var(--color-base-outline-button-labels);
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .section-page .page-button {
+    margin-top: 0;
+  }
+
+  .page-button--wrapper::after {
+    position: absolute;
+    top: -30%;
+    bottom: -30%;
+    left: -1.5rem;
+    content: '';
+    z-index: -2;
+    background: #17191C;
+    filter: blur(2px);
+    width: calc(100% + 3rem);
+  }
+
+  .page-button:hover {
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section-page {
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .section-page {
+    background-size: auto;
+    padding-bottom: 10rem;
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1439px) {
+  .section-page {
+    background-image: none;
+  }
+}

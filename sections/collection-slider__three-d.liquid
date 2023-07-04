@@ -1,0 +1,184 @@
+{{ 'collection-slider__three-d.css' | asset_url | stylesheet_tag }}
+
+{% assign currentDate = "now" | date: "%d-%m-%Y"  %}
+
+<div class="collection-slider-three-d__wrap">
+    <div class="collection-slider-three-d__container">
+        <h2 class="collection-slider-three-d__title">{{ section.settings.title }}</h2>
+        <div class="collection-slider-three-d__slider-wrap">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% assign blockDate = block.settings.date_picker | date: "%d-%m-%Y" %}
+                        <div class="swiper-slide">
+                            {% if blockDate == currentDate %}
+                                {%- assign countdown_slider_index = forloop.index0 -%}
+                                <span id="countdownSliderIndex" class="small-hide medium-hide large-up-hide">{{ countdown_slider_index }}</span>
+                                {% render 'card-product',
+                                        card_product: block.settings.product,
+                                        media_size: "portrait",
+                                        show_secondary_image: false,
+                                        show_quick_buy: true,
+                                        show_vendor: true,
+                                        show_rating: true,
+                                        enable_quick_view: true,
+                                        enable_color_swatches: false,
+                                        enable_countdown: false,
+                                        show_countdown_three_d_section: true,
+                                        enable_image_fill: true
+                                %}
+                            {% else %}
+                                {% render 'card-product',
+                                        card_product: block.settings.product,
+                                        media_size: "portrait",
+                                        show_secondary_image: false,
+                                        show_quick_buy: true,
+                                        show_vendor: true,
+                                        show_rating: true,
+                                        enable_quick_view: true,
+                                        enable_color_swatches: false,
+                                        enable_countdown: false,
+                                        show_countdown_three_d_section: true,
+                                        show_day_three_d_section: true,
+                                        show_day_value_three_d_section: blockDate,
+                                        enable_image_fill: true
+                                %}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-button-prev">
+                    <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="52.7822" width="52.0322" height="52.0322" rx="26.0161" transform="rotate(90 52.7822 0)" fill="#26282C"/>
+                        <path d="M28.0664 19.5122L21.5624 26.0162L28.0664 32.5203" stroke="white" stroke-width="1.30081" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="52.0322" width="52.0322" height="52.0322" rx="26.0161" transform="rotate(-90 0 52.0322)" fill="#26282C"/>
+                        <path d="M24.7153 32.52L31.2194 26.016L24.7153 19.512" stroke="white" stroke-width="1.30081" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const countdownSliderIndex = document.querySelector('#countdownSliderIndex');
+    // cowndown timer
+    (function() {
+    var start = new Date;
+    start.setHours(24, 0, 0); // 12am
+
+    function pad(num) {
+      return ("0" + parseInt(num)).substr(-2);
+    }
+
+    function tick() {
+      var now = new Date;
+      if (now > start) { // too late, go to tomorrow
+        start.setDate(start.getDate() + 1);
+      }
+      var remain = ((start - now) / 1000);
+      var hh = pad((remain / 60 / 60) % 60);
+      var mm = pad((remain / 60) % 60);
+      document.querySelector('.countdown__item').innerHTML =
+        hh + ":" + mm;
+      setTimeout(tick, 1000);
+    }
+
+
+    if (countdownSliderIndex != null) {
+        document.addEventListener('DOMContentLoaded', tick);
+    }
+  })();
+</script>
+
+<script>
+    const countdownSliderIndexValue = () => countdownSliderIndex ? countdownSliderIndex.textContent : 3;
+    const section_scripts_{{ section.id | replace: "-", "_" | replace: "--", "_" }} = {
+        section: document.querySelector("#shopify-section-{{ section.id }}"),
+        init() {
+            this.slider = new Swiper(this.section.querySelector(".swiper-container"), {
+                speed: 1000,
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                loopedSlides: 3,
+                slidesPerView: 'auto',
+                loop: true,
+                initialSlide: countdownSliderIndexValue(),
+                createElements: true,
+                slideToClickedSlide:true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 80,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                pagination: {
+                    el: this.section.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                // Navigation arrows
+                navigation: {
+                    nextEl: this.section.querySelector('.swiper-button-next'),
+                    prevEl: this.section.querySelector('.swiper-button-prev'),
+                },
+
+            });
+        }
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        section_scripts_{{ section.id | replace: "-", "_" | replace: "--", "_" }}.init()
+    })
+</script>
+
+{% schema %}
+{
+"name": "Collection slider 3d",
+"tag": "section",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title",
+"default": "Deal of the week"
+}
+],
+"blocks": [
+{
+"name": "Slide",
+"type": "slide",
+"limit": 7,
+"settings": [
+{
+"type": "product",
+"id": "product",
+"label": "Product"
+},
+{
+"type": "text",
+"id": "date_picker",
+"label": "Choose date",
+"info": "e.g. dd-mm-yyyy"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Collection slider 3d",
+"blocks": [
+{
+"type": "slide"
+}
+]
+}
+]
+}
+{% endschema %}

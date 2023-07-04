@@ -1,0 +1,83 @@
+<link href="//db.onlinewebfonts.com/c/88dc1d3425c59009eea0b3f1d47dad4d?family=Lumios-Marker" rel="stylesheet" type="text/css"/>
+{{ 'section-gift-card.css' | asset_url | stylesheet_tag }}
+
+<div class="gift-card page-width">
+    {% if section.settings.mobile_image1 != blank and section.settings.mobile_image2 != blank %}
+        <img class="gift-card__mobile-image1"
+             srcset="{{ section.settings.mobile_image1 | image_url: height: image_height }} 1x, {{ section.settings.mobile_image1 | image_url: height: image_height_2x }} 2x"
+             src="{{ section.settings.mobile_image1 | image_url: height: image_height }}">
+        <img class="gift-card__mobile-image gift-card__mobile-image2"
+             srcset="{{ section.settings.mobile_image2 | image_url: height: image_height }} 1x, {{ section.settings.mobile_image2 | image_url: height: image_height_2x }} 2x"
+             src="{{ section.settings.mobile_image2 | image_url: height: image_height }}">
+    {% endif %}
+
+    {% if section.settings.desktop_image != blank %}
+        <img class="gift-card__desktop-image"
+             srcset="{{ section.settings.desktop_image | image_url: height: image_height }} 1x, {{ section.settings.desktop_image | image_url: height: image_height_2x }} 2x"
+             src="{{ section.settings.desktop_image | image_url: height: image_height }}">
+    {% endif %}
+
+    <div class="gift-cart__form--container">
+        <p class="gift-cart__form--heading">GET ₹ 1000 OFF</p>
+        {% form 'contact' %}
+            {{ form.errors | default_errors }}
+
+            <div class="email">
+                <label for="email"></label>
+                <input type="email" name="contact[email]" placeholder="Email" id="email" />
+            </div>
+
+            <div class="first-name">
+                <label for="first-name"></label>
+                <input type="text" name="contact[first_name]" placeholder="Name" id="first-name" />
+            </div>
+
+            <div class="phone">
+                <label for="phone"></label>
+                <input type="tel" name="contact[phone]" placeholder="Mobile" id="phone" />
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="GET CODE" />
+            </div>
+        {% endform %}
+    </div>
+
+    <div class="gift-card__labels--container">
+        <p class="gift-card__label gift-card__label1">Over 10,000+ <br> <span>real reviews</span> online</p>
+        <p class="gift-card__label gift-card__label2"> +We are <span>always <br>in the news</span</p>
+        <p class="gift-card__label gift-card__label3">But, of course, your <br><span>privacy</span> is guaranteed</p>
+        <p class="gift-card__label gift-card__label4">That's why we are the <span>#1 <br> Adult Store</span> in India  </p>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Gift card",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "mobile_image1",
+            "label": "Mobile image1"
+        },
+        {
+            "type": "image_picker",
+            "id": "mobile_image2",
+            "label": "Mobile image2"
+        },
+        {
+            "type": "image_picker",
+            "id": "desktop_image",
+            "label": "Desktop image"
+        }
+    ],
+
+    "presets": [
+        {
+            "name": "Gift card"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,57 @@
+<form
+  class="kwes-form"
+  action="https://kwesforms.com/api/foreign/forms/CjOJVwy8NublgBCAyvVK"
+  success-message="Success! Your cancellation request is now received, please allow 5-7 working days for us to complete the cancellation process and for the refund (subject to restocking fees listed below) back to the Original Form of Payment/ Store Credit / Gift Card."
+>
+  <div class="form-element one-half">
+    <label for="name">Full Name</label>
+    <input type="text" name="name" rules="required|max:50">
+  </div>
+  <div class="form-element one-half">
+    <label for="name">Order Number</label>
+    <input type="text" name="order_number" rules="required|max:25" placeholder="HBI-XXXXXX">
+  </div>
+  <div class="form-element one-half">
+    <label for="email">Email Address</label>
+    <input type="email" name="email" rules="required|email">
+  </div>
+  <div class="form-element one-half">
+    <label for="phone">Phone Number</label>
+    <input type="tel" name="phone" rules="required|regex:/^(\+)?(\d[\d\s\-]{8,})\d*$/">
+  </div>
+  <div class="form-element">
+    <label for="message">Reason For Cancellation</label>
+    <textarea
+      name="message"
+      rules="required"
+      placeholder="Please share in details for consideration if available based on timing and circumstances"
+    ></textarea>
+  </div>
+  <div class="form-element">
+    <fieldset data-kw-group rules="required">
+      <legend>What cancellation option would you prefer:</legend>
+      <input type="radio" name="option" value="r_exchange">
+      <label for="r_exchange">Within 24 hours&gt;Full Store Credit</label><br>
+      <input type="radio" name="option" value="r_store_credit">
+      <label for="r_store_credit">Within 24 hours&gt;Refund (-10% restocking fees)</label><br>
+      <input type="radio" name="option" value="r_warranty_exchange">
+      <label for="r_warranty_exchange"><sup>(1)</sup> Post 24 hours&gt;Store Credit (-10% restocking fees)</label><br>
+      <input type="radio" name="option" value="r_warranty_exchange">
+      <label for="r_warranty_exchange"><sup>(1)</sup> Post 24 hours&gt;Refund (-25% restocking fees)</label><br>
+      <input type="radio" name="option" value="r_warranty_exchange">
+      <label for="r_warranty_exchange"
+        ><sup>(2)</sup> Post 24 hours+Order Shipped&gt;Store Credit (-25% restocking fees - Rs999)</label
+      ><br>
+      <input type="radio" name="option" value="r_warranty_exchange">
+      <label for="r_warranty_exchange"><sup>(3)</sup> Special Circumstance&gt;Order delayed beyond 7biz days</label>
+    </fieldset>
+  </div>
+  <div class="form-element form-notice">
+    <sup>(1)</sup> These requests require a Manager Approval based on when the requests are received.<br>
+    <sup>(2)</sup> These requests require additional time for RTO and cancellation processing.<br>
+    <sup>(3)</sup> If you received a special circumstance notification, select this option when submitting cancellation request.
+  </div>
+  <div class="form-element">
+    <button type="submit">Submit</button>
+  </div>
+</form>

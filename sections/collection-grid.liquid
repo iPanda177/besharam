@@ -1,0 +1,92 @@
+{{ 'collection-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-grid__wrap">
+    <div class="collection-grid__container page-width">
+        {% if section.settings.title %}
+            <h2 class="collection-grid__title">{{ section.settings.title }}</h2>
+        {% endif %}
+        <div class="collection-grid__table">
+            {% for block in section.blocks %}
+                <div class="collection-grid__table-item">
+                    <a href="{{ block.settings.collection.url }}">
+                        {% if block.settings.image != blank %}
+                            <img
+                                    srcset="{%- if  block.settings.image.width >= 165 -%}{{  block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if  block.settings.image.width >= 360 -%}{{  block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if  block.settings.image.width >= 535 -%}{{  block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                                        {%- if  block.settings.image.width >= 750 -%}{{  block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                                        {%- if  block.settings.image.width >= 1070 -%}{{  block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                                        {%- if  block.settings.image.width >= 1500 -%}{{  block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{  block.settings.image | image_url }} {{  block.settings.image.width }}w"
+                                    src="{{ block.settings.image | image_url: width: 768 }}"
+                                    alt="{{ block.settings.image.alt | escape }}"
+                                    loading="lazy"
+                                    width="{{  block.settings.image.width }}"
+                                    height="{{  block.settings.image.height }}"
+                            >
+                        {% else %}
+                            <img
+                                    srcset="{%- if  block.settings.collection.featured_image.width >= 165 -%}{{  block.settings.collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if  block.settings.collection.featured_image.width >= 360 -%}{{  block.settings.collection.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if  block.settings.collection.featured_image.width >= 535 -%}{{  block.settings.collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                                        {%- if  block.settings.collection.featured_image.width >= 750 -%}{{  block.settings.collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                                        {%- if  block.settings.collection.featured_image.width >= 1070 -%}{{  block.settings.collection.featured_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                                        {%- if  block.settings.collection.featured_image.width >= 1500 -%}{{  block.settings.collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{  block.settings.collection.featured_image | image_url }} {{  block.settings.collection.featured_image.width }}w"
+                                    src="{{ block.settings.collection.featured_image | image_url: width: 1500 }}"
+                                    alt="{{ block.settings.collection.featured_image.alt | escape }}"
+                                    loading="lazy"
+                                    width="{{  block.settings.collection.featured_image.width }}"
+                                    height="{{  block.settings.collection.featured_image.height }}"
+                            >
+                        {% endif %}
+                        <span class="item-label">{{ block.settings.label }}</span>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+"name": "Collection Grid",
+"tag": "section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title",
+"default": "Shop For"
+}],
+"blocks": [
+{
+"name": "Block",
+"type": "block",
+"limit": 5,
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "label",
+"label": "Label"
+}]
+}
+],
+"presets": [
+{
+"name": "Collection Grid"
+}
+]
+}
+{% endschema %}

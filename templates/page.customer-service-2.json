@@ -1,0 +1,1184 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4cf5b730-be58-4b31-aed8-801a0c2ce0f8": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14562570666055__4cf5b730-be58-4b31-aed8-801a0c2ce0f8-168178443895863ebb-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer's Lounge",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14562570666055__4cf5b730-be58-4b31-aed8-801a0c2ce0f8-168178443895863ebb-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "template--14562570666055__4cf5b730-be58-4b31-aed8-801a0c2ce0f8-168178443895863ebb-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14562570666055__4cf5b730-be58-4b31-aed8-801a0c2ce0f8-168178443895863ebb-0",
+        "template--14562570666055__4cf5b730-be58-4b31-aed8-801a0c2ce0f8-168178443895863ebb-1",
+        "template--14562570666055__4cf5b730-be58-4b31-aed8-801a0c2ce0f8-168178443895863ebb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/general-information-banner.webp",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f823772a-8e17-462a-a39b-d53a3862729f": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14562570666055__f823772a-8e17-462a-a39b-d53a3862729f-1681784508bb55ec77-0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "title_size": "h3",
+            "text": "<p>Business hours: 10am - 6pm IST Monday - Friday<\/p><p><a href=\"mailto:hi@imbesharam.com\">HI@IMBESHARAM.COM<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+91 22 33814108<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+91 9920 20 9722<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+91 9920 20 9722<\/a><\/p><p>Live Chat<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "template--14562570666055__f823772a-8e17-462a-a39b-d53a3862729f-1681784508bb55ec77-1": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "title_size": "h3",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "template--14562570666055__f823772a-8e17-462a-a39b-d53a3862729f-1681784508bb55ec77-2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "title_size": "h3",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14562570666055__f823772a-8e17-462a-a39b-d53a3862729f-1681784508bb55ec77-0",
+        "template--14562570666055__f823772a-8e17-462a-a39b-d53a3862729f-1681784508bb55ec77-1",
+        "template--14562570666055__f823772a-8e17-462a-a39b-d53a3862729f-1681784508bb55ec77-2"
+      ],
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "999c2e9c-e2ab-4c96-8d43-dc989577f8b6": {
+      "type": "contact-form",
+      "blocks": {
+        "template--14562570666055__999c2e9c-e2ab-4c96-8d43-dc989577f8b6-1681784576e4b18284-0": {
+          "type": "contact",
+          "settings": {
+            "heading": "Contact us",
+            "text": "hi@imbesharam.com",
+            "link": "mailto:hi@imbesharam.com"
+          }
+        },
+        "aa0aa1b6-16e7-4e7f-bcc2-45df9129a67d": {
+          "type": "contact",
+          "settings": {
+            "heading": "India",
+            "text": "+91 9920209722",
+            "link": "tel:+91 9920209722"
+          }
+        },
+        "b3763afa-6656-4196-975a-7954ff553bde": {
+          "type": "contact",
+          "settings": {
+            "heading": "United States",
+            "text": "+1 727 422 9111",
+            "link": "tel:+1 727 422 9111"
+          }
+        },
+        "417af119-a79c-4829-8e9c-3815e81fdb02": {
+          "type": "contact",
+          "settings": {
+            "heading": "UK",
+            "text": "+44 20 3290 1220",
+            "link": "tel:+44 20 3290 1220"
+          }
+        },
+        "template--14562570666055__999c2e9c-e2ab-4c96-8d43-dc989577f8b6-1681784576e4b18284-1": {
+          "type": "media",
+          "settings": {
+            "heading": "Follow us"
+          }
+        },
+        "6f08b728-2dbd-43ca-a372-748604e04e10": {
+          "type": "custom_field",
+          "settings": {
+            "type": "select",
+            "label": "Country",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": "Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Argentina, Armenia, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bolivia, Bosnia and Herzegovina, Botswana, Brazil, Brunei, Bulgaria, Burkina Faso, Burundi, Côte d'Ivoire, Cabo Verde, Cambodia, Cameroon, Canada, Central African Republic, Chad, Chile, China, Colombia, Comoros, Congo (Congo-Brazzaville), Costa Rica, Croatia, Cuba, Cyprus, Czechia (Czech Republic), Democratic Republic of the Congo, Denmark, Djibouti, Dominica, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, \"Eswatini (fmr. \"\"Swaziland\"\")\", Ethiopia, Fiji, Finland, France, Gabon, Gambia, Georgia, Germany, Ghana, Greece, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy See, Honduras, Hungary, Iceland, India, Indonesia, Iran, Iraq, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kiribati, Kuwait, Kyrgyzstan, Laos, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Mauritania, Mauritius, Mexico, Micronesia, Moldova, Monaco, Mongolia, Montenegro, Morocco, Mozambique, Myanmar (formerly Burma), Namibia, Nauru, Nepal, Netherlands, New Zealand, Nicaragua, Niger, Nigeria, North Korea, North Macedonia, Norway, Oman, Pakistan, Palau, Palestine State, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Poland, Portugal, Qatar, Romania, Russia, Rwanda, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Solomon Islands, Somalia, South Africa, South Korea, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Sweden, Switzerland, Syria, Tajikistan, Tanzania, Thailand, Timor-Leste, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Kingdom, United States of America, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, Yemen, Zambia, Zimbabwe"
+          }
+        },
+        "300bb2d6-f951-4267-b300-63f126b1cdef": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "State",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "2b7ea7fd-61f1-4496-a8ac-c1fd307b3ae0": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "Order No. (If available)",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "d7c052ef-a8c6-4430-9095-0e4a6f8a8e3a": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "Tracking No. (If available)",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "b03c1ec3-1edb-4064-8d85-7e3829843f60": {
+          "type": "custom_field",
+          "settings": {
+            "type": "select",
+            "label": "Reason for Inquiry",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": "Press\/Media, Wholesale & Distribution, Investment Opportunity, Other Business Inquiries"
+          }
+        },
+        "eb32c526-7918-454a-847c-7992847d33a6": {
+          "type": "custom_field",
+          "settings": {
+            "type": "checkbox",
+            "label": "I AUTHORIZE BESHARAM TO CONTACT ME VIA EMAIL IN RESPONSE TO MY ENQUIRY & I AGREE TO BE SIGNED UP ON BESHARAM'S E-MAILING LIST.",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14562570666055__999c2e9c-e2ab-4c96-8d43-dc989577f8b6-1681784576e4b18284-0",
+        "aa0aa1b6-16e7-4e7f-bcc2-45df9129a67d",
+        "b3763afa-6656-4196-975a-7954ff553bde",
+        "417af119-a79c-4829-8e9c-3815e81fdb02",
+        "template--14562570666055__999c2e9c-e2ab-4c96-8d43-dc989577f8b6-1681784576e4b18284-1",
+        "6f08b728-2dbd-43ca-a372-748604e04e10",
+        "300bb2d6-f951-4267-b300-63f126b1cdef",
+        "2b7ea7fd-61f1-4496-a8ac-c1fd307b3ae0",
+        "d7c052ef-a8c6-4430-9095-0e4a6f8a8e3a",
+        "b03c1ec3-1edb-4064-8d85-7e3829843f60",
+        "eb32c526-7918-454a-847c-7992847d33a6"
+      ],
+      "custom_css": [
+        "option {color: black;}"
+      ],
+      "settings": {
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Get in touch",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "24cbe69c-bd3e-4917-bf19-31ff40c44977": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14560352993351__24cbe69c-bd3e-4917-bf19-31ff40c44977-1681356458207f4016-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "heading_size": "h0",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14560352993351__24cbe69c-bd3e-4917-bf19-31ff40c44977-1681356458207f4016-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "text_size": "typeset2"
+          }
+        },
+        "template--14560352993351__24cbe69c-bd3e-4917-bf19-31ff40c44977-1681356458207f4016-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560352993351__24cbe69c-bd3e-4917-bf19-31ff40c44977-1681356458207f4016-0",
+        "template--14560352993351__24cbe69c-bd3e-4917-bf19-31ff40c44977-1681356458207f4016-1",
+        "template--14560352993351__24cbe69c-bd3e-4917-bf19-31ff40c44977-1681356458207f4016-2"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "question-0": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS YOUR RESHIPPING POLICY?",
+            "text": "<p>Our logistic partners in India - Blue Dart and Fedex have plenty of benefits and advantages and a few restrictions as well. We all strive to provide you the best service, here is a quick overview:<br\/><br\/>1.When your order clears customs and gets connected with the domestic shipper, they send you an SMS, and our team sends a courtesy SMS\/phone call to all Self Pick up orders to remind them to pick up order soon it arrives.<br\/><br\/>2.After the order arrives at the courier office in the customers pincode, the courier personnel generally makes a call attempt and a delivery attempt on the same day.<br\/><br\/>3.On the third day, if the order is still not delivered or picked up, our team sends a courtesy SMS\/phone call to remind you to pick up the order as the courier office will send it back after 5days.<br\/><br\/>However, in spite of these precautions, few orders sometimes don't get picked up, or get returned back to our India warehouse due to a multiple number of unique reasons. Under these circumstances, if we have to reship the order to you, it will incur a Reshipping Fee of Rs.999, which is charged by the shipper to reattempt the delivery once again. This may also cause a 7-10 business days delay which may vary depending on the time it takes for the package to come back and then for it to get connected in the same cycle once again.<br\/><br\/>So to avoid these circumstances we request you to keep track of your order and also let us know<a href=\"mailto:%20hello@imbesharam.com\">via email<\/a>about your inability to collect or receive the order.<\/p>"
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "WILL MY ORDER ARRIVE IN A DISCREET & PRIVATE MANNER?",
+            "text": "<p>Definitely. Your order will arrive in a discreet manner. <br\/><br\/>We have a custom logistics process in place for our customers in India and around the world. We have partnered with world class shippers Fedex,UPS,USPS,DHL and BlueDart & Aramex.<br\/>As we understand your need for privacy, we put an extra effort to ensure that your order is packaged securely, shipped reliably, handled discreetly and delivered timely.<br\/>Through an efficient & connected network, your package will arrive to you in a<a href=\"http:\/\/in.imbesharam.com\/blogs\/news\/7559730-packaging-so-discreet-even-mr-holmes-can-deduce-its-elements\" target=\"_blank\">Fedex\/UPS padded package<\/a>. There would be no indication outside about the contents of the package. The shipping label will say as shipped by & from<a href=\"http:\/\/in.imbesharam.com\/blogs\/news\/7559730-packaging-so-discreet-even-mr-holmes-can-deduce-its-elements\" target=\"_blank\">'Shipping Department, Happy Birds Inc, Florida\/Georgia USA'<\/a> and the product name as ‘Gifts & Souvenirs’. So, there will be no mention of the site IMbesharam and neither the actual product name.<br\/>So, Please be relaxed and place your order with ease because your concerns are our concerns and we have got your back.<br\/><br\/>To understand your need for privacy, we also have a self pickup facility for your order, if you prefer the package to not arrive at your house or work. By choosing this, you can have it wait for you at the closest courier company's local office. We can make that happen when you make the appropriate selection in the shopping cart before checkout.<br\/>For more details on how to opt for Will Pickup, please <a href=\"https:\/\/in.imbesharam.com\/blogs\/faq-order\/9791762-can-i-pick-up-my-order-instead-of-home-delivery\" target=\"_blank\">click here<\/a>.<br\/><br\/>For more information <a href=\"https:\/\/www.youtube.com\/watch?v=dqx6ctbJEMg\" target=\"_blank\">Click here <\/a><\/p>"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "WILL I HAVE TO WORRY ABOUT CUSTOMS DEPT KNOWING MY INFO?",
+            "text": "<p>Set your mind at rest, because we got it all covered.<br\/><br\/>To ensure your privacy we import the consignment in our Indian entity name, so your information is NOT disclosed at time of import. We handle and take care of the complete logistics cycle, so after you have made the purchase, you can relax and plan your event, while we go to work and make sure your order is packaged securely, shipped reliably, handled discreetly and delivered timely.<br\/><br\/>The price of the product you see on our site includes all duties & taxes that need to be paid, upon import and distribution, to the Indian government. About 70-80% of the product price goes towards customs & import taxes, brokerage fees, distribution charges, storage fees, local taxes which may include Octroi, iGST, etc depending on your local destination. There are NO sales taxes owed, since you have ordered them online from a US company.<br\/><br\/>For more information<a href=\"https:\/\/www.youtube.com\/watch?v=29S2yFdyiC4\" target=\"_blank\">Click here<\/a>.<\/p>"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS YOUR SHIPPING POLICY?",
+            "text": "<p>IMbesharam.com is a one stop shop for Indians & NRI's across the world to browse, shop & experience a bold & beautiful lifestyle. As we are exclusively catering to Indian and US customers, shipping is <strong>FREE <\/strong>and for our International customers, we offer deeply discounted rates with Fedex\/DHL & UPS and offer a flat rate of Rs.4,999 per order irrespective of the number of products in the order and is a standard International Mail rate. These rates are one of the best you can find online and they include all charges up to your door.<\/p>"
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT DOES 'CUSTOM LOGISTICS FOR INDIA' MEAN?",
+            "text": "<p>It is a custom and a systematic set of processes established to facilitate smooth, reliable shipping structure and extremely discounted rates specifically developed for IMBesharam.com. Since we are a US company fully focussed on Indians in India and worldwide, We have developed a custom shipping, tracking, customs clearing and delivery process for our customers in India, so every order is shipped securely, handled carefully and delivered timely. Orders over Rs.1000 are shipped for FREE.<br\/>The process involves our partnership with world class shippers - Fedex, UPS, USPS, DHL, BlueDart & Aramex, dedicated logistics manager, integrated website, and efficient order management and warehouse management tools and personnel.<\/p>"
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "settings": {
+            "title": "HOW LONG WILL IT TAKE TO RECEIVE THE ORDER?",
+            "text": "<p>For our customers in India, the shipping estimate is normally between 2-7 biz days and 14-21 biz days depending on the product you have purchased, the shipping option selected and shipping location and where you are ordering from. <br\/><br\/>When you purchase a product from our store that is listed as shipping from India, it takes 2-3 biz days to deliver the order in a Metro City and 3-7 biz days to a Non-Metro city and if you purchase a product that is being shipped from the US, it will take 14-21 biz days to deliver to you. The products are shipped out of our US distribution centre (<a href=\"https:\/\/in.imbesharam.com\/pages\/general-information#how-it-works\">see how it works<\/a>), to the destination country\/city. For customers in India, it may take between 3-5 days for the package to arrive at the Indian airport and then depending on how long it takes at customs (usually 1-3 days) they are delivered to our India distribution partner. The Indian partner normally takes 2-3 biz days to deliver in Metros and 3-7 biz days to non-Metros.<\/p><p>You can track your order here: www.imbesharam.com\/track <\/p>"
+          }
+        },
+        "d7f9e934-ccfc-481a-a3cf-c3674f147ef3": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT ARE THE SHIPPING CHARGES?",
+            "text": "<p>Shipping anywhere in India is completely FREE for all orders above Rs.1000. For orders below Rs.1000, a shipping fee of Rs.100 is to be paid upfront by the customers. Shipping anywhere in USA - Free USPS Priority ShippingShipping anywhere in Pakistan, Bangladesh, Sri Lanka & UAE and rest of the world: Rs.4999<\/p>"
+          }
+        },
+        "d362c864-65c8-4da3-b4a8-1ca8bf0854fe": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I CHANGE MY DELIVERY ADDRESS AFTER THE ORDER IS PLACED?",
+            "text": "<p>Not after order has been processed and you have received a shipment confirmation email. However in extreme\/unavoidable circumstances that you may have to change, we maybe able to assist with this if informed with 24 hours of receiving the shipment confirmation email.<\/p>"
+          }
+        },
+        "84c40caf-9606-4095-a5c6-f13d3330ae2e": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I SHIP IT TO A COUNTRY OUTSIDE INDIA?",
+            "text": "<p>Yes you can. Enter the physical address of the business or residence that the product needs to be delivered to. Be sure to add the city, state and country along with a valid zip code or pin code. So that we may reach you in case of emergency, ALWAYS remember to provide us with your mobile number.<\/p>"
+          }
+        },
+        "22bd006d-935c-43e5-b623-7478b81031d3": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I KNOW IF MY AREA IS SERVICEABLE OR NOT?",
+            "text": "<p><a href=\"https:\/\/www.bluedart.com\/home#locationfinder\">Enter your pin code here<\/a> if its serviceable it will show as 'Pincode OK', If not it will show as 'Pincode is not service area'. If your pincode is not serviceable, please either select an alternate address to get the package shipped to or Look up the closest BlueDart courier office in your area and select 'SELF-PICKUP' option in your shopping cart, which means you will get the package picked up at the closest BlueDart office. If none of these options work for you, Pls. contact our Customer Care Team and we will try to assist you by involving a third carrier or look up some other options.<\/p>"
+          }
+        },
+        "fc1402e4-0fc8-4212-9998-b06d5271999f": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I UPGRADE SHIPPING CHOICE TO SUPER\/LIGHTENING EXPRESS?",
+            "text": "<p>Sure you can. However this upgrade needs to be received and paid for within 48hrs of placing the order. If you decide to do that and had changed your mind about shipping, Please contact our customer care team within 48hours of placing the order on our site.<\/p>"
+          }
+        },
+        "3cfd2db3-7f28-46c8-a335-0e621b3fd094": {
+          "type": "question",
+          "settings": {
+            "title": "WHO WILL DELIVER MY ORDER? HOW?",
+            "text": "<p>We have partnered with Fedex, UPS, DHL and USPS for shipping our products in US & International and with BlueDart & Aramex for shipping our products in India. The package will carried on ground and air or a combination of both and delivered by the trained personnel of these world class shipping companies.<\/p>"
+          }
+        },
+        "91211865-ecd5-444a-882d-905979f10c6e": {
+          "type": "question",
+          "settings": {
+            "title": "IS THE PACKAGING DISCREET?",
+            "text": "<p>Absolutely, Your order is usually packaged in a <a href=\"http:\/\/in.imbesharam.com\/blogs\/news\/7559730-packaging-so-discreet-even-mr-holmes-can-deduce-its-elements\" target=\"_blank\" title=\"Fedex Discreet Packaging Besharam\">Fedex\/DHL padded envelope<\/a>, with no indication or mention of the contents or the recipient (you) up until it passes and gets cleared through customs. After customs clearance, the package is labelled with your name and address as the recipient and the shipper info will be 'Happy Birds Inc, Shipping Department, GA, USA'. There would be no other mention of the contents anywhere on the package, so when you receive it, you can confidently sign for it without having to face any uncomfortable situations at home or at work.<\/p><p>Will the packaging be discreet? <a href=\"https:\/\/www.youtube.com\/watch?v=uHzWrju0G7c\" target=\"_blank\" title=\"Discreet Packaging Video on imbesharam.com\">Click here<\/a> for the video answer.<\/p>"
+          }
+        },
+        "cfe2d14d-4910-4b41-8eac-1c250b42911b": {
+          "type": "question",
+          "settings": {
+            "title": "DOES MY ORDER NEED TO BE SIGNED FOR?",
+            "text": "<p>Yes, The courier personnel will release the package to you only after getting your signatures as proof of delivery.<\/p>"
+          }
+        },
+        "fbc6e1f4-cae0-43ef-8f0e-4d3d77fd900b": {
+          "type": "question",
+          "settings": {
+            "title": "WILL I BE CHARGED TWICE FOR SHIPPING EVEN ITS GOING TO SAME ADDRESS?",
+            "text": "<p>Delivery charges (Shipping costs) are automatically calculated per order\/invoice, So if you have all the products going to one address, shop it as one order, and you will have to pay only ONE delivery charge. However If you shopped as two individual orders, still going to same address, there is individual delivery charge on each order, so Yes, you will be paying for 2x delivery charges.<\/p>"
+          }
+        },
+        "4e0c3e11-ec6b-4028-ba4b-ab0d6e5e82e4": {
+          "type": "question",
+          "settings": {
+            "title": "CAN MY ORDER BE SHIPPED URGENT?",
+            "text": "<p>If you order needs to arrive quicker, Please select the quickest possible option during checkout which may take 3-5 days for reaching your local destination from our US distribution center. Simultaneously please contact us via email or chat after submitting the order, so we can try to expedite it as much logistically possible. However please know that the absolute quickest time is at least 4days from date of order & payment.<\/p>"
+          }
+        },
+        "20c352a1-6282-4d2a-a571-2fb5e6533ea5": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I PICK UP MY ORDER FROM THE COURIER OFFICE IN MY AREA?",
+            "text": "<p>Yes, you can. You can pick it up from the closest BlueDart office in your pincode should you desire to order that way. When placing the order, select 'SELF PICKUP' as the delivery preferenceand we will surely follow through and inform you about PICK-UP at your closest courier office. Make sure to take a valid ID to the courier office to collect the package.<\/p>"
+          }
+        },
+        "60bf700b-5680-4f33-b003-294af8a50ea4": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT HAPPENS IF I AM NOT HOME TO SIGN FOR MY DELIVERY?",
+            "text": "<p>Unfortunately if you or somebody at your home or work is not able to sign for the package, the courier will NOT be able to hand over your package. Please contact us via email or chat and we will reschedule the delivery or guide you to pick it up from the relevant courier's office.<\/p>"
+          }
+        },
+        "6ff51d51-3f56-4aa8-a9c3-7207ca886315": {
+          "type": "question",
+          "settings": {
+            "title": "I RECEIVED MY ORDER MUCH LATER THAN THE EXPECTED DATE?",
+            "text": "<p>We apologize for the inconvenience this may have caused. Normally the shipment arrives on time, however on occasions, there are several external factors like inclement weather, missed flight connections, delay in clearance at customs and other local circumstances that may delay the timely arrival of your package. While it is of no fault of us or yours, we shall take responsibility for the delay. Please contact us via Email\/Live chat and we will assist you with your request and resolve it your satisfaction.<\/p>"
+          }
+        },
+        "611f7d38-863e-4c6f-b194-ef8ca04fa1e9": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT ARE YOUR DELIVERY HOURS? WHAT TIME CAN I EXPECT MY ORDER?",
+            "text": "<p>You can expect your delivery at the standard business hours of 9am-6pm Monday thru Friday. In some exceptional situations, the delivery may also arrive on a Saturday. Please email us if you like to have the order on hold at the local courier office so you can pick it up at your convenience.<\/p>"
+          }
+        },
+        "d5e8904f-0633-42b5-9f16-aa8954cb1011": {
+          "type": "question",
+          "settings": {
+            "title": "WILL I BE CHARGED CUSTOMS AND IMPORT CHARGES?",
+            "text": "<p>No. What you see on in the store is what you pay for the order. The prices you see on our site are inclusive of customs and duty and brokerage fees (approx. 30-40%) and you will not have to pay any additional customs\/duties or taxes. What you pay to us, takes care of everything. Just enjoy your favorite TV show and wait for the courier guy to ring your door bell.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question-0",
+        "question-1",
+        "question-2",
+        "question-3",
+        "question-4",
+        "question-5",
+        "d7f9e934-ccfc-481a-a3cf-c3674f147ef3",
+        "d362c864-65c8-4da3-b4a8-1ca8bf0854fe",
+        "84c40caf-9606-4095-a5c6-f13d3330ae2e",
+        "22bd006d-935c-43e5-b623-7478b81031d3",
+        "fc1402e4-0fc8-4212-9998-b06d5271999f",
+        "3cfd2db3-7f28-46c8-a335-0e621b3fd094",
+        "91211865-ecd5-444a-882d-905979f10c6e",
+        "cfe2d14d-4910-4b41-8eac-1c250b42911b",
+        "fbc6e1f4-cae0-43ef-8f0e-4d3d77fd900b",
+        "4e0c3e11-ec6b-4028-ba4b-ab0d6e5e82e4",
+        "20c352a1-6282-4d2a-a571-2fb5e6533ea5",
+        "60bf700b-5680-4f33-b003-294af8a50ea4",
+        "6ff51d51-3f56-4aa8-a9c3-7207ca886315",
+        "611f7d38-863e-4c6f-b194-ef8ca04fa1e9",
+        "d5e8904f-0633-42b5-9f16-aa8954cb1011"
+      ],
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "Shipping Questions",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3b60ffb2-ce1c-46c2-9001-4b5274cda3c7": {
+      "type": "faq",
+      "blocks": {
+        "template--14560352993351__3b60ffb2-ce1c-46c2-9001-4b5274cda3c7-168135696166a60eea-0": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS THIS SITE ABOUT?",
+            "text": "<p><strong>We are Besharam! India's Favorite Adult Store.<\/strong><\/p><p>IMBesharam.com an award winning website, based in USA and catering to Indians worldwide. We are India's leading adult store measured by daily traffic, online ranking, social media followers and the most media mentions.<\/p><p>We are an e-commerce platform that showcases amazing products tastefully selected and sourced from popular brands in US, present them in a responsive boutique store for you to shop in a smooth & 'easy on the eye process'. We ship your order via world class carriers in a non-descriptive package & take care of all duties, customs and taxes through till delivery to your door.<\/p><p>We are in the business of bringing your curiosity, your imagination, your desires and your fantasies right to your bedroom. Because we understand your need for privacy, we put an extra effort to ensure that your order is packaged securely, shipped reliably, handled discreetly and delivered timely.<\/p><p>Shop right from in your bedroom for adult products for men & women, toys for gay & lesbian, lingerie, shapewear, costumes, undergarments and products for energy & stamina, male enhancement, sexual wellness, hygiene & care, romance & foreplay, oral & anal fun and many other intimate needs. We also carry the largest Bachelor & Bachelorette party collection in India.<\/p><p>Visit us on the web<br\/>Website: www.imbesharam.com<br\/>Facebook: www.facebook.com\/imbesharam<br\/>Twitter: www.twitter.com\/imbesharam<br\/>Youtube: www.youtube.com\/imbesharam<br\/>Vimeo: www.vimeo.com\/imbesharam<br\/>Google+ www.google.com\/plus\/imbesharam<br\/>Pinterest: @IMbesharam<br\/>SnapChat: @IMbesharam<\/p><p>Enough of us, tell us a bit about yourself and email us if you liked browsing or shopping on our site. We love to get your feedback!<\/p>"
+          }
+        },
+        "template--14560352993351__3b60ffb2-ce1c-46c2-9001-4b5274cda3c7-168135696166a60eea-1": {
+          "type": "question",
+          "settings": {
+            "title": "WHY SHOULD I SHOP FROM IMBESHARAM.COM?",
+            "text": "<p>In simple words, we are <strong>India's MOST loved Adult Store.<\/strong><\/p><p>Because 500,000 Indian customers have already done so, 250,000 Indians follow us on our Facebook, Instagram and Twitter channels and we have over 12,000 online reviews.<\/p><p>Not convinced?<\/p><p>Sunny Leone is the face of our brand, we deliver to our promises and stand behind our brand and our products and guess what, we have also won the XBIZ award for being Top International Adult Store.<\/p><p>Founded by 2 Indian Americans, we are HQ'd in Atlanta, USA with satellite office in India, Thailand & Ukraine. Our founders have over 30 years of combined experience in fashion, garments, online commerce, telecommunications and hospitality which has been instrumental in building a brand of this scale & reputation. <\/p><p>We import your orders in our company name so your personal information is not exposed or at risk, and ship your orders from US to India right to your door in the most discreet manner while maintaining your privacy throughout. We are partnered with FEDEX \/ DHL & UPS in the US, BlueDart & Aramex in India to offer you reliable shipping and door 2 door tracking. We give you 6 payment options of which 2 are innovative options to pay anonymously and pay offline, while the rest are the popular options to pay by debit and credit cards, net banking, paypal & most ATM cards.<\/p><p>We have a well grounded and professional team to answer your questions & assist you as needed 5 days a week, for 12hrs a day, <br\/><br\/>All in All, We dedicatedly strive to give you a world class browsing and shopping experience as we constantly grow & improvise to be your one stop shop for all your sexual wellness needs and a healthy adult lifestyle.<\/p><p><a href=\"https:\/\/www.youtube.com\/watch?v=UevB0onZdAs\">Click here<\/a> for the video explanation.<\/p>"
+          }
+        },
+        "dfd343f6-6eb8-44eb-b709-2e081ef21a8f": {
+          "type": "question",
+          "settings": {
+            "title": "IS IT SAFE\/OK TO SHOP FROM IMBESHARAM.COM?",
+            "text": "<p>Absolutely 100% Safe.<\/p><p>We are a US based International Company exclusively catering to Indians in India. We have a custom logistics process to ensure your order is ships promptly, packaged securely, clears customs reliably and delivers to your door timely.<\/p><p>Because we understand your need for privacy, we put an extra effort to ensure it, through our network of world class shippers like Fedex, UPS, DHL, BlueDart & Delhivery. The order will arrive in a white\/brown box, have no mention of Besharam on outside, and the shipping label will say - shipped from 'Shipping Department, Happy Birds Inc,' so there will be no mention of the site IMbesharam.com and the product name will be shown as Gifts & Souvenirs.<\/p><p>Rest assured your concerns are our concerns, we uphold and deliver to our promise of safe and timely delivery, so can shop at ease. We got your back!<\/p><p><a href=\"https:\/\/www.youtube.com\/watch?v=yrBnX8_D08o\">Click here<\/a> for a video explanation.<\/p>"
+          }
+        },
+        "3540fb5d-9981-4e9b-a84d-0801f2f11dc3": {
+          "type": "question",
+          "settings": {
+            "title": "IS IT LEGAL TO SHOP FOR SEX TOYS ON IMBESHARAM.COM?",
+            "text": "<p>The simple answer is YES.<\/p><p>Because we have already done the hard work of importing them through customs by filling all the documents to support the legality of these products, only after they get imported are we able to sell them in India. Our Custom consultants work with the department to properly classify these products and ensure we have the rights and permission to sell and distribute them in India.<\/p><p>Now there is a lot that goes behind the scene, which we will not bore you with. First, we avoid to label them as 'sex toys'. These are pleasure products, and we prefer not to label them as 'sex toys' due to the stigma and undue attention it gets.<\/p><p>Legal Explanation: Under the Indian Penal Code, 1860, Section 292 prohibits the sale of obscene objects. We argue with the department that these products are NOT OBSCENE and they are being used by an individual in the privacy of their own space, so the Indian Constitution grants each Indian citizen the freedom to their own space and rights to their privacy.<\/p><p>We take full responsibility for the products we sell, so you, the customer does not have to worry about it after having placed the order online. We export our products from the US, import them ourselves in India, pay import duties & taxes and clear customs, and bring your package to your door. So yes, it is LEGAL to shop for products on IMBesharam.com and use them in the privacy of your bedrooms.<\/p><p><a href=\"https:\/\/www.youtube.com\/watch?v=SHboHXOBuiE\">Click here<\/a> for the video explanation.<\/p>"
+          }
+        },
+        "1b501995-b7b6-4802-a59c-39b13de48623": {
+          "type": "question",
+          "settings": {
+            "title": "WHY IS THE PRICE OF SEX TOYS HIGHER IN INDIA THAN OTHER SITES IN USA & UK\/EUROPE?",
+            "text": "<p>The reason is the <strong>complex import process & expensive duties & brokerage charges<\/strong>.<\/p><p>The landed price of an adult product in India is about 3 to 4 times the cost of the product in USA, UK or Europe; the reason are detailed below:<\/p><ul><li><strong>International shipping<\/strong> - Usually we ship our consignment through DHL & Fedex from the US to India. The international shipping costs are high with these couriers, and more so lately due to COVID where flights are less, demand is more and rates of all man and material have gone up.<\/li><li><strong>Customs duties<\/strong> - The total import duties we pay on our shipments usually range between 105-125% of the declared value (some of the highest in the World) and these includes customs duties, IGST, taxes and various other fees that are collected by Govt. of India for allowing to import this product category. These have gone up from being 70-80% to 105-125% in last 2 years because the government is discouraging international imports and trying to persuade Indian citizens to buy products Made in India, to advance the MakeinIndia agenda.<\/li><li><strong>Broker charges<\/strong> - These are fees paid to a specialized group of agents and consultants, who handle all the necessary paperwork, certifications, licensing and regulatory compliances to make these imports happen. If not for them, it is near to impossible to import XX products in India due to the complexities of how rules and laws are written and implemented by authorities. These costs usually form a big chunk of the overall price (generally ¼ of the cost of the product you pay). The biggest advantage is that when we import through them, our customers identity is NEVER revealed at port of import and your privacy is maintained throughout the entire process.<\/li><li><strong>Domestic shipping and admin fees<\/strong> - Thereafter we incur costs of delivering the order to your door, which includes domestic courier shipping, quality control and courier coordination along with operational costs like warehousing & discreet packaging, business operations & customer service, which along with the cost of the product total up to about ¼ of the total price of the product.<\/li><\/ul><p>For example, if the price of a product costs $100 in the US, by time it reaches India, it will add up:<\/p><ol><li>US cost of product, shipping & admin costs = $120<\/li><li>International shipping = $50-$75<\/li><li>Customs duties = $120-$150<\/li><li>Broker charges = $95-$125<\/li><li>Domestic shipping and admin fees = $20-$30<\/li><\/ol><p>Total Landed costs in India = $405-$500<\/p><p>The sum total of these costs end up making the product 3-4x the price you can buy it in the USA, UK or Europe where there are NO such complex import processes or import restrictions that end up raising the selling prices.<\/p><p>We are aware that some international online shops may claim they ‘ship worldwide’ including India, but we do not recommend purchasing from any sites unless they clearly GUARANTEE 100% complete custom clearance and door delivery to you. We have seen and heard many customers take this risk, had their orders confiscated at Customs in India and ended up receiving show-cause notices from the department asking to show up to explain why they imported a ‘prohibited’ obscene product in India. The sellers, under these circumstances, will fold hands and will be unable to assist with clearance or refunds, since they claim they have already shipped the consignment and they are relieved of their responsibilities.<\/p><p>For such reasons, adult products in India will be a specialized commodity until the import restrictions are relaxed or we manufacture them in India, in which case we run a risk of producing products that may not match internationally reputed brand standards until such Indian manufacturing and skill sets become trained and competent to match up International standards of quality, hygiene and packaging.<\/p>"
+          }
+        },
+        "d2588755-88da-4de4-a2e0-bd28dee21216": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT PAYMENT OPTIONS ARE AVAILABLE ON IMBESHARAM.COM?",
+            "text": "<p>Almost every option under the sun.<\/p><p>First, the good news is that we are a localized brand in India, and accept all payment methods in Indian Currency, so you never have to worry about paying in International currency on our store.<\/p><p>For all of our customers in India, we accept:<\/p><p>1. All types of Credit & Debit Cards<br\/>(VISA, MASTERCARD & AMERICAN EXPRESS)<br\/>2. Most Wallets & UPI<br\/>(Paytm, Phonepe, Mobikwik, BHIM UPI, Google Pay and many more.)<br\/>3. Net banking & Cash deposit in Bank. <br\/>4. Pay via Cash on Delivery,COD Fee (10% COD Fee, To paid now)<br\/>5. PayPal<br\/>6. Cryptocurrency<br\/>Here is our Payment Policy in Details: <a href=\"https:\/\/in.imbesharam.com\/pages\/general-information#payment-policy\">PAYMENT POLICY<\/a><\/p>"
+          }
+        },
+        "56d2c06d-201d-427f-9137-00fde16a38c3": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I ORDER VIA COD (CASH ON DELIVERY)?",
+            "text": "<p>Yes You can!<\/p><p>We now offer Cash on Delivery payment option in checkout. Now you can shop at ease as we offer a unique International COD service. We are able to provide this service in partnership with Fedex\/DHL and BlueDart\/Delhivery and various other Indian couriers, to their network of pin codes.<\/p><p>Being that the International COD involves service from international shippers and domestic couriers, the COD fees charged on a COD order is 10%. This is in addition to your order value and collected in advance when you place your order in our store.<\/p><p>We require to collect this fees upfront for us to eliminate false COD orders and only accept genuine customers who intend to shop and pay upon delivery. <a href=\"https:\/\/in.imbesharam.com\/blogs\/news\/9413245-cash-on-delivery-cod-policy\">Click here<\/a> for detailed COD policy.<\/p><p>For a video explanation on our COD Policy, please <a href=\"https:\/\/www.youtube.com\/watch?v=xJfZ0afdj5A\">click here<\/a>.<\/p>"
+          }
+        },
+        "7776a391-009a-4ac7-ae72-70e3419807cf": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I MODIFY\/CANCEL THE ORDER AFTER IT IS PLACED?",
+            "text": "<p>Yes you can, but under 24 hours and subject to the details of our cancellation policy, please read our entire cancellation policy <a href=\"https:\/\/in.imbesharam.com\/blogs\/faq-order\/8095035-what-is-your-cancellation-policy\">here<\/a>.<\/p><p>If you decide to modify\/cancel your order, you are advised to do it within 24 hours of placing the order or before your order is shipped from our warehouse - whichever is earlier. With time zone differences, we cannot guarantee we will be able to modify\/cancel your order but we will make every effort to process that request.<\/p><p>If we are able to modify the order, there is NO extra cost to it and we will be happy to process it as revised order. If we are able to cancel the order, please allow 5-7 working days for us to process the refund back to the original form of payment if available.<\/p><p>If you need to modify your order, please <a href=\"mailto:hello@imbesharam.com\">Email Us<\/a> immediately.<\/p><p>If you need to cancel your order, review our detailed cancellation policy and submit the request here: <a href=\"https:\/\/in.imbesharam.com\/cancel\">imbesharam.com\/cancel<\/a><\/p>"
+          }
+        },
+        "bc93c720-1080-4435-83e7-9017ac060833": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS YOUR CANCELLATION POLICY?",
+            "text": "<p><strong>We offer a STRICT 24 hour Cancellation Policy to cancel any orders you placed with us, subject to it not being shipped from our warehouse and subject to the following terms and conditions:<br\/><br\/>1. Within 24 Hours + Order NOT SHIPPED<\/strong>: If you wish to cancel your order after the order is placed please submit it via email or live chat asap and get an acknowledgement from us. If we get the cancellation request within 24 hours of your order confirmation and the order is not shipped, we should be able to cancel your order and submit your payment for refund subject to the below <strong>restocking fees<\/strong>. Once cancellation request is submitted, please allow 24-48 hours for us to complete the cancellation process and 4-7 working days for the refund (subject to restocking fees listed below) back to the Original Form of Payment\/ Store Credit \/ Gift Card.<\/p><p><strong>RESTOCKING FEES:<\/strong> Any acceptable cancellations requests made within 24 hours will attract <strong>10% restocking fees, unless the refund is made in form of a Store Credit \/ Gift Card<\/strong>. These fees are deducted to cover administrative costs for receiving and cancelling order, warehouse administration required to cancel order and restock products, cancel shipping label as well as non refundable payment gateway fees which usually is between 3-5% of transaction value. <\/p><p><strong>REFUND OPTIONS:<\/strong> For any PREPAID orders, You can choose between one of the refund option<br\/>a. Refund (-less 10%) back to original payment form <br\/>b. Refund (full amount) as StoreCredit \/ GiftCard.<br\/>c. COD orders &gt;Refund (full amount) is ONLY as StoreCredit \/ GiftCard.<br\/>~~~<\/p><p><strong>2. Post 24 Hours + Order NOT SHIPPED<\/strong>: If we receive the cancellation request post the 24 hour period AND before the order has shipped, we <strong>may <\/strong>still be able to cancel the order,  this request has to be determined on a case to case basis, depending on what stage of the order cycle this request was received and if there is a possibility to cancel it. Once cancellation request is submitted, please allow 24-48 hours for us to complete the cancellation process and 4-7 working days for the refund (subject to restocking fees listed below) back to the Original Form of Payment\/ Store Credit \/ Gift Card.<\/p><p><strong>RESTOCKING FEES:<\/strong> All acceptable cancellation requests made post 24 hours cancellation period will attract <strong>25% restocking fees unless refunded in form of a Store Credit \/ Gift Card where the restocking fees is reduced to 10%<\/strong>. These fees are deducted to cover administrative costs for receiving and cancelling order, warehouse administration required to cancel order and restock products, interrupting the logistics cycle to retrieve the order and processing the cancellation as well as non refundable payment gateway fees which usually is between 3-5% of transaction value. <\/p><p><strong>REFUND OPTIONS:<\/strong> You can choose between one of the refund option<br\/>a. Refund (-less 25%) back to original form of payment.<br\/>b. Refund back (-less 10%) as StoreCredit \/ GiftCard.<br\/>c. COD orders &gt; Refund back (full amount) ONLY as StoreCredit \/ GiftCard.<\/p><p>~~~<\/p><p><strong>3. Within\/Post 24 Hours BUT Order HAS SHIPPED<\/strong>: If we receive the cancellation request within OR post the 24 hour period BUT the order has shipped, we <strong>may <\/strong>still be able to cancel the order,  this request has to be determined on a case to case basis, depending on if the order is UNOPENED and can be RTO'd (return to origin) or it may need you to ship it back to us. Once cancellation request is submitted, please allow time for the RTO to come back to our warehouse and thereafter 24-48 hours for us to complete the cancellation process and 4-7 working days for the refund (subject to restocking fees listed below) back to the Original Form of Payment\/ Store Credit \/ Gift Card.<\/p><p><strong>RESTOCKING FEES:<\/strong> All acceptable cancellation requests made post 24 hours cancellation period & after shipped order is RTO'd will attract <strong>25% restocking fees + Rs999 Shipping Costs and can ONLY be refunded back Store Credit \/ Gift Card<\/strong>. These fees are deducted to cover administrative costs for receiving and cancelling order, two way shipping costs and administration costs of reversing the logistics cycle to retrieve the order and processing the cancellation as well as non refundable payment gateway fees which usually is between 3-5% of transaction value. <\/p><p><strong>REFUND OPTIONS:<\/strong> In this case there is only one refund option:<br\/>a. Refund back (- less 25% + Rs999) as Store Credit \/ GiftCard.<br\/>~~~<br\/>To register a cancellation request, <a href=\"https:\/\/in.imbesharam.com\/cancel\">Click here<\/a><\/p>"
+          }
+        },
+        "3e5c3b37-411e-4ada-986a-f476e02b8bf4": {
+          "type": "question",
+          "settings": {
+            "title": "WHY WAS MY ORDER CANCELED?",
+            "text": "<p>Your order could have been cancelled due to multiple reasons. It could be because the order was not paid for 7 days of receiving it, or it was a duplicate order or it was flagged by our system as fraudulent.<\/p><p>Please <a href=\"mailto:hello@imbesharam.com\">contact us<\/a> immediately if you need to clarify the reason behind cancellation and resubmit the same order again post correcting any issues thereafter.<\/p>"
+          }
+        },
+        "96525b90-f2fd-4f22-b16a-744b9b8c025e": {
+          "type": "question",
+          "settings": {
+            "title": "HOW WILL I KNOW IF MY ORDER IS PLACED SUCCESSFULLY?",
+            "text": "<p>You will receive an order confirmation email from us detailing the products you ordered, the amount you paid and other relevant details about the order. Save this email as that is the only receipt you will get from us confirming your order and payment details.<\/p><p>However, if payment is deducted but an order confirmation email was not received by you then please email us at <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\">hello@imbesharam.com<\/a> and our team will assist you with the concern.<\/p>"
+          }
+        },
+        "312bf1fb-175e-41fd-b794-9387d096b166": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I CHECK THE STATUS OF MY ORDER \/ TRACK MY ORDER?",
+            "text": "<p>You can check the status of your order by<\/p><p>1. Sign in, then go to 'My account &gt; Order history' and then clicking the order # and then clicking the appropriate tracking link.<\/p><p>2. Simply click here <a href=\"https:\/\/in.imbesharam.com\/track\" target=\"_blank\" title=\"Track My Order\">TRACK MY ORDER<\/a> and enter your email address (that you used for purchasing the order) and the order number in digits, ex: 123456, and the app would display the order status.<\/p><p>3. You can also click the TRACK NOW options in the 'shipping confirmation' email you received. If you haven't received an email yet, most likely your order\/package has not shipped yet.<\/p><p>4. If none of the above work, just <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Contact Us\">contact us via email<\/a> and we will check in the system and get back to you with your order status.<\/p>"
+          }
+        },
+        "2e076ed5-6416-494c-8ca1-44c43befb653": {
+          "type": "question",
+          "settings": {
+            "title": "WHY DID I RECEIVE A PARTIAL ORDER?",
+            "text": "<p>This would happen for two reasons:<\/p><p>1. If during placing your order, you selected to receive your order quicker and selected 'SHIP WHAT'S IN STOCK ' then we ship you what we have in stock. The rest of the pending order is generally fulfilled under 10-14days after that.<\/p><p>2. We may have shipped partial order so to expedite delivery by shipping what was in stock in India, and will notify you of the status of the remainder of the order via email.<\/p><p>However if you specified that you need them all together and in spite of that you received a partial order, we apologize for that mistake, pls do contact <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Team Besharam\">Team Besharam<\/a> and we will check into this for you.<\/p>"
+          }
+        },
+        "23f88f7b-c389-4c1b-a6f4-0dda59a1663f": {
+          "type": "question",
+          "settings": {
+            "title": "I CAN'T SEE MY RECENT ORDER IN MY ORDER HISTORY?",
+            "text": "<p>If your order was placed before you created an account with your email address, it will not show in your account history. However if you <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\">contact us<\/a>, we will pull up the order details and send it to you via email.<\/p>"
+          }
+        },
+        "3f689e19-40c5-4fb4-9817-83cfd70beb88": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I PICK UP MY ORDER INSTEAD OF HAVING IT DELIVER TO MY HOME\/OFFICE?",
+            "text": "<p>Yes, of course you can!<\/p><p>We offer an option of 'Will Pickup' when you place the order and select your shipping options. 'Will-Pickup' as a delivery option wherein you can do a <strong>self pickup<\/strong> of your order from the closest courier office in your pincode, as and when convenient for you.<\/p><p>This is a great & smart option to avoid the courier guy coming to your home\/office and having your family\/friends question you about the package.<\/p><p>How to: While placing the order, Please select WILL PICK UP in delivery preference and your order will be delivered to the nearest courier pickup facility to your pin code. Once your order is delivered to the pickup location, you will receive notifications via email \/call from the courier to come and pickup your package. Make sure to take a valid ID to the courier office to collect the package.<\/p><p>Note: This service may not be offered by al couriers and for all pincodes in India, so if your nearest pincode is not available, we may have to ship it door delivery or ask you for an alternative pin code to ship it as 'Will Pick Up' to.<\/p><p><a href=\"https:\/\/www.youtube.com\/watch?v=T5doJ44j6rw\">Click here<\/a> for the video explanation.<\/p>"
+          }
+        },
+        "eab79a9e-da29-4354-adef-4df408e3f71b": {
+          "type": "question",
+          "settings": {
+            "title": "HOW TO SUBMIT A CUSTOM ORDER?",
+            "text": "<p>IMbesharam is India's No.1 Adult store. However, if you can't find what you are looking for or want something that we don't sell?<\/p><p>No Problem! Simply click on the link below to submit a request for any product you desire:<br\/><a href=\"https:\/\/in.imbesharam.com\/pages\/custom-order%20\">https:\/\/in.imbesharam.com\/pages\/custom-order<\/a><\/p><p>Once we receive the request, one of our agents will reach out with availability and cost for the product. And, if you don't have a link to the product to be shared in the above please then simply just put the description \/ name of the product in the additional information and our team will take it from there.<\/p>"
+          }
+        },
+        "5f3fd014-609e-47f2-89d4-027306ecd845": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU OFFER ANY DISCOUNTS?",
+            "text": "<p>Yes & No.<\/p><p>As a business policy, we price our products extremely competitively so when you add up import duties , taxes and fees & international shipping charges, our rates are 10-25% lesser than any other legit store selling authentic products.<\/p><p>We showcase high quality authentic products sourced right from the manufacturers\/master vendors. We strive to give you better quality products, truly great service, discreet packaging & reliable shipping & delivery with great shopping & after sales experience. PLUS we also offer FREE shipping as an incentive to all our customers which includes all the value added services we offer for all our customers and the custom duties. We unfortunately cannot discount our prices or products further lower than what they already are.<\/p><p>However we keep running exciting promotions every now and then (usually 5-12% off our already most competitive pricing), and we usually offer a price match if the product is exact same model and showcased on an authorized reseller in the same territory.<\/p><p>Additionally we also offer you various incentives like earning Rs500 to Rs1000 for an audio or video feedback. That makes a super worth to spend a few mins and make a nice sum of cash to purchase on IMbesharam.com <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#feedback\">Click here<\/a> to submit your review.<\/p>"
+          }
+        },
+        "dd1449e1-1de2-4b01-9d53-bff89006c6ae": {
+          "type": "question",
+          "settings": {
+            "title": "HOW WILL I KNOW MY PRIVACY IS ALWAYS MAINTAINED?",
+            "text": "<p>Lets explain how:<\/p><p>1. When you shop: When you shop our state of art website, we offer a 100% safe shopping environment, without dropping any cookies or capturing your personal information.<\/p><p>2. When you pay: Your payment information is never stored on our website. Our checkout uses a PCI compliant 128bit SSL secure encryption to transmit your data securely to the banks and get a response securely as we accept your payment and process your order. Your card statements would never show our brand name, but show our company name: Happy Birds.<\/p><p>3. When you order: Your personal data is saved to the extend you share with us for shipping your order. This is privately held with access only by the top management team who have signed NDA and confidentiality agreements and sworn to protect this critical personal information.<\/p><p>4. When we ship your order:  Your order is packaged securely in a white\/brown box, with no indication of our brand outside or the contents of the package. It ships from our warehouse, clears customs under our company name, and ONLY after its safely imported, we print and paste your address label to ship it through courier to you. It will show shipper name as Happy Birds, and content as 'Gifts & Souvenirs'<\/p><p>5. When we deliver: You can choose to pick up the order yourself at a time convenient for you by choosing SELF PICK option when submitting the order. This ensures the delivery does not happen at your home or office and nobody ever has to know what you ordered from us.<\/p><p>Every little bit counts and we have thought it over and over again before finally putting it in place by developing a custom logistics operation for our customers in India & across the world. We understand and realize that the products we sell are not something you will find in your neighborhood medical or departmental store, so when you purchase these from us, we go over and beyond to ensure your privacy is maintained to the best of our abilities and intention.<br\/><br\/>As they say, my friend, you are in good hands, when you shop these fantastic brands!<\/p>"
+          }
+        },
+        "53af05de-05a2-404b-9c75-e893c7f8b13a": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I KNOW THAT MY PRODUCT IS AUTHENTIC\/ORIGINAL?",
+            "text": "<p>Good Question. This can be easily verified by one of the following ways:<\/p><p>1. Visual appearance: With your vast shopping experience, when you look at a product, its packaging, label and manufacturers information, you would get a feel already if the product is authentic or not.<\/p><p>2. By verifying with the brand\/manufacturer: You can click a picture and contact the brand\/manufacturers official website and verify with them if the product is genuine, and let them know you purchased from Happy Birds\/IMbesharam.com. Since most of them have a UPC#\/SKU# the manufacturer can easily look up in their system and let you know if these are genuine or not. \/\/ They will be able to verify this for you as well.<\/p><p>3. By Google brand name\/ Toys \/ India: And you should see IMbesharam as the top listing showcasing this brand\/product in India.<\/p><p>Alternatively, when you receive the product, you should find the product in its sealed packaging and with identifying elements like the label\/tags that only original products have. If you need to see a picture of what you will get, <a href=\"mailto:%20hello@imbesharam.com\" target=\"_blank\">email us<\/a> and we will click a picture and send it to you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14560352993351__3b60ffb2-ce1c-46c2-9001-4b5274cda3c7-168135696166a60eea-0",
+        "template--14560352993351__3b60ffb2-ce1c-46c2-9001-4b5274cda3c7-168135696166a60eea-1",
+        "dfd343f6-6eb8-44eb-b709-2e081ef21a8f",
+        "3540fb5d-9981-4e9b-a84d-0801f2f11dc3",
+        "1b501995-b7b6-4802-a59c-39b13de48623",
+        "d2588755-88da-4de4-a2e0-bd28dee21216",
+        "56d2c06d-201d-427f-9137-00fde16a38c3",
+        "7776a391-009a-4ac7-ae72-70e3419807cf",
+        "bc93c720-1080-4435-83e7-9017ac060833",
+        "3e5c3b37-411e-4ada-986a-f476e02b8bf4",
+        "96525b90-f2fd-4f22-b16a-744b9b8c025e",
+        "312bf1fb-175e-41fd-b794-9387d096b166",
+        "2e076ed5-6416-494c-8ca1-44c43befb653",
+        "23f88f7b-c389-4c1b-a6f4-0dda59a1663f",
+        "3f689e19-40c5-4fb4-9817-83cfd70beb88",
+        "eab79a9e-da29-4354-adef-4df408e3f71b",
+        "5f3fd014-609e-47f2-89d4-027306ecd845",
+        "dd1449e1-1de2-4b01-9d53-bff89006c6ae",
+        "53af05de-05a2-404b-9c75-e893c7f8b13a"
+      ],
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "Order Questions",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "b272a26d-d9e0-4980-a60d-8dc89f59fc87": {
+      "type": "faq",
+      "blocks": {
+        "template--14560352993351__b272a26d-d9e0-4980-a60d-8dc89f59fc87-168135696166a60eea-0": {
+          "type": "question",
+          "settings": {
+            "title": "HOW CAN I CANCEL MY ORDER?",
+            "text": "<p>If you decide to cancel your order, you are advised to do it within 24 hours of placing the order or before your order is shipped from our warehouse - whichever is earlier. With time zone differences, we cannot guarantee we will be able to cancel your order but we will make every effort to process that request. Once cancelled, please allow 5-7 working days for us to process the refund back to the original form of payment if available.<\/p><p>Please read our <a href=\"https:\/\/in.imbesharam.com\/blogs\/customer-services\/24-hours-cancellation-policy\" title=\"IMB Cancellation Policy\">complete cancellation policy <\/a>here and submit your request right underneath the policy.<\/p>"
+          }
+        },
+        "template--14560352993351__b272a26d-d9e0-4980-a60d-8dc89f59fc87-168135696166a60eea-1": {
+          "type": "question",
+          "settings": {
+            "title": "ARE THERE ANY SIDE EFFECTS IN USING THE PRODUCTS?",
+            "text": "<p>Products that are for external use have no side effects. However you have to be careful not to use it on exposed wounds or rashes or any skin infections. The energy supplements do carry certain harmless nutrients and chemicals which are OK for a normal and healthy human to consume for a purpose. However if you have any heart condition or high blood pressure, its best not to use it until you have consulted with your doctor. At all times, you have to execs discretion in consuming anything that is sold in medical and health stores, the same applies to the supplements sold in our store.<\/p><p>Are there any side effects in using the products? <a href=\"https:\/\/www.youtube.com\/watch?v=I0EcQMPVSqA\" target=\"_blank\" title=\"Side Effects Explanation Video on imbesharam.com\">Click here<\/a> for the video answer.<\/p>"
+          }
+        },
+        "93ff8b72-811b-49e3-89be-f9a77223f2ba": {
+          "type": "question",
+          "settings": {
+            "title": "IS SUNNY LEONE AVAILABLE?",
+            "text": "<p>Sunny is the face of brand Besharam, but she is not involved in the day to day operations of the site or our company. But if you like to see more pictures and videos of Sunny, you should checkout our Facebook and youtube channels where we have a huge collection of hot and exciting pictures and videos of Sunny Leone.<\/p><p>Is Sunny Leone Available? <a href=\"https:\/\/www.youtube.com\/watch?v=aqNjM57oA3g\" target=\"_blank\" title=\"Is Sunny Leone Available Video on imbesharam.com\">Click here<\/a> for the video answer.<\/p>"
+          }
+        },
+        "b88c749d-4afc-47a8-9601-72710c249b8c": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I MAKE EXTRA CASH TO SHOP ON IMBESHARAM.COM?",
+            "text": "<p>That's an easy one.<\/p><p>You can make Rs.1250 just by sending an email to all your friends and asking them to check out our store. if 5 of them will shop, you will make Rs.1250 straight to use on your next order at IMbesharam.com.<br\/>If you have shopped with us and are willing to give us audio\/video feedback, we will pay Rs.500\/Rs.1000 respectively for the feedback.<\/p><p>For the video feedback, we will be able to mask your identity and blur the image so that your privacy stays intact at all times. You can give ONLY one audio \/video review to claim the benefits. So if you sum up all of this, you can easily make close to Rs.2000 in under 2 hours time and a little enthusiasm. All the best, see you soon my fellow Besharam!<\/p><p>How do I make extra cash to shop on imbesharam.com? <a href=\"https:\/\/www.youtube.com\/watch?v=bGlO2mpYCpw\" target=\"_blank\" title=\"How to Make Extra Cash to Shop on Imbesharam.com Video\">Click here<\/a> for the video answer.<\/p>"
+          }
+        },
+        "55858937-7447-49ed-8df7-52eafa037c2c": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I SHOP AT YOUR ONLINE STORE?",
+            "text": "<p>Very Easy. Get on a laptop or a tablet or a desktop or a smartphone that has internet connection. Pull up<a href=\"https:\/\/in.imbesharam.com\/pages\/www.imbesharam.com\" target=\"_blank\" title=\"Besharam Webstore\">www.imbesharam.com<\/a>in any of the browsers (Chrome works best, next is Safari & Firefox). Once you land at our site, feel free to click the links and browse around. When you decide on a product you like to purchase, Click 'ADD TO CART' button. After you have added all what you want to your cart, proceed to the cart by clicking the top right cart icon. Once in the cart, you get to review what you intend to purchase today. If all looks good, select your shipping and delivery preferences and then click 'SECURE CHECKOUT'. At this stage you will get to enter your billing and shipping address and also get a chance to setup your account. Click 'NEXT' to go to the last stage of order submission. In this stage, add any discount codes if you have, select your shipping method and then select a payment method. Enter your payment information and Click 'CONFIRM MY ORDER'. At this point the website confirms your order and charges you for the value of the cart. You are all set. Thank you for shopping at<a href=\"https:\/\/in.imbesharam.com\/pages\/www.imbesharam.com\" target=\"_blank\" title=\"Besharam Webstore\">IMbesharam.com<\/a>. <\/p>"
+          }
+        },
+        "29f47abc-fd13-43e9-9a8e-9746fe54f1ea": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I VIEW MY CART?",
+            "text": "<p>Look for the cart icon on the top right side of the website. Its has a shopping card graphic and says 'CART'. Click that icon or text and you will be directed to the shopping cart page and there you will be able to view all the products that you have selected including the price, quantity and product details. You will also have the option to make any changes on the order before submitting it.<\/p>"
+          }
+        },
+        "15dd7324-632f-4af1-bc31-c30b9b00da4b": {
+          "type": "question",
+          "settings": {
+            "title": "DO I NEED TO REGISTER FOR AN ACCOUNT TO SHOP ONLINE?",
+            "text": "<p>No, actually you don't need to register to shop online. You can shop as a guest and checkout as a guest without having to register. However you get many benefits for creating your account with us, like tracking your orders as soon as they leave our warehouse, get a first look at new products, opportunities to participate in online & offline promotions and access your order history anytime and shop quicker the next time around.<\/p>"
+          }
+        },
+        "ebe42d7f-8992-44f1-811c-07e3448d6a74": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I LOG INTO MY ACCOUNT?",
+            "text": "<p>After you have initially registered for an account with us OR setup an account already, you can always log back in with your username and password and look into your account. Select 'Sign In' or 'My Account' in the top right of the website and enter the your username and password. If you forgot your password, click 'Forgot password' and an email will be sent to you to set up a new password.<\/p>"
+          }
+        },
+        "77c85f3d-d1e2-46c9-9071-2da9d6e82bc1": {
+          "type": "question",
+          "settings": {
+            "title": "I'VE FORGOTTEN MY LOGIN DETAILS \/ PASSWORD",
+            "text": "<p>No problem. Go to the 'Sign in' page by clicking the 'My account' button on the top right side of the website. Once in Sign in page, just click the 'Forgot your password?' link and enter your email address you had used to setup your account. An email is sent to you automatically with instructions how to reset your password.<\/p>"
+          }
+        },
+        "8bcd9a77-611d-48a4-add1-8491ad1d3451": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU HAVE A RETAIL SHOP\/LOCATION?",
+            "text": "<p>At this point, we do not have retail locations as we are conceptualized to be exclusively an online specialty store. The obvious reason we are heavily invested online is because you will prefer to shop for intimate products like the ones sold on <a href=\"https:\/\/in.imbesharam.com\/\" target=\"_blank\" title=\"Besharam Webstore\">IMBesharam.com<\/a> in the comfort and privacy of your bedroom or private place vs in public at a retail or departmental store. Maybe in the future you might see our stores out there. <\/p><p>Do we have any retails shops\/locations? <a href=\"https:\/\/www.youtube.com\/watch?v=CqtUuslDjrE\" target=\"_blank\" title=\"Besharam Retail Shops\/Locations Video at imbesharam.com\">Click here<\/a> for the video answer.<\/p>"
+          }
+        },
+        "12db3ec6-71ee-4970-a2c4-4f64f01f2084": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I SIGNUP FOR THE VIP LIST \/ NEWSLETTER?",
+            "text": "<p><a href=\"https:\/\/in.imbesharam.com\/pages\/www.imbesharam.com\" target=\"_blank\">Click here<\/a>to go to the homepage of IMbesharam.com. Look for a pink ribbon at the bottom of the homepage. It says 'Sign Up Now'. Enter your full name and email address right there and click 'YES'. That's it. Now you are signed up for our VIP list.<\/p>"
+          }
+        },
+        "6bae63ff-9119-4edb-9fb5-c0bead967026": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I UNSUBSCRIBE FROM THE VIP LIST \/ NEWSLETTER?",
+            "text": "<p>Please click unsubscribe at the bottom of the newsletter. That will automatically unsubscribe you.<\/p>"
+          }
+        },
+        "c9ab7b5c-a545-4a64-83fe-d93a420fd34b": {
+          "type": "question",
+          "settings": {
+            "title": "IS VAT INCLUDED FOR A NON INDIAN CUSTOMER?",
+            "text": "<p>YES, If you are shopping at India Site (in.imbesharam.com), VAT and all other local and import taxes are included in the price of the product. One shop takes care of all stops. That means you do not have to pay anything on top of what you see for the products. All you have to worry about is shipping, which again if you choose FREE shipping, then you dont even have to worry about that.<\/p><p>The International site (us.imbesharam.com) prices are exclusive of taxes, so if you are shopping at our International site and you are a US resident in GA or FL, you will have to pay the sales tax which is 7%<\/p>"
+          }
+        },
+        "963ed042-2f44-4836-87b2-25caa6346bf8": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I APPLY MY PROMOTIONAL CODE\/REDEEM A COUPON?",
+            "text": "<p>In the stage two of the checkout page, enter your alpha-numerical promotion code where it says 'Enter your gift card #\/Promotion code', and click 'Submit'. The cart automatically applies the promotion\/discount and recalculates the new subtotal. After that you can continue with the balance of the payment and submit the order.<\/p>"
+          }
+        },
+        "49384f6d-b23f-40f1-917e-56db90ae2ad0": {
+          "type": "question",
+          "settings": {
+            "title": "WILL MY FAMILY\/NEIGHBORS KNOW WHATS INSIDE THE PACKAGE?",
+            "text": "<p>No way. We understand the need for your absolute privacy and hence we run a very tight ship when it comes to logistics and shipping. Your order is packaged very securely in a white bubble wrap envelope and sealed before it leaves the warehouse. There is no description or indication of the product inside and you cant feel the product either as its a padded envelope. The shipping label will show 'Happy Birds Inc, Shipping Department, GA, USA' as the shippers address. When the courier guy arrives, he delivers this as naturally as any other package from any online store in India. However if you feel more comfortable to pick up your package yourself from the courier's local office, just select appropriate 'SELF PICKUP' option in the shopping cart and we will follow these instructions. This should take away any sweat you broke and let you shop at ease.<\/p><p>Will my family or neighbors know whats inside my package? <a href=\"https:\/\/www.youtube.com\/watch?v=b42cXS549Wo\" target=\"_blank\" title=\"Discreet Packaging Video at imbesharam.com\">Click here<\/a> for the video answer.<\/p>"
+          }
+        },
+        "7aed11f9-9592-4012-8acd-68dfb6d7e2e0": {
+          "type": "question",
+          "settings": {
+            "title": "I FORGOT TO ADD A PROMOTIONAL CODE TO MY ORDER?",
+            "text": "<p>We thank you for your purchase with us and are sorry to hear that you forgot to apply a Promo code. Our system doesnot allow us to make any manual changes to the order once placed and we cannot apply the code post the order is placed.<br\/>However, please reach out to our support via<a href=\"https:\/\/in.imbesharam.com\/pages\/hello@imbesharam.com\">email <\/a>our customer support team will review the concern and offer the best resolution <\/p>"
+          }
+        },
+        "4bafe87c-8f99-46a0-83c5-6ad33419d5ee": {
+          "type": "question",
+          "settings": {
+            "title": "MY PROMOTION CODE\/GIFT CARD DOESN’T WORK?",
+            "text": "<p>Please check the terms and conditions of the promotional offer and its validity period. If your order is eligible and is still not working please contact Team Besharam via <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Customer Service at imbesharam.com\">Email<\/a>\/<a href=\"http:\/\/in.imbesharam.com\/#launch-chat\" target=\"_blank\" title=\"Live Chat on imbesharam.com\">LIVECHAT<\/a>, we shall look into this and fix it for you.<\/p>"
+          }
+        },
+        "210c0f87-03df-42df-8dd9-7038170f8b99": {
+          "type": "question",
+          "settings": {
+            "title": "IF AN ITEM IS OUT OF STOCK ONLINE, HOW DO I ORDER IT?",
+            "text": "<p>In cases that we are sold out of any item that you wish to purchase, please EMAIL us along with a link of that product page. We will ruffle some feathers at our end and try to look up options of ordering it through various vendor partners network. Most of the times, we shall be able to procure this and reactivate the ordering option so you can place the order then.<\/p>"
+          }
+        },
+        "9c435a9a-5689-42e0-9070-13527b867f40": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO WE KEEP \/ GET UPDATES OF THE LATEST PRODUCTS?",
+            "text": "<p>That's very easy, <a href=\"https:\/\/www.facebook.com\/imBesharam\" target=\"_blank\" title=\"Besharam Facebook\">Join us on Facebook<\/a> or T<a href=\"https:\/\/twitter.com\/imbesharam\">witter<\/a> or <a href=\"https:\/\/in.imbesharam.com\/\">sign up on our VIP list<\/a>, we shall send lots of goodies your way.<\/p>"
+          }
+        },
+        "d1f5b048-965f-4234-9f73-afc313ea7419": {
+          "type": "question",
+          "settings": {
+            "title": "HOW OLD DO I HAVE TO BE TO SHOP HERE?",
+            "text": "<p>You have to be above 18years of age, of sound mind and not be violating any laws or restrictions in your country\/state\/territory to shop at IMbesharam.com<\/p>"
+          }
+        },
+        "2fe12ee5-8c5a-4fde-9180-c3f42f0bbd86": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT LANGUAGE OPTIONS DO YOU OFFER CURRENTLY?",
+            "text": "<p>Currently we offer English (US) as the language of the website, however Team Besharam is fluent with English and several other major Indian languages.<\/p>"
+          }
+        },
+        "62e6cdad-50b1-4ff5-9fe1-66da3fd10d60": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT WARRANTY IS AVAILABLE ON THE PRODUCTS IN YOUR STORE?",
+            "text": "<p>Most of the electronic\/battery operated products come with the standard manufacturers warranty, about a year from date of purchase. There are other speciality products whose warranty information can be obtained by contacting the manufacturer directly. If you have a question about any particular product, please <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Besharam Email\">email us <\/a>and we can find it out for you from the manufacturer.<\/p>"
+          }
+        },
+        "0c9ed760-331d-4bdd-9091-27b001e4c0b3": {
+          "type": "question",
+          "settings": {
+            "title": "HOW ARE YOUR PRODUCTS DIFFERENT FROM SIMILAR ONLINE STORES?",
+            "text": "<p>We have worked hard to bring to you a better store, larger collection, quality products, real Customer Care, deeply discounted International FREE & Express shipping & dedicated logistics. We also have a very strong online presence with an active social network of over 190k fans and existing customers. Along with our celebrity endorsement of Sunny Leone -Google's #1 searched person of 2012, we also have in place superior business practices, efficient supply chain management and experienced and proficient team that allows us to position ourselves as India's #1 Adult Lifestyle webstore.<\/p><p>We welcome your <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#customer-reviews\" target=\"_blank\" title=\"customer service reviews\">feedback<\/a> and would like to learn and improve so we can retain that position for a long time to come. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14560352993351__b272a26d-d9e0-4980-a60d-8dc89f59fc87-168135696166a60eea-0",
+        "template--14560352993351__b272a26d-d9e0-4980-a60d-8dc89f59fc87-168135696166a60eea-1",
+        "93ff8b72-811b-49e3-89be-f9a77223f2ba",
+        "b88c749d-4afc-47a8-9601-72710c249b8c",
+        "55858937-7447-49ed-8df7-52eafa037c2c",
+        "29f47abc-fd13-43e9-9a8e-9746fe54f1ea",
+        "15dd7324-632f-4af1-bc31-c30b9b00da4b",
+        "ebe42d7f-8992-44f1-811c-07e3448d6a74",
+        "77c85f3d-d1e2-46c9-9071-2da9d6e82bc1",
+        "8bcd9a77-611d-48a4-add1-8491ad1d3451",
+        "12db3ec6-71ee-4970-a2c4-4f64f01f2084",
+        "6bae63ff-9119-4edb-9fb5-c0bead967026",
+        "c9ab7b5c-a545-4a64-83fe-d93a420fd34b",
+        "963ed042-2f44-4836-87b2-25caa6346bf8",
+        "49384f6d-b23f-40f1-917e-56db90ae2ad0",
+        "7aed11f9-9592-4012-8acd-68dfb6d7e2e0",
+        "4bafe87c-8f99-46a0-83c5-6ad33419d5ee",
+        "210c0f87-03df-42df-8dd9-7038170f8b99",
+        "9c435a9a-5689-42e0-9070-13527b867f40",
+        "d1f5b048-965f-4234-9f73-afc313ea7419",
+        "2fe12ee5-8c5a-4fde-9180-c3f42f0bbd86",
+        "62e6cdad-50b1-4ff5-9fe1-66da3fd10d60",
+        "0c9ed760-331d-4bdd-9091-27b001e4c0b3"
+      ],
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "Order Questions",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4d36c949-accb-4b2c-9ca6-8d44abe9c28d": {
+      "type": "faq",
+      "blocks": {
+        "template--14560352993351__4d36c949-accb-4b2c-9ca6-8d44abe9c28d-168135696166a60eea-0": {
+          "type": "question",
+          "settings": {
+            "title": "WHY DOES THE AMOUNT ON THE INVOICE ATTACHED TO MY PACKAGE NOT MATCH WITH THE ORDER TOTAL\/AMOUNT I PAID?",
+            "text": "<p>Because the invoice sent with the package is NOT your actual invoice, Your actual invoice is the ORDER confirmation email (which you get immediately after submitting your order and making the payment). That is the only INVOICE\/RECEIPT you get from us when you make purchase with us.<\/p><p>What you get on the package is a <strong>generic invoice<\/strong> used only for shipping and as required by courier. It is also used as a safety net for your order, as the description on the order is kept generic to say 'Gifts & Souvenirs' to keep the delivery as discreet as possible and to avoid any undue attention to the contents inside the package. You may NOT want the courier delivery person to know what is actually inside the package, Do you?<\/p><p>This along with many other carefully modelled processes are what we do to provide you discreet delivery as promised, so your order information stays private between you and our website. No third party should know about this.<\/p><p>NOTE: Since your order is placed with a US website, there is NO GST collected from you, so the invoice presents an all inclusive total of the product and associated costs to deliver it to your door, which includes customs duties, taxes, IGST and other fees & brokerage paid at time of import, all of that is billed to our company. Your information is NEVER shared with any outside agency\/department\/authority.<\/p>"
+          }
+        },
+        "template--14560352993351__4d36c949-accb-4b2c-9ca6-8d44abe9c28d-168135696166a60eea-1": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT TO DO IF MY DEBIT\/CREDIT CARD DOES NOT GO THROUGH?",
+            "text": "<p>ANSWER: NO PROBLEM.<\/p><p>We have encountered several instances where a payment has not gone through at the checkout stage. Before we address and share the alternate payment options, we want to make sure of a few things that you have already checked-<br\/>1. That your card is a DEBIT or CREDIT CARD with a VISA\/MASTERCARD\/AMERICAN EXPRESS logo on it.<br\/>2. That your card has an expiration date and that it has NOT expired yet<br\/>3. That your card has a CVV code in the back (three digits for VISA\/MASTER) and 4 digits in the front for AMERICAN EXPRESS<br\/>4. That you have available credit \/funds in your account to make that purchase<br\/>5. And lastly if you have a CARD that says INTERNATIONAL , use that FIRST. However if all above fails, you can make a payment using NETBANKING (<a href=\"http:\/\/in.imbesharam.com\/pages\/net-banking-instructions\" target=\"_blank\" title=\"Netbanking Payment Instructions\">instructions here<\/a>) or by purchasing a E-Giftcard from <a href=\"http:\/\/www.giftcardsindia.in\/products\/i-m-besharam-gift-voucher\" target=\"_blank\" title=\"Giftcards India website\">GiftCardsIndia<\/a> and using that to pay for your order on our store. The gift cards never expire, can be re-gifted and the best part about this is that you do not leave any trace on our site and your financial transaction is happening with a normal Departmental store type Indian entity.  Sign up on our <a href=\"http:\/\/in.imbesharam.com\/blogs\/news\/facebook.com\/imbesharam\" target=\"_blank\" title=\"Besharam Facebook page\">Facebook<\/a> page to stay updated with these announcements.<\/p><p>For more information <a href=\"http:\/\/in.imbesharam.com\/pages\/customer-services#payment-policy\" target=\"_blank\" title=\"Besharam store payment policy\">Click here<\/a><\/p>"
+          }
+        },
+        "faebf77e-4982-485e-a922-dde32a261d9d": {
+          "type": "question",
+          "settings": {
+            "title": "WILL MY DEBIT\/CREDIT CARD BE SAFE\/SECURE ON THIS SITE?",
+            "text": "<p>ANSWER: ABSOLUTELY YES.<\/p><p>Our site uses 128 bit SSL certification and is Level 1 PCI compliant which means your card information is encrypted & secure and never stored on our server. We host our website on <a href=\"http:\/\/en.wikipedia.org\/wiki\/Shopifyservers\" target=\"_blank\" title=\"imbesharam.com hosted on Shopify's Secure Servers\">Shopify<\/a> which is one of North America's largest and trusted ecommerce solution for over 60,000 merchants worldwide. They use the highest level of security in the shopping a cart which is used to process millions of dollars of sales every month through their network. Here is a link to their website and security details.<br\/>http:\/\/www.shopify.com\/tour\/shopping-cart<br\/>http:\/\/www.shopify.com\/tour\/ecommerce-hosting<br\/>We have partnered with one of world's largest payment processors called FIRST-DATA (America's largest merchant processor processing over $200 billion every month) for our merchant account processing which allows us to accept payment in Indian Rupees thereby you dont have to pay any conversion fees. The name you will see on your statements will say 'Happy Birds Inc'<\/p><p>For more information <a href=\"http:\/\/in.imbesharam.com\/pages\/customer-services#payment-policy\" target=\"_blank\" title=\"Besharam store payment policy\">Click here<\/a><\/p><p>Is my card information safe & secure? <a href=\"https:\/\/www.youtube.com\/watch?v=YOXOr5SBYpk\" target=\"_blank\" title=\"Safe\/Secure Credit Processing Video on imbesharam.com\">Click here<\/a> for the video answer.<\/p>"
+          }
+        },
+        "4fffed85-d5b2-4aa2-8805-02394a2d72e8": {
+          "type": "question",
+          "settings": {
+            "title": "WHY AM I NOT ABLE TO USE MY DEBIT\/CREDIT CARD ON YOUR SITE?",
+            "text": "<p>There could be few reasons why1.Your card has a restriction that it can only be used in India or you can only pay in INR.Solution: Try another card or payment method on our site. We have 6 choices for you.2.Your card may have been flagged before for fraud alert Solution: Contact bank to remove that flag or Use another card or payment method.3.The name\/billing address\/CVV code\/expiration dates do not match up.Solution: Check info and try again.<\/p><p>If none of the solutions work for you, <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#payment-policy\">please look at our payment options here<\/a> or contact us via <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Team besharam\">email<\/a>\/<a href=\"https:\/\/in.imbesharam.com\/#launch-chat\" target=\"_blank\" title=\"Live Chat\">live chat.<\/a><\/p>"
+          }
+        },
+        "31ab7c00-c530-4d21-bbec-3404554d2049": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT ARE THE AVAILABLE PAYMENT OPTIONS?",
+            "text": "<p>For our customers in India, we accept all Indian banks issued credit and debit cards, including cards that say 'International' and 'Valid in India only'. The type of cards we currently accept is VISA, MASTER, AMERICAN EXPRESS & DISCOVER. We also accept PAYPAL & All DEBIT CARDS issued in India.<\/p><p>We also accept Offline payments where you can transfer funds to our account (NEFT) or deposit cash in a local ICICI bank close to you.<\/p><p>We would like to know your feedback on this. <a href=\"https:\/\/in.imbesharam.com\/\">Sign up here to be stay updated<\/a> and <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#customer-reviews\">submit your feedback<\/a>.<\/p>"
+          }
+        },
+        "85d431c8-dc15-47a4-a29e-4612a96ae1e4": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU PRICE MATCH?",
+            "text": "<p>Sure, We can. Our prices as shown on the site include custom duties and taxes, so what you see here is the 'landed price' of the product. Our heavily discounted FLATE RATE International Express shipping rate of Rs599\/order is something that goes towards the final cost of the product, which not many online stores can offer or match. So if a reputable online seller is able to offer lesser price for the product, custom duties and taxes till the final destination and shipping as a WHOLE we will most definitely match that price.<\/p>"
+          }
+        },
+        "6909bbe7-dc43-4b18-857c-86fff05c5d82": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT CURRENCY CAN I USE ON THE WEBSITE?",
+            "text": "<p>The store default currency is Indian Rupees. You can browse the store in any major currency of your choice. At checkout our <a href=\"https:\/\/in.imbesharam.com\/\">India site<\/a> allows you to pay in Indian Rupees, so that you dont get charged any transaction fees or bank fees by your Banks, and at our <a href=\"https:\/\/us.imbesharam.com\/\">International store<\/a> you can pay in US$. A <a href=\"https:\/\/in.imbesharam.com\/pages\/general-information#currency-exchange\">currency exchange calculator <\/a>is available for your convenience<\/p>"
+          }
+        },
+        "cb8718e6-056d-452d-a572-f921d43c3498": {
+          "type": "question",
+          "settings": {
+            "title": "WHY HAS MY PAYMENT BEEN DECLINED \/ AN ERROR WITH MY PAYMENT?",
+            "text": "<p>Your payment could have been declined for any of these reasons:<\/p><p>1.The card information could be invalid  (Check the information and try again)<\/p><p>2.The site maybe down for a few minutes (Try again momentarily)<\/p><p>3.The card type might not be acceptable by our US gateways (Try a different card type - VISA\/MASTER\/AMEX\/DISCOVER or Try a Different Payment Option)<\/p><p>4.It shows a error message (Try another card or shop using paypal\/netbanking\/UPI)<\/p><p>..However If it still dont work, click here to <a href=\"https:\/\/in.imbesharam.com\/pages\/hello@imbesharam.com\" target=\"_blank\" title=\"Live Chat\">contact us<\/a> and we will walk you though and process your payment.<\/p>"
+          }
+        },
+        "3fb5ed66-d7bc-45fa-b71d-a1e8443d7122": {
+          "type": "question",
+          "settings": {
+            "title": "IF I DO NOT HAVE A CREDIT \/ DEBIT CARD, HOW DO I BUY YOUR PRODUCTS?",
+            "text": "<p>No problem. We have 3 convenient options you can shop with in case you dont have a debit or credit card.<\/p><p>1.NetBanking - Pay with your bank account via Airpay Gateway<\/p><p>2.ATM card - Pay with an ATM card using Airpay Gateway<\/p><p>3.Offline Payment - Make a payment by transferring money (NEFT) in our ICICI account or by depositing cash at any local ICICI bank closest to you.<\/p><p>4. Wallets - We accept the most popular wallets in use in India like Ola, Mobikwik and Paytm<\/p><p>For details on these options, <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#payment-policy\">Please click here<\/a>. <\/p>"
+          }
+        },
+        "19a12220-0da8-4564-883a-4992bcbb8c13": {
+          "type": "question",
+          "settings": {
+            "title": "HOW SECURE IS MY TRANSACTION?",
+            "text": "<p>Shopping with us is 100% safe and secure. Our site is hosted on www.shopify.com which is one of USA's largest ecommerce engine provider. The site is certified PCI compliant which is an industry standard certification and also offers 128bit SSL certificate and is Level 1 compliant, the highest in internet security. All credit card data that you enter is encrypted and securely processed and stored on the bank's server. <\/p><p>We never see or store your private data and we test our site monthly for any flaws or viruses. We also are GeoTrust certified which is equal to Verified by Verisign. Being an International brand and a US company site security and customer privacy are the most important standards that we strive to uphold all the time.<\/p>"
+          }
+        },
+        "caf85cf5-ab67-4263-872e-45cae6e130b0": {
+          "type": "question",
+          "settings": {
+            "title": "I REALIZED THAT I USED THE WRONG CARD, CAN I CHANGE MY CC INFO?",
+            "text": "<p>Yes you can, as long as you <a href=\"http:\/\/in.imbesharam.com\/#launch-chat\" target=\"_blank\" title=\"Besharam Live Chat\">contact us <\/a>within 24 hours of placing the order, there is a chance we can swap your cards and authorize the new card before we resubmit your order for processing.<\/p>"
+          }
+        },
+        "b836013a-e1a5-40a6-a955-52e4bcc4727c": {
+          "type": "question",
+          "settings": {
+            "title": "IT SEEMS LIKE I HAVE BEEN CHARGED TWICE. PLEASE FIX THIS.",
+            "text": "<p>Oh, thats not good. We apologize for this hassle. Please contact us via<a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Team besharam\"> email <\/a>and send a note of your order # and actual amount that you should have been charged as well as a limited screenshot of your statement showing the double charge. We will get on top of it and fix it right away.<\/p>"
+          }
+        },
+        "48778e8f-47c1-410a-802f-b656c59f82ef": {
+          "type": "question",
+          "settings": {
+            "title": "I HAVE LOST MY STORE CREDIT \/ GIFTCARD?",
+            "text": "<p>No problem, just <a href=\"http:\/\/in.imbesharam.com\/#launch-chat\" target=\"_blank\" title=\"Besharam Live Chat\">contact us <\/a>with details of your original order (name\/email\/phone number) and we will look it up for you and email the store credit number back to you.<\/p>"
+          }
+        },
+        "a90dabf4-dc26-4eb6-8db7-e062f2fbe2b1": {
+          "type": "question",
+          "settings": {
+            "title": "WILL THE NAME 'BESHARAM' REFLECT ON MY BANK\/CARD STATEMENT?",
+            "text": "<p>No. The name that will show on your bank\/card statement for any purchases you make with us on IMbesharam.com will say 'Happy Birds Inc'. Its very easy on the ear and eye and should not cause any inconveniences. <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#shipping-customs-policy\">Click here to see our shipping policy<\/a><\/p>"
+          }
+        },
+        "b4ce7799-6985-4774-a20a-940a8c29efdc": {
+          "type": "question",
+          "settings": {
+            "title": "IS COD (CASH ON DELIVERY) AVAILABLE?",
+            "text": "<p>YES. We just launched it! Now you can shop at ease and not have to worry about any common concerns like- 1.What if I paid and my order doesn't arrive? 2.What if my debit\/credit card information is at risk? 3.What if my order gets singled out at customs? No worries Anymore. Now the absolute 100% Risk Free option is to choose <a href=\"http:\/\/in.imbesharam.com\/blogs\/news\/9413245-cash-on-delivery-cod-policy\" target=\"_blank\" title=\"Cash on Delivery at IMbesharam.com\">COD (Cash on Delivery)<\/a> We are able to provide this service in partnership with BlueDart+Fedex\/DHL to all pin codes serviceable by them. There is a surcharge of 15% billed by courier company which will be added to your cart total. <\/p><p><strong>Note<\/strong>: For us to process a genuine COD order and eliminate false\/improper orders, we require the convenience fees to be paid upfront for all COD orders, after which the order is shipped from the USA.<\/p><p>For a brief explanation on our COD Policy, please <a href=\"https:\/\/www.youtube.com\/watch?v=xJfZ0afdj5A\" target=\"_blank\" title=\"COD Policy Video for imbesharam.com\">click here<\/a>.<\/p><p>How much does COD cost?<a href=\"https:\/\/www.youtube.com\/watch?v=6dnhramWjDw\" target=\"_blank\" title=\"COD Cost Video on imbesharam.com\"> Click here<\/a> for the video answer.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14560352993351__4d36c949-accb-4b2c-9ca6-8d44abe9c28d-168135696166a60eea-0",
+        "template--14560352993351__4d36c949-accb-4b2c-9ca6-8d44abe9c28d-168135696166a60eea-1",
+        "faebf77e-4982-485e-a922-dde32a261d9d",
+        "4fffed85-d5b2-4aa2-8805-02394a2d72e8",
+        "31ab7c00-c530-4d21-bbec-3404554d2049",
+        "85d431c8-dc15-47a4-a29e-4612a96ae1e4",
+        "6909bbe7-dc43-4b18-857c-86fff05c5d82",
+        "cb8718e6-056d-452d-a572-f921d43c3498",
+        "3fb5ed66-d7bc-45fa-b71d-a1e8443d7122",
+        "19a12220-0da8-4564-883a-4992bcbb8c13",
+        "caf85cf5-ab67-4263-872e-45cae6e130b0",
+        "b836013a-e1a5-40a6-a955-52e4bcc4727c",
+        "48778e8f-47c1-410a-802f-b656c59f82ef",
+        "a90dabf4-dc26-4eb6-8db7-e062f2fbe2b1",
+        "b4ce7799-6985-4774-a20a-940a8c29efdc"
+      ],
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "19b68481-5b56-4acf-ab9d-178df94f2efe": {
+      "type": "faq",
+      "blocks": {
+        "template--14560352993351__19b68481-5b56-4acf-ab9d-178df94f2efe-168135696166a60eea-0": {
+          "type": "question",
+          "settings": {
+            "title": "I HAVE BEEN REFUNDED WHEN I REQUESTED AN EXCHANGE?",
+            "text": "<p>Oops.. our bad, Unless in an unlikely event we couldn't find a replacement for that product, we have gone ahead and refunded it, so you can make a fresh purchase for something we will have in stock. If that resolves your concern, just shop again with us, if it doesn't please contact us via <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Customer Service at imbesharam.com\">Email<\/a>\/<a href=\"http:\/\/in.imbesharam.com\/#launch-chat\" target=\"_blank\" title=\"Live Chat on imbesharam.com\">LIVECHAT<\/a> and we shall address it to your satisfaction.<\/p>"
+          }
+        },
+        "template--14560352993351__19b68481-5b56-4acf-ab9d-178df94f2efe-168135696166a60eea-1": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT CAN I RETURN\/EXCHANGE?",
+            "text": "<p>Our Returns policy has been recently updated and VERY detailed, so you can read <a href=\"https:\/\/in.imbesharam.com\/pages\/general-information#return-policy\" title=\"Return Policy\">about it here.<\/a> <\/p><p>Generally speaking you can return almost everything you purchased from us as long as its <strong>not opened<\/strong>, <strong>nor used<\/strong>, <strong>nor tampered with<\/strong>, under 15 days of receipt of the products.<\/p><p>If you open the product then it not able to be returned. Additionally, depending on the product like lingerie, adult toys, lubricants etc, there are different options available to return them and most of them are at the discretion of Customer Care and depend on each individual circumstance.<\/p><p>For a detailed read, please view our <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">Return Policy<\/a><\/p>"
+          }
+        },
+        "79680400-74db-47f3-a996-46a9c2653168": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT'S YOUR RETURN POLICY\/EXCHANGE POLICY?",
+            "text": "<p>We offer a 100% satisfaction guarantee and a 15 day Return Policy on all the products purchased from our site. The 15 days begin from the date you receive your order. Depending on the product being returned, you can choose to get refund in form of store credit\/gift card that NEVER expires or choose to exchange the product. Due to the nature of the products and hygiene reasons, this policy is conditional to the following <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">terms<\/a>.<br\/>If the return is due to size issue or fitting concern (applicable for lingerie collection), we would gladly exchange (one time only) the product at NO COST to you and will be approved at the discrection of our concerned team. <br\/>While our endeavor is to provide real Customer Care, for returns that arise at no fault of ours (incorrect order or damaged product) we do have to bill the cost of return shipping to the US. <\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/mobile-our-policies?accordion=return-exchange-policy\" title=\"https:\/\/in.imbesharam.com\/pages\/mobile-our-policies?accordion=return-exchange-policy\">Click here to see the detailed return policy<\/a><\/p>"
+          }
+        },
+        "ef010892-0e4f-47c6-aefc-a8e7ed471dd3": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I RETURN\/EXCHANGE PRODUCTS?",
+            "text": "<p>If the return meets one of the four guidelines above, please gather the product\/s you would like to return\/exchange and click a close-up picture of it (using a 3MP or better phone camera), which clearly shows the condition of the product, its packaging and any associated booklets or tags intact. Next click the ‘Request Return’ button at the end of Returns Policy section, fill the form with information of your original order, upload the pictures you clicked, select the reason for return and choose the relevant refund\/exchange option. Submit the form with any special remarks or instructions you may have for our Returns Department. Allow 48 hours to approve the return request and email you a RMA# (Return Merchant Authorization number). After you have received the RMA#, please use the envelope provided inside your original order to carefully pack the return items, fill the Return Checklist (also provided in the original order) with the RMA# and insert these inside the envelope and securely seal it. Within 1-2 business days we will get the return package picked up. However if your pincode is not serviceable by our courier partners we will ask you to use the label attached to the Return Checklist and mail it to us at our India Distribution Center. Once we have received the return package and inspected it, we shall initiate the return\/exchange process and communicate with you via email with the status of your return request and follow through till you get the exchange replacement or till your refund is processed as credits.<\/p>"
+          }
+        },
+        "257effe8-57d2-4d3f-9a55-4b3051b773bb": {
+          "type": "question",
+          "settings": {
+            "title": "HOW TO SPEED UP RETURNS PROCESS?",
+            "text": "<p>if you send us what we need in the first go, or as quick as you can, that will help speed up the return process time.At the time of filling the form for returns, pls. use your smartphone to click picture of the product in the exact shape you plan to return it. Include a picture of the front, back, side and inside (if applicable). Upload these pics to the return request form and submit it.The pictures that you send will help us identify your returns quicker and aid in a speedy process.<\/p>"
+          }
+        },
+        "e3996775-934e-47fa-85f0-2c135f3259be": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I RETURN PRODUCTS I AM NOT FULLY SATISFIED WITH?",
+            "text": "<p>At Besharam, while we are bold and daring in what we do, we stand behind our products, our service and you, our customer. If, for any reason, you are not 100% satisfied with your order, we will gladly take it back and issue you a store credit for full value (less shipping costs to get it back to US). You just have to make sure the package is not opened or tampered with and the products have not been used.<\/p>"
+          }
+        },
+        "c70082ee-6654-45ef-a966-a4a953cd8b98": {
+          "type": "question",
+          "settings": {
+            "title": "HOW LONG WILL THE ENTIRE RETURNS PROCESS TAKE?",
+            "text": "<p>Once your order is approved for returns as per our policy, our team will initiate the pickup of the order which takes about 3-5 biz days to get to us in our India distribution center. Allow us one week after that to inspect the order, process your return and get a exchange or get the refund as per policy.<br\/>So give us about 2-3 weeks from date of pickup to completely process your return\/exchange. You will get a final email with confirmation of return\/replacement, refund\/store credit details and any other related instructions.<a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">Please click here to read details about the timeline<\/a><\/p>"
+          }
+        },
+        "c0da6cce-0ac4-49ea-93ea-22a8f97600f1": {
+          "type": "question",
+          "settings": {
+            "title": "DO I GET CHARGED FOR RETURNING PRODUCTS?",
+            "text": "<p>You are eligible for a return if your request is submitted in compliance with our 15 days return policy. <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">Read the policy in detail here<\/a> <br\/><br\/>If the product you are returning is under the first 15 days, is unopened & unused, you get back what you paid for the product less shipping costs of Rs.999\/- and 25% restocking fees that system deducts as per our<a href=\"https:\/\/in.imbesharam.com\/blogs\/customer-services\/24-hours-cancellation-policy\"> cancelation policy<\/a>.<\/p><p>If you are returning to exchange lingerie (due to size) as allowed by the policy, we waive the shipping costs as a one time benefit, to allow you a peace of mind in ordering lingerie from our store.<\/p>"
+          }
+        },
+        "5affb381-fa6b-43c6-b543-ccb281d2ce1e": {
+          "type": "question",
+          "settings": {
+            "title": "HOW WILL I BE REFUNDED FOR THE RETURN?",
+            "text": "<p>When a return request is processed, you will have a choice to either exchange it against another item\/s of same value or more OR get a refund in the form of a store credit, which never expires and you can use in the future on our site. Here is the<a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">RETURN PROCESS EXPLAINED.<\/a>RESTOCKING FEES: Due to the specialized nature of the product, all acceptable Return+Cancel Requests made within 15 days* period & after order is delivered will attract 25% restocking fees + Rs.999 2-way Shipping Costs and can ONLY be refunded back Store Credit \/ Gift Card. These fees covers cost of payment gateway that does not refund the fees that it charges us on the transaction, two way shipping costs and administration costs of reversing the logistics cycle to retrieve the order and processing the return.<\/p>"
+          }
+        },
+        "88e110d4-ba12-41d5-8d5c-e3a7cee6cfcd": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU PROVIDE A PICK UP FROM HOME\/WORK FOR RETURNS?",
+            "text": "<p>Yes, We do. Just like we delivered the original order to you, upon confirmation of a return request and issuance of an RMA# (Return Merchant Authorization Number) we schedule a pickup from the same address to pick up your approved return merchandise.<a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">See return policy for details<\/a><\/p>"
+          }
+        },
+        "0a9b3df2-4709-46d4-b849-7b749af07199": {
+          "type": "question",
+          "settings": {
+            "title": "HOW LONG WILL IT TAKE FOR THE REFUND TO BE RECIEVED?",
+            "text": "<p>Once the return is picked from your location, it takes between 7-10 biz days for the return merchandise to be received back at our distribution centre in India and the return process to complete and another few days for the returns department to process the refund.<br\/>So approximately your refund is processed in about 10-14 biz days and soon the store credits are processed to you an instant confirmation of the credit details will be sent via email.<\/p>"
+          }
+        },
+        "0e6ef2fc-f95b-406a-8d6a-ad5e81e4229e": {
+          "type": "question",
+          "settings": {
+            "title": "I WAS SUPPOSED TO RECEIVE MY REFUND BY NOW BUT I HAVEN'T?",
+            "text": "<p>If for any reason you have chosen to cancel your order as per our <a href=\"https:\/\/in.imbesharam.com\/blogs\/customer-services\/24-hours-cancellation-policy\">cancellation policy <\/a>and opted to get refunds to your source of payment and it has been over 3 weeks and you haven't received your refund yet, please do not worry. <br\/>Please contact us via <a href=\"https:\/\/in.imbesharam.com\/pages\/hello@imbesharam.com\">Email<\/a> and a member of our Customer Care team will look into this immediately and provide you with an update and resolve your concern.<\/p>"
+          }
+        },
+        "e016f81e-3612-44b6-9c2c-dcf7f81d2a93": {
+          "type": "question",
+          "settings": {
+            "title": "I RECEIVED A DAMAGED PRODUCT \/ WRONG ITEM, WHAT TO DO?",
+            "text": "<p>Technically that should not have happened, however If it did, we would like to first apologize for the inconvenience. Brand does a quality check of most electronic and non electronic products to ensure they arrive to you in new & fully functional condition, thus eliminating any chances\/possibilities of shipping faulty products.<br\/><br\/>However if you have received a faulty\/damaged product, please inform us under 72 hours of receipt and fill out the warranty claim form request<a href=\"https:\/\/in.imbesharam.com\/pages\/general-information#warranty-policy\" title=\"warranty policy\"><strong>here<\/strong><\/a>and our team will help you troubleshoot the product. If in case the troubleshooting steps did not work, we will make arrangements to get it picked up and file a claim with the brand to offer you a free* replacement.<br\/>* Terms & Conditions listed on warranty claim policy will be appliable<\/p>"
+          }
+        },
+        "9c33583d-498b-40c7-8fad-b33c291ec38b": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU ALLOW EXCHANGES?",
+            "text": "<p>Yes Of course, we do! Have you ordered a size too small or too big? No problem! We will replace it for you for FREE for the first time as a additional incentive to buy from imbesharam.com. However if the exchange is for a non-sizing related issue, it will not be a FREE replacement and it will go by the <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">return guidelines shown here<\/a><\/p>"
+          }
+        },
+        "1993333f-8ef7-4e4b-8d12-89bd50f19e48": {
+          "type": "question",
+          "settings": {
+            "title": "I HAVE BEEN REFUNDED THE INCORRECT AMOUNT?",
+            "text": "<p>We apologize if we made a mistake on that, Please contact us via <a href=\"mailto:hello@imbesharam.com\" target=\"_blank\" title=\"Customer Service at imbesharam.com\">Email<\/a>\/<a href=\"http:\/\/in.imbesharam.com\/#launch-chat\" target=\"_blank\" title=\"Live Chat on imbesharam.com\">LIVECHAT<\/a>, we will look into that right away and get this resolved ASAP.<\/p>"
+          }
+        },
+        "df92f214-2401-4cc3-9e2d-9b97d7b0f732": {
+          "type": "question",
+          "settings": {
+            "title": "WHY CANT I RETURN IF I OPENED THE PACKAGE?",
+            "text": "<p>If you open the package\/seal many of the categories primarily any clothing or products that come in contact with the intimate\/private parts of a human is considered unusable and un-sellable again due to hygiene and security reasons.<br\/><br\/>So all lingerie, underwear, shapewear, legwear, adult toys etc are non-returnable. We also are unable to accept books, games and DVDs back due to the nature of the product. Costumes are unreturnable after they have been opened\/used.<a href=\"https:\/\/in.imbesharam.com\/pages\/general-information#return-policy\" target=\"_blank\">Please read our detailed return policy for more info<\/a><\/p>"
+          }
+        },
+        "543902b7-e7e3-4ecd-b71b-fb847d0e5698": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU HAVE ANY EXCHANGE \/ MONEY BACK GUARANTEE OR PERIOD?",
+            "text": "<p>Yes, we have a 15 days exchange\/money back policy. <a href=\"https:\/\/in.imbesharam.com\/pages\/customer-services#return-policy\">Please read our return policy for further details<\/a>. If we shipped you an incorrect order or your order was damaged during shipping or arrived defective, we take full responsibility for it.<br\/><br\/>We will fix your concern to your satisfaction and if you decide not to keep it, you are entitled to get your money back provided you informed us within 12hours of you accepting the delivery and you meet the conditions of our return policy. <br\/><strong>NOTE: <\/strong>For products that are opened and found to be defective, we will assist with warranty claim process (please read our warranty policy<a href=\"https:\/\/in.imbesharam.com\/pages\/general-information#warranty-policy\" title=\"warranty policy\"> here<\/a>) and a money back guarantee is not applicable.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14560352993351__19b68481-5b56-4acf-ab9d-178df94f2efe-168135696166a60eea-0",
+        "template--14560352993351__19b68481-5b56-4acf-ab9d-178df94f2efe-168135696166a60eea-1",
+        "79680400-74db-47f3-a996-46a9c2653168",
+        "ef010892-0e4f-47c6-aefc-a8e7ed471dd3",
+        "257effe8-57d2-4d3f-9a55-4b3051b773bb",
+        "e3996775-934e-47fa-85f0-2c135f3259be",
+        "c70082ee-6654-45ef-a966-a4a953cd8b98",
+        "c0da6cce-0ac4-49ea-93ea-22a8f97600f1",
+        "5affb381-fa6b-43c6-b543-ccb281d2ce1e",
+        "88e110d4-ba12-41d5-8d5c-e3a7cee6cfcd",
+        "0a9b3df2-4709-46d4-b849-7b749af07199",
+        "0e6ef2fc-f95b-406a-8d6a-ad5e81e4229e",
+        "e016f81e-3612-44b6-9c2c-dcf7f81d2a93",
+        "9c33583d-498b-40c7-8fad-b33c291ec38b",
+        "1993333f-8ef7-4e4b-8d12-89bd50f19e48",
+        "df92f214-2401-4cc3-9e2d-9b97d7b0f732",
+        "543902b7-e7e3-4ecd-b71b-fb847d0e5698"
+      ],
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "Returns Questions",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4cf5b730-be58-4b31-aed8-801a0c2ce0f8",
+    "f823772a-8e17-462a-a39b-d53a3862729f",
+    "999c2e9c-e2ab-4c96-8d43-dc989577f8b6",
+    "24cbe69c-bd3e-4917-bf19-31ff40c44977",
+    "faq",
+    "3b60ffb2-ce1c-46c2-9001-4b5274cda3c7",
+    "b272a26d-d9e0-4980-a60d-8dc89f59fc87",
+    "4d36c949-accb-4b2c-9ca6-8d44abe9c28d",
+    "19b68481-5b56-4acf-ab9d-178df94f2efe"
+  ]
+}

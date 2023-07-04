@@ -1,0 +1,222 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+{#    width: 50%;#}
+{#    float: right;#}
+    vertical-align: top;
+  }
+  @media screen and (max-width: 768px) {
+    #shopify-section-{{ section.id }} {
+    width: 100%;
+    display: block;
+    float:none;
+  }
+}
+
+{%- endstyle -%}
+
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+{{ 'section-faq-with-image.css' | asset_url | stylesheet_tag }}
+
+<div class="section--padding faq-with-image{% if section.settings.show_divider %}  section--divider{% endif %}">
+  {%- if section.settings.secondary_background -%}
+    <div class="faq--colored">
+  {%- endif -%}
+    <div class="faq page-width{% if section.settings.narrow %} page-width--inner{% endif %}">
+
+      <div class="faq--wrapper">
+        <div class="faq__left">
+          {% if section.settings.heading != blank %}
+            <h3 class="faq__title">{{ section.settings.heading | escape }}</h3>
+          {% endif %}
+          {% if section.settings.description != blank %}
+            <p class="faq__description">{{ section.settings.description | escape }}</p>
+          {% endif %}
+
+          {% if section.settings.mobile_image != blank %}
+            <img class="faq__mobile-image"
+                 srcset="{{ section.settings.mobile_image | image_url: height: image_height }} 1x, {{ section.settings.mobile_image | image_url: height: image_height_2x }} 2x"
+                 src="{{ section.settings.mobile_image | image_url: height: image_height }}">
+          {% endif %}
+
+          {% if section.settings.desktop_image != blank %}
+            <img class="faq__desktop-image"
+                 srcset="{{ section.settings.desktop_image | image_url: height: image_height }} 1x, {{ section.settings.desktop_image | image_url: height: image_height_2x }} 2x"
+                 src="{{ section.settings.desktop_image | image_url: height: image_height }}">
+          {% endif %}
+        </div>
+
+        <div class="faq__right">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'rich-text' -%}
+                <p class="h3" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</p>
+                <div class="rte">{{ block.settings.text }}</div>
+              {%- when 'question' -%}
+                <accordion-tab {{ block.shopify_attributes }}>
+                  <details>
+                    <summary>
+                      <span>
+                        <span class="icon icon-plus-alt"></span>
+                        {{ block.settings.title | escape }}
+                      </span>
+                    </summary>
+                    <div class="accordion__content rte typeset">
+                      {{ block.settings.text }}
+                    </div>
+                  </details>
+                </accordion-tab>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- if section.settings.secondary_background -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "FAQ with image",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "narrow",
+      "default": false,
+      "label": "t:sections.all.narrow.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "secondary_background",
+      "default": false,
+      "label": "t:sections.faq.settings.secondary_background.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": false,
+      "label": "t:sections.all.show_divider.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "FAQs",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "default": "description",
+      "label": "t:sections.all.description.label"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile image",
+      "id": "mobile_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop image",
+      "id": "desktop_image"
+    },
+    {
+      "type": "text",
+      "id": "image-alt",
+      "default": "Alt",
+      "label": "Image alt"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.header.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_top.unit",
+      "label": "t:sections.all.padding.padding_top.label",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_bottom.unit",
+      "label": "t:sections.all.padding.padding_bottom.label",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rich-text",
+      "name": "t:sections.faq.blocks.rich-text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Rich text",
+          "label": "t:sections.faq.blocks.rich-text.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Use this section for any descriptive text you need to fill out your pages or to add introductory headings between other blocks.</p>",
+          "label": "t:sections.faq.blocks.rich-text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "t:sections.faq.blocks.question.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Frequently asked question",
+          "label": "t:sections.faq.blocks.question.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.faq.blocks.question.settings.text.label",
+          "default": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+        },
+        {
+          "type": "checkbox",
+          "label": "Show on right column",
+          "id": "show_on_right_column",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ with image",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  }
+}
+{% endschema %}

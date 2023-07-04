@@ -1,0 +1,784 @@
+{
+  "sections": {
+    "2568e31d-74f0-4d04-89d8-67a9dca6a236": {
+      "type": "video-hero",
+      "blocks": {
+        "template--14560198099015__2568e31d-74f0-4d04-89d8-67a9dca6a236-168123266534e83308-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have you seen my sharam?",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14560198099015__2568e31d-74f0-4d04-89d8-67a9dca6a236-168123266534e83308-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "template--14560198099015__2568e31d-74f0-4d04-89d8-67a9dca6a236-168123266534e83308-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "For Him",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "28021dd2-4b00-4b71-8266-576fc24eb5a5": {
+          "type": "button",
+          "settings": {
+            "button_label": "For Her",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "26e466dd-c1f0-49fd-8e7e-5c4d0e2ff358": {
+          "type": "button",
+          "settings": {
+            "button_label": "For Couples",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "4009e9af-fab8-4c89-88d0-694e9a80a864": {
+          "type": "info-banner",
+          "settings": {
+            "message_bar_title": "<span>India's #1 Adult Webstore - <\/span> Celebrating <strong>10 years<\/strong> of shopping, love and happiness",
+            "message_bar_rating": "4.7",
+            "message_bar_rating_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"18\" height=\"17\" viewbox=\"0 0 18 17\" fill=\"none\">\n<path d=\"M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z\" fill=\"#D30076\"><\/path>\n<\/svg>\n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"18\" height=\"17\" viewbox=\"0 0 18 17\" fill=\"none\">\n<path d=\"M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z\" fill=\"#D30076\"><\/path>\n<\/svg>\n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"18\" height=\"17\" viewbox=\"0 0 18 17\" fill=\"none\">\n<path d=\"M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z\" fill=\"#D30076\"><\/path>\n<\/svg>\n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"18\" height=\"17\" viewbox=\"0 0 18 17\" fill=\"none\">\n<path d=\"M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z\" fill=\"#D30076\"><\/path>\n<\/svg>\n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"18\" height=\"17\" viewbox=\"0 0 18 17\" fill=\"none\">\n<path d=\"M9 1.61804L10.5451 6.37336L10.6574 6.71885H11.0206H16.0207L11.9755 9.6578L11.6817 9.87132L11.7939 10.2168L13.339 14.9721L9.29389 12.0332L9 11.8197L8.70611 12.0332L4.66099 14.9721L6.20609 10.2168L6.31834 9.87132L6.02445 9.6578L1.97933 6.71885H6.97937H7.34265L7.4549 6.37336L9 1.61804Z\" stroke=\"#D30076\"><\/path>\n<path d=\"M9.00091 0L11.0215 6.21885L9.81321 2.5L9.50092 9V10.0623L9.00091 12.4377L3.71085 16.2812L5.73147 10.0623L0.441406 6.21885H6.98029L9.00091 0Z\" fill=\"#D30076\"><\/path>\n<\/svg>"
+          }
+        },
+        "c8f8a911-7f37-4ea5-86af-3c26cc6d8713": {
+          "type": "text_block_link",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Forbes.png",
+            "link": "shopify:\/\/products\/100-questions-about-sex-game",
+            "text": "\"The biggest player in the sextech space in India\""
+          }
+        },
+        "b46a3be9-2cff-4c00-bee3-1a0e3706eff8": {
+          "type": "text_block_link",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/femina.png",
+            "link": "shopify:\/\/blogs\/besharam-letters",
+            "text": "\"The biggest player in the sextech space in India\""
+          }
+        },
+        "dd3d76f5-3bc3-4c99-a198-45b7fc9fa878": {
+          "type": "text_block_link",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Forbes.png",
+            "link": "",
+            "text": "\"The biggest player in the sextech space in India\""
+          }
+        },
+        "f34618c6-6c89-45e1-a3ae-243e6ff9bb34": {
+          "type": "text_block_link",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Entrepreneur.png",
+            "link": "shopify:\/\/products\/setting-the-mood-romantic-games-kheper-games-4-play-game",
+            "text": "\"The biggest player in the sextech space in India\""
+          }
+        },
+        "40e9707d-99b0-47ae-a163-ddee893d1ae9": {
+          "type": "text_block_link",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Forbes.png",
+            "link": "",
+            "text": "\"The biggest player in the sextech space in India\""
+          }
+        }
+      },
+      "block_order": [
+        "template--14560198099015__2568e31d-74f0-4d04-89d8-67a9dca6a236-168123266534e83308-0",
+        "template--14560198099015__2568e31d-74f0-4d04-89d8-67a9dca6a236-168123266534e83308-1",
+        "template--14560198099015__2568e31d-74f0-4d04-89d8-67a9dca6a236-168123266534e83308-2",
+        "28021dd2-4b00-4b71-8266-576fc24eb5a5",
+        "26e466dd-c1f0-49fd-8e7e-5c4d0e2ff358",
+        "4009e9af-fab8-4c89-88d0-694e9a80a864",
+        "c8f8a911-7f37-4ea5-86af-3c26cc6d8713",
+        "b46a3be9-2cff-4c00-bee3-1a0e3706eff8",
+        "dd3d76f5-3bc3-4c99-a198-45b7fc9fa878",
+        "f34618c6-6c89-45e1-a3ae-243e6ff9bb34",
+        "40e9707d-99b0-47ae-a163-ddee893d1ae9"
+      ],
+      "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/451bfb7964804fd08d9283d0867e6ab8.mp4",
+        "video_thumbnail": "shopify:\/\/shop_images\/image_1.png",
+        "text_box_position": "bottom-center",
+        "text_alignment": "center",
+        "image_ratio": "570px",
+        "show_text_box": true,
+        "layout_width": "layout_width_custom",
+        "show_divider": false,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "show_text_below": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "rgba(0,0,0,0)",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#26282c",
+        "colors_overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "72894d07-7eb8-40ef-9c2b-ee1557b87bca": {
+      "type": "collection-slider",
+      "blocks": {
+        "b55ef8c8-1fdb-4a2f-be13-4312b5879813": {
+          "type": "slide",
+          "settings": {
+            "collection": "top-10-vibrators",
+            "hashtag": "#top10",
+            "slide_title": "Vibrators",
+            "image": "shopify:\/\/shop_images\/masturbators.png"
+          }
+        },
+        "31564c63-9c86-43d8-a437-580bc6e6bd5a": {
+          "type": "slide",
+          "settings": {
+            "collection": "top-10-dildos",
+            "hashtag": "#top10",
+            "slide_title": "Dildos",
+            "image": "shopify:\/\/shop_images\/vibrator.png"
+          }
+        },
+        "1979ca03-6584-49cd-9a01-d555abc863f0": {
+          "type": "slide",
+          "settings": {
+            "collection": "top-10-massagers",
+            "hashtag": "#top10",
+            "slide_title": "Massagers",
+            "image": "shopify:\/\/shop_images\/massager.png"
+          }
+        },
+        "6e473668-dc74-4796-88e4-538ad0f792db": {
+          "type": "slide",
+          "settings": {
+            "collection": "top-10-masturbators",
+            "hashtag": "#top10",
+            "slide_title": "Masturbators",
+            "image": "shopify:\/\/shop_images\/massager.png"
+          }
+        },
+        "60eb278b-e236-44b0-ab99-ec67a828b285": {
+          "type": "slide",
+          "settings": {
+            "collection": "top-10-sex-toys-for-couples",
+            "hashtag": "#top10",
+            "slide_title": "Toys",
+            "image": "shopify:\/\/shop_images\/masturbators.png"
+          }
+        },
+        "2714d98f-a0f3-4460-8b41-d2f19638809e": {
+          "type": "slide",
+          "settings": {
+            "collection": "top-10-lubricants",
+            "hashtag": "#top10",
+            "slide_title": "Lubricants",
+            "image": "shopify:\/\/shop_images\/TOP_10_Lubricants.jpg"
+          }
+        },
+        "4b241dbd-54b4-4c78-9aed-c03a217c9589": {
+          "type": "slide",
+          "settings": {
+            "collection": "top-10-masturbators",
+            "hashtag": "#top10",
+            "slide_title": "Masturbators",
+            "image": "shopify:\/\/shop_images\/vibrator.png"
+          }
+        }
+      },
+      "block_order": [
+        "b55ef8c8-1fdb-4a2f-be13-4312b5879813",
+        "31564c63-9c86-43d8-a437-580bc6e6bd5a",
+        "1979ca03-6584-49cd-9a01-d555abc863f0",
+        "6e473668-dc74-4796-88e4-538ad0f792db",
+        "60eb278b-e236-44b0-ab99-ec67a828b285",
+        "2714d98f-a0f3-4460-8b41-d2f19638809e",
+        "4b241dbd-54b4-4c78-9aed-c03a217c9589"
+      ],
+      "settings": {
+        "section_title": "Shop Top 10",
+        "button_link": "shopify:\/\/collections"
+      }
+    },
+    "5172be8e-e995-4891-8227-e4d820d3a5fd": {
+      "type": "collection-grid",
+      "blocks": {
+        "68ce18ff-e508-4159-a23a-6fc20ff6927d": {
+          "type": "block",
+          "settings": {
+            "collection": "couples-vibrators",
+            "image": "shopify:\/\/shop_images\/for_couple.png",
+            "label": "For Couples"
+          }
+        },
+        "965ba947-fb47-445e-b316-d6f0aefa2970": {
+          "type": "block",
+          "settings": {
+            "collection": "anal-sex-toys-for-men",
+            "image": "shopify:\/\/shop_images\/for_him_5c74a80a-abf8-441a-b854-870995600aca.png",
+            "label": "For Him"
+          }
+        },
+        "22632344-7ccb-4b24-97dd-c3e9274a623f": {
+          "type": "block",
+          "settings": {
+            "collection": "first-time-shopper",
+            "image": "shopify:\/\/shop_images\/first_time.png",
+            "label": "First Time"
+          }
+        },
+        "689ca2cf-b182-43a7-aea7-7d86606a2d40": {
+          "type": "block",
+          "settings": {
+            "collection": "smart-sex-toys-for-women",
+            "image": "shopify:\/\/shop_images\/for_her_6b7175fd-2bec-4526-9c73-18d0c18cb5e3.png",
+            "label": "For Her"
+          }
+        },
+        "bdf4ae05-e11b-45ca-b5b5-70270fc0c4df": {
+          "type": "block",
+          "settings": {
+            "collection": "sex-toys-for-lesbians",
+            "image": "shopify:\/\/shop_images\/temporary_file_queer.png",
+            "label": "Queer favorites"
+          }
+        }
+      },
+      "block_order": [
+        "68ce18ff-e508-4159-a23a-6fc20ff6927d",
+        "965ba947-fb47-445e-b316-d6f0aefa2970",
+        "22632344-7ccb-4b24-97dd-c3e9274a623f",
+        "689ca2cf-b182-43a7-aea7-7d86606a2d40",
+        "bdf4ae05-e11b-45ca-b5b5-70270fc0c4df"
+      ],
+      "settings": {
+        "title": "Shop For"
+      }
+    },
+    "a4d09b1c-2553-43cc-a586-10da00da5a47": {
+      "type": "collection-icon-list",
+      "blocks": {
+        "082f80cf-3213-4d8f-a7ff-3d116b53ad24": {
+          "type": "Collection",
+          "settings": {
+            "collection": "clitoral-vibrators",
+            "image": "shopify:\/\/shop_images\/vibrators_77f8e1e5-73c1-4a26-8eb8-4dbc24fc00a9.png",
+            "image-hover": "shopify:\/\/shop_images\/vibrators-hover.png",
+            "label": "Vibrators"
+          }
+        },
+        "6e9a4bb8-f80a-42eb-a08b-0ddc546811c5": {
+          "type": "Collection",
+          "settings": {
+            "collection": "king-cock-dildos",
+            "image": "shopify:\/\/shop_images\/masurbators.png",
+            "image-hover": "shopify:\/\/shop_images\/dildos-hover.png",
+            "label": "Dildos"
+          }
+        },
+        "c48e04ca-ae43-4f2b-8dc9-0e5ece7e1f26": {
+          "type": "Collection",
+          "settings": {
+            "collection": "massagers-for-women",
+            "image": "shopify:\/\/shop_images\/massagers.png",
+            "image-hover": "shopify:\/\/shop_images\/massager-hover.png",
+            "label": "Massagers"
+          }
+        },
+        "db909faf-4c4b-46f6-9565-396c8222a792": {
+          "type": "Collection",
+          "settings": {
+            "collection": "anal-sex-toys-for-men",
+            "image": "shopify:\/\/shop_images\/butt-plug.png",
+            "image-hover": "shopify:\/\/shop_images\/but-plugs-hover.png",
+            "label": "Butt Plugs"
+          }
+        },
+        "1d9f623e-eb2f-414b-aa80-1273eea312e5": {
+          "type": "Collection",
+          "settings": {
+            "collection": "anal-fun",
+            "image": "shopify:\/\/shop_images\/lovence.png",
+            "image-hover": "shopify:\/\/shop_images\/lovense-hover.png",
+            "label": "Lovense"
+          }
+        },
+        "a3989b17-f93b-4c67-9c12-724cb71d8ca6": {
+          "type": "Collection",
+          "settings": {
+            "collection": "fleshlight",
+            "image": "shopify:\/\/shop_images\/fleshlights.png",
+            "image-hover": "shopify:\/\/shop_images\/fleshlight-hover.png",
+            "label": "Fleshlight"
+          }
+        },
+        "83f1c6b2-1e84-458d-9094-6ebeb39f556c": {
+          "type": "Collection",
+          "settings": {
+            "collection": "50-shades-collection",
+            "image": "shopify:\/\/shop_images\/shades-of-grey.png",
+            "image-hover": "shopify:\/\/shop_images\/vibrators-hover.png",
+            "label": "50 Shades of Grey"
+          }
+        },
+        "c1405162-9b4d-44ab-8bdb-b0dc5690d9d5": {
+          "type": "Collection",
+          "settings": {
+            "collection": "anal-fantasy",
+            "image": "shopify:\/\/shop_images\/masurbators.png",
+            "image-hover": "shopify:\/\/shop_images\/dildos-hover.png",
+            "label": "Masturbators"
+          }
+        }
+      },
+      "block_order": [
+        "082f80cf-3213-4d8f-a7ff-3d116b53ad24",
+        "6e9a4bb8-f80a-42eb-a08b-0ddc546811c5",
+        "c48e04ca-ae43-4f2b-8dc9-0e5ece7e1f26",
+        "db909faf-4c4b-46f6-9565-396c8222a792",
+        "1d9f623e-eb2f-414b-aa80-1273eea312e5",
+        "a3989b17-f93b-4c67-9c12-724cb71d8ca6",
+        "83f1c6b2-1e84-458d-9094-6ebeb39f556c",
+        "c1405162-9b4d-44ab-8bdb-b0dc5690d9d5"
+      ],
+      "settings": {
+        "title": "Shop By"
+      }
+    },
+    "a6e1c587-e979-43d3-874c-f34cf010381a": {
+      "type": "hashtag-linklist",
+      "blocks": {
+        "f72e4a43-5eb3-43c2-96cd-376ee4309aef": {
+          "type": "link",
+          "settings": {
+            "label": "#BDSM",
+            "collection": "accessories"
+          }
+        },
+        "da0df8fa-ce9a-4940-9a2a-bfb537e26c55": {
+          "type": "link",
+          "settings": {
+            "label": "#KinkToys",
+            "collection": "anal-fantasy"
+          }
+        },
+        "ebec7d7c-dc63-4a1e-8ec7-660899b12b51": {
+          "type": "link",
+          "settings": {
+            "label": "#AnalSex",
+            "collection": "anal-sex-toys-for-men"
+          }
+        },
+        "cf913147-d3d0-4f5f-895a-2a99e5efe09d": {
+          "type": "link",
+          "settings": {
+            "label": "#OralSex",
+            "collection": "anal-toys-for-women"
+          }
+        },
+        "b1f39e65-490c-4216-8dcb-025c7289bd72": {
+          "type": "link",
+          "settings": {
+            "label": "#Masturbation",
+            "collection": "50-shades-collection"
+          }
+        },
+        "f115221e-bf11-4600-a1c9-476cb8ea20a6": {
+          "type": "link",
+          "settings": {
+            "label": "#Lubrication",
+            "collection": "amorelie"
+          }
+        }
+      },
+      "block_order": [
+        "f72e4a43-5eb3-43c2-96cd-376ee4309aef",
+        "da0df8fa-ce9a-4940-9a2a-bfb537e26c55",
+        "ebec7d7c-dc63-4a1e-8ec7-660899b12b51",
+        "cf913147-d3d0-4f5f-895a-2a99e5efe09d",
+        "b1f39e65-490c-4216-8dcb-025c7289bd72",
+        "f115221e-bf11-4600-a1c9-476cb8ea20a6"
+      ],
+      "settings": {
+      }
+    },
+    "1d31099d-6fa0-448b-9757-27e8f90b7a9e": {
+      "type": "collection-product-grid",
+      "settings": {
+        "title": "Most popular",
+        "collection": "fifty-shades-of-grey-vibrators",
+        "products_limit": 8
+      }
+    },
+    "9a6f7fc1-4f1f-42eb-a32e-d10e91de3cbc": {
+      "type": "collection-slider__three-d",
+      "blocks": {
+        "84754d93-c808-4430-8d0f-10a8aa360040": {
+          "type": "slide",
+          "settings": {
+            "product": "fifty-shades-darker-adrenaline-spikes-metal-wartenberg-pinwheel",
+            "date_picker": "19-06-2023"
+          }
+        },
+        "40e647a5-c575-491d-bbb0-9817234de7a3": {
+          "type": "slide",
+          "settings": {
+            "product": "anal-fantasy-9-function-prostate-vibe",
+            "date_picker": "20-06-2023"
+          }
+        },
+        "8724bee0-095b-46ba-a2bf-a3fb92527836": {
+          "type": "slide",
+          "settings": {
+            "product": "amorelie-love-pleasure-box",
+            "date_picker": "21-06-2023"
+          }
+        },
+        "1388d60b-88f5-434a-a3f4-a68f8ddf9b0f": {
+          "type": "slide",
+          "settings": {
+            "product": "fifty-shades-of-grey-yours-and-mine-vibrating-love-ring-c-ring",
+            "date_picker": "22-06-2023"
+          }
+        },
+        "3112b29e-8d3f-4b1e-a50e-bc61c1e020fd": {
+          "type": "slide",
+          "settings": {
+            "product": "adult-toys-prostate-toys-aneros-aneros-eupho-p-spot-massager",
+            "date_picker": "23-06-2023"
+          }
+        },
+        "776a1c26-acf9-4664-8710-00a932f98f1a": {
+          "type": "slide",
+          "settings": {
+            "product": "fifty-shades-of-grey-a-perfect-o-silicone-love-ring",
+            "date_picker": "24-06-2023"
+          }
+        },
+        "bbf63e1d-629b-4307-ae61-5a7184b8741f": {
+          "type": "slide",
+          "settings": {
+            "product": "fifty-shades-of-grey-feel-it-baby-strap-on-vibrating-dildo-harness-kit",
+            "date_picker": "25-06-2023"
+          }
+        }
+      },
+      "block_order": [
+        "84754d93-c808-4430-8d0f-10a8aa360040",
+        "40e647a5-c575-491d-bbb0-9817234de7a3",
+        "8724bee0-095b-46ba-a2bf-a3fb92527836",
+        "1388d60b-88f5-434a-a3f4-a68f8ddf9b0f",
+        "3112b29e-8d3f-4b1e-a50e-bc61c1e020fd",
+        "776a1c26-acf9-4664-8710-00a932f98f1a",
+        "bbf63e1d-629b-4307-ae61-5a7184b8741f"
+      ],
+      "settings": {
+        "title": "Deal of the week"
+      }
+    },
+    "6d3ebb0f-5203-4865-8d67-51ee0087001e": {
+      "type": "gift-card",
+      "settings": {
+        "mobile_image1": "shopify:\/\/shop_images\/Group_3705_1_-trimmy.png",
+        "mobile_image2": "shopify:\/\/shop_images\/Frame_35810_2_-trimmy.png",
+        "desktop_image": "shopify:\/\/shop_images\/Group_3702.png"
+      }
+    },
+    "0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660": {
+      "type": "reviews",
+      "blocks": {
+        "template--14573288292423__0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660-1685016361adfe888e-0": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_35440.svg"
+          }
+        },
+        "template--14573288292423__0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660-1685016361adfe888e-1": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_35441.svg"
+          }
+        },
+        "template--14573288292423__0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660-1685016361adfe888e-2": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_35442.svg"
+          }
+        }
+      },
+      "block_order": [
+        "template--14573288292423__0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660-1685016361adfe888e-0",
+        "template--14573288292423__0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660-1685016361adfe888e-1",
+        "template--14573288292423__0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660-1685016361adfe888e-2"
+      ],
+      "settings": {
+        "show_divider": false,
+        "heading": "Real reviews",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "heading_image": "shopify:\/\/shop_images\/truspilot.svg",
+        "btn_url": "#",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "b1164d89-76ab-4f02-b23b-71f91c88f927": {
+      "type": "faq-with-image",
+      "blocks": {
+        "template--14560198099015__52b27d1d-6efa-4fde-86e3-3f044ac7d846-1681248247c7f38e9a-0": {
+          "type": "question",
+          "settings": {
+            "title": "Where to buy sex toys in India",
+            "text": "<p>In India you can buy premium sex toys for men & women online at <a href=\"https:\/\/in.imbesharam.com\/\" title=\"Buy Sex Toys in India\">IMBesharam.com<\/a>. Besharam is the pioneer brand that introduced erotic commerce as a legitimate category in the Indian E-commerce ecosystem, and over last 9 years (since launching in 2012) has delivered over 750,000 orders to Indians in almost every city, town and district in India. We showcase mid-range to luxury lines of products made by popular American & European brands like <a href=\"https:\/\/in.imbesharam.com\/collections\/fleshlight\" title=\"Buy Fleshlight masturbators in India\">Fleshlight<\/a>, <a href=\"https:\/\/in.imbesharam.com\/collections\/lovense\" title=\"Buy Lovense sex toys in India\">Lovense<\/a>, Satisfyer, Womanizer, <a href=\"https:\/\/in.imbesharam.com\/collections\/lelo\" title=\"Buy LELO sex toys in India\">LELO<\/a>, FunFactory, OhMiBod, Rocks Off, Tenga, AutoBlow, Kiiroo, DocJohnson, Penthouse, PlayBoy, KamaSutra, Fifty Shades of Grey and various others.<\/p><p>Buying these sex toys aka Pleasure devices is a breeze on Besharam’s mobile friendly shopping site. Delivery is quick and your privacy is maintained all the way from placing order, securely making your payment, to bringing a sturdy white box with discreetly packaged products inside with no mention of the contents of our website on the label. You can also choose to pick up the order from your closest courier hub, so you don’t need to worry about delivery to your home\/office.<\/p><p>Sunny Leone is the face of the brand and we has an excellent online reputation with 4.8\/5 score on <a href=\"https:\/\/www.trustpilot.com\/review\/www.imbesharam.com\" target=\"_blank\" title=\"IMbesharam.com Trustpilot Reviews\">TrustPilot<\/a> and over 250,000 followers on our <a href=\"https:\/\/www.facebook.com\/IMbesharam\/\" target=\"_blank\" title=\"IMbesharam.com Facebook\">Facebook<\/a>, <a href=\"https:\/\/www.instagram.com\/imbesharam\/\" target=\"_blank\" title=\"IMbesharam.com Instagram\">Instagram<\/a> and <a href=\"https:\/\/twitter.com\/imbesharam\" target=\"_blank\" title=\"IMbesharam.com Twitter\">Twitter<\/a> channels.<\/p><p>Shop in the privacy of your home, you never have to step outside or worry if neighbour aunty sees you 🙀.<\/p>",
+            "show_on_right_column": false
+          }
+        },
+        "template--14560198099015__52b27d1d-6efa-4fde-86e3-3f044ac7d846-1681248247c7f38e9a-1": {
+          "type": "question",
+          "settings": {
+            "title": "How to buy the best quality sex toys in India?",
+            "text": "<p>This is easy. Shopping for <a href=\"https:\/\/in.imbesharam.com\/collections\/vibrators\" title=\"Vibrators\">vibrators<\/a>, <a href=\"https:\/\/in.imbesharam.com\/collections\/dildos\">dildos <\/a>and <a href=\"https:\/\/in.imbesharam.com\/collections\/masturbators\" title=\"Masturbators\">masturbators <\/a>is not as complex as you may imagine. Usually all the sex toys on IMbesharam.com site have reviews by real users. These reviews are real accounts of verified buyers who chose to leave a review after the use. Most new users look at these reviews to build up a confidence level at buying a particular product.<br\/><br\/>Because we are the #1 Adult Store in India, we take precaution to pick brands that offer durable products, great warranty support and excel on giving the user the best available experience for the price paid. This allows us to offer you a great sales and warranty policy, and allows us to stand by our brands and produces for at least 1 year from date of sale.<br\/><br\/>Because of this belief and conviction, we aim to procure and showcase only the best, probably we are the only branded marketplace in India that has a collection so diverse, a range so exquisite and a reputation so stellar. We also love hearing from our customers, and we definitely want to hear if our product is not doing what we promised it would. You are always welcome to shoot us an email with the problem and details of the product you purchased and we will get right back to you with a solution!<\/p>",
+            "show_on_right_column": false
+          }
+        },
+        "0688724c-816c-4ff6-9968-f3a9c0b3694b": {
+          "type": "question",
+          "settings": {
+            "title": "Is imbesharam a trusted sex store to buy adult toys online in india?",
+            "text": "<p>We understand that for a lot of us ordering a sex toy at home with our desi parents is sometimes more stressful than smuggling drugs cross country, so we at IMbesharam.com built our business ground up.<br\/><br\/>We first addressed the most crucial element of the business: PRIVACY.<br\/><br\/>We established a end to end logistics process to be able to import adult products in India from USA and Europe. Post that we established comprehensive partnerships with courier providers to offer SELF PICKUP option for those who don’t want delivery at their home\/office. We furnished a secure warehouse to stock over 2000 SKU’s with over a $1 Million worth of inventory in India. When you order from IMbesharam.com, your payment is processed through our encrypted payment gateway, your card statement shows Happy Birds and there is no mention of your purchase at IMBesharam.com. When your order ships, we offer a completely discreet and non-descriptive packaging with no mention of IMBesharam or sex toy on it. If you don’t want it to be delivered to an address, you can even pick it up at your nearest courier office. No one has to know.<br\/>We also make sure you are completely safe while you are on our website. We don’t save any cookies or collect data on you beyond what is required for the shipping of the adult toys. That information too is only accessible only to the top management all of whom have signed Non-Disclosure Agreements, and are committed to protecting your privacy.<br\/><br\/>We do work really hard to make sure IMBesharam is more than just a company that wants to sell you a product. We believe everyone deserves sexual pleasure and satisfaction and we strive to deliver that experience in the best possible manner. So for us, ensuring your security, quality, and privacy is more than just good business, it is our mission.<\/p>",
+            "show_on_right_column": false
+          }
+        },
+        "aeace61a-0531-478c-b4d3-b8a7a385f38f": {
+          "type": "question",
+          "settings": {
+            "title": "Which are the most popular sex toys for men in India?",
+            "text": "<p>Use this text to answer questions in as much detail The most popular <a href=\"https:\/\/in.imbesharam.com\/pages\/sex-toys-for-men\" title=\"Sex Toys for Men\">sex toys for men<\/a> are <a href=\"https:\/\/in.imbesharam.com\/collections\/masturbators\" title=\"Male Masturbators\">masturbators<\/a>. The most commonly known ones are <a href=\"https:\/\/in.imbesharam.com\/collections\/fleshlight\" title=\"Fleshlights\">fleshlight<\/a> or pocket pussy or strokers. These are discrete sex toys, usually made of skin like TPE material inside a sturdy plastic cup with a removable seal, having a vaginal or butt shaped opening, they imitate the sensation of a vulva or a butt and are often used for masturbation by Penis owners. Some of them also provide a vacuum cup style suction and thus also popular masturbator choices in male sex toys. The latest and greatest Masturbators are the ones that are <a href=\"https:\/\/in.imbesharam.com\/collections\/smart-sex-toys-for-men\" title=\"Smart Sex Toys for Men\">smart toys<\/a> which use apps for controlling them hands free, can deliver a real handsfree blowjob like sensation, some that can be used with partners in long distance, others that can sync with video content and stimulate your experience via VR to deliver the most realistic life-like experience of lovemaking.<br\/><br\/>From the data collected for last 8 years of over 500,000 online orders for sex toys for men, we can definitely list them in order of Top 5 sex toys for men in India are:<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/adult-toys-toys-for-men-fleshlight-fleshlight-pink-original-masturbator-810476017002\" title=\"Fleshlight Original Masturbator\">Fleshlight Original Masturbator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/tenga-air-flow-cup-new\" title=\"Tenga Masturbator\">Tenga Cup Masturbator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/collections\/masturbators\/products\/hustler-vibrating-p-y-masturbator\" title=\"Sunny Leone Masturbator\">Hustler Sunny Leone Masturbator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/fifty-shades-of-grey-yours-and-mine-vibrating-love-ring-c-ring\" title=\"Fifty Shades of Grey Cock Ring\">Fifty Shades of Grey Cock Ring<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/sasha-grey-ur3-cream-pie-masturbator\" title=\"Sasha Grey Masturbator\">Sasha Grey Pocket Masturbator<\/a><\/li><\/ol><p>Other popular sex toys for men are <a href=\"https:\/\/in.imbesharam.com\/collections\/cock-rings\" title=\"Cock Rings\">cock rings<\/a>, which stimulate the penis and the balls by vibrations from a small motor powered by batteries or a charger. It also works to restrict the blood flow to and from your penis, allowing it to stay erect for longer. These are quite popular with those interested in extending their erection or orgasm control. Lastly, the <a href=\"https:\/\/in.imbesharam.com\/collections\/prostate-massagers\" title=\"Prostate Massagers\">prostate massagers<\/a> are also very popular. The P-spot is one of the biggest pleasure points in the male body, which probably 90% men do not know or have not tried to stimulate their prostate and it is a tragedy how stigmatized it is. But our years of experience have taught us that popularity does not mean universal. There is nothing wrong with trying a blow-up sex doll or a butt plug, all of which and more that are offered in our sex store. Find what works best for you.<br\/><br\/>For beginners we encourage keeping a budget of Rs3000 to try an <a href=\"https:\/\/in.imbesharam.com\/collections\/best-masturbators-under-10k\" title=\"Masturbators under Rs.10000\">entry level masturbator<\/a> from either Tenga, Hustler or Penthouse brands, along with a warming or silky lube to multiply the pleasure and feel as close to real life experience.<br\/><br\/>We at IMBesharam have always believed that sex toys are for everyone, just like sexual pleasure is for everyone. There is a huge stigma against men using sex toys, and there is very little conversation surrounding. It is not shameful to want or to use a sex toy, It just means you value your pleasure and are curious to expand the range of your own pleasure.as possible for your customers.<\/p>",
+            "show_on_right_column": false
+          }
+        },
+        "0f78604d-ce76-479d-a3f2-b97aa3dbc47a": {
+          "type": "question",
+          "settings": {
+            "title": "Which are the most popular sex toys for women in India?",
+            "text": "<p>This is without doubt and with an overwhelming majority of orders in our store, the most popular <a href=\"https:\/\/in.imbesharam.com\/pages\/sex-toys-for-women\" title=\"Sex Toys for Women\">sex toy for women<\/a> is the 'Vibrator'.<\/p><p>Usually it is a slender cylinder made of medical grade silicone with a powerful motor inside to give the sensation of vibration, and IMBesharam.com has a HUGE collection of them. We have <a href=\"https:\/\/in.imbesharam.com\/collections\/vibrators\" title=\"Vibrators\">vibrators<\/a> that vibrate, large, small and mini, in shape of bullets, eggs, <a href=\"https:\/\/in.imbesharam.com\/collections\/rabbit-vibrators\" title=\"Rabbit Vibrators\">rabbit vibrators<\/a>, hair blower and even eye mascara, vibrators that have clitoral stimulator attached (The Bunny \/ Rabbits), vibrators that turn warm, those that are waterproof, some use batteries and some are rechargeable, some vibrators are handsfree as they come with thrusting motion, some come with suction motion to stimulate the clitoris, many new vibrators are <a href=\"https:\/\/in.imbesharam.com\/collections\/smart-sex-toys-for-women\" title=\"Smart Sex Toys for Women\">SMART<\/a> as they can be operated by smart apps or bluetooth controlled tiny and powerful remotes.<\/p><p>There are various kinds of vibrators with different speeds, patterns of vibration and features that massage the <a href=\"https:\/\/in.imbesharam.com\/collections\/g-spot-vibrators\" title=\"G-Spot Vibrators\">g-spot<\/a> or the clitoris as well as various other erogenous zones of the body like nipples and literally can deliver orgasms by the minute. Now you can make love to yourself in your bedroom, bathroom, while at work, while travel or even when in long distance play using <a href=\"https:\/\/in.imbesharam.com\/collections\/remote-controlled\" title=\"Remote Controlled Vibrators\">remote controlled vibrators<\/a>.<br\/><br\/>From the data collected for last 8 years of over 400,000 online orders for sex toys for women, we can definitely list them in order of Top 10 sex toys for women in India are:<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/fifty-shades-of-grey-greedy-girl-rechargeable-g-spot-rabbit\" title=\"Fifty Shades G-Spot Rabbit Vibrator\">Fifty Shades G-Spot Rabbit Vibrator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/lovense-lush\" title=\"Lovense Lush\">Lovense Lush Vibrator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/satisfyer-pro-2-rechargeable-pressure-wave-vibrator\" title=\"Satisfyer Pro 2 Pressure Wave Vibrator\">Satisfyer Pro 2 Pressure Wave Vibrator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/bms-essential-rechargeable-bullet-vibrator\" title=\"BMS Rechargeable Power Bullet\">BMS Rechargeable Power Bullet<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/fifty-shades-of-grey-greedy-girl-thrusting-rabbit-vibrator\" title=\"Fifty Shades Greedy Girl\">Fifty Shades Greedy Girl<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/satisyer-pro-penguin-next-generation\" title=\"Satisfyer Penguin Clitoral Suction\">Satisfyer Penguin Clitoral Suction<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/bswish-bwild-classic-bunny\" title=\"B Swish Bwild Bunny\">B Swish Bwild Bunny<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/lust-stories\" title=\"Lust Stories Premium Bluetooth Vibrator\">Lust Stories Premium Bluetooth Vibrator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/swarovski-racy-mini-g-spot-vibrator-pillow-talk\" title=\"https:\/\/in.imbesharam.com\/products\/lust-stories\">Pillow Talk Racy Mini G-Spot Vibrator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/meta-rabbit-vibrator\" title=\"Meta Rabbit Vibrator\">Meta Rabbit Vibrator<\/a><\/li><\/ol><p>Some vibrators are shaped like a massage wand and usually best fit for external stimulation on the cilitors, the vulva, nipples and various other erogenous zones in the body. They are from the vibrator family but often also called as <a href=\"https:\/\/in.imbesharam.com\/collections\/massagers\" title=\"Massagers\">Massagers<\/a> and\/or Wands primarily because they can also be disguised as an innocent massage wand lying in the home or the bedroom, but all the smart folks know what it really is used for.<\/p><p>Since some so called controversial depictions of female sexual pleasure hits on our TV screens in India (thank you Swara Bhaskar\/Veere di Wedding & Kiara Advani\/Lust Stories), there has been a rise of healthy conversation about sex toys, orgasms, and sexual satisfaction for women. Women deserve pleasure, and sex toys are some of the easiest ways to obtain that. We mean, vibrators always let women cum first.<\/p><p>The second most popular sex toys that most vulva owners shop for are <a href=\"https:\/\/in.imbesharam.com\/collections\/dildos\" title=\"Dildos for Women\">Dildos<\/a>. These are artificial products shaped like a penis, usually made of medical grade silicone, glass, premium grade steel, crystals, and even hand made rare wood. They can be inserted into the vulva for pleasure and feeling of fullness, usually controlled by the user to touch and sense pleasure zones inside the vagina. These dildos come in all shapes, sizes and textures, find the one perfect for you here in the <a href=\"https:\/\/in.imbesharam.com\/collections\/dildos\" title=\"Buy Dildo in India\">Dildos Collection<\/a>.<\/p><p>Many women realize much pleasure from anal penetration and vibration and this job is best handled by a mighty assortment of <a href=\"https:\/\/in.imbesharam.com\/collections\/butt-plug\" title=\"Butt Plugs\">butt plugs<\/a> which come in various shape, size and texture. The most common forms have a small tapered edge for easy insertion and a flat base to hold it outside and for ease of removal. They can vibrate, thrust, inflate, sizzle and thrust and probably also help with relaxing the muscles for anal play and anal sex as well.<\/p><p>Last but not the least is our huge collection of <a href=\"https:\/\/in.imbesharam.com\/collections\/kegel-balls\" title=\"Kegel Balls\">Kegel balls<\/a> and <a href=\"https:\/\/in.imbesharam.com\/collections\/nipple-toys\" title=\"Nipple Toys\">nipple toys<\/a> which bring much pleasure to women who want to try something different in the usual routine. Kegel balls are also healthy for the pelvic muscles and recommended by health experts for all vulva owners to exercise at least once a week.<\/p><p>The point of sex toys is pleasure, and pleasure is best achieved by experimenting and exploring your sexuality. Using sex toys alone, or with a partner can be a fun and exciting way to explore everything you like. Go ahead try one today, your body will thank you later.<\/p>",
+            "show_on_right_column": false
+          }
+        },
+        "4b63b813-789a-407b-be02-ed3004d841ef": {
+          "type": "question",
+          "settings": {
+            "title": "Which are the best sex toys for couples in India?",
+            "text": "<p>Sex toys and couples are like cookies and milk, like bread and butter, like chocolate and coffee - they are just made for each other. There is this annoying myth going around that sex toys are only used by people who don’t have someone to have sex with, or by people whose partners cannot satisfy them. We call bullshit. <a href=\"https:\/\/in.imbesharam.com\/pages\/sex-toys-for-couples\" title=\"Sex Toys for Couples\">Sex toys for couples<\/a> exist to enhance the pleasure during sex, and with a good partner, sex becomes unbelievably good. Now imagine a sextoy that can be used by both partners simultaneously … it would be amazing wouldn’t it? Here are the best sex toys that can be used for couples, both opposite sex as well as same sex couples.<\/p><h4>COUPLES TOYS<\/h4><p>When couples are in the mood to try new toys to spice up their sex life, we recommend the following sex toys as they have excellent reviews from our customer database of over a million customers. A few toys like the Satisfyer Partner Plus can be worn by the female during intercourse, and it fits and stays in place to give clitoral and G Spot stimulation to the female and vibration effect to the male on the penis shaft as well as the penis tip which is usually the most sensitive. Here are some of the most popular couples toys:<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/satisfyer-partner-plus-w-remote-control-couples-vibrator\" title=\"Satisfyer Partner Plus w Remote Control\">Satisfyer Partner Plus w Remote Control<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/we-vibe-jive-wireless-bluetooth-app-vibrator\" title=\"We Vibe Jive Wireless Bluetooth Vibrator\">We Vibe Jive Wireless Bluetooth Vibrator<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/mysteryvibe-crescendo-unisex-vibrator\" title=\"Mystery Vibe Crescendo Unisex Vibrator\">Mystery Vibe Crescendo Unisex Vibrator<\/a><\/li><\/ol><h4>LONG DISTANCE TOYS<\/h4><p>Take out the Long Distance from your lovemaking. Thanks to the internet and very advanced sextech used in these world famous sex toy brands, developed for such partners and couples who like to achieve the closest in person like sexual experience when being physically apart. Enter the TWO best brands, Lovense and Kiiroo. Both the brands have a vibrator that can be use by the female partner and the masturbator with a large container and a thick flesh like sleeve for inserting the penis. Upon secure sign in activation, when the female inserts the vibrator in the vagina, the masturbator mimics those movements and delivers exact sensation to the male partner, miles away. So the female partner is in charge and can control the lovemaking experience by maneuvering the vibrrator, and controlling its movements pleasure herself and her partner in long distance. There are several intuitive features like private chat, video and music sync vibrations that can also be experienced in these sessions. Alternatively, either partner can use the app, and control the vibrations and patterns in their partners sex toys while having a live phone conversation or video chat on their phones. While teleportation is being worked on, this is the closest we have for long distance sexual experience in todays sextech world. The TWO best examples for simultaneous sex play:<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/lovense-nora\" title=\"Lovense Nora\">Lovense Nora<\/a> and <a href=\"https:\/\/in.imbesharam.com\/products\/lovense-max-2-hightech-male-masturbator-new\" title=\"Lovense Max\">Lovense Max<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/kiiroo-onyx-1\" title=\"Kiiro Onyx\">Kiiroo Onyx<\/a> and <a href=\"https:\/\/in.imbesharam.com\/products\/kiiroo-pearl-2-just-arrived\" title=\"Kiiroo Pearl\">Kiiroo Pearl<\/a><\/li><\/ol><p>And these are for when one partner is playing and the other is controlling:<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/lovense-lush-3-wireless-smart-vibrator-new\" title=\"Lovense Lush 3\">Lovense Lush 3<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/ohmibod-esca2-for-kiiroo\" title=\"OhMiBod Esca 2 for Kiiroo\">OhMiBod Esca 2 for Kiiroo<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/new-ohmibod-club-vibe-3-oh\" title=\"OhMiBod Vibe 3 Oh\">OhMiBod Vibe 3 Oh<\/a><\/li><\/ol><h4>APP CONTROLLED TOYS FOR DISCREET PUBLIC PLAY<\/h4><p>Fancy walking with your partner in a restaurant, taking your seats and while the order is being prepared you take out a remote or your phone and decide to play in public with your partner. This takes the notion of shameless one level up. The sex toys for men and women that either have a remote control or are connected to an app, can make this fantasy come true, before you say I love you. The female partner would wear the toy inside the panties and it usually fits in spot by the specially designed pantioes, or can be worn as inserted inside the vagina, what ever floats your boat. And when the remote or the app turns on, you can control the vibrations, intensity, speed and sensations, all from the palm of your hands. Your partner can’t stand the pleasure while sitting and can’t hold the frenzy of being teased in public, without anyone even knowing. The euphoria of this experience is far beyond words and can only be experienced with one engaging in this novel form of public play. Here are some great recommendations for Public Play:<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/screaming-o-mastering-panty-set\" title=\"Screaming O My Secret Vibrating Panty Set\">Screaming O My Secret Vibrating Panty Set<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/vibrating-boyshort\" title=\"Panty Rebel Vibrating BoyShorts\">Panty Rebel Vibrating Boyshort<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/love-to-love-secret-panty-2-vibrating-panties\" title=\"Love to Love Secret Vibrating Panties\">Love to Love Secret Vibrating Panties<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/new-ohmibod-club-vibe-3-oh\" title=\"OhMiBod Club Vibe 3.Oh! Vibrating Panties\">OhMiBod Club Vibe 3.Oh!<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/lovense-ferry-app-controlled-magnetic-panty-vibrator-new\" title=\"Lovense Ferry App Controlled Panty Vibrator\">Lovense Ferry App Controlled Panty Vibrator<\/a><\/li><\/ol><h4>BDSM: BDSM STANDS FOR BONDAGE, DOMINATION, SADISM AND MASOCHISM (AS A TYPE OF SEXUAL PRACTICE)<\/h4><p>In simple words, it is a very very common and frequent practice in most mature relationships which involves role play and domination of one, both or multiple partners. Seen Fifty Shades of Grey - the movie? Well imagine you being the boss in your role play. While everyone have their own secret kinks and desires, we open up the world to your imagination and provide an unparalleled collection of toys, gags, whips, tapes, restraints, ropes, clamps, floggers and a variety of <a href=\"https:\/\/in.imbesharam.com\/collections\/bdsm\" title=\"BDSM Sex Toys\">BDSM toys<\/a> for the beginner, mid and advanced games.You may look at the special bondage tape and go ehh how different could it be from normal tape. It is different, for one, it doesn’t pull out the hair when you rip it off, and believe us, that makes a difference). It is not the red room you want, with these amazing collection under one roof, it is your bedroom you want.<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/fetish-collection-large-ball-gag\" title=\"EasyToys Silicone Ball Gag\">EasyToys Silicone Ball Gag<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/fifty-shades-of-grey-nipple-clamps\" title=\"Fifty Shades of Grey Nipple Clamps\">Fifty Shades of Grey Nipple Clamps<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/fifty-shades-of-grey-please-sir-flogger\" title=\"Fifty Shades of Grey Please Sir Flogger\">Fifty Shades of Grey Please Sir Flogger<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/setting-the-mood-romantic-kits-bijoux-indiscrets-bijoux-indiscrets-happily-ever-after-bridal\" title=\"Bijoux Indiscrets Wedding Kit\">Bijoux Indiscrets Wedding Kit<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/fifty-shades-of-grey-hard-limits-universal-restraint-kit\" title=\"Fifty Shades of Grey Bed Restraint Kit\">Fifty Shades of Grey Bed Restraint Kit<\/a><\/li><\/ol><h4>STRAP-ONS<\/h4><p>Then comes <a href=\"https:\/\/in.imbesharam.com\/collections\/strapon-dildos\" title=\"Strapon Toys\">Strap-Ons<\/a> which are usually a great toy used for female to female pleasure play or role play as well as Female to Male penetration (usually called Pegging) These are harnesses worn around the waist, with a slot for an attachment for a dildo or similar shaped toy that can be inserted either in the vagina or the anus, and becomes a very interesting partner in a same sex sexual experience. The most popular use of the strap on is by vulva owners who are attracted to the same sex and use the strap on as their body attachment to deliver and receive pleasure which is as a result of penetration.<\/p><h4>PEGGING<\/h4><p>Pegging is when a female wears a strap-on dildo (see above) and penetrates her male partner anally. Yes anyone and everyone can put on a strap on and get about their business, but the term pegging only applies when a penis owner is being penetrated by a vagina owner. The goal is two folds and brings immense pleasure to both the partners. For the male partner, the magic spot is the prostate. When the small dildo is inserted in the anal cavity (with suitable application of lube, loving and TLC) it stimulates the pathway and ends up reaching its pleasure destination of prostate junction, which rests between the base of the penis and the rectum as they end inside the anal cavity. This junction is a super erogenous and usually the center of pleasure explosion, hence also termed as the male G Spot or the P Spot. In pegging activity, the back and forth movement stimulates many nerve endings in the pathway and leads to an ultimate orgasm. Take a look at the various P Spot Pegging sex toys that we offer on IMBesharam.com<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/scandal-pegging-strap-on-panty-set-s-m\" title=\"Scandal Pegging Strap-On Panty Set\">Scandal Pegging Strap On Panty Set<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/sex-mischief-strap-on-silicone-dildo\" title=\"Sex & Mischief Strap On & Silicone Dildo\">Sex & Mischief Strap On & Silicone Dildo<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/fetish-fantasy-series-first-timers-strap-on-set\" title=\"Fetish Fantasy First Timers Strap On Set\">Fetish Fantasy First Timers Strap On Set<\/a><\/li><\/ol><h4>SEX SWINGS & POSITION AIDS<\/h4><p>We also have sex swings and position aids! We all know sometimes even we don’t really understand the positions our bodies are in, and things like position aid will help you stay comfortable and not dislocate anything. Plus they help you manipulate the lack of experience with a handy accessory like a doggie style strap, the name says it all.<\/p><ol><li><a href=\"https:\/\/in.imbesharam.com\/products\/fetish-pleasure-kits-lux-fetish-lux-fetish-fantasy-swing-lf1473\" title=\"Lux Fetish Fantasy Swing\">Lux Fetish Fantasy Swing<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/products\/bedroom-surprise-position-lux-fetish-lux-fetish-lace-position-pal-lf1332r1\" title=\"Lux Fetish Position Pal\">Lux Fetish Position Pal<\/a><\/li><li><a href=\"https:\/\/in.imbesharam.com\/collections\/positional-aids\/products\/lux-fetish-doggie-style-strap\" title=\"Lux Fetish Doggie Style Support\">Lux Fetish Doggie Style Support<\/a><\/li><\/ol>",
+            "show_on_right_column": false
+          }
+        },
+        "a8af128a-da79-411d-b55d-e746c94b8527": {
+          "type": "question",
+          "settings": {
+            "title": "Why is the price of sex toys higher in India than other sites in USA & UK\/Europe?",
+            "text": "<p>Use this text to answer questions in as much deThe reason is the <strong>complex import process & expensive duties & brokerage charges<\/strong>.<\/p><p>The landed price of an adult product in India is about 3 to 4 times the cost of the product in USA, UK or Europe; the reason are detailed below:<\/p><ul><li><strong>International shipping<\/strong> - Usually we ship our consignment through DHL & Fedex from the US to India. The international shipping costs are high with these couriers, and more so lately due to COVID where flights are less, demand is more and rates of all man and material have gone up.<\/li><li><strong>Customs duties<\/strong> - The total import duties we pay on our shipments usually range between 105-125% of the declared value (some of the highest in the World) and these includes customs duties, IGST, taxes and various other fees that are collected by Govt. of India for allowing to import this product category. These have gone up from being 70-80% to 105-125% in last 2 years because the government is discouraging international imports and trying to persuade Indian citizens to buy products Made in India, to advance the MakeinIndia agenda.<\/li><li><strong>Broker charges<\/strong> - These are fees paid to a specialized group of agents and consultants, who handle all the necessary paperwork, certifications, licensing and regulatory compliances to make these imports happen. If not for them, it is near to impossible to import XX products in India due to the complexities of how rules and laws are written and implemented by authorities. These costs usually form a big chunk of the overall price (generally ¼ of the cost of the product you pay). The biggest advantage is that when we import through them, our customers identity is NEVER revealed at port of import and your privacy is maintained throughout the entire process.<\/li><li><strong>Domestic shipping and admin fees<\/strong> - Thereafter we incur costs of delivering the order to your door, which includes domestic courier shipping, quality control and courier coordination along with operational costs like warehousing & discreet packaging, business operations & customer service, which along with the cost of the product total up to about ¼ of the total price of the product.<\/li><\/ul><p>For example, if the price of a product costs $100 in the US, by time it reaches India, it will add up:<\/p><ol><li>US cost of product, shipping & admin costs = $120<\/li><li>International shipping = $50-$75<\/li><li>Customs duties = $120-$150<\/li><li>Broker charges = $95-$125<\/li><li>Domestic shipping and admin fees = $20-$30<\/li><\/ol><p>Total Landed costs in India = $405-$500<\/p><p>The sum total of these costs end up making the product 3-4x the price you can buy it in the USA, UK or Europe where there are NO such complex import processes or import restrictions that end up raising the selling prices.<\/p><p>We are aware that some international online shops may claim they ‘ship worldwide’ including India, but we do not recommend purchasing from any sites unless they clearly GUARANTEE 100% complete custom clearance and door delivery to you. We have seen and heard many customers take this risk, had their orders confiscated at Customs in India and ended up receiving show-cause notices from the department asking to show up to explain why they imported a ‘prohibited’ obscene product in India. The sellers, under these circumstances, will fold hands and will be unable to assist with clearance or refunds, since they claim they have already shipped the consignment and they are relieved of their responsibilities.<\/p><p>For such reasons, adult products in India will be a specialized commodity until the import restrictions are relaxed or we manufacture them in India, in which case we run a risk of producing products that may not match internationally reputed brand standards until such Indian manufacturing and skill sets become trained and competent to match up International standards of quality, hygiene and packaging.tail as possible for your customers.<\/p>",
+            "show_on_right_column": false
+          }
+        },
+        "6d963734-3a69-48a5-81e7-2dfda16d9a2e": {
+          "type": "question",
+          "settings": {
+            "title": "Is it illegal to sell sex toys in India?",
+            "text": "<p>This is one of the MOST easily misunderstood question. Hence you will see answers that weigh on both sides.<\/p><p>First the short answer.<\/p><p>‘Is it illegal to sell sex\/buy toys in India’? - The answer is YES<\/p><p>However:<\/p><p>‘Is it illegal to buy sex toys from a website that is NOT from India’? - The answer is NO, you do NOT break Indian LAW.<\/p><p>Let's break the above down.<\/p><p>As you already read everywhere you researched, Section 292 says….(see a very thorough article <a href=\"https:\/\/blog.ipleaders.in\/sex-toys-selling-india-legal\/\" target=\"_blank\" title=\"Is online selling of sex toys illegal in India?\">here<\/a>). If the product is ‘classified’ as a sex toy which will be if it looks ‘obscene’ (silly isn't it?) so while there is no classic textbook definition of obscene, whats obscene to me may not be to you. But certain products that look like a male or female genital are obscene (for majority of us) so lets classify them as sex toys. However the reality of the matter is that sex toys category is so huge, wide and long (pun intended) that there is no way to classify everything as obscene looking. For ex: see <a href=\"https:\/\/in.imbesharam.com\/products\/satisyer-pro-penguin-next-generation\" title=\"Satisfyer Pro Penguin\">this<\/a>, <a href=\"https:\/\/in.imbesharam.com\/products\/lovehoney-sqweel-go?variant=17592681093\" title=\"Sqweel Go\">this<\/a> and <a href=\"https:\/\/in.imbesharam.com\/products\/lovense-lush\" title=\"Lovense Lush\">this<\/a> - They would NOT be Sex Toys, hence buying them or selling them will NOT BE ILLEGAL.<\/p><p>In India the burden to prove legal-illegal rests on the seller, so if you end up buying, you are MOST cases not breaking any law. There is no department in Indian regulatory system that will mandate this transaction, so if you bought a sex toy from a reputed seller like <a href=\"https:\/\/in.imbesharam.com\/\" title=\"IMbesharam.com\">IMbesharam.com<\/a> you know you are just fine. Just make sure to read customer reviews and check their social media pages to know what brand you are dealing with.<\/p><p>So when are in a dilemma, why risk your hard earned money and peace of mind, buy it from an Indian Sex Toy Store that is NOT based in India but sells exclusively to India - <a href=\"https:\/\/in.imbesharam.com\/\">IMbesharam.com<\/a> This way you are not doing a transaction in the territorial jurisdiction of India and as such exempted from many laws that would have applied.<\/p>",
+            "show_on_right_column": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560198099015__52b27d1d-6efa-4fde-86e3-3f044ac7d846-1681248247c7f38e9a-0",
+        "template--14560198099015__52b27d1d-6efa-4fde-86e3-3f044ac7d846-1681248247c7f38e9a-1",
+        "0688724c-816c-4ff6-9968-f3a9c0b3694b",
+        "aeace61a-0531-478c-b4d3-b8a7a385f38f",
+        "0f78604d-ce76-479d-a3f2-b97aa3dbc47a",
+        "4b63b813-789a-407b-be02-ed3004d841ef",
+        "a8af128a-da79-411d-b55d-e746c94b8527",
+        "6d963734-3a69-48a5-81e7-2dfda16d9a2e"
+      ],
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "TOP QUESTIONS",
+        "description": "RELATED TO SEX TOYS IN INDIA ANSWERED",
+        "mobile_image": "shopify:\/\/shop_images\/Frame_35811_3.png",
+        "desktop_image": "shopify:\/\/shop_images\/Group_3702_1_2b37f0a5-f54e-4f2c-98af-c0009c563c6e.png",
+        "image-alt": "Alt",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c0179911-ae26-43d7-a8fb-fa915ac635f2": {
+      "type": "international-brands",
+      "blocks": {
+        "template--14575030403143__c0179911-ae26-43d7-a8fb-fa915ac635f2-1685048939409edbf4-0": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aneros_1_78c044e1-35d5-4c2d-b778-e416c4b2fa7d.png",
+            "link": ""
+          }
+        },
+        "template--14575030403143__c0179911-ae26-43d7-a8fb-fa915ac635f2-1685048939409edbf4-1": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lovense.png",
+            "link": ""
+          }
+        },
+        "template--14575030403143__c0179911-ae26-43d7-a8fb-fa915ac635f2-1685048939409edbf4-2": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fleshlight_5dd2fed9-0329-4581-93a7-aa06a6251417.png",
+            "link": ""
+          }
+        },
+        "4870f375-0448-4e0c-8b05-2c914b6ed64c": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tenga_273dcd74-4d26-4cc1-9850-9f43290dbee4.png",
+            "link": ""
+          }
+        },
+        "b20ea82b-7195-45cb-8d41-09707fabf9ff": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kiiro.png",
+            "link": ""
+          }
+        },
+        "fbc9ee25-55ac-4b31-9d4c-144509ca670a": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/we-vibe_9c12af89-e21d-430b-a187-820a6c044310.png",
+            "link": ""
+          }
+        },
+        "a797cafb-4036-40c9-b484-0fb821c3112a": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/satisfyer_2258c777-5998-40b2-b588-481f68a233e7.png",
+            "link": ""
+          }
+        },
+        "b561a32f-5f7c-46cb-9f32-54f5b6de3852": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/womanizer_cb798735-215b-4434-9fe2-764653bc44f6.png",
+            "link": ""
+          }
+        },
+        "3ab59f97-675c-4f0a-83a3-25f155b7b5c6": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fifty-shades-of-grey.png",
+            "link": ""
+          }
+        },
+        "8da8f5ea-013c-449d-843b-9b1ac92f4010": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lelo_bc8dc529-0182-447c-8cf6-d7f9bff13b0e.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14575030403143__c0179911-ae26-43d7-a8fb-fa915ac635f2-1685048939409edbf4-0",
+        "template--14575030403143__c0179911-ae26-43d7-a8fb-fa915ac635f2-1685048939409edbf4-1",
+        "template--14575030403143__c0179911-ae26-43d7-a8fb-fa915ac635f2-1685048939409edbf4-2",
+        "4870f375-0448-4e0c-8b05-2c914b6ed64c",
+        "b20ea82b-7195-45cb-8d41-09707fabf9ff",
+        "fbc9ee25-55ac-4b31-9d4c-144509ca670a",
+        "a797cafb-4036-40c9-b484-0fb821c3112a",
+        "b561a32f-5f7c-46cb-9f32-54f5b6de3852",
+        "3ab59f97-675c-4f0a-83a3-25f155b7b5c6",
+        "8da8f5ea-013c-449d-843b-9b1ac92f4010"
+      ],
+      "settings": {
+        "show_divider": false,
+        "heading": "Brands We Stock",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "btn_url": "shopify:\/\/pages\/brands",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cb1161b8-165f-4648-bb0a-639caa38565a": {
+      "type": "featured-blog",
+      "blocks": {
+        "template--14573288292423__cb1161b8-165f-4648-bb0a-639caa38565a-1684937952ccbf9a27-0": {
+          "type": "title",
+          "settings": {
+            "show_date": true,
+            "note": "3 min read"
+          }
+        }
+      },
+      "block_order": [
+        "template--14573288292423__cb1161b8-165f-4648-bb0a-639caa38565a-1684937952ccbf9a27-0"
+      ],
+      "settings": {
+        "blog": "news",
+        "show_divider": false,
+        "heading": "Sex-Ed we all Need",
+        "heading_mobile": "SEX-ED WE NEED",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "show_image": true,
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "padding_top": 36,
+        "padding_bottom": 8
+      }
+    },
+    "f24440f3-14a6-4477-bdec-86b49b956048": {
+      "type": "page",
+      "settings": {
+        "show_divider": false,
+        "page_1": "all-about-sex-toys",
+        "page_2": "all-about-sex-toys-2",
+        "page_3": "all-about-sex-toys-3",
+        "page_mobile": "all-about-sex-toys-mobile",
+        "heading": "All about sex toys",
+        "heading_mobile": "About sex toys",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 100,
+        "padding_bottom": 68
+      }
+    }
+  },
+  "order": [
+    "2568e31d-74f0-4d04-89d8-67a9dca6a236",
+    "72894d07-7eb8-40ef-9c2b-ee1557b87bca",
+    "5172be8e-e995-4891-8227-e4d820d3a5fd",
+    "a4d09b1c-2553-43cc-a586-10da00da5a47",
+    "a6e1c587-e979-43d3-874c-f34cf010381a",
+    "1d31099d-6fa0-448b-9757-27e8f90b7a9e",
+    "9a6f7fc1-4f1f-42eb-a32e-d10e91de3cbc",
+    "6d3ebb0f-5203-4865-8d67-51ee0087001e",
+    "0f18b51f-d4fc-4e9e-a2bd-4bcad3b88660",
+    "b1164d89-76ab-4f02-b23b-71f91c88f927",
+    "c0179911-ae26-43d7-a8fb-fa915ac635f2",
+    "cb1161b8-165f-4648-bb0a-639caa38565a",
+    "f24440f3-14a6-4477-bdec-86b49b956048"
+  ]
+}

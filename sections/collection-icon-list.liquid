@@ -1,0 +1,101 @@
+{{ 'collection-icon-list.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-icon-list__wrap">
+    <div class="collection-icon-list__container page-width">
+        {% if section.settings.title %}
+            <h2 class="collection-icon-list__title">{{ section.settings.title }}</h2>
+        {% endif %}
+        <div class="collection-icon-list__content-wrap">
+            {% for block in section.blocks %}
+                <a class="collection-icon-list__collection-link" href="{{ block.settings.collection.url }}">
+                    {% if block.settings.image != blank %}
+                        <img  class="front-img"
+                                srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                                        {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                                        {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                                        {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                                src="{{ block.settings.image | image_url: width: 768 }}"
+                                alt="{{ block.settings.image.alt | escape }}"
+                                loading="lazy"
+                                width="{{ block.settings.image.width }}"
+                                height="{{ block.settings.image.height }}"
+                        >
+                    {% endif %}
+                    <div class="back-content">
+                        {% if block.settings.image-hover != blank %}
+                            <img
+                                    srcset="{%- if block.settings.image-hover.width >= 165 -%}{{ block.settings.image-hover | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if block.settings.image-hover.width >= 360 -%}{{ block.settings.image-hover | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if block.settings.image-hover.width >= 535 -%}{{ block.settings.image-hover | image_url: width: 535 }} 535w,{%- endif -%}
+                                        {%- if block.settings.image-hover.width >= 750 -%}{{ block.settings.image-hover | image_url: width: 750 }} 750w,{%- endif -%}
+                                        {%- if block.settings.image-hover.width >= 1070 -%}{{ block.settings.image-hover | image_url: width: 1070 }} 1070w,{%- endif -%}
+                                        {%- if block.settings.image-hover.width >= 1500 -%}{{ block.settings.image-hover | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{ block.settings.image-hover | image_url }} {{ block.settings.image-hover.width }}w"
+                                    src="{{ block.settings.image-hover | image_url: width: 768 }}"
+                                    alt="{{ block.settings.image-hover.alt | escape }}"
+                                    loading="lazy"
+                                    width="{{ block.settings.image-hover.width }}"
+                                    height="{{ block.settings.image-hover.height }}"
+                            >
+                        {% endif %}
+                    </div>
+                    <div class="block-label__wrap">
+                        <span class="block-label">{{ block.settings.label }}</span>
+                    </div>
+                </a>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+"name": "Collection Icon List",
+"tag": "section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title",
+"default": "Shop By"
+}],
+"blocks": [
+{
+"name": "Collection",
+"type": "Collection",
+"limit": 8,
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "image_picker",
+"id": "image-hover",
+"label": "Hover-image"
+},
+{
+"type": "text",
+"id": "label",
+"label": "Label"
+}]
+}
+],
+"presets": [
+{
+"name": "Collection Icon List"
+}
+]
+}
+{% endschema %}

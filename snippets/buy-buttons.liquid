@@ -1,0 +1,271 @@
+{% comment %}
+  Renders product buy-buttons.
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} product form id.
+  - show_pickup_availability:: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
+  Usage:
+  {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
+{% endcomment %}
+<product-form class="product-form" {{ block.shopify_attributes }}>
+  <div class="product-form__error-message-wrapper" role="alert" hidden>
+    <svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 13 13">
+      <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+      <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+      <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+      <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"/>
+    </svg>
+    <span class="product-form__error-message"></span>
+  </div>
+  
+  {%- form 'product', product, id: product_form_id, data-type: 'add-to-cart-form' -%}
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled="disabled"/>
+    {%- if block.settings.show_quantity_selector -%}
+      <div class="product-form__quantity">
+        <label for="Quantity-{{ block.id }}" class="visually-hidden">{{ 'products.product.quantity.label' | t }}</label>
+        <quantity-input class="quantity">
+          <button class="quantity__button no-js-hidden" name="minus" type="button">
+            <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+            {% render 'icon', icon: 'minus' %}
+          </button>
+          <input class="quantity__input"
+            type="number"
+            name="quantity"
+            id="Quantity-{{ block.id }}"
+            min="1"
+            value="1"
+            form="{{ product_form_id }}"
+          />
+          <button class="quantity__button no-js-hidden" name="plus" type="button">
+            <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+            {% render 'icon', icon: 'plus' %}
+          </button>
+        </quantity-input>
+      </div>
+    {%- endif -%}
+    <div class="product-form__buttons">
+      <button
+        type="submit"
+        name="add"
+        class="product-form__submit button{% if block.settings.show_dynamic_checkout %} button--secondary{% endif %} button--full-width"
+        {%- if product.selected_or_first_available_variant.available == false %} disabled="disabled"{% endif -%}
+        {%- if product.template_suffix == 'pre-order' %} data-pre-order="true"{% endif -%}
+      >
+        {%- liquid
+          if product.selected_or_first_available_variant.available
+            if product.template_suffix != 'pre-order'
+              echo 'products.product.add_to_cart' | t
+            else
+              echo 'products.product.pre_order' | t
+            endif
+          else
+            echo 'products.product.sold_out' | t
+          endif
+        -%}
+      </button>
+      {%- if block.settings.show_dynamic_checkout -%}
+        {{ form | payment_button }}
+      {%- endif -%}
+    </div>
+  {%- endform -%}
+</product-form>
+
+{%- if show_pickup_availability -%}
+  {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+  {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+  <pickup-availability class="product__pickup-availabilities no-js-hidden"
+    {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+    data-has-only-default-variant="{{ product.has_only_default_variant }}"
+  >
+    <template>
+      <pickup-availability-preview class="pickup-availability-preview">
+        {% render 'icon', icon: 'unavailable' %}
+        <div class="pickup-availability-info">
+          <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+          <button class="pickup-availability-button link link--underline">{{ 'products.product.pickup_availability.refresh' | t }}</button>
+        </div>
+      </pickup-availability-preview>
+    </template>
+  </pickup-availability>
+  <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{% comment %} drop a hint and chat with us buttons {% endcomment %}
+<div class="additional-buttons">
+  <div id="dropahint_wrapper" class="additional-button additional-button--dropahint"></div>
+  <a class="additional-button" href="#">ANY Q's? CHAT WITH US</a>
+</div>
+
+<div class="delivery-features">
+  <div class="delivery-features-item">
+        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5687 22.0379C20.5371 21.6223 20.2068 21.292 19.7911 21.2603C19.3262 21.2957 18.9781 21.7012 19.0135 22.1661C19.0451 22.5817 19.3754 22.912 19.7911 22.9437C20.256 22.9083 20.6041 22.5027 20.5687 22.0379Z" fill="white"/>
+          <path d="M22.6279 21.3157C22.5963 20.9001 22.266 20.5698 21.8503 20.5381C21.3854 20.5735 21.0373 20.9791 21.0727 21.4439C21.1043 21.8595 21.4346 22.1898 21.8503 22.2215C22.3152 22.1862 22.6633 21.7806 22.6279 21.3157Z" fill="white"/>
+          <path d="M28.7684 8.10653V8.0675C28.7577 8.04035 28.7446 8.01425 28.7293 7.98942L28.7001 7.95039L28.6415 7.88695L28.6073 7.85767L28.5439 7.8284H28.5195L17.921 3.49531C17.8037 3.44785 17.6724 3.44785 17.555 3.49531L6.98094 7.7552H6.95654L6.89311 7.78448L6.85895 7.81376L6.8004 7.87719L6.77112 7.91623C6.75581 7.94105 6.74276 7.96716 6.73208 7.9943V8.03334C6.72696 8.07384 6.72696 8.11483 6.73208 8.15533V12.059H1.13518C0.865701 12.059 0.647217 12.2775 0.647217 12.547C0.647217 12.8165 0.865701 13.0349 1.13518 13.0349V13.0984H6.67353V14.7672H4.77536C4.50589 14.7672 4.2874 14.9857 4.2874 15.2552C4.2874 15.5246 4.50589 15.7431 4.77536 15.7431H6.67353V17.4119H2.17453C1.90506 17.4119 1.68657 17.6304 1.68657 17.8999C1.68657 18.1694 1.90506 18.3879 2.17453 18.3879H6.67353V20.4275C6.6745 20.6245 6.79387 20.8016 6.97606 20.8765L17.555 25.2681C17.6079 25.2891 17.6641 25.3006 17.721 25.3023C17.7778 25.3006 17.834 25.2891 17.8869 25.2681L28.4658 20.8765C28.648 20.8016 28.7674 20.6245 28.7684 20.4275V8.22852C28.7735 8.18802 28.7735 8.14703 28.7684 8.10653ZM17.7356 4.48587L21.7466 6.09126L12.6218 9.95102L8.4497 8.21388L17.7356 4.48587ZM17.233 24.0921L7.64945 20.1006V18.383H9.67448C9.94396 18.383 10.1624 18.1645 10.1624 17.895C10.1624 17.6255 9.94396 17.4071 9.67448 17.4071H7.64945V15.7382H12.2851C12.5545 15.7382 12.773 15.5198 12.773 15.2503C12.773 14.9808 12.5545 14.7623 12.2851 14.7623H7.64945V13.0984H8.62537C8.89485 13.0984 9.11333 12.8799 9.11333 12.6104C9.11333 12.3409 8.89485 12.1224 8.62537 12.1224H7.64945V8.94095L11.3775 10.4829L17.233 12.9227V24.0921ZM17.7405 12.0981L13.8856 10.4829L23.0202 6.60849L27.0166 8.21876L21.1952 10.6586L17.7405 12.0981ZM18.2236 24.0921V12.9227L20.9708 11.7809L27.8022 8.93119L27.8266 20.1006L18.2236 24.0921Z" fill="white"/>
+      </svg>
+    <p>Discreet packaging</p>
+  </div>
+  <div class="delivery-features-item">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25.2309 12.6099C25.1647 12.4833 25.0335 12.4039 24.8906 12.4041H4.61024C4.46737 12.4041 4.33636 12.4834 4.27011 12.6099L1.73293 17.4406C1.63416 17.6286 1.70645 17.8611 1.89448 17.9599C1.94963 17.9889 2.01099 18.004 2.07328 18.004H4.2266V26.4855C4.22671 26.6978 4.39881 26.8699 4.61112 26.87H24.8903C25.1027 26.87 25.2749 26.6978 25.2749 26.4855V18.004H27.4282C27.6406 18.004 27.8127 17.8318 27.8127 17.6194C27.8127 17.5571 27.7975 17.4958 27.7685 17.4406L25.2309 12.6099ZM4.84272 13.1731H14.1128L11.9814 17.235H2.70895L4.84272 13.1731ZM4.99411 18.004H12.2121C12.3551 18.004 12.4863 17.9247 12.5527 17.7981L14.365 14.3484V26.1022H4.99411V18.004ZM24.5058 26.1016H15.1345V14.3478L16.9472 17.7981C17.0135 17.9247 17.1447 18.0041 17.2876 18.004H24.5058V26.1016ZM17.5185 17.235L15.3872 13.1731H24.6583L26.791 17.235H17.5185Z" fill="white"/>
+      <path d="M14.7499 11.2042C17.1179 11.2042 19.0375 9.28461 19.0375 6.91668C19.0375 4.54874 17.1179 2.62915 14.7499 2.62915C12.382 2.62915 10.4624 4.54874 10.4624 6.91668V6.91689C10.4651 9.28368 12.3831 11.2017 14.7499 11.2042ZM14.7499 3.39819C16.6931 3.39819 18.2684 4.97347 18.2684 6.91668C18.2684 8.85988 16.6931 10.4352 14.7499 10.4352C12.8068 10.4352 11.2316 8.85999 11.2314 6.91689C11.2336 4.97457 12.8076 3.4005 14.7499 3.39819Z" fill="white"/>
+      <path d="M15.1409 7.98726H13.4097C13.1973 7.98726 13.0251 8.15942 13.0251 8.37179C13.0251 8.58415 13.1973 8.75631 13.4097 8.75631H15.14C16.0155 8.74598 16.7169 8.02791 16.7066 7.15241C16.6964 6.29147 16.001 5.59598 15.14 5.58587H14.338L14.6052 5.31868C14.7581 5.17136 14.7627 4.92796 14.6154 4.77497C14.468 4.62204 14.2246 4.61748 14.0716 4.76481C14.0685 4.76789 14.0653 4.77102 14.0622 4.7742L13.1393 5.69705C12.9892 5.84702 12.989 6.09036 13.139 6.24055C13.1391 6.24066 13.1392 6.24077 13.1393 6.24088L14.0622 7.16373C14.2124 7.31391 14.4558 7.31391 14.606 7.16373C14.7562 7.01355 14.7562 6.77009 14.606 6.61991L14.3386 6.3525H15.1408C15.5916 6.35991 15.951 6.73131 15.9436 7.18208C15.9364 7.62241 15.5812 7.97765 15.1408 7.98485L15.1409 7.98726Z" fill="white"/>
+    </svg>
+    <p>Self pickup</p>
+  </div>
+  <div class="delivery-features-item">
+    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23.3476 12.463H23.0065V10.7794C23.0065 8.58948 22.1365 6.48922 20.588 4.9407C19.0395 3.39217 16.9392 2.52222 14.7493 2.52222C12.5593 2.52222 10.4591 3.39217 8.91053 4.9407C7.362 6.48922 6.49205 8.58948 6.49205 10.7794V12.463H6.15219C4.87511 12.463 3.83594 13.5924 3.83594 14.9806V24.4547C3.83594 25.8429 4.87511 26.9723 6.15219 26.9723H23.3489C24.626 26.9723 25.6652 25.8429 25.6652 24.4547V14.9806C25.6639 13.5924 24.6247 12.463 23.3476 12.463ZM7.40705 10.7794C7.40705 8.83215 8.1806 6.96463 9.55753 5.5877C10.9345 4.21077 12.802 3.43722 14.7493 3.43722C16.6965 3.43722 18.5641 4.21077 19.941 5.5877C21.3179 6.96463 22.0915 8.83215 22.0915 10.7794V12.463H20.3922V10.7794C20.3922 9.28283 19.7977 7.84753 18.7394 6.78927C17.6812 5.73102 16.2459 5.1365 14.7493 5.1365C13.2527 5.1365 11.8174 5.73102 10.7591 6.78927C9.70085 7.84753 9.10633 9.28283 9.10633 10.7794V12.463H7.40705V10.7794ZM10.0213 12.463V10.7794C10.0213 9.5255 10.5194 8.32293 11.4061 7.43628C12.2928 6.54962 13.4953 6.0515 14.7493 6.0515C16.0032 6.0515 17.2058 6.54962 18.0924 7.43628C18.9791 8.32293 19.4772 9.5255 19.4772 10.7794V12.463H10.0213ZM24.7489 24.4547C24.7489 25.3384 24.1202 26.0573 23.3476 26.0573H6.15088C5.3781 26.0573 4.74963 25.3384 4.74963 24.4547V14.9806C4.74963 14.097 5.37706 13.378 6.15088 13.378H23.3476C24.1202 13.378 24.7489 14.097 24.7489 14.9806V24.4547Z" fill="white"/>
+      <path d="M14.7497 16.2974C14.2866 16.2972 13.8352 16.4428 13.4595 16.7134C13.0838 16.9841 12.8027 17.3662 12.6563 17.8055C12.5098 18.2448 12.5052 18.719 12.6433 19.161C12.7814 19.603 13.0551 19.9904 13.4256 20.2682V21.814C13.4256 22.1652 13.5651 22.502 13.8134 22.7503C14.0617 22.9986 14.3985 23.1382 14.7497 23.1382C15.1009 23.1382 15.4377 22.9986 15.686 22.7503C15.9343 22.502 16.0738 22.1652 16.0738 21.814V20.2682C16.4443 19.9904 16.718 19.603 16.8561 19.161C16.9941 18.719 16.9896 18.2448 16.8431 17.8055C16.6966 17.3662 16.4156 16.9841 16.0399 16.7134C15.6641 16.4428 15.2128 16.2972 14.7497 16.2974ZM15.3891 19.6253C15.3191 19.6654 15.261 19.7233 15.2205 19.7931C15.1801 19.8628 15.1588 19.9421 15.1588 20.0227V21.814C15.1588 21.9225 15.1157 22.0266 15.039 22.1033C14.9623 22.1801 14.8582 22.2232 14.7497 22.2232C14.6412 22.2232 14.5371 22.1801 14.4604 22.1033C14.3837 22.0266 14.3405 21.9225 14.3405 21.814V20.0227C14.3406 19.942 14.3193 19.8628 14.2788 19.793C14.2383 19.7232 14.18 19.6654 14.11 19.6253C13.8622 19.4842 13.6681 19.2651 13.5579 19.0022C13.4476 18.7393 13.4274 18.4473 13.5004 18.1717C13.5734 17.8961 13.7355 17.6523 13.9614 17.4784C14.1873 17.3045 14.4644 17.2102 14.7496 17.2102C15.0347 17.2102 15.3118 17.3045 15.5377 17.4784C15.7637 17.6523 15.9257 17.8961 15.9987 18.1717C16.0717 18.4473 16.0515 18.7393 15.9413 19.0022C15.831 19.2651 15.6369 19.4842 15.3891 19.6253Z" fill="white"/>
+    </svg>
+    <p>15 days <br> return policy</p>
+  </div>
+</div>
+
+{% comment %} <div data-rebuy-id="91943"></div>
+<script id="rebuy-dynamic-bundle-template" type="text/template">
+  <div class="rebuy-widget"
+  v-cloak
+  v-on:click="stopPropagation($event)"
+  v-bind:id="'rebuy-widget-' + id"
+  v-bind:class="['widget-type-' + config.type.replace('_','-'), products.length > 0 ? 'is-visible' : 'is-hidden']">
+  
+  <div class="rebuy-widget-container">
+      <div class="rebuy-widget-content">
+          
+          <h4 class="super-title" v-if="config.language.super_title != ''" v-html="config.language.super_title"></h4>
+
+          <h3 class="primary-title" v-if="config.language.title != ''" v-html="config.language.title"></h3>
+
+          <div class="description" v-if="config.language.description != ''" v-html="config.language.description"></div>
+          
+          <div class="rebuy-bundle">
+          
+              <div class="rebuy-bundle__images">
+
+                  <div class="rebuy-bundle__image" v-for="(product, index) in products" v-if="product.selected" v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]">
+                      <a class="rebuy-bundle__image-item" v-bind:href="learnMoreURL(product)" v-bind:style="imageStyles" v-on:click="learnMore(product);" v-bind:class="[hasLearnMore() && !isInputProduct(product) ? 'clickable' : '' ]">
+                          <img v-bind:src="itemImage(product, product.selected_variant, '400x400')" v-bind:alt="product.title">
+                      </a>
+                      <div class="rebuy-bundle__image-divider">
+                          <i class="far fa-plus"></i>
+                      </div>
+                  </div>
+                  
+              </div>
+              
+              <div class="rebuy-bundle__items">
+                  
+
+              <div class="rebuy-product-block" v-for="(product, product_index) in products" v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product), isInputProduct(product) ? 'is-input-product' : '' ,product.selected ? 'is-selected': '']">
+                      
+                      <div class="rebuy-product-info">
+                          <div class="rebuy-product-checkbox">
+                              <label class="rebuy-checkbox-label">
+                                  <input
+                                      class="checkbox-input rebuy-checkbox"
+                                      v-model="product.selected"
+                                      type="checkbox" />
+                              </label>                                  
+                          </div>
+                          <strong class="rebuy-product-label" v-if="isInputProduct(product)" v-html="'This item:'"></strong>
+                          <a class="rebuy-product-title" v-bind:href="learnMoreURL(product)" v-on:click="learnMore(product);" v-html="product.title" v-bind:class="[hasLearnMore() && !isInputProduct(product) ? 'clickable' : '']" v-bind:alt="'View ' + product.title"></a>
+                          <div class="rebuy-variant-title" v-if="showVariantTitle(product)" v-html="product.selected_variant.title"></div>
+                          <div class="rebuy-product-review" v-if="hasProductReviews(product)">
+                              <span class="rebuy-star-rating">
+                                  <span class="rebuy-star-rating-background"></span>
+                                  <span class="rebuy-star-rating-foreground" v-bind:style="{ width: productReviewRatingPercentage(product) }"></span>
+                              </span>
+                              <span class="rebuy-review-count" v-html="productReviewCount(product)"></span>
+                          </div>
+
+                          <div class="rebuy-product-price">
+                              <div v-if="variantOnSale(product, product.selected_variant)">
+                                  <span class="rebuy-money sale" v-html="formatMoney(variantPrice(product, product.selected_variant))"></span>
+                                  <span class="rebuy-money compare-at" v-html="formatMoney(variantCompareAtPrice(product, product.selected_variant))"></span>
+                              </div>
+                              <div v-if="!(variantOnSale(product, product.selected_variant))">
+                                  <span class="rebuy-money" v-html="formatMoney(variantPrice(product, product.selected_variant))"></span>
+                              </div>
+                          </div>
+                          <div class="rebuy-product-description" v-if="showProductDescription(product)" v-html="text(product.body_html)"></div>
+                      </div>
+                      <div class="rebuy-product-options" v-if="showVariantSelect(product)">
+                          <select
+                              :id="id + '-' + 'select' + '-' + product_index"
+                              :class="{ hide : settings.view_options.variant_selector == 'buttons' }"
+                              class="rebuy-select"
+                              v-model="product.selected_variant_id"
+                              v-on:change="selectVariant(product)">
+                              <option v-for="variant in product.variants" v-bind:value="variant.id">{{ variant.title }}</option>
+                          </select>
+
+                          <div v-if="option.name == 'Color' && displayColorSwatches()" v-for="(option, option_index) in product.options" class="rebuy-color-swatches">
+                              <div v-for="(value, value_index) in option.values" class="rebuy-color-swatch">
+                                  <input
+                                      :name="id + '-color-' + product_index" 
+                                      :id="id + '-color-' + option_index + '-' + value + '-' + value_index"
+                                      :checked="value_index == 0" 
+                                      :value="value"
+                                      type="radio" 
+                                      class="rebuy-color-input hide"
+                                      v-on:change="selectVariantByColor(product, value, product_index)">
+                                  <label
+                                      :for="id + '-color-' + option_index + '-' + value + '-' + value_index"
+                                      :style="{ backgroundColor: value }"
+                                      :title="value"
+                                      class="rebuy-color-label"></label>
+                              </div>
+                          </div>
+
+                          <div v-if="option.name == 'Size' && settings.view_options.variant_selector == 'buttons'" v-for="(option, option_index) in product.options" class="mt-10 rebuy-size-swatches">
+                              <div v-for="(value, value_index) in option.values" class="rebuy-size-swatch">
+                                  <input
+                                      :name="id + '-size-' + product_index" 
+                                      :id="id + '-size-' + product_index + '-' + value"
+                                      :checked="value_index == 0" 
+                                      :value="value"
+                                      type="radio" 
+                                      class="rebuy-size-input hide"
+                                      v-on:change="selectVariantBySize(product, value, product_index)">
+                                  <label
+                                      :for="id + '-size-' + product_index + '-' + value"
+                                      class="rebuy-size-label">{{ value }}</label>
+                              </div>
+                          </div>
+                      </div>
+                      
+                  </div>
+
+              </div>
+              
+              <div class="rebuy-bundle__actions" v-if="subtotal() > 0">
+                  
+                  <div class="rebuy-bundle__actions-price">
+                      <strong class="rebuy-bundle__actions-price-label">Total Price:</strong>
+                      
+                      <div class="rebuy-bundle__actions-price-value" v-if="bundleOnSale()">
+                          <span class="rebuy-money sale" v-html="formatMoney(subtotal())"></span>
+                          <span class="rebuy-money compare-at" v-html="formatMoney(compareAtSubtotal())"></span>
+                      </div>
+                      <div class="rebuy-bundle__actions-price-value" v-if="!(bundleOnSale())">
+                          <span class="rebuy-money" v-html="formatMoney(subtotal())"></span>
+                      </div>
+                  </div>
+                  
+                  <div class="rebuy-bundle__actions-buttons">
+                      <button
+                          class="rebuy-button"
+                          v-on:click="addSelectedProductsToCart()"
+                          type="button">
+                              <span v-html="buttonWidgetLabel()"></span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</script> {% endcomment %}

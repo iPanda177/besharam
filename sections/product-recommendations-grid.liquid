@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="{{ 'component-card-designs.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-product-grid.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- assign products_limit = section.settings.products_limit -%}
+
+<product-recommendations data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4">
+    {%- if recommendations.performed and recommendations.products_count > 0 -%}
+        <div class="collection-product-grid__wrap page-width">
+            <div class="collection-product-grid__container">
+                <h2 class="collection-product-grid__title">{{ section.settings.title }}</h2>
+                <div class="collection-product-grid__product-wrapper">
+                    {% for product in recommendations.products limit: 4 %}
+                        <div class="collection-product-grid__product-block">
+                            {% render 'card-product',
+                                    card_style: "style-type--1",
+                                    card_product: product,
+                                    card_collection: recommendations.products,
+                                    media_size: "portrait",
+                                    show_secondary_image: false,
+                                    show_quick_buy: true,
+                                    show_vendor: true,
+                                    show_rating: true,
+                                    enable_quick_view: true,
+                                    enable_color_swatches: false,
+                                    enable_countdown: false,
+                                    enable_image_fill: true
+                            %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {%- endif -%}
+</product-recommendations>
+
+{% schema %}
+{
+"name": "Recommendations Grid",
+"tag": "section",
+"class": "section product-recommendations-grid",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title",
+"default": "You may also like"
+}
+],
+"presets": [
+{
+"name": "Recommendations Grid"
+}
+]
+}
+{% endschema %}

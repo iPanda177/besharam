@@ -1,0 +1,299 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "b309e2d8-a1e7-4f9e-b18c-2a3170236cb8": {
+      "type": "logo-list",
+      "blocks": {
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-fifty-shades-of-grey.png",
+            "link": ""
+          }
+        },
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-lovense.png",
+            "link": ""
+          }
+        },
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-tenga.png",
+            "link": ""
+          }
+        },
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-satisfyer.png",
+            "link": ""
+          }
+        },
+        "09dbb31b-5c71-4513-8d5d-e33cb051e996": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-fleshlight.png",
+            "link": ""
+          }
+        },
+        "e548fe00-7c8b-4a44-83a7-ecc59dad56e8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-pipedream.png",
+            "link": ""
+          }
+        },
+        "6796bb35-605b-4730-b9c2-efff1b2701b5": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-aneros.png",
+            "link": ""
+          }
+        },
+        "749eae0a-e4a8-4458-8dca-5e540ac68cc9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-lelo.png",
+            "link": ""
+          }
+        },
+        "835eb7d2-1754-48dd-aa5b-5453d56ac1c1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-voodoo.png",
+            "link": ""
+          }
+        },
+        "6eced9d8-db91-4b3f-9deb-171c0f719a55": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-b-swish.png",
+            "link": ""
+          }
+        },
+        "deb52f4a-7924-4e73-ad94-834123fe47b4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-king-cock.png",
+            "link": ""
+          }
+        },
+        "bdc87e48-718c-49e4-ba51-b78e2ae2f0df": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-womanizer.png",
+            "link": ""
+          }
+        },
+        "ca0b96ac-f5d8-4a10-945c-3afd62f45645": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-swiss-navy.png",
+            "link": ""
+          }
+        },
+        "6bc40301-b4fc-41ec-8f50-59dea5a8dbce": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-kiiroo.png",
+            "link": ""
+          }
+        },
+        "63aacc89-c568-4113-aa30-5ad084a551d7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-pjur.png",
+            "link": ""
+          }
+        },
+        "0e1856c9-ea2e-4268-a0f4-88d52eda5f8d": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-system-jo.png",
+            "link": ""
+          }
+        },
+        "e246039b-8266-4b7c-879c-7209d2bb2070": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-rocks-off.png",
+            "link": ""
+          }
+        },
+        "b483b725-7ede-45ff-bda0-89bee5bf006c": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-we-vibe.png",
+            "link": ""
+          }
+        },
+        "a0b982cb-1d48-47bc-9b83-2f51c4fd185b": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-je-joue.png",
+            "link": ""
+          }
+        },
+        "f12915f0-ec60-4294-984c-70a769d1917e": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-romp.png",
+            "link": ""
+          }
+        },
+        "25888de7-e0d6-4134-8c05-3f428bc2563d": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-bathmate.png",
+            "link": ""
+          }
+        },
+        "80428204-3210-45ee-a19d-ffffb6308d7e": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-hustler.png",
+            "link": ""
+          }
+        },
+        "99385cfa-4b92-4619-a08a-bf0feecb7f77": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-durex.png",
+            "link": ""
+          }
+        },
+        "ffcf2e4b-46b4-4389-8814-224b451ea098": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-fun-factory.png",
+            "link": ""
+          }
+        },
+        "12c4823d-fa66-4df1-8e52-c3a55616a41f": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-penthouse.png",
+            "link": ""
+          }
+        },
+        "2d73cb1a-7258-4fe7-99ca-34202ab13ba0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-njoy.png",
+            "link": ""
+          }
+        },
+        "10577175-0f6e-42f1-a6e8-9ed0f0a465ad": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-ohmibod.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-0",
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-1",
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-2",
+        "template--14563732389959__b309e2d8-a1e7-4f9e-b18c-2a3170236cb8-1681956770f369c271-3",
+        "09dbb31b-5c71-4513-8d5d-e33cb051e996",
+        "e548fe00-7c8b-4a44-83a7-ecc59dad56e8",
+        "6796bb35-605b-4730-b9c2-efff1b2701b5",
+        "749eae0a-e4a8-4458-8dca-5e540ac68cc9",
+        "835eb7d2-1754-48dd-aa5b-5453d56ac1c1",
+        "6eced9d8-db91-4b3f-9deb-171c0f719a55",
+        "deb52f4a-7924-4e73-ad94-834123fe47b4",
+        "bdc87e48-718c-49e4-ba51-b78e2ae2f0df",
+        "ca0b96ac-f5d8-4a10-945c-3afd62f45645",
+        "6bc40301-b4fc-41ec-8f50-59dea5a8dbce",
+        "63aacc89-c568-4113-aa30-5ad084a551d7",
+        "0e1856c9-ea2e-4268-a0f4-88d52eda5f8d",
+        "e246039b-8266-4b7c-879c-7209d2bb2070",
+        "b483b725-7ede-45ff-bda0-89bee5bf006c",
+        "a0b982cb-1d48-47bc-9b83-2f51c4fd185b",
+        "f12915f0-ec60-4294-984c-70a769d1917e",
+        "25888de7-e0d6-4134-8c05-3f428bc2563d",
+        "80428204-3210-45ee-a19d-ffffb6308d7e",
+        "99385cfa-4b92-4619-a08a-bf0feecb7f77",
+        "ffcf2e4b-46b4-4389-8814-224b451ea098",
+        "12c4823d-fa66-4df1-8e52-c3a55616a41f",
+        "2d73cb1a-7258-4fe7-99ca-34202ab13ba0",
+        "10577175-0f6e-42f1-a6e8-9ed0f0a465ad"
+      ],
+      "settings": {
+        "opacity": 100,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "726493aa-6c17-4c2b-a670-d91cac69e314": {
+      "type": "logo-list",
+      "disabled": true,
+      "blocks": {
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-king-cock.png",
+            "link": ""
+          }
+        },
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-womanizer.png",
+            "link": ""
+          }
+        },
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-2": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-3": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-0",
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-1",
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-2",
+        "template--14563732389959__726493aa-6c17-4c2b-a670-d91cac69e314-1681956770f369c271-3"
+      ],
+      "settings": {
+        "opacity": 72,
+        "show_divider": false,
+        "heading": "Logo list",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b309e2d8-a1e7-4f9e-b18c-2a3170236cb8",
+    "726493aa-6c17-4c2b-a670-d91cac69e314"
+  ]
+}

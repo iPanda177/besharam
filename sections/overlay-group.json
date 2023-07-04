@@ -1,0 +1,233 @@
+{
+  "name": "t:sections.overlay-group.name",
+  "type": "custom.overlay",
+  "sections": {
+    "popup": {
+      "type": "popup",
+      "disabled": true,
+      "blocks": {
+        "popup-0": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "First timer?",
+            "subheading_size": "h5"
+          }
+        },
+        "popup-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sign up and get 10% off your first order<\/p>",
+            "text_size": "typeset3",
+            "secondary_color": false
+          }
+        },
+        "popup-2": {
+          "type": "newsletter",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter and be the first to hear about our new arrivals, special promotions and online exclusives.<\/p>",
+            "button_style_secondary": true,
+            "button_full_width": false
+          }
+        },
+        "popup-3": {
+          "type": "social_media",
+          "settings": {
+            "mobile_disabled": false
+          }
+        },
+        "popup-4": {
+          "type": "floating",
+          "settings": {
+            "subheading": "Newsletter",
+            "show_social_media": "all",
+            "text_box_position": "left",
+            "colors_text": "#ffffff",
+            "mobile_disabled": true,
+            "mobile_hide_social_media": false,
+            "mobile_social_heading": "Follow us"
+          }
+        }
+      },
+      "block_order": [
+        "popup-0",
+        "popup-1",
+        "popup-2",
+        "popup-3",
+        "popup-4"
+      ],
+      "settings": {
+        "mode": "enabled",
+        "only_homepage": true,
+        "only_visitor": true,
+        "delay": 5,
+        "expiry": 30,
+        "width": 600,
+        "padding": 40,
+        "text_alignment": "center",
+        "text_box_position": "center",
+        "image_position": "top",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#faeaa1",
+        "colors_text": "#ffffff",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#26282c",
+        "gradient_background": "",
+        "colors_shadow": "#d4217d"
+      }
+    },
+    "cookie-banner": {
+      "type": "cookie-banner",
+      "disabled": true,
+      "blocks": {
+        "cookie-banner-0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We use cookies and similar technologies to provide the best experience on our website. <a href=\"\/policies\/privacy-policy\">Privacy Policy<\/a><\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "cookie-banner-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Accept",
+            "button_label_2": "No"
+          }
+        }
+      },
+      "block_order": [
+        "cookie-banner-0",
+        "cookie-banner-1"
+      ],
+      "settings": {
+        "mode": "enabled",
+        "delay": 5,
+        "text_alignment": "left",
+        "text_box_position": "bottom",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#a8e8e2"
+      }
+    },
+    "age-verifier": {
+      "type": "age-verifier",
+      "disabled": true,
+      "blocks": {
+        "age-verifier-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Confirm your age",
+            "heading_size": "h2",
+            "heading_tag": "p"
+          }
+        },
+        "age-verifier-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you 18 years old or older?<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "age-verifier-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Yes I am",
+            "button_label_2": "No I'm not",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "age-verifier-0",
+        "age-verifier-1",
+        "age-verifier-2"
+      ],
+      "settings": {
+        "mode": "enabled",
+        "expiry": 30,
+        "width": 480,
+        "padding": 40,
+        "text_alignment": "center",
+        "image_position": "right",
+        "colors_button_label": "#212326",
+        "colors_button_background": "#faeaa1",
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#a8e8e2",
+        "colors_overlay": "#212326",
+        "colors_overlay_opacity": 80,
+        "blur_image": true
+      }
+    },
+    "mobile-dock": {
+      "type": "mobile-dock",
+      "blocks": {
+        "774c59ce-0116-4079-b1d9-5b9742260520": {
+          "type": "menu",
+          "settings": {
+            "custom_icon": "",
+            "title": "Menu"
+          }
+        },
+        "0ce964f6-ebe2-4dff-bfcf-29b0f6a1125a": {
+          "type": "link",
+          "settings": {
+            "custom_icon": "<svg width=\"16\" height=\"17\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" class=\"icon icon-wishlist\" viewbox=\"0 0 22 19\" fill=\"none\">\n      <path d=\"M2.55029 11.0275C1.4915 9.50722 0.992047 8.09157 1.0001 6.81285L1.0001 6.81283C1.00978 5.28581 1.55631 3.85989 2.52833 2.79196C3.51525 1.70769 4.8204 1.12061 6.20569 1.12061C7.97746 1.12061 9.61772 2.11348 10.57 3.71932C10.66 3.87118 10.8235 3.96429 11 3.96429C11.1766 3.96429 11.34 3.87118 11.4301 3.71932C12.3823 2.11351 14.0226 1.12061 15.7944 1.12061C17.1037 1.12061 18.3593 1.65126 19.3304 2.62851L19.6833 2.27787L19.3304 2.62851C20.3968 3.70163 21.0099 5.22721 20.9999 6.81431C20.9918 8.09293 20.4814 9.50841 19.4196 11.0276L19.8294 11.3141L19.4196 11.0276C18.5988 12.202 17.4528 13.4342 16.0044 14.6879C13.5583 16.8052 11.1522 18.2124 11.0581 18.2671C11.0401 18.2776 11.0201 18.2828 11 18.2828C10.9799 18.2828 10.9602 18.2776 10.9425 18.2674L10.9423 18.2673C10.8502 18.2142 8.42542 16.8065 5.9691 14.688L5.66481 15.0409L5.9691 14.688C4.51518 13.4341 3.36804 12.2017 2.55029 11.0275L2.55029 11.0275Z\" stroke=\"currentColor\" stroke-linejoin=\"round\"><\/path>\n    <\/svg>",
+            "title": "Wishlist",
+            "link": "#"
+          }
+        },
+        "1b931df1-3481-4bb3-a4b1-c57698c33013": {
+          "type": "account",
+          "settings": {
+            "custom_icon": "",
+            "title": "Account"
+          }
+        },
+        "499db9c4-4531-40c0-902b-c41e38b3c65b": {
+          "type": "link",
+          "settings": {
+            "custom_icon": "<svg width=\"25\" height=\"24\" viewbox=\"0 0 25 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M18.2746 14.8441L18.2747 14.8442L21.5959 17.0138C21.7901 17.1407 21.8604 17.382 21.767 17.5911L20.2309 21.0303L20.2301 21.032C20.1074 21.3095 19.7964 21.4795 19.4954 21.4362L19.4938 21.436C17.8263 21.2018 13.4442 20.2136 9.23264 16.1228L9.23131 16.1215C5.13037 12.1675 3.83743 7.29109 3.67491 5.72855L3.67395 5.71927L3.67263 5.71003C3.62957 5.40657 3.79714 5.10395 4.08077 4.97864L7.54014 3.45207C7.5402 3.45204 7.54026 3.45202 7.54032 3.45199C7.75357 3.35826 7.99689 3.4305 8.12385 3.62203C8.12387 3.62206 8.12389 3.62209 8.1239 3.62211L10.3064 6.92343L10.3065 6.92351C10.4271 7.10591 10.4019 7.35292 10.2464 7.50754L10.2463 7.50752L10.2429 7.51104L8.77367 9.00074L8.62169 9.15484L8.63004 9.37111C8.67187 10.4554 9.22797 11.5295 9.77319 12.3431C10.3275 13.1701 10.9196 13.7992 11.1206 14.0048L11.1205 14.005L11.1305 14.0146C11.3484 14.2254 11.9906 14.8227 12.83 15.378C13.6559 15.9244 14.7415 16.4771 15.8344 16.5115L16.0487 16.5183L16.2013 16.3676L17.6853 14.9033L17.6867 14.9018C17.8393 14.75 18.0897 14.7232 18.2746 14.8441Z\" stroke=\"white\"><\/path>\n<\/svg>",
+            "title": "Contact",
+            "link": "tel:+912248931870"
+          }
+        },
+        "72d34754-9e6f-46e7-9cd1-a6c3dd5a8475": {
+          "type": "cart",
+          "settings": {
+            "custom_icon": "",
+            "title": "Cart"
+          }
+        }
+      },
+      "block_order": [
+        "774c59ce-0116-4079-b1d9-5b9742260520",
+        "0ce964f6-ebe2-4dff-bfcf-29b0f6a1125a",
+        "1b931df1-3481-4bb3-a4b1-c57698c33013",
+        "499db9c4-4531-40c0-902b-c41e38b3c65b",
+        "72d34754-9e6f-46e7-9cd1-a6c3dd5a8475"
+      ],
+      "settings": {
+        "use_custom_colors": false,
+        "colors_text": "#ffffff",
+        "colors_background": "#000000",
+        "gradient_background": "",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    }
+  },
+  "order": [
+    "popup",
+    "cookie-banner",
+    "age-verifier",
+    "mobile-dock"
+  ]
+}

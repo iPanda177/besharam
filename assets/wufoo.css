@@ -1,0 +1,86 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+ Title : IM Besharam
+ Author : Craft & Code, LLC
+ URL : http://imbesharam.com
+
+ Last Updated : 4/09/16
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+/* Webfonts */
+@font-face {
+  font-family: 'pluto cond medium';
+  src: url('https://cdn.shopify.com/s/files/1/0165/3114/t/20/assets/plutocondmedium.eot?16846478800558181662') format('truetype');
+  src: url('https://cdn.shopify.com/s/files/1/0165/3114/t/20/assets/plutocondmedium.woff?16846478800558181662') format('woff'),url('https://cdn.shopify.com/s/files/1/0165/3114/t/20/assets/plutocondmedium.ttf?16846478800558181662') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {font-family: 'pluto cond medium';}
+.embed .confirm h2.paidHeading {font-family: 'pluto cond medium';}
+
+/* Backgrounds */
+html, html.embed{background: transparent;}
+#container{background: transparent;}
+.wufoo li.focused{background-color: transparent;}
+
+/* Confirm */
+.embed .confirm h2.paidHeading {color: hsla(0, 0%, 100%, 0.8); font-weight: bold;}
+
+/* Errors */
+#errorLi, .error-container, .wufoo li.error p.error {display: none !important;}
+.wufoo li.error {background-color: transparent !important;margin-bottom: 0 !important;}
+.wufoo li.error .desc {color: hsla(100, 100%, 100%, 0.6) !important;}
+.wufoo li.error input.text, .wufoo li.error textarea.textarea, .wufoo li.error select.select {border: 1px solid hsl(325, 93%, 47%) !important;}
+
+/* Borders */
+#container{border: none;}
+.wufoo .instruct{border:1px solid #e6e6e6}
+
+/* Typography */
+.wufoo .info h2{font-size:160%;font-family:'pluto cond medium';color:hsla(100, 100%, 100%, 0.6)}
+.wufoo .info div{font-size:95%;font-family:'pluto cond medium';color:hsla(100, 100%, 100%, 0.6)}
+.wufoo .section h3 {display: none;}
+.wufoo .section div{font-size:10px;font-family:'pluto cond medium';color:hsla(100, 100%, 100%, 0.6); line-height: 1.5em; margin: 0; padding: 0 7.5px;}
+.wufoo label.desc, .wufoo legend.desc{font-size:95%;font-family:'pluto cond medium';color:hsla(100, 100%, 100%, 0.6); text-transform: uppercase; padding: 0;}
+.wufoo li div, .wufoo li div label, .wufoo li span label{font-family:'pluto cond medium';color:hsla(100, 100%, 100%, 0.6)}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{font-size:100%;font-family:'pluto cond medium';color:hsla(100, 100%, 100%, 0.8)}
+.wufoo label.choice{color:#fff}
+
+/* Input Fields */
+.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select{
+  background: hsla(0, 0%, 0%, 0.3);
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  padding: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.wufoo textarea.textarea {text-transform: none;}
+.wufoo select.select {background: hsla(0, 0%, 0%, 0.3) url('https://cdn.shopify.com/s/files/1/0165/3116/t/11/assets/icon_dropdown.png?6302736028359348023') no-repeat right center;}
+.wufoo input.checkbox {border-radius: 0;}
+.wufoo input.text, .wufoo select.select {height: 40px;}
+.wufoo span.req {color: hsl(325, 93%, 47%) !important;}
+.wufoo li {padding: 6px 7.5px 9px;}
+.wufoo li.leftHalf, .wufoo li.rightHalf {width: calc(50% - 15px) !important;}
+.wufoo li.focused label.desc, .wufoo li.focused legend.desc, .wufoo li.focused div, .wufoo li.focused span, .wufoo li.focused div label, .wufoo li.focused span label, .safari .wufoo li.focused input.file {color: hsla(100, 100%, 100%, 0.8);}
+.wufoo li span {color: hsla(100, 100%, 100%, 0.8); font-size: 9px;}
+
+/* Button */
+.wufoo li.buttons {padding: 10px 7.5px;}
+.wufoo li.buttons input {
+  background: hsl(325, 93%, 47%);
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 20px;
+  height: 50px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+/* Customer Feedback Form (wufooFormzkk866j0l7upuf) */

@@ -1,0 +1,829 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "599ab457-a02a-4b66-b985-dd4227c2ede7": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14560817872967__599ab457-a02a-4b66-b985-dd4227c2ede7-16817759074f530e69-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Behind the Scenes",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14560817872967__599ab457-a02a-4b66-b985-dd4227c2ede7-16817759074f530e69-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "template--14560817872967__599ab457-a02a-4b66-b985-dd4227c2ede7-16817759074f530e69-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__599ab457-a02a-4b66-b985-dd4227c2ede7-16817759074f530e69-0",
+        "template--14560817872967__599ab457-a02a-4b66-b985-dd4227c2ede7-16817759074f530e69-1",
+        "template--14560817872967__599ab457-a02a-4b66-b985-dd4227c2ede7-16817759074f530e69-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/behind-the-scenes-banner.png",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "096a01f7-7d58-4016-9980-5233fb6494c3": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14560817872967__096a01f7-7d58-4016-9980-5233fb6494c3-168177565306cbf712-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Team Besharam",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14560817872967__096a01f7-7d58-4016-9980-5233fb6494c3-168177565306cbf712-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Why did two Indian born American boys decide to give up their comfortable lifestyles, invest all their savings (against the advise of family members and their social circle) and pursue a mission to 'Bring International Brands to Indian Hands' - and by brands we mean adult toys brand, to a country where buying a condom needs balls, talking about sex is taboo, but doing it..Oh well, we have 1.3 billion answers to it. <strong>Because WE BELIEVE.<\/strong><\/p><p><\/p><p>We believe that Indians have the same aspirations and dreams, the same wants and needs as anyone else in the world, so why do they not have access to products that provide pleasure to mind like food does to belly, enjoyment in relationships like a movie date or a long drive, have more sex and have less stress. This is NO Brainer!! We gave the world 'KamaSutra' and then several generations later we just decided to walk back in the corner and pull the curtains close. When did our traditions and morality take our right to choices and liberty. Well..It did happen then but now the Young, Bold India is ready to catch up. Its been waiting at the sidelines for a very long time, and now the boys and girls, men and women have come together and said ENOUGH.<\/p><p>Besharam stands for rising up, speaking out and carving your own path. Welcome to the world of Besharam, <a href=\"https:\/\/youtu.be\/gBapG9LPBw8\" title=\"https:\/\/youtu.be\/gBapG9LPBw8\">I M Besharam - You know you are too<\/a>. We believe we can deliver happiness. And for this reason we are alive, online and thriving.<\/p><p>Scroll through these sections and meet our founding team, the movers and shakers of the business in US, India and worldwide. Say Hi, Give a Hi5 or just a Thumbs Up, coz if you are reading this, and you are feeling it, you are with us in our journey towards leading Youngistan in the 21st Century.   <\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "template--14560817872967__096a01f7-7d58-4016-9980-5233fb6494c3-168177565306cbf712-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__096a01f7-7d58-4016-9980-5233fb6494c3-168177565306cbf712-0",
+        "template--14560817872967__096a01f7-7d58-4016-9980-5233fb6494c3-168177565306cbf712-1",
+        "template--14560817872967__096a01f7-7d58-4016-9980-5233fb6494c3-168177565306cbf712-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Team_Besharam_copy_grande_279c70b1-c395-4403-b7c1-0d4f0d4bc2bb.webp",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "041c42c1-772a-455a-ad07-7b0857dbc4a2": {
+      "type": "testimonials",
+      "disabled": true,
+      "blocks": {
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>Hi I'm Salim, one of the proud founders of www.imbesharam.com.<br\/><br\/>I harbor a tremendous passion for new and insightful things, and have a gift of closely predicting the trends that could impact tomorrow. Migrating to the U.S. in the mid 90's was one of the initial major changes I endeavored, since then I have been living the American dream, born and raised in the culture rich country of India, I inherited the fan-ism for movies, music and embraced the religion of sports. I am a sucker for creativity and intelligence. I love traveling and meeting people from all around the world, all walks of life. I strongly believe that thousands of years of evolution and we have yet to tap the viscosity of the human mind. Life is very much like a game of football, you run, you fall, you get hurt, you get up run and you score.<br\/><br\/>As we embark on our new journey across oceans and borders, we are both nervous for what new challenge that may come and excited for we can see our destination in sight. for no man that has not stumbled and fallen has achieved success unless he stood up and started walking again.<br\/><br\/>So here's my motto..Life is a sport... Chicks dig scars.... the pain goes away.... but the glory well the glory lasts forever..... Always be yourself and believe in yourself... Welcome to the world of BESHARAM.<\/p>",
+            "image": "shopify:\/\/shop_images\/Salim.webp",
+            "author": "Salim Rajan - Co Founder & Chief Executive Officer"
+          }
+        },
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>I BELIEVE: We are all born equal..its upto us how fast we want to run.<\/p><p>Born & brought up In India and growing up in more than 6 countries, I have lived many memories and moments that have influenced what I am today. Now, a proud Indian-American, father of two amazing kids and an avid travel and sports enthusiast, I am living my passion and enjoy what I do, and I hope one day we do for India what Playboy did for America.<\/p><p>I have been a part of many business startups, most of them successful which has enriched my expertise in various aspects of Entrepreneurship. What I have learnt is 'Fall 7 times, Get up 8'. There is no single formula for success, but if you are determined, driven and believe in yourself, your passion will take form and you will achieve your destiny. For us, the idea of Besharam was just a palace in the clouds when we thought of it first, but slowly and gradually, one order-one challenge-one teammate and one day at a time, we have built a brand that we are extremely proud of.<\/p><p>When I am not working, I love to travel and experience the food & culture like a local. I love staying active, play badminton and table tennis. When I am beat, I relax to my favorite shows SUITS, HTGAWM, Two and a Half Men and others on Netflix and catch up on Indian movies quite often... If I had not been busy building the largest adult store for Indians worldwide, I probably would have been directing\/producing a Bollywood Hollywood crossover movie.. Well you never know what life brings you next.<\/p><p>Enough about me.. I am glad you are here, and we hope you leave with a great experience that you can share with your friends.. and maybe with family too, coz I M besharam, you know you are too! Ciao<\/p>",
+            "image": "shopify:\/\/shop_images\/Raj.webp",
+            "author": "Raj Armani - Co founder & Chief Operating Officer"
+          }
+        },
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>My name is Kim and I am badass with numbers. The fact that the boys are profitable from Month 2 is because we planned it lean and build it ground up.<\/p><p>I am a UF MBA graduate as well as a world citizen. A mother of two, I like to balance my work & home life for which I seldom take on the role of #BossMom and yeah that moves the needle and gets things done. I enjoy my routines of workout and Yoga, they call me germaphobic but I think I am more of a cleanliness & hygiene loving person. I do have my days with OCD but if not for it, I would have to work double to get the same work done. <\/p><p>With extensive experience in the corporate and the startup world, I am happy to be part of the vision of Brand Besharam and bring happiness to people around the world, one bedroom at a time. We are glad you are here, onwards and upwards to many great experiences shopping at IMbesharam.com<\/p>",
+            "image": "shopify:\/\/shop_images\/Kim.webp",
+            "author": "Kim Rajan - CFO & Most Respected Person in company"
+          }
+        },
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-3": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "icon": "5",
+            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
+            "author": "Author"
+          }
+        },
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-4": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "icon": "5",
+            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
+            "author": "Author"
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-0",
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-1",
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-2",
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-3",
+        "template--14560817872967__041c42c1-772a-455a-ad07-7b0857dbc4a2-16817784636d0836f5-4"
+      ],
+      "settings": {
+        "autorotate": true,
+        "autorotate_speed": 5,
+        "hide_images": false,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cb3efe39-9372-4040-b10e-16786223da12": {
+      "type": "tab-collage",
+      "blocks": {
+        "template--14560817872967__cb3efe39-9372-4040-b10e-16786223da12-168177620185b13639-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Salim.webp",
+            "image_position": "center center",
+            "heading": "Salim Rajan - Co Founder & Chief Executive Officer",
+            "description": "<p>Hi I'm Salim, one of the proud founders of www.imbesharam.com.<br\/><br\/>I harbor a tremendous passion for new and insightful things, and have a gift of closely predicting the trends that could impact tomorrow. Migrating to the U.S. in the mid 90's was one of the initial major changes I endeavored, since then I have been living the American dream, born and raised in the culture rich country of India, I inherited the fan-ism for movies, music and embraced the religion of sports. I am a sucker for creativity and intelligence. I love traveling and meeting people from all around the world, all walks of life. I strongly believe that thousands of years of evolution and we have yet to tap the viscosity of the human mind. Life is very much like a game of football, you run, you fall, you get hurt, you get up run and you score.<br\/><br\/>As we embark on our new journey across oceans and borders, we are both nervous for what new challenge that may come and excited for we can see our destination in sight. for no man that has not stumbled and fallen has achieved success unless he stood up and started walking again.<br\/><br\/>So here's my motto..Life is a sport... Chicks dig scars.... the pain goes away.... but the glory well the glory lasts forever..... Always be yourself and believe in yourself... Welcome to the world of BESHARAM.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "327759dc-09e2-4a7e-888a-4bf38486a62f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Raj.webp",
+            "image_position": "center center",
+            "heading": "Raj Armani - Co founder & Chief Operating Officer",
+            "description": "<p>I BELIEVE: We are all born equal..its upto us how fast we want to run.<\/p><p>Born & brought up In India and growing up in more than 6 countries, I have lived many memories and moments that have influenced what I am today. Now, a proud Indian-American, father of two amazing kids and an avid travel and sports enthusiast, I am living my passion and enjoy what I do, and I hope one day we do for India what Playboy did for America.<\/p><p>I have been a part of many business startups, most of them successful which has enriched my expertise in various aspects of Entrepreneurship. What I have learnt is 'Fall 7 times, Get up 8'. There is no single formula for success, but if you are determined, driven and believe in yourself, your passion will take form and you will achieve your destiny. For us, the idea of Besharam was just a palace in the clouds when we thought of it first, but slowly and gradually, one order-one challenge-one teammate and one day at a time, we have built a brand that we are extremely proud of.<\/p><p>When I am not working, I love to travel and experience the food & culture like a local. I love staying active, play badminton and table tennis. When I am beat, I relax to my favorite shows SUITS, HTGAWM, Two and a Half Men and others on Netflix and catch up on Indian movies quite often... If I had not been busy building the largest adult store for Indians worldwide, I probably would have been directing\/producing a Bollywood Hollywood crossover movie.. Well you never know what life brings you next.<\/p><p>Enough about me.. I am glad you are here, and we hope you leave with a great experience that you can share with your friends.. and maybe with family too, coz I M besharam, you know you are too! Ciao<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "dc0d37ae-a50b-4fc3-a98b-abeebe09c2ae": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kim.webp",
+            "image_position": "center center",
+            "heading": "Kim Rajan - CFO & Most Respected Person in company",
+            "description": "<p>My name is Kim and I am badass with numbers. The fact that the boys are profitable from Month 2 is because we planned it lean and build it ground up.<\/p><p>I am a UF MBA graduate as well as a world citizen. A mother of two, I like to balance my work & home life for which I seldom take on the role of #BossMom and yeah that moves the needle and gets things done. I enjoy my routines of workout and Yoga, they call me germaphobic but I think I am more of a cleanliness & hygiene loving person. I do have my days with OCD but if not for it, I would have to work double to get the same work done. <\/p><p>With extensive experience in the corporate and the startup world, I am happy to be part of the vision of Brand Besharam and bring happiness to people around the world, one bedroom at a time. We are glad you are here, onwards and upwards to many great experiences shopping at IMbesharam.com<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "6159bfaf-c220-427f-a68b-3782288c166a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jenny.webp",
+            "image_position": "center center",
+            "heading": "Jenny Harper: Operations Manager, US & Sweet Talker!",
+            "description": "<p>Hello World, I am Jenny - and I oversee operations to make sure your orders coming on time.<\/p><p>I am the Boss here at the US office and the boys have to listen to my instructions most of the time. That does feel good, I admit. No kidding, I have been with IMbesharam 5 months after we went live and have been managing US operations since then. I have a zest for life, enjoy my time at work and outside of it I am never found at one place. Being a nurse is my dream because I believe in caring for the vulnerable and needy. I have also many talents and skills, I speak 5 languages and almost got a job at FBI as a translator. But then Besharam happened. I love to travel, have been in most cities in America and Europe, but haven't made it to India yet. I hope someday soon when the time is right and when my Indian fellas would connect Besharam for happiness like Cadbury is to chocolate.<\/p><p>I love cooking and can also make delicious Indian meals like Nihari, Butter Chicken and Chicken Tandoori as well. Everyday morning I wake up to Chai and then coffee keeps me going for the rest of the day. Proud to be the youngest Besharam in our team, I am happy to be associated with <a href=\"https:\/\/in.imbesharam.com\/\" title=\"Besharam India's First Adult Lifestyle Webstore\">IMbesharam.com<\/a>, a concept which I truly believe in.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "92a0348e-511e-46bf-bda6-e8223f70febd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sanjana.webp",
+            "image_position": "center center",
+            "heading": "Sanjana",
+            "description": "<p>Hey, this is Sanjana, the operations manager who makes sure things rock and roll on time and we as a team deliver the best customer service experience you would expect of an international crew.<\/p><p>Being raised in a traditional Marwari family in Rajasthan, a state in India, I grew up to become bold and fearless. From my early years, I have enjoyed taking on new challenges and thinking outside the box, which led me to join Besharam as a Customer Service Agent in 2019. Set up to achieve new heights for myself and the brand, I grew into a leader who cherishes the values of discipline, accountability, and punctuality and would go the extra mile to get things done.<\/p><p>My peers think my favorite hobby is organizing tasks but I enjoy traveling more than that. My wanderlust (or work\/studies) has taken me to various states in India and around the globe. I believe in taking responsibility and fulfilling them wholeheartedly, and I take pride in navigating my professional journey and personal life with this principle.<\/p><p>I am super glad to see you here at IMbesharam.com, and all I've to say is you have got this life once, so live it to the fullest! #playmoreshameless<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "e50051bd-0aa9-4c7b-9b42-80a54f66eb78": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pulkit.webp",
+            "image_position": "center center",
+            "heading": "Pulkit",
+            "description": "<p>Ola People, this is Pulkit the guy who makes things happen at IMbesharam.com and probably knows what you have been up to behind your parent's back! Think of me as the diligent Delhiite achieving excellence in customer satisfaction. Your pleasure is our business!<\/p><p>True Indian at heart, I enjoy a delicious buffet of Bollywood movies, music mixes, Indian cricket, and technology with a delightful side of poetry! When I'm not a Sanskari Indian, I'm an optimistic rebel who found a learning and loving space in the business of normalizing pleasure. Since then, my passion for the cause, determination to excel, and competence to lead have created a space for me to grow consistently and contribute efficiently to the team.<\/p><p>I believe my team and our customers love me because i) I love what I do, and ii) my work ethic follows the principle of Kaizen which means continuous improvement. So that's me, your Besharam Buddy, and I'll sign off now with a quick tip- What you did yesterday was just good for yesterday; today you need to be better, and tomorrow you need to be much better *wink wink*<\/p><p>Cheers to being Besharam! #playmoreshameless<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__cb3efe39-9372-4040-b10e-16786223da12-168177620185b13639-0",
+        "327759dc-09e2-4a7e-888a-4bf38486a62f",
+        "dc0d37ae-a50b-4fc3-a98b-abeebe09c2ae",
+        "6159bfaf-c220-427f-a68b-3782288c166a",
+        "92a0348e-511e-46bf-bda6-e8223f70febd",
+        "e50051bd-0aa9-4c7b-9b42-80a54f66eb78"
+      ],
+      "custom_css": [
+        ".media-wrapper {background-color: #1a1b18;}"
+      ],
+      "settings": {
+        "layout": "text_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "make_collapsible_rows": false,
+        "full_width": true,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#ffffff",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#1a1b18",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "66daa978-3baa-4c7b-80a8-c7b58e6d5127": {
+      "type": "tab-collage",
+      "blocks": {
+        "template--14560817872967__66daa978-3baa-4c7b-80a8-c7b58e6d5127-168177620185b13639-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vishal.webp",
+            "image_position": "center center",
+            "heading": "Vishal",
+            "description": "<p>Hello DilWalo, this is Vishal, a Delhi-ite imported from Hyderabad who handles backend operations and logistics so your orders delivers to you in time and on the clock - Yep I am the zealous Dilwala coordinating the pleasure network across India.<\/p><p>Whether my avatar is a gaming freak or an order guru- I'm passionate about what I do, and this passion drives my life motto. I omitted the word 'impossible' from my dictionary when I started my journey with this amazing team as a full-time Besharam. Working in a completely new industry wasn't always easy but, being a challenge lover, I take pride in how I've grown as a leader and what I have learned as a professional in the past three and a half years at IMBesharam.com.<\/p><p>My peers enjoy my sweet mix of a movie buff (literally, any language works till subtitles are on) and wanderlust, and my bosses admire my determination for my work so, I think it's safe to say my superpower is making people smile *wink wink*<\/p><p>Anyways, enough about me! Have a fun shopping experience with us. Waiting for your order to ring! #playmoreshameless<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "e4f34c03-6c49-4ab0-adef-99926ce5a011": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nirav.webp",
+            "image_position": "center center",
+            "heading": "Nirav",
+            "description": "<p>Nomoshkar, It's Nirav ahoy, from the city of joy, Kolkata, moonlighting as a Customer Service Agent but in reality the mean, mean sales machine! Ask me anything about our brand and products and I will get your attention for the next 60 mins, till you give in and become a lifelong member of the besharam family.<\/p><p>Apart from being a sports fanatic, I enjoy listening to music, watching K-dramas, and learning how to mine cryptocurrency. I've always preferred standing out from the crowd, and the urge led me to a tabooed (not anymore, seriously) industry and this mind-blowing team. When I communicate with our valuable patrons, I see myself creating a beautiful experience for their intimate lives while breaking societal barriers and positively contributing to the firm's growth- all of it makes me fall in love with this work even more!<\/p><p>My motto for life is 'when the going gets tough, the tough get going and that's how I roll. I yearn to keep learning and growing which makes me the boss and customer’s favorite (still, unofficial though)! I believe we're contributing to bringing a revolutionary change in the Indian society, and I can't wait for all of you to experience it with us.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "60048f8a-238f-4af0-bde7-1c2d10cd5ca9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Anish.webp",
+            "image_position": "center center",
+            "heading": "Anish",
+            "description": "<p>I am Anish, the Warehouse Manager at India's Office of IMBesharam.com- the responsible guy who packs and ships your pleasure packets i.e.the orders.<\/p><p>My indulgence lies in traveling to new places and exploring different cuisines. I find myself to be a happy-go-lucky person gifted with a good sense of humor- you know who's the peer's favorite in the warehouse! My journey with IMBesharam.com started in 2020, and since then, I've been managing the warehouse operations- packing and shipping orders, taking inventory, and coordinating orders- with the boys.<\/p><p>I have a deep passion for what I do, making it my top priority. I enjoy taking on new challenges that have allowed me to grow every day at my job with the support of a superb team and encouraging management. Knowing these pleasure packets are bringing satisfaction and happiness all over the globe is the star highlight of my job!<\/p><p>Thank you for choosing IMBesharam.com to re-discover your pleasure :) Hope to see your order(s) dropping by soon! Till then #playmoreshameless<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "13a363a4-8c09-42e4-a2a3-bf300723e84f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Irina.webp",
+            "image_position": "center center",
+            "heading": "Irina",
+            "description": "<p>Hello, I am Irina from Ukraine, working at the Ukraine office of IMBesharam.com- the backend brains managing the pleasure inventory!<\/p><p>Being a mom of 7 years old, I tend to hold a serious and conservative exterior. But, my soul is a child excited about adventures, travel, and meeting new people. Owing to this insatiable kid, I joined IMBesharam.com in 2021 despite it being an unconventional field for me. Balancing motherhood with this space has helped me discover new realms of myself, making me more interested in walking this journey and learning to be more besharam!<\/p><p>When I'm not a full-time working mom, you can find me playing active sports or indulging in bathroom singing. And, on the days I'm lucky, I can sing the entire sentences from a song ;)<\/p><p>That's all about me! I welcome you to IMBesharam.com and hope you enjoy shopping with us as much as we like creating this experience for you!<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "59550961-3878-448a-a0ed-fd93892ceb9e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Manpreet.webp",
+            "image_position": "center center",
+            "heading": "Manpreet",
+            "description": "<p>I am Manpreet, from the beautiful city of Chandigarh, posted at the India Office of IMBesharam.com as the Shipping Manager- the witty and friendly pleasure agent at your service!<\/p><p>I find myself to be an ambivert who can conveniently gel up with like-minded beings. I take pride in identifying as a Netflix binge-watcher for movies and TV series and a rebel who has always enjoyed challenging the orthodox taboos. My journey with IMBesharam.com started in February 2022, and the experience has been no less than fascinating for me. My keen eye for detail, ability to ascertain the needs and requirements of the customers, and strong persuasion skills make me one of the favorites around here!<\/p><p>My peers and customers know that I love my job, and they aren’t wrong, obviously! But, I also love short vacations to hill stations, especially when I’m driving on my own. My work motto encourages me to go the extra mile to fulfill the naughty desires of our valued patrons.<\/p><p>I’m super happy to be able to share the pleasure vision of IMBesharam.com with you :) Hoping to welcome you to our extended Besharam family! #playmoreshameless<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "8c66c1fd-8b7a-489b-ada3-146646b77314": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Marco.webp",
+            "image_position": "center center",
+            "heading": "Marco",
+            "description": "<p>Hello, I am Marco from Italy, the web tech leader at the USA office of IMBesharam.com- the cool developer running the pleasure website!<\/p><p>I'm passionate and intuitive about innovation and enjoy refreshing my skills to keep up with new trends and technologies. My learning voyage with IMBesharam.com started in 2019, and since, I'm presenting my best to research and implement top web solutions that bring value to our business and our customers. The intriguing combination of a challenging workspace and a dynamic team makes my work a delight for me.<\/p><p>Currently, I'm based in Thailand, and I love riding my bike around Phuket in my leisure time to enjoy the panoramic views that these seas and land have to offer. I also find my pleasure in trying different cuisines (but pizza is still my favorite), reading, and playing video games.<\/p><p>Take your pleasure seriously with IMBesharam.com :) Signing off! #playmoreshameless<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__66daa978-3baa-4c7b-80a8-c7b58e6d5127-168177620185b13639-0",
+        "e4f34c03-6c49-4ab0-adef-99926ce5a011",
+        "60048f8a-238f-4af0-bde7-1c2d10cd5ca9",
+        "13a363a4-8c09-42e4-a2a3-bf300723e84f",
+        "59550961-3878-448a-a0ed-fd93892ceb9e",
+        "8c66c1fd-8b7a-489b-ada3-146646b77314"
+      ],
+      "custom_css": [
+        ".media-wrapper {background-color: #1a1b18;}"
+      ],
+      "settings": {
+        "layout": "image_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "make_collapsible_rows": false,
+        "full_width": true,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#ffffff",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#1a1b18",
+        "gradient_background": "",
+        "padding_top": 8,
+        "padding_bottom": 36
+      }
+    },
+    "95804273-be6c-4de4-94cb-9c76969c80a7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14560817872967__95804273-be6c-4de4-94cb-9c76969c80a7-168177565306cbf712-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "What is IMbesharam.com",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14560817872967__95804273-be6c-4de4-94cb-9c76969c80a7-168177565306cbf712-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>IMbesharam.com is a one stop shop for Indians & NRI's across the world to browse, shop & experience a bold & beautiful lifestyle. Positioned as India's #1 Adult Lifestyle webstore & Bachelor\/Bachelorette Party superstore, it is one of the most daring & bold concept in Indian webspace. We showcase amazing products sourced from popular brands in US & Europe, present them in a multi-device capable elegant online store for you to order them instantly in a smooth & 'easy on the eye process'. We ship them to you via world class shipping carriers in a non descriptive package & take care of all duties, customs and taxes through till delivery to your door. We are in the business of bringing your curiosity, imagination, desires and fantasies right to your bedroom.<\/p><h4>Why Besharam<\/h4><p>Because Besharam is being bold, being real and being yourself. We believe we all are Besharam, whether we like to accept it is another story. We seldom talk about things that we see, sense, hear, feel and want to experience. Besharam gives you a window to choose what you always wanted to try. Because if you have the means you can achieve true satisfaction, healthier minds and stronger relationships, you will be more happier and less aggressive, more balanced and less impulsive. Because the times we live in needs a medium to provide a way of release, so people are more civil, our precious ones more safe. Because we want to educate people about sex, give them tools to enjoy it in their privacy and comfort and lastly because India is ready, It has been ready for many generations, now it has a voice, a window, a trusted brand and a real community - Welcome fellow Besharam, to our world where fantasy meets reality.<\/p><h4>How It Began<\/h4><p>It began over a cup of coffee and a conversation about how us Indians have aced every aspects of life, science, business, politics and spiritual beliefs and ancient knowhow in health and wellbeing..but still have no real access to experience a lifestyle that we desire in our relationships and private moments. The coffee got cold but the idea caught steam and right that weekend we flew in to California and met with another friend who had great experience in online business structuring. The idea became a concept, the concept became a brand, the brand became a business and the business now needed a face. The following week, we  met with Sunny Leone, contracted her to be the face of the brand and went back to the airport realising we have planted the seed of Besharam. After over 12 months of research, 5 trips to India, meeting with attorneys and consultants, getting reintroduced to our culture and lifestyle, enjoying dosa's in the morning at Juhu and lunch in South Bombay & dinner in Ghatkopar, we relived our childhood and at the same time build the structure of imbesharam.com brick by brick.<\/p><h4>What Now <\/h4><p>Rome wasn't built in a day, neither would your trust be. So now we start our day by coming to work, have our coffee, talk to our team, listen to you-our customers and run the business in the most systematic, organized and ethical manner, while keeping an eye on the prize. Your trust and faith, for many many years to come.<\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "template--14560817872967__95804273-be6c-4de4-94cb-9c76969c80a7-168177565306cbf712-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__95804273-be6c-4de4-94cb-9c76969c80a7-168177565306cbf712-0",
+        "template--14560817872967__95804273-be6c-4de4-94cb-9c76969c80a7-168177565306cbf712-1",
+        "template--14560817872967__95804273-be6c-4de4-94cb-9c76969c80a7-168177565306cbf712-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-sketchpad.webp",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "100vh",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4b09bc84-753f-4b8c-95e3-bc4c3dcd169e": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14560817872967__4b09bc84-753f-4b8c-95e3-bc4c3dcd169e-168177565306cbf712-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "About face of Besharam - Sunny Leone",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14560817872967__4b09bc84-753f-4b8c-95e3-bc4c3dcd169e-168177565306cbf712-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Sunny Leone<\/h4><p>Sunny Leone, an American Adult Actress is now the new sensation in Bollywood. Within 6 months after appearing on Indian TV in BigBoss, she had already created a record online by becoming the MOST SEARCHED PERSON OF THE YEAR - 2012. As per Google(India) she was the MOST searched person of the year 2012, surpassing Salman Khan, Shah Rukh Khan and Katrina Kaif for that year. She was named Penthouse Pet of the year in 2003 and was a contract star for Vivid Entertainment. Named by Maxim as one of the top 12 adult actress in 2010, she has also played roles in independent mainstream films and TV shows. Sunny Leone was born in 1981 as 'Karenjit Kaur' in Ontario to Sikh Punjabi parents. She had moved to California when she was 13. She now owns and runs her own production company in LA with her partner\/husband and has won the Babe of the year at 2008 Xbiz awards. In 2012 Sunny started her Bollywood career, first as the star of Mahesh Bhatt's film- Jism2 and currently shooting for Ekta Kapoor's film - Ragini MMS2. She also appeared in a item song in Shootout at Wadala alongside John Abraham and Anil Kapoor. Due to her immense popularity in the Indian population worldwide, she also won the 'Crossover Star of the year' award at AVN2013.<\/p><p>Did you know that Sunny Leone is the face of the Brand IMBesharam.com? And did you know that this is officially endorsed Sunny Leone sex toys website, the only one in India? Why does it matter? Because it is always wise to shop for sex toys from an established reputed website. And yes IMbesharam is the only sex toy site where you can order sex toys closely modeled as per Sunny Leone’s most intimate parts. Are you aware of the difference between a normal vibrator and a Sunny Leone one? Sunny Leone toys are a world on it’s own and our past customers already know it. Perhaps we should ask the politician who bought a Sunny Leone sex doll last year? Oh yeah, it is a real story and you can have one yourself from this Sunny Leone sex shop. You want other type of Sunny Leone toy because you are such diehard fan of her? You can find all sorts of Sunny Leone sex toys here including vibrators and flashlights. If you ever wanted to be close to Sunny Leone, you just can’t get any closer than this. All Sunny Leone sex toys are discreetly packaged and delivered to your address within few days.<\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "template--14560817872967__4b09bc84-753f-4b8c-95e3-bc4c3dcd169e-168177565306cbf712-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__4b09bc84-753f-4b8c-95e3-bc4c3dcd169e-168177565306cbf712-0",
+        "template--14560817872967__4b09bc84-753f-4b8c-95e3-bc4c3dcd169e-168177565306cbf712-1",
+        "template--14560817872967__4b09bc84-753f-4b8c-95e3-bc4c3dcd169e-168177565306cbf712-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-sunny.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "100vh",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e601d6a8-7cac-4b53-9d5e-b63db9d541f9": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5515aa50-3e14-4b69-b4a4-c401d5b8248f": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14560817872967__5515aa50-3e14-4b69-b4a4-c401d5b8248f-168177599693293ecb-0": {
+          "type": "column",
+          "settings": {
+            "title": "The promise we make",
+            "title_size": "h3",
+            "text": "<p>We value your business and understand your concern for privacy, product quality & credit\/debt card security.<\/p><p>We source & sell products only from reputed brands and suppliers, deploy high standards of site security, take extra care to ship the package non descriptively and entrust reliable shippers to bring your order in a discreet and timely manner.<\/p><p>We have also substantially invested in R&D so that we could come out with a custom solution.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "template--14560817872967__5515aa50-3e14-4b69-b4a4-c401d5b8248f-168177599693293ecb-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/satisfyer.png",
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "template--14560817872967__5515aa50-3e14-4b69-b4a4-c401d5b8248f-168177599693293ecb-1": {
+          "type": "column",
+          "settings": {
+            "title": "The promise we keep",
+            "title_size": "h3",
+            "text": "<p>We will stand behind each product you order from our store, and will make good any concern you may have about the quality or service to the best of our ability. Apart from our 30days return policy and US & India based customer service support, we also have an open door policy. We invite our customers to reach out to our CEO directly should your concern be unresolved. He can be reached at CEO@imbesharam.com or at +1.727.422.9111 to answer any questions you may have.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__5515aa50-3e14-4b69-b4a4-c401d5b8248f-168177599693293ecb-0",
+        "template--14560817872967__5515aa50-3e14-4b69-b4a4-c401d5b8248f-168177599693293ecb-2",
+        "template--14560817872967__5515aa50-3e14-4b69-b4a4-c401d5b8248f-168177599693293ecb-1"
+      ],
+      "settings": {
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "43eddcdc-95f9-491d-921f-c794436921b1": {
+      "type": "contact-form",
+      "blocks": {
+        "template--14560817872967__43eddcdc-95f9-491d-921f-c794436921b1-16817763656f3b70b0-0": {
+          "type": "contact",
+          "settings": {
+            "heading": "Contact us",
+            "text": "hi@imbesharam.com",
+            "link": "mailto:hi@imbesharam.com"
+          }
+        },
+        "25e4baf6-9ba5-46a9-b529-24b50217edbf": {
+          "type": "contact",
+          "settings": {
+            "heading": "India",
+            "text": "+91 9920209722",
+            "link": "tel:+91 9920209722"
+          }
+        },
+        "4a2a481c-07ec-488b-8ac3-6d6401ecaeb5": {
+          "type": "contact",
+          "settings": {
+            "heading": "United States",
+            "text": "+1 727 422 9111",
+            "link": "tel:+1 727 422 9111"
+          }
+        },
+        "195d74dd-c6e7-480f-ac63-ea462d5b89fd": {
+          "type": "contact",
+          "settings": {
+            "heading": "UK",
+            "text": "+44 20 3290 1220",
+            "link": "tel:+44 20 3290 1220"
+          }
+        },
+        "template--14560817872967__43eddcdc-95f9-491d-921f-c794436921b1-16817763656f3b70b0-1": {
+          "type": "media",
+          "settings": {
+            "heading": "Follow us"
+          }
+        },
+        "5fa29c1d-7a15-4a34-9751-e365530ae499": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "Country",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": "Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Argentina, Armenia, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bolivia, Bosnia and Herzegovina, Botswana, Brazil, Brunei, Bulgaria, Burkina Faso, Burundi, Côte d'Ivoire, Cabo Verde, Cambodia, Cameroon, Canada, Central African Republic, Chad, Chile, China, Colombia, Comoros, Congo (Congo-Brazzaville), Costa Rica, Croatia, Cuba, Cyprus, Czechia (Czech Republic), Democratic Republic of the Congo, Denmark, Djibouti, Dominica, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, \"Eswatini (fmr. \"\"Swaziland\"\")\", Ethiopia, Fiji, Finland, France, Gabon, Gambia, Georgia, Germany, Ghana, Greece, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy See, Honduras, Hungary, Iceland, India, Indonesia, Iran, Iraq, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kiribati, Kuwait, Kyrgyzstan, Laos, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Mauritania, Mauritius, Mexico, Micronesia, Moldova, Monaco, Mongolia, Montenegro, Morocco, Mozambique, Myanmar (formerly Burma), Namibia, Nauru, Nepal, Netherlands, New Zealand, Nicaragua, Niger, Nigeria, North Korea, North Macedonia, Norway, Oman, Pakistan, Palau, Palestine State, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Poland, Portugal, Qatar, Romania, Russia, Rwanda, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Solomon Islands, Somalia, South Africa, South Korea, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Sweden, Switzerland, Syria, Tajikistan, Tanzania, Thailand, Timor-Leste, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Kingdom, United States of America, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, Yemen, Zambia, Zimbabwe"
+          }
+        },
+        "ee797e22-e5ac-4f94-9096-3d77ea3dc095": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "State",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "d8cdcb71-d1e6-499d-8656-2baea0348e7a": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "Order No. (If available)",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "f2ad1cbf-accb-4839-8536-b5a45c89189d": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "Tracking No. (If available)",
+            "required": false,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "217ed41e-3ab5-452d-9058-0b62207543fc": {
+          "type": "custom_field",
+          "settings": {
+            "type": "select",
+            "label": "Reason for Inquiry",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": "Press\/Media, Wholesale & Distribution, Investment Opportunity, Other Business Inquiries"
+          }
+        },
+        "284e07dd-5c51-44d4-888a-11d3cb833382": {
+          "type": "custom_field",
+          "settings": {
+            "type": "checkbox",
+            "label": "I AUTHORIZE BESHARAM TO CONTACT ME VIA EMAIL IN RESPONSE TO MY ENQUIRY & I AGREE TO BE SIGNED UP ON BESHARAM'S E-MAILING LIST.",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__43eddcdc-95f9-491d-921f-c794436921b1-16817763656f3b70b0-0",
+        "25e4baf6-9ba5-46a9-b529-24b50217edbf",
+        "4a2a481c-07ec-488b-8ac3-6d6401ecaeb5",
+        "195d74dd-c6e7-480f-ac63-ea462d5b89fd",
+        "template--14560817872967__43eddcdc-95f9-491d-921f-c794436921b1-16817763656f3b70b0-1",
+        "5fa29c1d-7a15-4a34-9751-e365530ae499",
+        "ee797e22-e5ac-4f94-9096-3d77ea3dc095",
+        "d8cdcb71-d1e6-499d-8656-2baea0348e7a",
+        "f2ad1cbf-accb-4839-8536-b5a45c89189d",
+        "217ed41e-3ab5-452d-9058-0b62207543fc",
+        "284e07dd-5c51-44d4-888a-11d3cb833382"
+      ],
+      "settings": {
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Business Inquiries",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "665c5ea2-3e5c-42b1-aeea-a3dfc549264e": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14560817872967__665c5ea2-3e5c-42b1-aeea-a3dfc549264e-168177599693293ecb-0": {
+          "type": "column",
+          "settings": {
+            "title": "INDIA HEADQUARTERS(BUSINESS ENQUIRIES ONLY)",
+            "title_size": "h3",
+            "text": "<p>Happy Birds LLC<\/p><p>AWFIS co-working<\/p><p>Block L, Connaught Place,<\/p><p>New Delhi, Delhi 110001, India<\/p><p><a href=\"mailto:hi@imbesharam.com\">HI@IMBESHARAM.COM<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+91 22 33814108<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+91 9920 20 9722<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+91 9920 20 9722<\/a><\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "template--14560817872967__665c5ea2-3e5c-42b1-aeea-a3dfc549264e-168177599693293ecb-1": {
+          "type": "column",
+          "settings": {
+            "title": "USA HEADQUARTERS(BUSINESS ENQUIRIES ONLY)",
+            "title_size": "h3",
+            "text": "<p>Happy Birds LLC<\/p><p>3101 Cobb Pkwy,<\/p><p>Suite 124<\/p><p>Atlanta, GA 30339 USA<\/p><p><a href=\"mailto:hi@imbesharam.com\">HI@IMBESHARAM.COM<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+1 727 422 9111<\/a><\/p><p><a href=\"https:\/\/in.imbesharam.com\/pages\/behind-the-scenes#\">+1 888 567 9565<\/a><\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "template--14560817872967__665c5ea2-3e5c-42b1-aeea-a3dfc549264e-168177599693293ecb-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "title_size": "h3",
+            "text": "<p>UK Inquiries: <a href=\"tel:+44 2032901220\" target=\"_blank\" title=\"tel:+44 2032901220\">+44 2032901220<\/a><\/p><p>Australia Inquiries: <a href=\"tel:+61 280060922\" target=\"_blank\" title=\"tel:+61 280060922\">+61 280060922<\/a><\/p><p>South Africa Inquiries: <a href=\"tel:+1 8669227444\" target=\"_blank\" title=\"tel:+1 8669227444\">+1 8669227444<\/a><\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14560817872967__665c5ea2-3e5c-42b1-aeea-a3dfc549264e-168177599693293ecb-0",
+        "template--14560817872967__665c5ea2-3e5c-42b1-aeea-a3dfc549264e-168177599693293ecb-1",
+        "template--14560817872967__665c5ea2-3e5c-42b1-aeea-a3dfc549264e-168177599693293ecb-2"
+      ],
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "599ab457-a02a-4b66-b985-dd4227c2ede7",
+    "096a01f7-7d58-4016-9980-5233fb6494c3",
+    "041c42c1-772a-455a-ad07-7b0857dbc4a2",
+    "cb3efe39-9372-4040-b10e-16786223da12",
+    "66daa978-3baa-4c7b-80a8-c7b58e6d5127",
+    "95804273-be6c-4de4-94cb-9c76969c80a7",
+    "4b09bc84-753f-4b8c-95e3-bc4c3dcd169e",
+    "e601d6a8-7cac-4b53-9d5e-b63db9d541f9",
+    "5515aa50-3e14-4b69-b4a4-c401d5b8248f",
+    "43eddcdc-95f9-491d-921f-c794436921b1",
+    "665c5ea2-3e5c-42b1-aeea-a3dfc549264e"
+  ]
+}

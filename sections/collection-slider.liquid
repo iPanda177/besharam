@@ -1,0 +1,166 @@
+{{ 'collection-slider.css' | asset_url | stylesheet_tag }}
+
+{% assign customize = section.settings %}
+
+<div class="collection-slider__wrapper">
+    <div class="collection-slider__container page-width">
+        <div class="collection-slider__header">
+            {% if customize.section_title %}
+                <h2 class="collection-slider__title">{{ customize.section_title }}</h2>
+            {% endif %}
+            {% if customize.button_link != blank %}
+                <a href="{{ customize.button_link }}" class="button collection-slider__button">VIEW ALL</a>
+            {% endif %}
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for slide in section.blocks %}
+                    <div  class="swiper-slide">
+                        <a href="{{ slide.settings.collection.url }}">
+                            {% if slide.settings.image != blank %}
+                                <img
+                                        srcset="{%- if  slide.settings.image.width >= 165 -%}{{  slide.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if  slide.settings.image.width >= 360 -%}{{  slide.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if  slide.settings.image.width >= 535 -%}{{  slide.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                                        {%- if  slide.settings.image.width >= 750 -%}{{  slide.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                                        {%- if  slide.settings.image.width >= 1070 -%}{{  slide.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                                        {%- if  slide.settings.image.width >= 1500 -%}{{  slide.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{  slide.settings.image  | image_url }} {{  slide.settings.image.width }}w"
+                                        src="{{ slide.settings.image  | img_url: "768x" }}"
+                                        alt="{{ slide.settings.image.alt | escape }}"
+                                        loading="lazy"
+                                        width="{{  slide.settings.image.width }}"
+                                        height="{{  slide.settings.image.height }}"
+                                >
+                            {% else %}
+                                <img
+                                        srcset="{%- if  slide.settings.collection.featured_image.width >= 165 -%}{{  slide.settings.collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if  slide.settings.collection.featured_image.width >= 360 -%}{{  slide.settings.collection.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if  slide.settings.collection.featured_image.width >= 535 -%}{{  slide.settings.collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                                        {%- if  slide.settings.collection.featured_image.width >= 750 -%}{{  slide.settings.collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                                        {%- if  slide.settings.collection.featured_image.width >= 1070 -%}{{  slide.settings.collection.featured_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                                        {%- if  slide.settings.collection.featured_image.width >= 1500 -%}{{  slide.settings.collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{  slide.settings.collection.featured_image | image_url }} {{  slide.settings.collection.featured_image.width }}w"
+                                        src="{{ slide.settings.collection.featured_image | image_url: width: 1500 }}"
+                                        alt="{{ slide.settings.collection.featured_image.alt | escape }}"
+                                        loading="lazy"
+                                        width="{{  slide.settings.collection.featured_image.width }}"
+                                        height="{{  slide.settings.collection.featured_image.height }}"
+                                >
+                            {% endif %}
+                            <div class="info__block">
+                                {% if slide.settings.hashtag %}
+                                    <span class="hashtag">{{ slide.settings.hashtag }}</span>
+                                {% endif %}
+                               <span class="info__block-title">{{ slide.settings.slide_title }}</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+                    <rect x="0.5" y="39.7905" width="39" height="39" rx="19.5" transform="rotate(-90 0.5 39.7905)" fill="#26282C"/>
+                    <path d="M19 25.2905L24 20.2905L19 15.2905" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<script>
+    const section_scripts_{{ section.id | replace: "-", "_" | replace: "--", "_" }} = {
+        section: document.querySelector("#shopify-section-{{ section.id }}"),
+        init() {
+            this.slider = new Swiper(this.section.querySelector(".swiper"), {
+                speed: 400,
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 6
+                    },
+                    // when window width is >= 480px
+                    360: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 6
+                    },
+                    // when window width is >= 640px
+                    768: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 16,
+                    },
+                    1110: {
+                        slidesPerView: 4.5,
+                        spaceBetween: 16,
+                    }
+                },
+                pagination: {
+                    el: this.section.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: this.section.querySelector('.swiper-button-next'),
+                },
+
+            });
+        }
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        section_scripts_{{ section.id | replace: "-", "_" | replace: "--", "_" }}.init()
+    })
+</script>
+
+{% schema %}
+{
+"name": "Collection Slider",
+"tag": "section",
+"settings": [
+{
+"type": "text",
+"id": "section_title",
+"label": "Title",
+"default": "Shop Top 10"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "'View all' url"
+}
+],
+"blocks": [
+{
+"name": "Slide",
+"type": "slide",
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+},
+{
+"type": "text",
+"id": "hashtag",
+"label": "HashTag",
+"default": "#top10"
+},
+{
+"type": "text",
+"id": "slide_title",
+"label": "Label"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Collection Slider"
+}
+]
+}
+{% endschema %}

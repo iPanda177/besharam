@@ -1,0 +1,53 @@
+<form class="kwes-form" action="https://kwesforms.com/api/foreign/forms/x4kpHcfgigh7ZSt8G2S4" success-message="Thanks! Your inquiry has been received. We will respond to you pretty soon, till then, Happy Shopping!">
+  <div class="form-element one-half">
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" rules="required|max:50">
+  </div>
+  <div class="form-element one-half">
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname" rules="required|max:50">
+  </div>
+  <div class="form-element">
+    <label for="email">Email Address</label>
+    <input type="email" name="email" rules="required|email">
+  </div>
+  <div class="form-element one-half">
+    <label for="phone">Phone Number</label>
+    <input type="tel" name="phone" rules="regex:/^(\+)?(\d[\d\s\-]{8,})\d*$/">
+  </div>
+  <div class="form-element one-half">
+    <label for="country">Country</label>
+    <select name="country" kw-select-type="countries"></select>
+  </div>
+  <div class="form-element one-half">
+    <label for="order_number">Order Number (if available)</label>
+    <input type="text" name="order_number" rules="max:25" placeholder="HBI-">
+  </div>
+  <div class="form-element one-half">
+    <label for="tracking_number">Tracking Number (if available)</label>
+    <input type="text" name="tracking_number" rules="max:25" placeholder="">
+  </div>
+  <div class="form-element">
+    <label for="reason">Reason For Inquiry</label>
+    <select type="text" name="reason" rules="required">
+      <option value="">Please select...</option>
+      <option value="r_press">Press/Media</option>
+      <option value="r_wholesale">Wholesale & Distribution</option>
+      <option value="r_investment">Investment Opportunity</option>
+      <option value="r_other">Other Business Inquiries</option>
+    </select>
+  </div>
+  <div class="form-element">
+    <label for="message">Message</label>
+    <textarea name="message" rules="required"></textarea>
+  </div>
+  <div class="form-element input-checkbox-wrapper">
+    <input class="input-checkbox" type="checkbox" id="accept" name="accept" rules="required">
+    <label for="accept">
+      I authorize IMbesharam to contact me via email in response to my inquiry and I agree to be signed up on IMbesharam's e-mailing list.
+    </label>
+  </div>
+  <div class="form-element">
+    <button type="submit">Submit</button>
+  </div>
+</form>

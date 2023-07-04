@@ -1,0 +1,28 @@
+<script>
+var isSnizeLoaded = false;
+var timeout = 2000;
+
+window.SearchaniseIncluded = true;
+
+{% if template contains 'product' %}
+    timeout = 5000;
+{% endif %}
+
+{% comment %} 
+Searchanise = {};
+Searchanise.forceUseExternalJQuery = true; 
+{% endcomment %}
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    setTimeout(function () {
+        if (isSnizeLoaded == true) return;
+        window.SearchaniseIncluded = false;
+        var head = document.getElementsByTagName('head')[0]; 
+        var s = document.createElement('script');
+        s.id = 'snize-script-widget';
+        s.src = '//www.searchanise.com/widgets/shopify/init.js?a=0B9E4i6R1j';
+        head.appendChild(s);
+        console.log("Snize Loaded after " + timeout);
+    }, timeout);
+});
+</script>

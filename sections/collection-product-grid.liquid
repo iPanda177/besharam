@@ -1,0 +1,70 @@
+{{ 'collection-product-grid.css' | asset_url | stylesheet_tag }}
+
+{%- assign products_limit = section.settings.products_limit -%}
+
+<div class="collection-product-grid__wrap">
+    <div class="collection-product-grid__container page-width">
+        <h2 class="collection-product-grid__title">{{ section.settings.title }}</h2>
+        <div class="collection-product-grid__product-wrapper">
+            {%- if products_limit > 4 -%}
+                <a class="button collection-product-grid__collection-link" href="{{ section.settings.collection.url }}">VIEW ALL</a>
+            {%- endif -%}
+            {% for product in section.settings.collection.products limit: products_limit %}
+                <div class="collection-product-grid__product-block">
+                    {% render 'card-product',
+                            card_style: "style-type--1",
+                            card_product: product,
+                            card_collection: section.settings.collection,
+                            media_size: "portrait",
+                            show_secondary_image: false,
+                            show_quick_buy: true,
+                            show_vendor: true,
+                            show_rating: true,
+                            enable_quick_view: true,
+                            enable_color_swatches: false,
+                            enable_countdown: false,
+                            enable_image_fill: true
+                    %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+{% schema %}
+{
+"name": "Collection Product Grid",
+"tag": "section",
+"class": "section-collection-product-grid",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title",
+"default": "Most popular"
+},
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+},
+{
+"type": "range",
+"id": "products_limit",
+"label": "Products limit",
+"min": 4,
+"max": 12,
+"step": 4,
+"default": 8
+}
+],
+"presets": [
+{
+"name": "Collection Product Grid"
+}
+]
+}
+{% endschema %}

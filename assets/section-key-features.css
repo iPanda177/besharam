@@ -1,0 +1,137 @@
+.features-top {
+    position: relative;
+    z-index: -1;
+    margin-bottom: -1.8rem;
+}
+
+.title-wrapper {
+    justify-content: flex-start;
+}
+
+.features .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    opacity: .2;
+}
+
+.image-features__block-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 23px;
+}
+
+.image-feature__container {
+    width: calc(50% - 8px);
+    max-height: 222px;
+    position: relative;
+}
+
+.image-feature__container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.image-feature__container p {
+    position: absolute;
+    bottom: 0;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    margin: 0;
+    padding: 0 19px 14px 14px;
+    letter-spacing: 0;
+}
+
+.features__block-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.feature__container {
+    width: calc(50% - 8px);
+    padding: 10px;
+    background: linear-gradient(270.45deg, #444649 -30.76%, rgba(68, 70, 73, 0.37) 122.67%);
+    border-radius: 5px;
+}
+
+.feature__container p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (min-width: 750px) {
+    .features {
+        position: relative;
+        z-index: 0;
+    }
+
+    .features-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 144rem;
+        width: 100%;
+        margin: 0 auto -2.6rem;
+    }
+
+    .features .title {
+        font-size: 75px;
+    }
+
+    .image-feature__container {
+        width: calc(25% - 12px);
+        max-height: 312px;
+        position: relative;
+    }
+
+    .image-feature__container img {
+        border-radius: 7.5px;
+    }
+
+    .image-feature__container p {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 0 40.5px 30.75px 21.75px;
+    }
+
+    .features__block-wrapper {
+        gap: 12px;
+        justify-content: space-between;
+    }
+
+    .feature__container {
+        width: calc(100% / 3 - 10px);
+        padding: 12.6px 27px;
+        border-radius: 4px;
+    }
+
+    .feature__container p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .features {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .features .title-wrapper {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+}

@@ -1,0 +1,178 @@
+.text-video-hero-section {
+  margin-bottom: 50px
+}
+
+.banner__media-box {
+  width: 584px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.banner__media-box .media--400px {
+  height: 388px;
+}
+
+.banner__media-box .banner__media {
+  border-radius: 20px;
+}
+
+.banner__media-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__media-subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.banner__media-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  margin: 0;
+  padding: 0;
+}
+
+.banner__media-title:before {
+  content: '';
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  display: block;
+  background-image: url('Vector.svg');
+  width: 115px;
+  height: 70px;
+  background-repeat: no-repeat;
+}
+
+.banner__media-title:after {
+  content: '';
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+  display: block;
+  background-image: url('Vector.svg');
+  width: 115px;
+  height: 70px;
+  background-repeat: no-repeat;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+.banner__media-title .heart {
+  font-size: 50px;
+  display: inline-block;
+}
+
+.banner__media-title svg {
+  height: 50px;
+}
+
+.player__media #btn-nosound {
+  position: absolute;
+  bottom: -145px;
+  left: -240px;
+}
+
+.player__media {
+  left: unset;
+}
+
+.player__media #btn-nosound svg {
+  width: 24px;
+  height: auto;
+}
+
+.player__media #btn-play svg {
+  width: 50px;
+  height: auto;
+}
+.breadcrumb {
+  padding-top: 20px;
+
+}
+.breadcrumb span:last-of-type {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__media-subtitle {
+    font-size: 20px;
+    line-height: 36px;
+    padding-left: 28px;
+    padding-right: 23px;
+    margin-bottom: -20px;
+  }
+
+  .banner__media-title {
+    font-size: 41px;
+    line-height: 41px;
+    letter-spacing: 0;
+    padding-left: 28px;
+    padding-right: 23px;
+    margin-bottom: 60px;
+  }
+
+  .banner__media-title .heart {
+    font-size: 31px;
+    line-height: 31px;
+  }
+
+  .banner__media-title:before {
+    transform: scale(0.8) rotate(35deg) scaleY(-1);
+    left: -20px;
+    bottom: 0;
+    top: unset;
+  }
+
+  .banner__media-title:after {
+    transform: scale(0.8) rotate(150deg);
+    bottom: 0;
+    right: -20px;
+  }
+
+  .banner__media-box {
+    width: 390px;
+    margin: 0 auto;
+  }
+
+  .banner__media-box .media--400px {
+    height: 318px;
+  }
+
+  .player__media #btn-nosound {
+    left: -130px;
+    bottom: -80px;
+  }
+
+  .player__media #btn-nosound svg {
+    width: 32px;
+  }
+
+  .player__media #btn-play svg {
+    width: 70px;
+  }
+
+  .text-video-hero-section .banner--mobile-bottom .banner__content {
+    background-color: transparent;
+  }
+
+  .breadcrumb {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .breadcrumb .link {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .banner__media-box {
+    width: 90%;
+  }
+}

@@ -1,0 +1,23 @@
+<div class="checkout-header">
+  <div class="checkout-flex-header">
+    <div class="flex-item logo">
+      <a href="/">
+        <img src="{{ 'besharam-logo-header.png' | asset_url }}" alt="IMBesharam" class="brand" />
+      </a>
+    </div>
+    <div class="header__contact">
+      {% render 'icon', icon: 'contact' %}
+      <span>Help?</span>
+      <div class="select__contact">
+        <div class="select__contact--inner">
+          <a href="#">{% render 'icon', icon: 'callme' %}Call me back</a>
+          <a href="#">{% render 'icon', icon: 'chat' %}Live chat</a>
+          <a href="mailto:{{ shop.email }}" target="_blank">{% render 'icon', icon: 'email' %}Email</a>
+          <a href="tel:{{ shop.phone }}" target="_blank">{% render 'icon', icon: 'phone' %}Call us</a>
+          <a href="#">{% render 'icon', icon: 'whatsapp' %}WhatsApp</a>
+        </div>
+      </div>
+      {% render 'icon', icon: 'caret' %}
+    </div>
+  </div>
+</div>

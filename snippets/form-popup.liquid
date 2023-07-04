@@ -1,0 +1,26 @@
+<div id="{{ form_id }}-popup" class="form-popup" style="display:none;">
+  <div class="form-popup-head">
+    <div class="form-popup-title">{{ form_title | default: 'IMbesharam.com' }}</div>
+    <a href="javascript:void(0)" class="form-popup-close">
+      <svg  width="24" height="24" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="m4.59 59.41a2 2 0 0 0 2.83 0l24.58-24.58 24.59 24.58a2 2 0 0 0 2.83-2.83l-24.59-24.58 24.58-24.59a2 2 0 0 0 -2.83-2.83l-24.58 24.59-24.59-24.58a2 2 0 0 0 -2.82 2.82l24.58 24.59-24.58 24.59a2 2 0 0 0 0 2.82z"></path></svg>
+    </a>
+  </div>
+  <div class="form-popup-body">
+    <div class="form-popup-scroll">
+      {%- case form_id -%}
+        {%- when 'callmeback' -%}
+          {% render 'form-callmeback' %}
+        {%- when 'return' -%}
+          {% render 'form-return' %}
+        {%- when 'warranty' -%}
+          {% render 'form-warranty' %}
+        {%- when 'cancel' -%}
+          {% render 'form-cancel' %}
+        {%- when 'contact' -%}
+          {% render 'form-contact' %}
+        {%- when 'business' -%}
+          {% render 'form-business' %}
+      {%- endcase -%}
+    </div>
+  </div>
+</div>

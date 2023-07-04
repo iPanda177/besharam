@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+
+    <style>
+      .input-placeholder-color--lvl-22 {
+        color: #fff !important;
+      }
+      /* Segpay */
+      div[data-select-gateway="67262021703"]
+      {
+        display: none !important;
+      }
+    </style>
+
+    {{ 'checkout.scss.css' | asset_url | stylesheet_tag }}
+    {{ 'solid.min.css' | asset_url | stylesheet_tag }}
+    {{ 'brands.min.css' | asset_url | stylesheet_tag }}
+    {{ 'fontawesome.min.css' | asset_url | stylesheet_tag }}
+
+    {{ checkout_scripts }}
+
+    <script>
+      window.money_format = {{ shop.money_with_currency_format | json }};
+
+      /* We need that all javascript is loaded before allowing to continue to process the payment */
+      (function($) {
+        $(document).on("page:load page:change", function() {
+          if (Shopify.Checkout.step == 'payment_method') {
+            $('#continue_button,#continue_button_alt').attr('style','display: none !important');
+            $("<div id=\"jsLoading\">Payment is loading, please, wait...<br>If the payment button doesn't show up within 10 seconds<br><a href=\".\">click to refresh the page</a>.</div>").insertBefore($('.step__footer')[0]);
+          }
+        });
+      })(Checkout.$);
+    </script>
+
+    {{ 'geo-codes.js' | asset_url | script_tag }}
+    
+    {% include 'checkoutscripts' %}
+
+  </head>
+  <body class="{{ checkout.unique_gateways | handleize }}">
+
+    {{ skip_to_content_link }}
+
+    {% render 'checkout-header' %}
+
+    <div id="panel-upi-thankyou" class="panel" style="display: none;">
+      <div class="panel-amount upi-full-amount" style="display: none;">
+        <div>
+          AMOUNT TO PAY&nbsp;<span class="upi-full-payment-price"></span>
+        </div>
+      </div>
+      <div class="panel-amount cod-amount" style="display: none;">
+        <div class="upi-pay-now one-half">
+          <div>
+            PAY NOW&nbsp;<span class="upi-cod-pay-now"></span>
+          </div>
+        </div>
+        <div class="upi-pay-at-delivery one-half">
+          PAY AT DELIVERY&nbsp;<span class="upi-cod-pay-at-delivery"></span>
+        </div>
+      </div>
+      <div class="panel-row reverse-mobile">
+        <div class="panel-col">
+          <div class="panel-title js-panel-toggle-desktop"><i class="fa-solid fa-laptop"></i> If using a desktop/laptop <i class="fa-solid fa-plus"></i></div>
+          <div class="panel-row" style="display: none">
+            <div class="panel-col one-half">
+              <div class="panel-content">
+                <img class="qrcode" src="{{ 'qrcode-manual-upi.png' | asset_url }}">
+              </div>
+            </div>
+            <div class="panel-col one-half">
+              <div class="panel-content panel-instruction">
+                1. Open any UPI app on your mobile<br />
+                2. Select 'SCAN TO PAY' and scan this QR code<br />
+                3. Enter the amount to pay as seen above<br />
+                4. Proceed with OTP and make the payment<br />
+                5. Take screenshot of the payment confirmation<br />
+                6. Reply to the email you get from us and add this screenshot to it
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-col">
+          <div class="panel-title js-panel-toggle-mobile"><i class="fa-solid fa-mobile-screen-button"></i> If using a mobile phone <i class="fa-solid fa-plus"></i></div>
+          <div class="panel-row" style="display: none">
+            <div class="panel-col one-half">
+              <div class="panel-content upi-id-container">
+                <div>
+                  <span class="upi-id">happy.5299@wahdfcbank</span>
+                </div>
+                <button type="button">Copy ID to clipboard</button>
+              </div>
+            </div>
+            <div class="panel-col one-half">
+              <div class="panel-content panel-instruction">
+                1. Copy the UPI ID above on your phone<br />
+                2. Open any UPI app on your mobile<br />
+                3. Select 'PAY VIA UPI ID' and paste the UPI ID<br />
+                4. Enter the amount to pay as seen above<br />
+                5. Proceed with OTP and make the payment<br />
+                6. Take screenshot of the payment confirmation<br />
+                7. Reply to the email you get from us and add this screenshot to it
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-rebuy-id="5211"></div>
+
+    {% liquid 
+      assign is_cod = false
+      assign is_cod_new = false
+      assign is_upi = false
+      if checkout.order.transactions.last.gateway contains 'CASH ON DELIVERY' 
+        assign is_cod = true
+      elsif checkout.order.transactions.last.gateway == 'Cash On Delivery (COD) 2022' 
+        assign is_cod_new = true
+      elsif checkout.order.transactions.last.gateway == 'Manual UPI COD' 
+        assign is_upi = true
+        assign is_cod = true
+      elsif checkout.order.transactions.last.gateway == 'Manual UPI'
+        assign is_upi = true
+      endif
+    
+      if checkout.order
+        assign is_thank_you = true
+      endif
+    %}
+
+    <div id="checkout" class="content" data-content>
+      <div class="wrap breadcrumb-wrapper">
+        <div class="cart-breadcrumb">
+            {{ breadcrumb }}
+        </div>
+      </div>
+
+      <div class="Checkout__pinwheel-alert"></div>
+      <div class="Checkout__airpay-alert"></div>
+      
+      <div class="wrap checkout-flex">
+        <div class="main" role="main">
+          <div id="js-order-information"></div>
+          <div class="main__content">
+            {{ content_for_layout }}
+          </div>
+        </div>
+        <div class="sidebar">
+          <div id="js-order-confirmation"></div>
+          <div id="js-order-instructions"></div>
+
+          {% if is_thank_you %}
+            <div class="Thankyou__order_submitted">
+              <span class="Thankyou__title">Thank you</span> your order is submitted!
+            </div>
+          {% endif %}
+
+          {% if is_cod_new %}
+          <div class="verification-pending" style="display: none">
+            Your order is on <strong>HOLD</strong>, pending <strong>PHONE VERIFICATION</strong><br>
+            Our team will call you now (10am-7pm).</p>
+            <p class="disclaimer">If we cannot speak to you to VERIFY the order and shipping address, <strong>the order will be cancelled</strong>. Please be informed.</p>
+          </div>
+          {% endif %}
+
+          {% if is_upi and order.financial_status == 'pending' %}
+          <div class="verification-pending">
+            <div class="section__header">
+              <div class="section__title-wrapper-custom">
+                <h2 class="section__title">PENDING UPI PAYMENT VERIFICATION</h2>
+              </div>
+            </div>
+          
+            <p class="disclaimer">
+              You will receive soon an email with the details of your order. Reply to that email and attach the screenshot/picture of payment as proof. Our team will verify it and process your order right away.
+            </p>
+          </div>
+          {% endif %}
+
+          {% liquid
+            assign items_from_usa = 0
+            assign items_from_india = 0
+            for item in checkout.line_items
+              if item.variant.inventory_quantity > 0
+                assign items_from_india = items_from_india | plus: 1
+              else
+                assign items_from_usa = items_from_usa | plus: 1
+              endif
+            endfor
+          %}
+        
+          {% if items_from_usa > 0 %}
+            {%- capture suboffer -%}
+            <div class="sub-offer">
+              <div class="title">
+                ALERT: Part of your order will ship from USA <div style="display: inline-block; vertical-align: middle; line-height:1em;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16"><path d="M503.2,423.7H8.8A8.8,8.8,0,0,1,0,414.9V97.1a8.8,8.8,0,0,1,8.8-8.8H503.2a8.8,8.8,0,0,1,8.8,8.8V414.9A8.8,8.8,0,0,1,503.2,423.7Z" fill="#f5f5f5"/><path d="M512,114.1H0v-17a8.8,8.8,0,0,1,8.8-8.8H503.2a8.8,8.8,0,0,1,8.8,8.8v17Z" fill="#ff4b55"/><rect y="191.5" width="512" height="25.8" fill="#ff4b55"/><rect y="139.9" width="512" height="25.8" fill="#ff4b55"/><path d="M512,268.9H8.8A8.8,8.8,0,0,1,0,260.1v-17H512Z" fill="#ff4b55"/><rect y="346.3" width="512" height="25.8" fill="#ff4b55"/><path d="M503.2,423.7H8.8A8.8,8.8,0,0,1,0,414.9v-17H512v17A8.8,8.8,0,0,1,503.2,423.7Z" fill="#ff4b55"/><rect y="294.7" width="512" height="25.8" fill="#ff4b55"/><path d="M229.5,88.3H8.8A8.8,8.8,0,0,0,0,97.1v163a8.9,8.9,0,0,0,8.8,8.8H229.5a8.8,8.8,0,0,0,8.8-8.8V97.1A8.7,8.7,0,0,0,229.5,88.3Z" fill="#41479b"/><path d="M24.8,108.5l1.9,5.9h6.2c.8.1,1.2,1.1.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7c-.7-.4-.3-1.4.5-1.5h6.2l1.9-5.9A.9.9,0,0,1,24.8,108.5Z" fill="#f5f5f5"/><path d="M24.8,139.2l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7a.8.8,0,0,1,.5-1.5h6.2l1.9-5.9A.8.8,0,0,1,24.8,139.2Z" fill="#f5f5f5"/><path d="M24.8,169.8l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.5-5,3.5a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.6a.8.8,0,0,1,.5-1.5h6.2l1.9-5.9A.9.9,0,0,1,24.8,169.8Z" fill="#f5f5f5"/><path d="M24.8,200.5l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7a.8.8,0,0,1,.5-1.5h6.2l1.9-5.9A.8.8,0,0,1,24.8,200.5Z" fill="#f5f5f5"/><path d="M24.8,231.2l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5,3.6a.9.9,0,0,1-1.3-1l1.9-5.9-5-3.6a.8.8,0,0,1,.5-1.5h6.2l1.9-5.8A.8.8,0,0,1,24.8,231.2Z" fill="#f5f5f5"/><path d="M48.6,123.6l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5,3.6a.9.9,0,0,1-1.3-1l1.9-5.9-5-3.6a.8.8,0,0,1,.5-1.5H45l2-5.8A.8.8,0,0,1,48.6,123.6Z" fill="#f5f5f5"/><path d="M48.6,154.2l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7a.8.8,0,0,1,.5-1.5H45l2-5.9A.9.9,0,0,1,48.6,154.2Z" fill="#f5f5f5"/><path d="M48.6,184.9l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.8a.9.9,0,0,1-1.3,1l-5-3.6-5,3.6a.9.9,0,0,1-1.3-1l1.9-5.8-5-3.7a.8.8,0,0,1,.5-1.5H45l2-5.8A.8.8,0,0,1,48.6,184.9Z" fill="#f5f5f5"/><path d="M48.6,215.5l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7a.8.8,0,0,1,.5-1.5H45l2-5.9A.9.9,0,0,1,48.6,215.5Z" fill="#f5f5f5"/><path d="M72.4,108.5l1.9,5.9h6.2a.9.9,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.8-5.9-4.9-3.7c-.7-.4-.3-1.4.5-1.5h6.1l2-5.9A.9.9,0,0,1,72.4,108.5Z" fill="#f5f5f5"/><path d="M72.4,139.2l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.8.8,0,0,1,72.4,139.2Z" fill="#f5f5f5"/><path d="M72.4,169.8l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.8-5.9-4.9-3.6a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.9.9,0,0,1,72.4,169.8Z" fill="#f5f5f5"/><path d="M72.4,200.5l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.8.8,0,0,1,72.4,200.5Z" fill="#f5f5f5"/><path d="M72.4,231.2l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5,3.6a.9.9,0,0,1-1.3-1l1.8-5.9-4.9-3.6a.8.8,0,0,1,.5-1.5h6.1l2-5.8A.8.8,0,0,1,72.4,231.2Z" fill="#f5f5f5"/><path d="M96.2,123.6l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5,3.6a.9.9,0,0,1-1.3-1l1.8-5.9L86,131a.8.8,0,0,1,.5-1.5h6.1l2-5.8A.8.8,0,0,1,96.2,123.6Z" fill="#f5f5f5"/><path d="M96.2,154.2l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.8-5.9L86,161.6a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.9.9,0,0,1,96.2,154.2Z" fill="#f5f5f5"/><path d="M96.2,184.9l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.8a.9.9,0,0,1-1.3,1l-5-3.6-5,3.6a.9.9,0,0,1-1.3-1l1.8-5.8L86,192.3a.8.8,0,0,1,.5-1.5h6.1l2-5.8A.8.8,0,0,1,96.2,184.9Z" fill="#f5f5f5"/><path d="M96.2,215.5l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.8-5.9L86,222.9a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.9.9,0,0,1,96.2,215.5Z" fill="#f5f5f5"/><path d="M120,108.5l1.9,5.9h6.2a.9.9,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7c-.7-.4-.3-1.4.5-1.5h6.1l2-5.9A.9.9,0,0,1,120,108.5Z" fill="#f5f5f5"/><path d="M120,139.2l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.8.8,0,0,1,120,139.2Z" fill="#f5f5f5"/><path d="M120,169.8l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.6a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.9.9,0,0,1,120,169.8Z" fill="#f5f5f5"/><path d="M120,200.5l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.5-1.5h6.1l2-5.9A.8.8,0,0,1,120,200.5Z" fill="#f5f5f5"/><path d="M120,231.2l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-1l1.8-5.9-4.9-3.6a.8.8,0,0,1,.5-1.5h6.1l2-5.8A.8.8,0,0,1,120,231.2Z" fill="#f5f5f5"/><path d="M143.8,123.6l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-1l1.8-5.9-4.9-3.6a.8.8,0,0,1,.4-1.5h6.2l2-5.8A.8.8,0,0,1,143.8,123.6Z" fill="#f5f5f5"/><path d="M143.8,154.2l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.4-1.5h6.2l2-5.9A.9.9,0,0,1,143.8,154.2Z" fill="#f5f5f5"/><path d="M143.8,184.9l1.9,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.8a.9.9,0,0,1-1.3,1l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-1l1.8-5.8-4.9-3.7a.8.8,0,0,1,.4-1.5h6.2l2-5.8A.8.8,0,0,1,143.8,184.9Z" fill="#f5f5f5"/><path d="M143.8,215.5l1.9,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.4-1.5h6.2l2-5.9A.9.9,0,0,1,143.8,215.5Z" fill="#f5f5f5"/><path d="M167.5,108.5l2,5.9h6.2a.9.9,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.4-1.5H164l2-5.9A.8.8,0,0,1,167.5,108.5Z" fill="#f5f5f5"/><path d="M167.5,139.2l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.4-1.5H164l2-5.9A.8.8,0,0,1,167.5,139.2Z" fill="#f5f5f5"/><path d="M167.5,169.8l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.6a.8.8,0,0,1,.4-1.5H164l2-5.9A.8.8,0,0,1,167.5,169.8Z" fill="#f5f5f5"/><path d="M167.5,200.5l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-4.9-3.7a.8.8,0,0,1,.4-1.5H164l2-5.9A.8.8,0,0,1,167.5,200.5Z" fill="#f5f5f5"/><path d="M167.5,231.2l2,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-1l1.8-5.9-4.9-3.6a.8.8,0,0,1,.4-1.5H164l2-5.8A.8.8,0,0,1,167.5,231.2Z" fill="#f5f5f5"/><path d="M191.3,123.6l2,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-1l1.8-5.9-5-3.6a.8.8,0,0,1,.5-1.5h6.2l2-5.8A.8.8,0,0,1,191.3,123.6Z" fill="#f5f5f5"/><path d="M191.3,154.2l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-5-3.7a.8.8,0,0,1,.5-1.5h6.2l2-5.9A.8.8,0,0,1,191.3,154.2Z" fill="#f5f5f5"/><path d="M191.3,184.9l2,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.8a.9.9,0,0,1-1.3,1l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-1l1.8-5.8-5-3.7a.8.8,0,0,1,.5-1.5h6.2l2-5.8A.8.8,0,0,1,191.3,184.9Z" fill="#f5f5f5"/><path d="M191.3,215.5l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5-3.6-5.1,3.6a.8.8,0,0,1-1.2-.9l1.8-5.9-5-3.7a.8.8,0,0,1,.5-1.5h6.2l2-5.9A.8.8,0,0,1,191.3,215.5Z" fill="#f5f5f5"/><path d="M215.1,108.5l2,5.9h6.2a.9.9,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5.1-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7a.9.9,0,0,1,.5-1.5h6.2l2-5.9A.8.8,0,0,1,215.1,108.5Z" fill="#f5f5f5"/><path d="M215.1,139.2l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5.1-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7a.8.8,0,0,1,.5-1.5h6.2l2-5.9A.8.8,0,0,1,215.1,139.2Z" fill="#f5f5f5"/><path d="M215.1,169.8l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.8.8,0,0,1-1.3.9l-5.1-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.6a.8.8,0,0,1,.5-1.5h6.2l2-5.9A.8.8,0,0,1,215.1,169.8Z" fill="#f5f5f5"/><path d="M215.1,200.5l2,5.9h6.2a.8.8,0,0,1,.5,1.5l-5,3.7,1.9,5.9a.8.8,0,0,1-1.3.9l-5.1-3.6-5,3.6a.8.8,0,0,1-1.3-.9l1.9-5.9-5-3.7a.8.8,0,0,1,.5-1.5h6.2l2-5.9A.8.8,0,0,1,215.1,200.5Z" fill="#f5f5f5"/><path d="M215.1,231.2l2,5.8h6.2a.8.8,0,0,1,.5,1.5l-5,3.6,1.9,5.9a.9.9,0,0,1-1.3,1l-5.1-3.6-5,3.6a.9.9,0,0,1-1.3-1l1.9-5.9-5-3.6a.8.8,0,0,1,.5-1.5h6.2l2-5.8A.8.8,0,0,1,215.1,231.2Z" fill="#f5f5f5"/></svg></div>
+              </div>
+              We may have several similar product in stock in India <div style="display: inline-block; vertical-align: middle; line-height:1em;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16"><path d="M512,200.1H0V97.1a8.8,8.8,0,0,1,8.8-8.8H503.2a8.8,8.8,0,0,1,8.8,8.8v103Z" fill="#fab446"/><path d="M503.2,423.7H8.8A8.8,8.8,0,0,1,0,414.9v-103H512v103A8.8,8.8,0,0,1,503.2,423.7Z" fill="#73af00"/><rect y="200.1" width="512" height="111.81" fill="#f5f5f5"/><path d="M256,303.4A47.4,47.4,0,1,1,303.4,256,47.4,47.4,0,0,1,256,303.4Zm0-86A38.6,38.6,0,1,0,294.6,256,38.6,38.6,0,0,0,256,217.4Z" fill="#41479b"/><circle cx="256" cy="256" r="5.4" fill="#41479b"/><polygon points="256 256.8 242.3 258.2 213 256.8 213 255.2 242.3 253.8 256 255.2 256 256.8" fill="#41479b"/><polygon points="256 256.8 269.7 258.2 299 256.8 299 255.2 269.7 253.8 256 255.2 256 256.8" fill="#41479b"/><polygon points="255.2 256 253.8 242.3 255.2 213 256.8 213 258.2 242.3 256.8 256 255.2 256" fill="#41479b"/><polygon points="255.2 256 253.8 269.7 255.2 299 256.8 299 258.2 269.7 256.8 256 255.2 256" fill="#41479b"/><polygon points="255.4 256.6 244.8 247.9 225 226.1 226.1 225 247.9 244.8 256.6 255.4 255.4 256.6" fill="#41479b"/><polygon points="255.4 256.6 264.1 267.2 285.9 287 287 285.9 267.2 264.1 256.6 255.4 255.4 256.6" fill="#41479b"/><polygon points="255.4 255.4 264.1 244.8 285.9 225 287 226.1 267.2 247.9 256.6 256.6 255.4 255.4" fill="#41479b"/><polygon points="255.4 255.4 244.8 264.1 225 285.9 226.1 287 247.9 267.2 256.6 256.6 255.4 255.4" fill="#41479b"/><polygon points="256.3 256.7 244.2 263.3 216.6 273.2 215.9 271.7 242.5 259.2 255.7 255.3 256.3 256.7" fill="#41479b"/><polygon points="256.3 256.7 269.5 252.8 296.1 240.3 295.4 238.8 267.8 248.7 255.7 255.3 256.3 256.7" fill="#41479b"/><polygon points="255.3 256.3 248.7 244.2 238.8 216.6 240.3 215.9 252.8 242.5 256.7 255.7 255.3 256.3" fill="#41479b"/><polygon points="255.3 256.3 259.2 269.5 271.7 296.1 273.2 295.4 263.3 267.8 256.7 255.7 255.3 256.3" fill="#41479b"/><polygon points="255.7 256.7 242.5 252.8 215.9 240.3 216.6 238.8 244.2 248.7 256.3 255.3 255.7 256.7" fill="#41479b"/><polygon points="255.7 256.7 267.8 263.3 295.4 273.2 296.1 271.7 269.5 259.2 256.3 255.3 255.7 256.7" fill="#41479b"/><polygon points="255.3 255.7 259.2 242.5 271.7 215.9 273.2 216.6 263.3 244.2 256.7 256.3 255.3 255.7" fill="#41479b"/><polygon points="255.3 255.7 248.7 267.8 238.8 295.4 240.3 296.1 252.8 269.5 256.7 256.3 255.3 255.7" fill="#41479b"/><circle cx="256" cy="256" r="7.3" fill="#f5f5f5"/><circle cx="256" cy="256" r="4.4" fill="#41479b"/></svg></div>, our Team will contact you with options for speedy delivery
+            </div>
+            {%- endcapture -%}
+          {% endif %}
+
+          <div class="section__header js-order-summary-header">
+            {% if is_thank_you %}
+              <h2 class="section__title js-order-summary-title">ORDER # - {{ checkout.order_name }}</h2>
+            {% else %}
+            <h2 class="section__title js-order-summary-title">ORDER SUMMARY</h2>
+            {% endif %}
+          </div>
+          <div class="sidebar__content js-order-summary-content">
+
+            <div class="Thankyou__box-sub-notice" style="display: none">
+              {{ suboffer }}
+            </div>
+            
+            {{ content_for_order_summary }}
+
+            <div class="order-summary__section order-summary__section--total-lines cod-line-items" data-order-summary-section="cod-lines" style="display:none;">
+              <table class="total-line-table">
+                <thead>
+                  <tr>
+                    <th scope="col"><span class="visually-hidden">Description</span></th>
+                    <th scope="col"><span class="visually-hidden">Price</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="total-line total-line--subtotal">
+                    <td class="total-line__name payment-due-label">
+                      Subtotal
+                    </td>
+                    <td class="total-line__price">
+                      <span class="order-summary__emphasis price-subtotal">{{ checkout.line_items_subtotal_price | money }}</span>
+                    </td>
+                  </tr>
+                  {% if checkout.discounts_amount > 0 %}
+                  <tr class="total-line total-line--subtotal">
+                    <td class="total-line__name payment-due-label">
+                      Discount
+                      <span class="reduction-code">
+                        <svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-18 reduction-code__icon" aria-hidden="true" focusable="false"> <use xlink:href="#tags-filled"></use> </svg>
+                      </span>
+                    </td>
+                    <td class="total-line__price">
+                      <span class="order-summary__emphasis price-discounts">-{{ checkout.discounts_amount | money }}</span>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% if checkout.gift_cards_amount > 0 %}
+                  <tr class="total-line total-line--subtotal">
+                    <td class="total-line__name payment-due-label">
+                      Gift Card
+                      <span class="reduction-code">
+                        <svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-18 reduction-code__icon" aria-hidden="true" focusable="false"> <use xlink:href="#gift-filled"></use> </svg>
+                      </span>
+                    </td>
+                    <td class="total-line__price">
+                      <span class="order-summary__emphasis">-{{ checkout.gift_cards_amount | money }}</span>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  <tr class="total-line total-line--subtotal">
+                    <td class="total-line__name payment-due-label">
+                      {% if shipping_method.title %}
+                        {{ shipping_method.title }}
+                      {% else %}
+                        Shipping
+                      {% endif %}
+                    </td>
+                    <td class="total-line__price">
+                      <span class="order-summary__emphasis">
+                        {% if checkout.shipping_price > 0 %}
+                          {{ checkout.shipping_price | money }}
+                        {% else %}
+                          FREE
+                        {% endif %}
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="order-summary__section order-summary__section--total cod-totals" data-order-summary-section="cod-due" style="display:none;">
+              {%- assign cod_fees = checkout.total_price | plus: checkout.discounts_amount | divided_by: 10.0 -%}
+              <table class="total-line-table">
+                <thead>
+                  <tr>
+                    <th scope="col"><span class="visually-hidden">Description</span></th>
+                    <th scope="col"><span class="visually-hidden">Price</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="total-line">
+                    <td class="total-line__name payment-due-label">
+                      Total COD Fees (10%)
+                    </td>
+                    <td class="total-line__price payment-due">
+                      <span class="payment-due__price">{{ cod_fees | money }}</span>
+                    </td>
+                  </tr>
+                  <tr class="total-line">
+                    <td class="total-line__name payment-due-label">
+                      Total Amount
+                      <span class="order-summary__small-text accent">Due On Delivery</span>
+                    </td>
+                    <td class="total-line__price payment-due">
+                      <span class="payment-due__price price-total">{{ checkout.total_price | minus: checkout.gift_cards_amount | plus: cod_fees | money }}</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="order-summary__section order-summary__section--total cod-prepaid-totals" data-order-summary-section="cod-prepaid-due" style="display:none;">
+              {%- assign cod_prepaid_fees = checkout.line_items_subtotal_price | plus: checkout.shipping_price | plus: checkout.discounts_amount | divided_by: 10.0 -%}
+              <table class="total-line-table">
+                <thead>
+                  <tr>
+                    <th scope="col"><span class="visually-hidden">Description</span></th>
+                    <th scope="col"><span class="visually-hidden">Price</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="total-line">
+                    <td class="total-line__name payment-due-label">
+                      COD Fees (10%) + Shipping
+                      <span class="order-summary__small-text accent">Due Now</span>
+                    </td>
+                    <td class="total-line__price payment-due">
+                      <span class="payment-due__price">{{ cod_prepaid_fees | plus: checkout.shipping_price | money }}</span>
+                    </td>
+                  </tr>
+                  <tr class="total-line">
+                    <td class="total-line__name payment-due-label">
+                      COD Amount
+                      <span class="order-summary__small-text accent">Due On Delivery</span>
+                    </td>
+                    <td class="total-line__price payment-due">
+                      <span class="payment-due__price">{{ checkout.subtotal_price | money }}</span>
+                    </td>
+                  </tr>
+                  <tr class="total-line">
+                    <td class="payment-due-label__total">
+                      Total
+                      <br /><span class="price-includes">Includes customs duties &amp; taxes</span>
+                    </td>
+                    <td class="total-line__price payment-due">
+                      <span class="payment-due__price price-total">{{ checkout.total_price | minus: checkout.gift_cards_amount | plus: cod_prepaid_fees | money }}</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="continue_button_alt_wrapper"></div>
+          {% if is_thank_you %}
+          <div class="Thankyou__extra-wrapper">
+            <div class="Thankyou__payment-wrapper">
+              Payment status
+              <div class="Thankyou__payment-status">
+                {{ order.financial_status | upcase }}
+              </div>
+              <div class="Thankyou__payment-method">
+                {% if is_cod or is_cod_new %}
+                  {% if is_upi %}
+                    UPI + COD
+                  {% else %}
+                    COD
+                  {% endif %}
+                {% elsif is_upi %}
+                    UPI
+                {% else %}
+                  {{ checkout.transactions.last.gateway | upcase }}
+                {% endif %}
+              </div>
+            </div>
+            <div class="Thankyou__delivery-wrapper">
+              Delivery method
+              <div class="Thankyou__delivery-method">
+                {{ checkout.order.attributes['delivery-preference'] }}
+              </div>
+              <div class="Thankyou__deliver-notice">
+              Note: Please carry your ID if you’re picking up from courier office.
+              </div>
+            </div>
+          </div>
+          <div class="Thankyou__box">
+            <div class="Thankyou__box-heading">
+              Shipping information
+            </div>
+            <div class="Thankyou__user-info">
+              <div class="Thankyou__shippping-address">
+
+                <div role="row" class="Thankyou__shippping-block">
+                  <div class="Thankyou__shippping-block__inner">
+                    <div role="rowheader" class="Thankyou__shippping-block__label">Ship to</div>
+                    <div role="cell" class="Thankyou__shippping-block__content">
+                      <bdo>
+                        {{ checkout.shipping_address.street }}<br />
+                        {{ checkout.shipping_address.city }},
+                        {{ checkout.shipping_address.zip }},
+                        {{ checkout.shipping_address.country }}
+                      </bdo>
+                    </div>
+                  </div>
+                </div>
+
+                <div role="row" class="Thankyou__shippping-block">
+                  <div class="Thankyou__shippping-block__inner">
+                    <div role="rowheader" class="Thankyou__shippping-block__label">Email</div>
+                    <div role="cell" class="Thankyou__shippping-block__content">
+                      <bdo>{{ checkout.email }}</bdo>
+                    </div>
+                  </div>
+                </div>
+                
+                <div role="row" class="Thankyou__shippping-block">
+                  <div class="Thankyou__shippping-block__inner">
+                    <div role="rowheader" class="Thankyou__shippping-block__label">Phone</div>
+                    <div role="cell" class="Thankyou__shippping-block__content">
+                      <bdo>{{ checkout.shipping_address.phone }}</bdo>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="Thankyou__estimates">
+              <div>
+                <div>Est / Shipping Date</div>
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.49996 0.666504C7.04957 0.666504 5.63174 1.0966 4.42578 1.90239C3.21982 2.70819 2.27989 3.8535 1.72485 5.19349C1.1698 6.53348 1.02458 8.00797 1.30754 9.4305C1.5905 10.853 2.28893 12.1597 3.31451 13.1853C4.3401 14.2109 5.64677 14.9093 7.0693 15.1923C8.49183 15.4752 9.96632 15.33 11.3063 14.775C12.6463 14.2199 13.7916 13.28 14.5974 12.074C15.4032 10.8681 15.8333 9.45023 15.8333 7.99984C15.831 6.05562 15.0576 4.19169 13.6829 2.81692C12.3081 1.44215 10.4442 0.668798 8.49996 0.666504ZM8.49996 13.9998C7.31327 13.9998 6.15324 13.6479 5.16654 12.9887C4.17985 12.3294 3.41081 11.3923 2.95669 10.2959C2.50256 9.19958 2.38374 7.99318 2.61525 6.8293C2.84676 5.66541 3.41821 4.59631 4.25732 3.7572C5.09644 2.91808 6.16553 2.34664 7.32942 2.11513C8.49331 1.88361 9.69971 2.00243 10.7961 2.45656C11.8924 2.91069 12.8295 3.67972 13.4888 4.66642C14.1481 5.65311 14.5 6.81315 14.5 7.99984C14.498 9.59054 13.8653 11.1155 12.7405 12.2403C11.6157 13.3651 10.0907 13.9979 8.49996 13.9998Z" fill="white" fill-opacity="0.8"/>
+                  <path d="M9.16671 7.72416V4.00016C9.16671 3.82335 9.09647 3.65378 8.97145 3.52876C8.84642 3.40373 8.67685 3.3335 8.50004 3.3335C8.32323 3.3335 8.15366 3.40373 8.02864 3.52876C7.90361 3.65378 7.83337 3.82335 7.83337 4.00016V8.00016C7.83341 8.17696 7.90367 8.3465 8.02871 8.4715L10.0287 10.4715C10.1544 10.5929 10.3228 10.6601 10.4976 10.6586C10.6724 10.6571 10.8396 10.587 10.9633 10.4634C11.0869 10.3398 11.157 10.1726 11.1585 9.99776C11.16 9.82297 11.0928 9.65456 10.9714 9.52883L9.16671 7.72416Z" fill="white" fill-opacity="0.8"/>
+                  </svg>
+                  <span id="ty_eds">{{ checkout.order.attributes['estimated-date-of-shipping'] }}</span>
+              </div>
+              <div>
+                <div>Est / Delivery Date</div>
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.49996 0.666504C7.04957 0.666504 5.63174 1.0966 4.42578 1.90239C3.21982 2.70819 2.27989 3.8535 1.72485 5.19349C1.1698 6.53348 1.02458 8.00797 1.30754 9.4305C1.5905 10.853 2.28893 12.1597 3.31451 13.1853C4.3401 14.2109 5.64677 14.9093 7.0693 15.1923C8.49183 15.4752 9.96632 15.33 11.3063 14.775C12.6463 14.2199 13.7916 13.28 14.5974 12.074C15.4032 10.8681 15.8333 9.45023 15.8333 7.99984C15.831 6.05562 15.0576 4.19169 13.6829 2.81692C12.3081 1.44215 10.4442 0.668798 8.49996 0.666504ZM8.49996 13.9998C7.31327 13.9998 6.15324 13.6479 5.16654 12.9887C4.17985 12.3294 3.41081 11.3923 2.95669 10.2959C2.50256 9.19958 2.38374 7.99318 2.61525 6.8293C2.84676 5.66541 3.41821 4.59631 4.25732 3.7572C5.09644 2.91808 6.16553 2.34664 7.32942 2.11513C8.49331 1.88361 9.69971 2.00243 10.7961 2.45656C11.8924 2.91069 12.8295 3.67972 13.4888 4.66642C14.1481 5.65311 14.5 6.81315 14.5 7.99984C14.498 9.59054 13.8653 11.1155 12.7405 12.2403C11.6157 13.3651 10.0907 13.9979 8.49996 13.9998Z" fill="white" fill-opacity="0.8"/>
+                  <path d="M9.16671 7.72416V4.00016C9.16671 3.82335 9.09647 3.65378 8.97145 3.52876C8.84642 3.40373 8.67685 3.3335 8.50004 3.3335C8.32323 3.3335 8.15366 3.40373 8.02864 3.52876C7.90361 3.65378 7.83337 3.82335 7.83337 4.00016V8.00016C7.83341 8.17696 7.90367 8.3465 8.02871 8.4715L10.0287 10.4715C10.1544 10.5929 10.3228 10.6601 10.4976 10.6586C10.6724 10.6571 10.8396 10.587 10.9633 10.4634C11.0869 10.3398 11.157 10.1726 11.1585 9.99776C11.16 9.82297 11.0928 9.65456 10.9714 9.52883L9.16671 7.72416Z" fill="white" fill-opacity="0.8"/>
+                  </svg>
+                  <span id="ty_edd">{{ checkout.order.attributes['estimated-date-of-delivery'] }}</span>
+              </div>
+            </div>
+            <div class="Thankyou__estimates-notice">
+              Estimated delivery dates are not guaranteed. Weather delays, courier partner operational mechanism and other unforeseen circumstances may impact delivery time. We ask you to be cognizant of the e-commerce ecosystem. Thank you for your understanding. 
+            </div>
+            <div class="Thankyou__track-order" style="text-align: center;">
+              <a href="{{shop.url}}/apps/tracktor/track?order=HBI-101{{checkout.order_number}}&email{{checkout.email}}"
+                class="btn">Track your order</a>
+              <div style="margin-top: 5px; font-size: 14px; font-weight: 400">Activates in 12-24 hours after shipping</div>
+            </div>
+            <div class="Thankyou__continue-shopping"></div>
+          </div>
+
+          <div class="instagram__banner">
+            <a target="_blank" href="https://www.instagram.com/imbesharam/">
+              <img loading="lazy" src="{{'imb-thank-you-follow-instagram.jpg' | asset_url}}" class="thank-you-img" title="Follow Us on Instagram" />
+            </a>
+          </div>
+          <div class="leavereview__banner">
+            <a target="_blank" href="https://besharam.wufoo.com/forms/customer-feedback-form">
+              <img loading="lazy" src="{{'imb-thank-you-leave-review.jpg' | asset_url}}" class="thank-you-img" title="Leave a review" />
+            </a>
+          </div>
+
+          {% endif %}
+      </div>
+    </div>
+
+  {% if is_thank_you %}
+    <div class="discounts-wrapper">
+      <div class="discount-title">VIP COUPONS</div>
+      
+      <div class="discount-wrapper">
+        <div class="discount-conditions">
+          <div class="discount-percentage">
+            20% OFF
+          </div>
+          <div class="discount-note">
+            The Heavenly Sale. Extra 10% off your order sitewide (min	Rs.3000). 1 max
+          </div>
+        </div>
+        <div class="discount-code-container">
+          <div>
+            <span class="discount-code">HEAVEN</span><br/>
+            <span class="discount-expiration">Expires 31st Jul 2023</span>
+          </div>
+          <button type="button">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3141_521)">
+            <path d="M15.4512 17.4287H6.48633C5.3958 17.4287 4.50879 16.5417 4.50879 15.4512V6.48633C4.50879 5.3958 5.3958 4.50879 6.48633 4.50879H15.4512C16.5417 4.50879 17.4287 5.3958 17.4287 6.48633V15.4512C17.4287 16.5417 16.5417 17.4287 15.4512 17.4287ZM6.48633 5.82715C6.12285 5.82715 5.82715 6.12285 5.82715 6.48633V15.4512C5.82715 15.8146 6.12285 16.1104 6.48633 16.1104H15.4512C15.8146 16.1104 16.1104 15.8146 16.1104 15.4512V6.48633C16.1104 6.12285 15.8146 5.82715 15.4512 5.82715H6.48633ZM3.19043 12.1553H2.53125C2.16777 12.1553 1.87207 11.8596 1.87207 11.4961V2.53125C1.87207 2.16777 2.16777 1.87207 2.53125 1.87207H11.4961C11.8596 1.87207 12.1553 2.16777 12.1553 2.53125V3.15747H13.4736V2.53125C13.4736 1.44072 12.5866 0.553711 11.4961 0.553711H2.53125C1.44072 0.553711 0.553711 1.44072 0.553711 2.53125V11.4961C0.553711 12.5866 1.44072 13.4736 2.53125 13.4736H3.19043V12.1553Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_3141_521">
+            <rect width="18" height="18" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            Copy</button>
+        </div>
+        <div class="discount-info">
+          <span>To use the coupon, copy + paste it at your next checkout</span>
+        </div>
+      </div>
+
+      <div class="discount-wrapper">
+        <div class="discount-conditions">
+          <div class="discount-percentage">
+            20% OFF
+          </div>
+          <div class="discount-note">
+            The Heavenly Sale. Extra 10% off your order sitewide (min	Rs.3000). 1 max
+          </div>
+        </div>
+        <div class="discount-code-container">
+          <div>
+            <span class="discount-code">HEAVEN</span><br/>
+            <span class="discount-expiration">Expires 31st Jul 2023</span>
+          </div>
+          <button type="button">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3141_521)">
+            <path d="M15.4512 17.4287H6.48633C5.3958 17.4287 4.50879 16.5417 4.50879 15.4512V6.48633C4.50879 5.3958 5.3958 4.50879 6.48633 4.50879H15.4512C16.5417 4.50879 17.4287 5.3958 17.4287 6.48633V15.4512C17.4287 16.5417 16.5417 17.4287 15.4512 17.4287ZM6.48633 5.82715C6.12285 5.82715 5.82715 6.12285 5.82715 6.48633V15.4512C5.82715 15.8146 6.12285 16.1104 6.48633 16.1104H15.4512C15.8146 16.1104 16.1104 15.8146 16.1104 15.4512V6.48633C16.1104 6.12285 15.8146 5.82715 15.4512 5.82715H6.48633ZM3.19043 12.1553H2.53125C2.16777 12.1553 1.87207 11.8596 1.87207 11.4961V2.53125C1.87207 2.16777 2.16777 1.87207 2.53125 1.87207H11.4961C11.8596 1.87207 12.1553 2.16777 12.1553 2.53125V3.15747H13.4736V2.53125C13.4736 1.44072 12.5866 0.553711 11.4961 0.553711H2.53125C1.44072 0.553711 0.553711 1.44072 0.553711 2.53125V11.4961C0.553711 12.5866 1.44072 13.4736 2.53125 13.4736H3.19043V12.1553Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_3141_521">
+            <rect width="18" height="18" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            Copy</button>
+        </div>
+        <div class="discount-info">
+          <span>To use the coupon, copy + paste it at your next checkout</span>
+        </div>
+      </div>
+
+      <div class="discount-wrapper">
+        <div class="discount-conditions">
+          <div class="discount-percentage">
+            20% OFF
+          </div>
+          <div class="discount-note">
+            The Heavenly Sale. Extra 10% off your order sitewide (min	Rs.3000). 1 max
+          </div>
+        </div>
+        <div class="discount-code-container">
+          <div>
+            <span class="discount-code">HEAVEN</span><br/>
+            <span class="discount-expiration">Expires 31st Jul 2023</span>
+          </div>
+          <button type="button">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3141_521)">
+            <path d="M15.4512 17.4287H6.48633C5.3958 17.4287 4.50879 16.5417 4.50879 15.4512V6.48633C4.50879 5.3958 5.3958 4.50879 6.48633 4.50879H15.4512C16.5417 4.50879 17.4287 5.3958 17.4287 6.48633V15.4512C17.4287 16.5417 16.5417 17.4287 15.4512 17.4287ZM6.48633 5.82715C6.12285 5.82715 5.82715 6.12285 5.82715 6.48633V15.4512C5.82715 15.8146 6.12285 16.1104 6.48633 16.1104H15.4512C15.8146 16.1104 16.1104 15.8146 16.1104 15.4512V6.48633C16.1104 6.12285 15.8146 5.82715 15.4512 5.82715H6.48633ZM3.19043 12.1553H2.53125C2.16777 12.1553 1.87207 11.8596 1.87207 11.4961V2.53125C1.87207 2.16777 2.16777 1.87207 2.53125 1.87207H11.4961C11.8596 1.87207 12.1553 2.16777 12.1553 2.53125V3.15747H13.4736V2.53125C13.4736 1.44072 12.5866 0.553711 11.4961 0.553711H2.53125C1.44072 0.553711 0.553711 1.44072 0.553711 2.53125V11.4961C0.553711 12.5866 1.44072 13.4736 2.53125 13.4736H3.19043V12.1553Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_3141_521">
+            <rect width="18" height="18" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            Copy</button>
+        </div>
+        <div class="discount-info">
+          <span>To use the coupon, copy + paste it at your next checkout</span>
+        </div>
+      </div>
+
+    </div>
+  {% endif %}
+
+    <div class="checkout-footer">
+      <div class="checkout-footer-wrapper">
+        <div class="trustpilot-wrapper"></div>
+        <div class="checkout-secure-payment-wrapper">
+          <div class="secure-payment-icon">
+            {% render 'icon', icon: 'lock' %}
+          </div>
+          <div class="secure-payment">
+            <div class="secure-payment-header">
+              Secure Payment Page
+            </div>
+          </div>
+          <div class="secure-payment-icon">
+            {% render 'icon', icon: 'lock' %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+    <div id="black-overlay" style="display: none;"></div>
+
+    <script>
+      window.gsc=window.gsc||function() {
+        (gsc.q=gsc.q||[]).push(arguments)
+      };
+    </script>
+    
+    {% comment %} {% render 'getsitecontrol-loader', tpl: template %} {% endcomment %}
+
+    <script>
+      gsc('params', {
+        showPan: Shopify.Checkout.step == 'payment_method',
+      })
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (Shopify.Checkout.step || !Shopify.Checkout.step) {
+          var s = document.createElement("script");
+          s.id = "trustpilot-script-widget";
+          s.src = "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
+          document.body.appendChild(s);
+          var trustPilotWidget = '<div style="padding: 0" class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="593b07d80000ff0005a43c3d" data-style-height="40px" data-style-width="100%" data-theme="dark"><a href="https://www.trustpilot.com/review/www.imbesharam.com" target="_blank" rel="noopener">Trustpilot</a></div>';
+
+          var footerElement = document.querySelector(".trustpilot-wrapper");
+          footerElement.innerHTML = trustPilotWidget;
+          {% comment %} footerElement.appendChild(trustpilotContainer, footerElement.firstChild); {% endcomment %}
+        }
+      });
+
+      /* Copy to clipboard */
+      document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.discount-code-container button');
+        
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var btn = this;
+                var coupon = btn.closest('.discount-code-container').querySelector('.discount-code').textContent;
+                var type = "text/plain";
+                var blob = new Blob([coupon], { type });
+                var data = [new ClipboardItem({ [type]: blob })];
+                
+                navigator.clipboard.write(data).then(
+                    function() {
+                        btn.innerHTML = "Copied to clipboard";
+                    },
+                    function() {
+                        // failed
+                    }
+                );
+            });
+        });
+      });
+
+    </script>
+
+    {% comment %} <script 
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="LIe30v"
+    >
+    </script> {% endcomment %}
+
+    {% comment %} {% include 'checkout-airpay' %} {% endcomment %}
+    {% comment %} {% include 'checkout-freshchat-scripts' %} {% endcomment %}
+
+  </body>
+</html>

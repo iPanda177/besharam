@@ -1,0 +1,142 @@
+/* LOGIN FORM STYLES */
+
+#MainContent {
+    position: relative;
+}
+
+.customer.login,
+.customer.register {
+    width: 100%;
+    max-width: 1024px;
+    padding-top: 145px;
+    padding-bottom: 155px;
+    margin-top: 36px;
+    position: static;
+}
+
+.customer.login::before,
+.customer.register::before {
+    position: absolute;
+    top: -130px;
+    left: 0;
+    bottom: -150px;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("bg-wave.png");
+}
+
+.login-form,
+.recover-form,
+#create_customer {
+    max-width: 325px;
+    margin: 0 auto;
+}
+
+.customer.register h1,
+.customer.login h1,
+.customer.login #recover:target {
+    font: 700 75px/71px "Quicksand", sans-serif;
+    color: rgba(255, 255, 255, .2);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 150%;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.recover-form .field input,
+#customer_login input,
+#create_customer input {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.customer.login .link.recover {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#create_customer button[type="submit"],
+.customer.login button[type="submit"] {
+    width: 100%;
+    margin: 24px 0 8px;
+}
+
+#create_customer .login-link,
+.customer.login .create-account {
+    margin: 0;
+}
+
+#create_customer .login-link .label,
+.customer.login .create-account .label {
+    opacity: .8;
+    font-size: 14px;
+    line-height: 25px;
+    display: block;
+    text-align: center;
+}
+
+#create_customer .login-link a,
+.customer.login .create-account a {
+    border: 0.75px solid rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.8;
+    text-align: center;
+    font-size: 14px;
+    padding: 18px;
+    line-height: 1;
+    margin: 8px 0 0;
+}
+
+#create_customer .login-link a:hover,
+.customer.login .create-account a:hover {
+    text-decoration: none;
+    background-image: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+#create_customer .return-to-store,
+.customer.login .back-to-login,
+.customer.login .link.return-to-store {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    line-height: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Mobile styles */
+
+@media(max-width: 768px) {
+    .customer.login,
+    .customer.register {
+        padding-top: 53px;
+        padding-bottom: 70px;
+        margin-top: 15px;
+    }
+
+    .customer.register h1,
+    .customer.login h1,
+    .customer.login #recover:target {
+        font-size: 42px;
+    }
+
+    .customer.login::before,
+    .customer.register::before {
+        top: -40px;
+        bottom: -50px;
+        background-image: url("bg-wave__mobile.png");
+    }
+}

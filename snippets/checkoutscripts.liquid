@@ -1,0 +1,1099 @@
+<script>
+
+  var isTrustPilotLoaded = false;
+  var isStaging = false;
+
+  var isStaff = false;
+
+  {%- if customer -%}
+    {%- if customer.tags contains 'staff' -%}
+      isStaff = true;
+    {%- endif -%}
+  {%- endif -%}
+
+  var wait = function wait(delay) {
+    return new Promise(function (resolve) {
+      return setTimeout(resolve, delay);
+    });
+  };
+
+  var Get = function Get(url) {
+    return fetch(url, {
+      method: 'GET',
+      credentials: 'same-origin'
+    }).then(function (r) {
+      return r.json();
+    });
+  };
+
+  var FormatDate = function FormatDate(date) {
+    var showYear = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+    var year = date.getFullYear().toString().substr(-2);
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    if (day < 10) {
+      day = '0' + day;
+    };
+    if (month < 10) {
+      month = '0' + month;
+    };
+    return day + '/' + month + (showYear ? '/' + year : '');
+  };
+
+  function getFirstWord(text) {
+    let regexp = /^\w+/m;
+    let match = text.trim().match(regexp);
+    if (match !== null && match.length > 0) {
+      return match[0];
+    } else {
+      return '';
+    }
+  }
+
+  function formatMoney(cents, format) {
+
+    if (typeof cents == 'string') {
+      cents = cents.replace('.', '');
+    }
+    var value = '';
+    var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+    var formatString = (format || this.money_format);
+
+    function defaultOption(opt, def) {
+      return (typeof opt == 'undefined' ? def : opt);
+    }
+
+    function formatWithDelimiters(number, precision, thousands, decimal) {
+      precision = defaultOption(precision, 2);
+      thousands = defaultOption(thousands, ',');
+      decimal = defaultOption(decimal, '.');
+
+      if (isNaN(number) || number == null) {
+        return 0;
+      }
+
+      number = (number / 100.0).toFixed(precision);
+
+      var parts = number.split('.'),
+        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+        cents = parts[1] ? (decimal + parts[1]) : '';
+
+      return dollars + cents;
+    }
+
+    switch (formatString.match(placeholderRegex)[1]) {
+      case 'amount':
+        value = formatWithDelimiters(cents, 2);
+        break;
+      case 'amount_no_decimals':
+        value = formatWithDelimiters(cents, 0);
+        break;
+      case 'amount_with_comma_separator':
+        value = formatWithDelimiters(cents, 2, '.', ',');
+        break;
+      case 'amount_no_decimals_with_comma_separator':
+        value = formatWithDelimiters(cents, 0, '.', ',');
+        break;
+    }
+
+    return formatString.replace(placeholderRegex, value);
+  };
+
+  var AddBusinessDays = function AddBusinessDays(n) {
+    var d = new Date();
+    var day = d.getDay();
+    d.setDate(d.getDate() + n + (day === 6 ? 2 : +!day) + Math.floor((n - 1 + (day % 6 || 1)) / 5) * 2);
+    return d;
+  };
+
+(function($) {
+
+	$(document).on("page:load page:change", function() {
+
+    function updateShippingSummary(cart_type, shipping_type) {
+      let shipMethod = window.Countries.shipping.find(function(s) {
+        return s.from.toLowerCase() == cart_type.toLowerCase() && s.type.toLowerCase() == shipping_type;
+      });
+      if ($(".shipping-summary .from-india").length !== 0) {
+        let r = shipMethod.ranges.find(function(r) {
+          return r.from.toLowerCase() == 'india';
+        });
+        $(".shipping-summary .from-india .shipping-days").text("*EST. DELIVERY: " + FormatDate(AddBusinessDays(r.min), false) + " - " + FormatDate(AddBusinessDays(r.max), false));
+      }
+      if ($(".shipping-summary .from-usa").length !== 0) {
+
+        let r = shipMethod.ranges.find(function(r) {
+          return r.from.toLowerCase() == 'usa';
+        });
+        $(".shipping-summary .from-usa .shipping-days").text("*EST. DELIVERY: " + FormatDate(AddBusinessDays(r.min), false) + " - " + FormatDate(AddBusinessDays(r.max), false));
+      }
+    }
+
+    function createCheckoutAttributes() {
+      $.each(checkoutAttributes, function(i, val) {
+        $('.edit_checkout').append('<input type="hidden" name="checkout[attributes][' + i + ']" value="' + val + '">');
+      });
+      if ( $('input[name="checkout[attributes][estimated-date-of-shipping]"]').length == 0 ) {
+        $('.edit_checkout').append('<input type="hidden" name="checkout[attributes][estimated-date-of-shipping]" value="">');
+      }
+      if ( $('input[name="checkout[attributes][estimated-date-of-delivery]"]').length == 0 ) {
+        $('.edit_checkout').append('<input type="hidden" name="checkout[attributes][estimated-date-of-delivery]" value="">');
+      }
+    }
+
+    function updateShippingAttributes(cart_type, shipping_type) {
+
+      if (!cart_type || !shipping_type) return;
+
+      var shipping_method = window.Countries.shipping.find(function(s) {
+        return s.from.toLowerCase() == cart_type.toLowerCase() && s.type.toLowerCase() == shipping_type;
+      });
+
+      let min = -1;
+      let max = -1;
+
+      for (let i = 0; i < shipping_method.ranges.length; i++) {
+        if (min < 0 || shipping_method.ranges[i].eds < min) {
+          min = shipping_method.ranges[i].eds;
+        }
+        if (max < 0 || shipping_method.ranges[i].max > max) {
+          max = shipping_method.ranges[i].max;
+        }
+      } 
+
+      let eds = FormatDate(AddBusinessDays(min), true);
+      let edd = FormatDate(AddBusinessDays(max), true);
+      
+      if ( $('input[name="checkout[attributes][estimated-date-of-shipping]"]').length > 0 ) {
+        $('input[name="checkout[attributes][estimated-date-of-shipping]"]').val(eds);
+      }
+
+      if ( $('input[name="checkout[attributes][estimated-date-of-delivery]"]').length > 0 ) {
+        $('input[name="checkout[attributes][estimated-date-of-delivery]"]').val(edd);
+      }
+    }
+
+    var checkoutToken = Shopify.Checkout.token;
+    var checkoutStep = Shopify.Checkout.step;
+    var checkoutEmail = {{ checkout.email | json }};
+   
+    var checkoutShippingPrice = {{ checkout.shipping_price | money_without_currency | remove: ',' }} * 100;
+    var checkoutTotalPrice = {{ checkout.total_price | money_without_currency | remove: ',' }} * 100;
+    var checkoutSubTotalPrice = {{ checkout.line_items_subtotal_price | money_without_currency | remove: ',' }} * 100;
+    var checkoutGiftCardsAmount = {{ checkout.gift_cards_amount | money_without_currency | remove: ',' }} * 100;
+    var checkoutDiscountAmount = {{ checkout.discounts_amount | money_without_currency | remove: ',' }} * 100;
+    var checkoutShipping = {{ checkout.shipping_method.price | plus: 0 }};
+    var checkoutShippingCountry = {{ checkout.shipping_address.country | json }};
+    var checkoutCODFees = (checkoutSubTotalPrice + checkoutDiscountAmount + checkoutShipping) / 10.0;
+    var checkoutCODPrepaidFees = (checkoutSubTotalPrice + checkoutDiscountAmount + checkoutShipping) / 10.0 + checkoutShipping;
+
+    var checkoutAttributes = {{ checkout.attributes | json }};
+
+    var orderGateway = '{{ order.transactions.last.gateway }}';
+    var orderFinancialSatus = '{{ order.financial_status }}';
+
+    var checkoutID = '{{ checkout.id }}';
+    var checkoutName = '{{ checkout.name }}';
+    var checkoutOrderID = '{{ checkout.order_id }}';
+    var checkoutOrderName = '{{ checkout.order_name }}';
+
+    var checkoutLineItems = [];
+    {% for line_item in checkout.line_items %}
+      checkoutLineItems.push({
+      handle: {{ line_item.product.handle | json }},
+      variant_id: {{ line_item.variant_id }}
+    });
+    {% endfor %}
+
+    var titleElement = $('<div>').addClass('section__title-wrapper');
+    $('.js-order-summary-title').wrap(titleElement);
+
+    if (checkoutStep == 'thank_you' || !Shopify.Checkout.step) {
+      if ($('.section__title-wrapper').find('.js-order-summary-toggle').length === 0) {
+        $('.section__title-wrapper').append('<i class="fa-solid fa-minus js-order-summary-toggle"></i>');
+      }
+    } else {
+      if ($('.section__title-wrapper').find('.js-order-summary-toggle').length === 0) {
+        $('.section__title-wrapper').append('<i class="fa-solid fa-minus js-order-summary-toggle"></i>');
+      }
+    }
+
+    if ($('#continue_button_alt').length === 0) {
+      $('#continue_button').clone().attr('id', 'continue_button_alt').appendTo('#continue_button_alt_wrapper').on('click', function() {
+        $('#continue_button').trigger('click');
+      });
+    }
+
+    $('.page--thank-you  .step__footer__continue-btn').clone().attr('id', 'continue_button_alt').appendTo('.Thankyou__continue-shopping').on('click', function() {
+      $('.page--thank-you  .step__footer__continue-btn').trigger('click');
+    });
+
+    if (window.innerWidth < 990) {
+      $('.step__footer__previous-link').appendTo('.sidebar');
+    }
+
+    if (checkoutStep == 'payment_method') {
+
+      let upiPaymentHtml = `
+      <div id="panel-upi-full-payment" class="panel" style="display: none;">
+        <div class="panel-row reverse-mobile">
+          <div class="panel-col">
+            <div class="panel-title js-panel-toggle-desktop">
+              <div><i class="fa-solid fa-laptop"></i> If using a desktop/laptop</div><i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="panel-row" style="display: none">
+              <div class="panel-col one-third">
+                <div class="panel-content">
+                  <img class="qrcode" src="{{ 'qrcode-manual-upi.png' | asset_url }}">
+                </div>
+              </div>
+              <div class="panel-col two-thirds">
+                <div class="panel-content panel-instruction">
+                  1. Open any UPI app on your mobile<br>
+                  2. Select 'SCAN TO PAY' and scan this QR code<br>
+                  3. Enter the amount to pay as seen above<br>
+                  4. Proceed with OTP and make the payment<br>
+                  5. Take screenshot of the payment confirmation<br>
+                  6. Select below 'I HAVE MADE PAYMENT' and submit the order<br>
+                  7. Reply to the email you get from us and add this screenshot to it
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-col">
+            <div class="panel-title js-panel-toggle-mobile">
+              <div><i class="fa-solid fa-mobile-screen-button"></i> If using a mobile phone</div><i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="panel-row" style="display: none">
+              <div class="panel-col one-third">
+                <div class="panel-content upi-id-container">
+                  <div>
+                    <span class="upi-id">happy.5299@wahdfcbank</span>
+                  </div>
+                  <button type="button">Copy ID to clipboard</button>
+                </div>
+              </div>
+              <div class="panel-col two-thirds">
+                <div class="panel-content panel-instruction">
+                  1. Copy the UPI ID above on your phone<br>
+                  2. Open any UPI app on your mobile<br>
+                  3. Select 'PAY VIA UPI ID' and paste the UPI ID<br>
+                  4. Enter the amount to pay as seen above<br>
+                  5. Proceed with OTP and make the payment<br>
+                  6. Take screenshot of the payment confirmation<br>
+                  7. Select below 'I HAVE MADE PAYMENT' and submit the order<br>
+                  8. Reply to the email you get from us and add this screenshot to it
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="panel-upi-cod" class="panel" style="display: none;">
+        <div class="panel-amount">
+          <div class="upi-pay-now one-third">
+            <div style="background: linear-gradient(89.78deg,#9D70AF .14%,#F188B7 72.52%); display: inline-block; padding: 0.25em 0.25em;">
+              PAY NOW&nbsp;<span class="upi-cod-pay-now"></span>
+            </div>
+          </div>
+          <div class="upi-pay-at-delivery two-thirds">PAY AT DELIVERY&nbsp;<span class="upi-cod-pay-at-delivery"></span></div>
+        </div>
+        <div class="panel-row reverse-mobile">
+          <div class="panel-col">
+            <div class="panel-title js-panel-toggle-desktop">
+              <div><i class="fa-solid fa-laptop"></i> If using a desktop/laptop</div> <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="panel-row" style="display: none">
+              <div class="panel-col one-third">
+                <div class="panel-content">
+                  <img class="qrcode" src="{{ 'qrcode-manual-upi.png' | asset_url }}">
+                </div>
+              </div>
+              <div class="panel-col two-thirds">
+                <div class="panel-content panel-instruction">
+                  1. Open any UPI app on your mobile<br>
+                  2. Select 'SCAN TO PAY' and scan this QR code<br>
+                  3. Enter the amount to pay as seen above<br>
+                  4. Proceed with OTP and make the payment<br>
+                  5. Take screenshot of the payment confirmation<br>
+                  6. Select below 'I HAVE MADE PAYMENT' and submit the order<br>
+                  7. Reply to the email you get from us and add this screenshot to it
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-col">
+            <div class="panel-title js-panel-toggle-mobile">
+              <div><i class="fa-solid fa-mobile-screen-button"></i> If using a mobile phone</div> <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="panel-row" style="display: none">
+              <div class="panel-col one-third">
+                <div class="panel-content upi-id-container">
+                  <div>
+                    <span class="upi-id">happy.5299@wahdfcbank</span>
+                  </div>
+                  <button type="button">Copy ID to clipboard</button>
+                </div>
+              </div>
+              <div class="panel-col two-thirds">
+                <div class="panel-content panel-instruction">
+                  1. Copy the UPI ID above on your phone<br>
+                  2. Open any UPI app on your mobile<br>
+                  3. Select 'PAY VIA UPI ID' and paste the UPI ID<br>
+                  4. Enter the amount to pay as seen above<br>
+                  5. Proceed with OTP and make the payment<br>
+                  6. Take screenshot of the payment confirmation<br>
+                  7. Select below 'I HAVE MADE PAYMENT' and submit the order<br>
+                  8. Reply to the email you get from us and add this screenshot to it
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
+      $('body').append(upiPaymentHtml);
+
+      let chkConfirmPaymentHtml = `
+      <div id="upi-accept-wrapper" style="display: none;">
+        <div class="radio__input" style="margin-top: 7.5px !important; text-align: center; font-size:14px; width: 100%;">
+          <input type="checkbox" id="upi-accept" class="input-checkbox">
+          <label for="upi-accept">&nbsp;I HAVE MADE THE PAYMENT, ACTIVATE BUTTON AND SUBMIT</label>
+        </div>
+      </div>
+      `;
+      $('#continue_button_alt_wrapper').prepend(chkConfirmPaymentHtml);
+    }
+
+    const usaFlag = "<img src='{{ 'usa-2_x11.png' | asset_url }}' style='vertical-align:middle;'>";
+    const indiaFlag = "<img src='{{ 'ship-from-india.svg' | asset_url }}' width='12' height='12' style='vertical-align:middle;'>";
+    const indiaFlagBig = "<img src='{{ 'ship-from-india.svg' | asset_url }}' width='18' height='18' style='vertical-align:middle;'>";
+   
+    const stripeID = '6751176';
+    const stripeTitle = '<div class="payTitle">CREDIT / DEBIT CARDS (no fees + fastest)</div>';
+    const stripeAfterMsg = '<span class="payMsg">Pay in ₹, no fees + instant confirmation, your statement will show: HAPPY BIRDS USA</span>'
+    const stripeMsg = '<div class="stripeMsg"><label><input id="stripe-accept" class="input-checkbox" type="checkbox">Please enable <span class="highligh-text"> "international online usage"</span> on your card/bank settings else transaction may get declined.</label></div>'
+    $('[data-select-gateway="'+stripeID+'"] label').html("").append(stripeTitle);
+
+    $('label[for=checkout_payment_gateway_'+stripeID+']').append('<div class="payment-icons"><div class="payment-icon payment-icon--visa"></div><div class="payment-icon payment-icon--master"></div></div>');
+    $('#payment-gateway-subfields-'+stripeID).prepend(stripeMsg);
+    $('#payment-gateway-subfields-'+stripeID).append(stripeAfterMsg);
+
+    var coinbaseID = '66624815175'
+    if (isStaging) {
+    }
+    const coinbaseTitle = '<div class="payTitle">Cryptocurrency (Coinbase)</div>';
+    const coinbaseMsg = "<p class='payMsg'>Pay using crypto securely on COINBASE for your order, your payment is discreet. No Fees & Instant confirmation. <br /><br />Your wallet will show 'Happy Birds'</p>";
+    const coinbaseIcons = '<div class="payment-icons"><div class="payment-icon payment-icon--crypto"></div></div>';
+    $('[data-select-gateway="'+coinbaseID+'"] label').html("").append(coinbaseTitle);
+    $('[data-select-gateway="'+coinbaseID+'"] label').append(coinbaseIcons);
+    $('#payment-gateway-subfields-'+coinbaseID+' .blank-slate').html(coinbaseMsg);
+
+    var upiNote = '<div style="font-size: 10px; margin: 15px 0 10px; text-align: center; text-transform: none;">Note: Download and open the QR code on a computer and scan it with the UPI app using your mobile phone or use the UPI ID shown on the QR code image.</div><div class="upi-id-container"><div><span class="upi-id">happy.5299@wahdfcbank</span></div><button type="button">Copy ID</button></div>'
+
+    var manualUpiID = '67264708679'
+    const manualUpiTitle = '<div class="payTitle">UPI via Google Pay • PhonePe • Paytm • BHIM</div>';
+    const manualUpiMsg = "<p class='payMsg'>Pay in ₹ using UPI. No fees & instant confirmation. Your statement will show: HAPPY EXPORTS<br /></p>";
+    const manualUpiIcons = '<div class="payment-icons"><div class="payment-icon payment-icon--upi"></div></div>';
+    $('[data-select-gateway="'+manualUpiID+'"] label').html("").append(manualUpiTitle);
+    $('[data-select-gateway="'+manualUpiID+'"]').append(manualUpiMsg);
+    $('[data-select-gateway="'+manualUpiID+'"] label').append(manualUpiIcons);
+
+    if(checkoutStep == 'payment_method') {
+      let upiFullPaymentHtml = $('#panel-upi-full-payment')
+      $('#payment-gateway-subfields-'+manualUpiID+' .blank-slate').html(upiFullPaymentHtml);
+      $('#panel-upi-full-payment').show();
+      $('.upi-full-payment-price').html(formatMoney(checkoutTotalPrice, window.money_format));
+    }
+
+    var manualUpiCodID = '67275620423'
+    if (isStaging) {
+      
+    }
+    const manualUpiCodTitle = '<div class="payTitle">COD (Cash on Delivery)* 10% Fees Due Now</div>';
+    const manualUpiCodMsg = "<p class='payMsg'>COD fees (10% of total + shipping) <span class='highligh-text'>" + formatMoney(checkoutCODPrepaidFees, window.money_format) + "</span> due now, order total <span class='highligh-text'>" + formatMoney(checkoutSubTotalPrice, window.money_format) + " due at delivery</span>. Avoid 10% COD fees, by making full payment now.</p>";
+    const manualUpiCodIcons = '<div class="payment-icons"><div class="payment-icon payment-icon--cod"></div></div>';
+
+    $('[data-select-gateway="'+manualUpiCodID+'"] label').html("").append(manualUpiCodTitle);
+    $('[data-select-gateway="'+manualUpiCodID+'"]').append(manualUpiCodMsg);
+    $('[data-select-gateway="'+manualUpiCodID+'"] label').append(manualUpiCodIcons);
+    if (isStaff) {
+      $('[data-select-gateway="' + manualUpiCodID + '"]').attr('style', 'display: block !important')
+    }
+    
+    if(checkoutStep == 'payment_method') {
+      let upiCodHtml = $('#panel-upi-cod')
+      $('#payment-gateway-subfields-'+manualUpiCodID+' .blank-slate').html(upiCodHtml);
+      $('#panel-upi-cod').show();
+      $('.upi-cod-pay-now').html(formatMoney(checkoutCODPrepaidFees, window.money_format));
+      $('.upi-cod-pay-at-delivery').html(formatMoney(checkoutSubTotalPrice, window.money_format));
+    }
+
+    var newCodGatewayId = '65951957063';
+    if (isStaging) {
+      newCodGatewayId = '75149705356';
+    }
+  
+    {% if checkout.total_price < 1000000 %}
+      const newCodTitle = "<div class='payTitle'>CASH ON DELIVERY (COD) + 10% FEES</div>";
+      const newCodMsg = "<p class='payMsg'>COD FEES (10% OF TOTAL + SHIPPING) + ORDER TOTAL " + formatMoney(checkoutTotalPrice + checkoutCODFees, window.money_format) + " DUE AT DELIVERY. AVOID 10% FEES BY MAKING FULL PAYMENT NOW.</p>"
+    {% else %}
+      const newCodTitle = "<div class='payTitle'>CASH ON DELIVERY* (COD) + 10% FEES</div>";
+      const newCodMsg = "<p class='payMsg'><span>*Only offered for orders under Rs.25,000</span><br><br>COD FEES (10% OF TOTAL + SHIPPING) + ORDER TOTAL " + formatMoney(checkoutTotalPrice + checkoutCODFees, window.money_format) + " DUE AT DELIVERY. AVOID 10% FEES BY MAKING FULL PAYMENT NOW.</p>";
+    {% endif %}
+
+    const newCodIcons = '<div class="payment-icons"><div class="payment-icon payment-icon--cod"></div></div>';
+    $('[data-select-gateway="'+newCodGatewayId+'"] label').html("").append(newCodTitle);
+    $('[data-select-gateway="'+newCodGatewayId+'"]').append(newCodMsg);
+    $('[data-select-gateway="'+newCodGatewayId+'"] label').append(newCodIcons);
+
+    $('#payment-gateway-subfields-'+newCodGatewayId+' .blank-slate').html('<div class="panel">I UNDERSTAND THIS IS A COD ORDER & I CONFIRM THAT I INTEND TO PAY THE FULL AMOUNT OF THE ORDER UPON DELIVERY. IF THE ORDER IS RETURNED BACK TO US DUE TO NON PAYMENT OF COD AMOUNT, I WILL BE RESPONSIBLE FOR 2 WAY SHIPPING CHARGES OF ₹999.00<div class="radio__input"><input id="cod-accept-1" class="input-radio" type="checkbox"><span>ACCEPT TO PROCEED</span></div></div><div class="panel">OUR TEAM WILL CONTACT YOU FOR ORDER & SHIPPING ADDRESS VERIFICATION, IF WE CANNOT SPEAK TO YOU, THE ORDER WILL BE CANCELLED. PLEASE EXPECT A CALL FROM 022-48931870 (10AM-7PM)<div class="radio__input"><input id="cod-accept-2" class="input-radio" type="checkbox"><span>ACCEPT TO PROCEED</span></div></div>');
+
+    let includesDutiesTaxes = '<p class="price-includes">Includes customs duties &amp; taxes</p>';
+    $('.total-line__name.payment-due-label .payment-due-label__total').append(includesDutiesTaxes);
+
+    if(checkoutStep == 'payment_method') {
+
+      $('.js-panel-toggle-desktop').on('click', function() {
+        $(this).next('.panel-row').slideToggle()
+        $(this).find('i.fa-minus, i.fa-plus').toggleClass('fa-minus fa-plus')
+      });
+
+      $('.js-panel-toggle-mobile').on('click', function() {
+        $(this).next('.panel-row').slideToggle()
+        $(this).find('i.fa-minus, i.fa-plus').toggleClass('fa-minus fa-plus')
+      });
+
+      if ($(window).width() < 750) {
+        $('.js-panel-toggle-mobile').click()
+      } else {
+        $('.js-panel-toggle-desktop').click()
+      }
+
+      $('#continue_button_alt').show();
+      
+      $('#checkout_payment_gateway_' + stripeID + ', #checkout_payment_gateway_' + coinbaseID).change(function() {
+        if(this.checked) {
+          $('#upi-accept-wrapper').hide()
+          $('#continue_button_alt').prop('disabled', false);
+          $('#continue_button_alt').text('Pay Now');
+        }
+      });
+
+      $('#checkout_payment_gateway_' + manualUpiID + ',' + '#checkout_payment_gateway_' + manualUpiCodID).change(function() {
+        if(this.checked) {
+          $('#upi-accept-wrapper').show()
+          $('#continue_button_alt').text('Complete Order');
+        } else {
+          $('#upi-accept-wrapper').hide()
+          $('#continue_button_alt').text('Pay Now');
+        }
+        if(this.checked && !$('#upi-accept').is(":checked")) {
+          $('#continue_button_alt').prop('disabled', true);
+        }
+      });
+
+      $('#upi-accept').change(function() {
+        if(this.checked) {
+          $('#continue_button_alt').prop('disabled', false);
+        } else {
+          $('#continue_button_alt').prop('disabled', true);
+        }
+      });
+
+      var $checkoutFormBtn = $('.step__footer__continue-btn');
+      var $paymentForm = $checkoutFormBtn.parents('form');
+      {% comment %} $('.section--billing-address').insertBefore('.section--payment-method'); {% endcomment %}
+      $('.section--billing-address').insertAfter('.section--payment-method');
+
+      if ( checkoutShippingCountry !== "India" ) {
+        $('.radio-wrapper[data-select-gateway="'+codGatewayId+'"]').hide();
+        $('.radio-wrapper[data-select-gateway="'+newCodGatewayId+'"]').hide();
+      }
+
+      // Modify Payment Method Labels & Icons
+      $('div[data-payment-method=""] p.section__text').text('All transactions are secure and encrypted <i class="fa-solid fa-lock"></i>');
+
+      // Update selected payment option
+      $('.section--payment-method div.radio-wrapper.content-box__row').click(function() {
+        var btnclass = $(this).data("select-gateway");
+        $('.btn.btn--primary').attr('data-selected', btnclass);
+        //$('.payMsg').hide();
+        //$(this).children('.payMsg').show();
+        $('.section--payment-method div.radio-wrapper').removeClass('active')
+        $(this).addClass('active')
+      });
+
+      // COD reveal/hide order summary info
+      $('[data-payment-method] input[type="radio"]').click(function(){
+        if ($(this).is(':checked')) {
+          if ($(this).val() == newCodGatewayId) {
+            $('[data-order-summary-section="payment-lines"], [data-order-summary-section="payment-due"]').slideUp()
+            $('[data-order-summary-section="cod-lines"], [data-order-summary-section="cod-due"]').slideDown()
+            $('[data-order-summary-section="cod-prepaid-lines"], [data-order-summary-section="cod-prepaid-due"]').slideUp()
+          } else if ($(this).val() == manualUpiCodID) {
+            $('.total-line--subtotal').hide()
+            $('[data-order-summary-section="payment-lines"], [data-order-summary-section="payment-due"]').slideUp()
+            $('[data-order-summary-section="cod-lines"], [data-order-summary-section="cod-due"]').slideUp()
+            $('[data-order-summary-section="cod-prepaid-lines"], [data-order-summary-section="cod-prepaid-due"]').slideDown()
+          } else {
+            $('[data-order-summary-section="payment-lines"], [data-order-summary-section="payment-due"]').slideDown()
+            $('[data-order-summary-section="cod-lines"], [data-order-summary-section="cod-due"]').slideUp()
+            $('[data-order-summary-section="cod-prepaid-lines"], [data-order-summary-section="cod-prepaid-due"]').slideUp()
+          }
+        }
+      });
+
+      // move billing inside payment section
+      var shopifyPaymentSection = $('.section--payment-method');
+      var shopifyBillingSection = $('.section--billing-address');
+      shopifyBillingSection.appendTo(shopifyPaymentSection);
+      $('.section--billing-address .radio-wrapper label').first().text("Billing address is same as shipping address");
+      
+      $('.section--payment-method > .section__header .section__text').html('All transactions are secure and encrypted &nbsp; <i class="fa-solid fa-lock"></i>');
+
+
+      $('#jsLoading').hide();
+
+    }
+
+    let phoneReviewBlock = '\
+    <div role="row" class="review-block">\
+      <div class="review-block__inner">\
+        <div role="rowheader" class="review-block__label">\
+          Phone\
+        </div>\
+        <div role="cell" class="review-block__content">\
+            <address class="address address--tight">\
+              {{ checkout.shipping_address.phone }}\
+            </address>\
+        </div>\
+      </div>\
+      <div role="cell" class="review-block__link">\
+        <a class="link--small" href="' + location.pathname + '?step=contact_information">\
+          <span aria-hidden="true">Change</span>\
+          <span class="visually-hidden">Change phone number</span>\
+        </a>\
+      </div>\
+    </div>';
+
+    if (checkoutStep == 'shipping_method' || checkoutStep == 'payment_method') {
+
+      if (!$('.sidebar').find('.js-customer-details-header').length) {
+        
+      if (checkoutStep == 'shipping_method') {
+          $('.main__content .step .step__sections').addClass('section--shipping-address')
+          $('.section--shipping-address > .section:first').addClass('section--review-block')
+          $('.section--shipping-address > .section:first .content-box__row').append(phoneReviewBlock)
+          $('.section--review-block').insertAfter('.section.section--shipping-method')
+          {% comment %} $('.section--shipping-address > .section:first').insertAfter('.section--shipping-method') {% endcomment %}
+        } else if (checkoutStep == 'payment_method') {
+          $('.main__content .step .step__sections').addClass('section--payment-method')
+          $('.section--payment-method > .section:first').addClass('section--review-block')
+          $('.section--payment-method > .section:first .content-box__row').append(phoneReviewBlock)
+          $('.section--review-block').insertAfter('.section.section--payment-method')
+          {% comment %} $('.section--payment-method > .section:first').insertAfter('.section--payment-method') {% endcomment %}
+        }
+      } else {
+        $('.main__content .step .step__sections > .section:first').remove()
+      }
+
+      $('.section--review-block').prepend('<div class="section__header js-customer-details-header"><h2 class="section__title">YOUR ORDER DETAILS</h2></div>')
+
+    }
+
+    if (checkoutStep == 'shipping_method') {
+
+      // Free, Express, Standard
+      var shipping_method = "";
+
+      // India, Usa, Combined
+      var cart_type = "";
+
+      {% comment %} $('.order-summary__section--product-list').hide() {% endcomment %}
+      $('.js-order-summary-toggle').on('click', function() {
+        $('.order-summary__section--product-list').slideToggle()
+        $('.js-order-summary-toggle').toggleClass('fa-plus fa-minus')
+      });
+
+      let discount_section = document.querySelector('.order-summary__section--discount');
+      if (discount_section) {
+        discount_section.style.display = "none";
+      }
+
+      $('.section--shipping-method .content-box').prepend('<div class="shipping-summary"><div class="from-india-wrapper"></div></div>');
+
+      $('.section--shipping-method .content-box').append('<div class="shipping-summary"><div class="from-usa-wrapper"></div></div>');
+
+      $('.section--shipping-method .content-box').append('<div class="content-box__row fake_usa_shipping" style="display:none"><div class="radio-wrapper"><div class="radio__input"><input class="input-radio" checked="checked" type="radio" name="fake_usa_shipping"></div><label class="radio__label" for="fake_usa_shipping"><span class="radio__label__primary">FREE Shipping (14-21 biz days)</span><span class="radio__label__accessory"><span class="content-box__emphasis">Free</span></span></label></div></div>');
+
+      $('.section--shipping-method .content-box').append('<p class="shipping-notice">* These best estimates fluctuate at certain times due to courier operational delays that we cannot control, but we will try to speed up where we can and keep you informed.</p>');
+
+      if ( checkoutShippingCountry == "India" ) {
+
+        Get("/cart.js").then(function(cart) {
+
+          var india_flag = "{{ 'ship-from-india.svg' | asset_url }}";
+          var usa_flag = "{{ 'ship-from-usa.svg' | asset_url }}";
+
+          let india_items = 0;
+          let usa_items = 0;
+
+          var productItems = [];
+
+          if (cart.item_count > 0) {
+            for(var i=0; i < cart.items.length; i++) {
+              productItems.push({
+                variant_id: cart.items[i].variant_id,
+                handle: cart.items[i].handle
+              });
+            }
+          } else {
+            for(var i=0; i < checkoutLineItems.length; i++) {
+              productItems.push({
+                variant_id: checkoutLineItems[i].variant_id,
+                handle: checkoutLineItems[i].handle
+              });
+            }
+          }
+
+          var promises = productItems.map(function(item) {
+            return Get("/products/" + item.handle + ".json");
+          });
+
+          Promise.all(promises).then(function(results) {
+
+            $(".shipping-summary .from-india-wrapper").hide()
+            $(".shipping-summary .from-usa-wrapper").hide()
+
+            results.forEach(function(result) {
+              var variant;
+              for (var i=0; i < productItems.length; i++) {
+                variant = result.product.variants.find(v => v.id === productItems[i].variant_id);
+                if (variant != null) break;
+              }
+
+              let svg_clock = '<svg class="svg-clock" width="13" height="13" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5287 10.5012L9.15839 8.72346V5.10227C9.15839 4.73816 8.86408 4.44385 8.49997 4.44385C8.13586 4.44385 7.84155 4.73816 7.84155 5.10227V9.05271C7.84155 9.26009 7.939 9.45566 8.10492 9.57944L10.7385 11.5547C10.857 11.6435 10.9953 11.6863 11.1329 11.6863C11.3337 11.6863 11.5312 11.5961 11.6603 11.4223C11.879 11.1319 11.8197 10.7191 11.5287 10.5012Z" fill="white" fill-opacity="0.8"/><path d="M8.5 0.5C3.81281 0.5 0 4.31281 0 9C0 13.6872 3.81281 17.5 8.5 17.5C13.1872 17.5 17 13.6872 17 9C17 4.31281 13.1872 0.5 8.5 0.5ZM8.5 16.1832C4.5397 16.1832 1.3168 12.9603 1.3168 9C1.3168 5.0397 4.5397 1.8168 8.5 1.8168C12.461 1.8168 15.6832 5.0397 15.6832 9C15.6832 12.9603 12.4603 16.1832 8.5 16.1832Z" fill="white" fill-opacity="0.8"/></svg>'
+
+              if (variant && variant.inventory_quantity > 0) {
+                
+                if ($(".shipping-summary .from-india").length === 0) {
+
+                  $(".shipping-summary .from-india-wrapper").append('<div class="from-india"><div class="shipping-country"><img class="country-flag" src="' + india_flag + '"><span>Ships from India</span></div></div></div>');
+                  
+                  $('[data-shipping-method-label-title="FREE Shipping (3-7 biz days)"]').html("FREE Shipping (3-7 biz days)<br/><span class='shipping-days'>*EST. DELIVERY: " + svg_clock + FormatDate(AddBusinessDays(3), false) + " - " + FormatDate(AddBusinessDays(7), false) + "</span>")
+                  
+                  $('[data-shipping-method-label-title="EXPRESS India Shipping (2-3 biz days)"]').html("EXPRESS (2-3 biz days)<br/><span class='shipping-days'>*EST. DELIVERY: " + svg_clock + FormatDate(AddBusinessDays(2), false) + " - " + FormatDate(AddBusinessDays(3), false) + "</span>")
+                }
+
+                var image_src = result.product.image != null ? result.product.image.src : '//cdn.shopify.com/s/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png';
+
+                $(".from-india").append('<div class="shipping-line"><img src="' + image_src + '"><span>' + result.product.title + '</span></div>');
+
+                $(".shipping-summary .from-india-wrapper").show()
+
+                india_items += 1;
+                
+              } else {
+                if ($(".shipping-summary .from-usa").length === 0) {
+                  
+                  $(".shipping-summary .from-usa-wrapper").append('<div class="from-usa"><div class="shipping-country"><img class="country-flag" src="' + usa_flag + '"><span>Ships from USA</span></div></div>');
+
+                  $('label[for="fake_usa_shipping"] .radio__label__primary').html("FREE Shipping (14-21 biz days)<br/><span class='shipping-days'>*EST. DELIVERY: " + svg_clock + FormatDate(AddBusinessDays(14), false) + " - " + FormatDate(AddBusinessDays(21), false) + "</span>")
+                }
+                var image_src = result.product.image != null ? result.product.image.src : '//cdn.shopify.com/s/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png';
+                $(".from-usa").append('<div class="shipping-line"><img src="' + image_src + '"><span>' + result.product.title + '</span></div>');
+                $(".shipping-summary .from-usa-wrapper").show()
+                usa_items += 1;
+              }
+            });
+
+            if (usa_items > 0 && india_items == 0) {
+              cart_type = 'USA';
+              $('.section--shipping-method .content-box__row').hide()
+              $('.fake_usa_shipping').show()
+            } else if (usa_items == 0 && india_items > 0) {
+              cart_type = 'India';
+            } else {
+              cart_type = 'Combined';
+              $('.fake_usa_shipping').show()
+            }
+
+            // Iterate through shipping methods, hide incompatible ones and rename the shipping type accordingly
+            {% comment %} let shipping_check_below = '<br><span class="small-text">(check above for estimated timeframe)</span>'; {% endcomment %}
+
+            $(".section--shipping-address .radio__label__primary").each(function() {
+
+              let shipping_method = '';
+              if ($(this).html().toLowerCase().includes("free")) {
+                shipping_method = window.Countries.shipping.find(function(s) {
+                  return s.from.toLowerCase() == cart_type.toLowerCase() && s.type.toLowerCase() == "free";
+                });
+              } else if ($(this).html().toLowerCase().includes("express")) {
+                shipping_method = window.Countries.shipping.find(function(s) {
+                  return s.from.toLowerCase() == cart_type.toLowerCase() && s.type.toLowerCase() == "express";
+                });
+              } else if ($(this).html().toLowerCase().includes("standard")) {
+                shipping_method = window.Countries.shipping.find(function(s) {
+                  return s.from.toLowerCase() == cart_type.toLowerCase() && s.type.toLowerCase() == "standard";
+                });
+              }
+              {% comment %} $(this).html(shipping_method.title + shipping_check_below); {% endcomment %}
+
+            })
+
+            createCheckoutAttributes();
+            
+            let selected_shipping_el = $(".section--shipping-address .field--active .radio__label__primary");
+            if (selected_shipping_el.length > 0) {
+              let selected_shipping_type = getFirstWord(selected_shipping_el.html().toLowerCase());
+              updateShippingAttributes(cart_type, selected_shipping_type);
+              updateShippingSummary(cart_type, selected_shipping_type);
+            }
+
+            $("[data-shipping-method]").each( function(idx, el) {
+            
+              let shipping_desc = $(this).attr("data-shipping-method").toLowerCase();
+
+              if ( cart_type.toLowerCase() == 'india' ) {
+                
+                if ( shipping_desc.includes("international") ) {
+                  {% comment %} $(this).parent().hide(); {% endcomment %}
+                } else if ( shipping_desc.includes("combined") ) {
+                  {% comment %} $(this).parent().hide(); {% endcomment %}
+                } 
+
+              } else if ( cart_type.toLowerCase() == 'usa' ) {
+                
+                if ( shipping_desc.includes("india") ) {
+                  {% comment %} $(this).parent().hide(); {% endcomment %}
+                } else if ( shipping_desc.includes("combined") ) {
+                  {% comment %} $(this).parent().hide(); {% endcomment %}
+                } 
+                
+              } else if ( cart_type.toLowerCase() == 'combined' ) {
+                
+                if ( shipping_desc.includes("india") ) {
+                  {% comment %} $(this).parent().hide(); {% endcomment %}
+                } else if ( shipping_desc.includes("international") ) {
+                  {% comment %} $(this).parent().hide(); {% endcomment %}
+                }
+                
+              }
+              
+            });
+
+          });
+
+        });
+
+        $('input[name="checkout[shipping_rate][id]"]').change( function() {
+          let shipping_type = getFirstWord($(this).parents(".radio-wrapper").find(".radio__label__primary").html().toLowerCase());
+          updateShippingAttributes(cart_type, shipping_type);
+          updateShippingSummary(cart_type, shipping_type);
+        });
+
+      }
+
+    };
+     
+    if(checkoutStep == 'contact_information') {
+      
+      let loginForm = '\
+      <div id="login-form" style="display:none;">\
+        <form action="/account/login" method="post">\
+          <input type="hidden" name="form_type" value="customer_login" />\
+          <input type="hidden" name="checkout_url" value="' + location.href + '" />\
+          <input type="hidden" name="customer[email]" value="{{ checkout.email }}" />\
+          <div class="fieldset login-password--field">\
+            <div class="field field--required field--show-floating-label">\
+              <div class="field__input-wrapper">\
+                <label class="field__label field__label--visible" for="login_password">Password</label>\
+                <input id="login_password" placeholder="Password" class="field__input" size="30" type="password" value="" name="customer[password]" required />\
+              </div>\
+            </div>\
+            <div class="field">\
+              <button class="btn" type="submit">Sign in</button>\
+            </div>\
+          </div>\
+        </form>\
+      </div>';
+      let acceptsMarketing = '\
+      <div class="Checkout__accepts-marketing">\
+        <input class="input-checkbox" type="checkbox" id="checkout_buyer_accepts_marketing" />\
+        <label class="checkbox__label">sign up to our newsletter to get VIP access to freebies, coupons & monthly giveaways</label>\
+      </div>';
+
+      // Remove default subscribe item
+      $('.section--contact-information .fieldset-description').remove(); 
+      
+      let $userEmailField = $('[data-section="customer-information"] > .fieldset');
+      $userEmailField.before('<div class="Checkout__show-login">Already have an account? <a href="javascript:;">SIGN IN <i class="fas fa-sign-in-alt"></i></a></div>')
+      $userEmailField.after('<div class="Checkout__contact-info">' + acceptsMarketing + '</div>');
+      // update accepts marketing checkbox after login also
+      $('.logged-in-customer-newsletter').html(acceptsMarketing);
+      $userEmailField.after(loginForm); // add html form markup to dom
+
+      // change hidden email field value
+      var $loginForm = $('#login-form');
+      $userEmailField.find('input').on('keyup keydown', function () {
+        $loginForm.find('input[name="customer[email]"]').val($(this).val());
+      });
+      $('.Checkout__show-login > a').on('click', function (e) {
+        e.preventDefault();
+        $loginForm.toggle();
+      });
+
+      // Phone Field
+      {%- unless customer -%}
+      $('#checkout_shipping_address_phone').parent().before('<span class="phone-code"></span>');
+      $('#checkout_shipping_address_country').on('change', function(){
+        var countryCode = $(this).find('option:selected').data('code').toLowerCase();
+        var dialCode = window.Countries.dial.find(function (e) {
+          return e.code == countryCode;
+        });
+        $('.phone-code').html('+' + dialCode.dial);
+      }).trigger('change');
+      {%- endunless -%}
+
+      $('#checkout_buyer_accepts_marketing').prop('checked', true);
+      $('#checkout_remember_me').attr("checked", "checked");
+
+      // logged in block changes
+      $('.logged-in-customer-information__paragraph > a').text('Sign out');
+      // changes to "select address" dropdown
+      $('#checkout_shipping_address_id').find('option:first').text('Select Stored Address');
+      // trigger phone prefix change
+      $('#checkout_shipping_address_id').on('change', function () {
+        setInterval(function (e) {
+          $('#checkout_shipping_address_country').trigger('change');
+        }, 500);
+      });
+
+    }
+
+    // Change Text on various areas
+    $('.section__title, .step__footer__continue-btn').text(function () {
+      return $(this).text().replace("method", "options");
+    });
+    $('.step__footer__previous-link').text(function () {
+      return $(this).text().replace("information", "info");
+    });
+    $('.section--contact-information .section__title').text(function () {
+      return $(this).text().replace("Customer", "Your");
+    });
+    $('.section--shipping-address-recap .edit-link').text(function () {
+      return $(this).text().replace("Edit shipping address", "Edit");
+    });
+
+    $('.order-summary__section--discount .field__label').text(function () {
+      return $(this).text().replace("Gift card or discount code", "Gift Card / Discount Code");
+    });
+    $('.order-summary__section--discount .field__input').attr("placeholder", "Gift Cards / Discount Code");
+
+    // ------------------------------------------------------------------
+    // -- SHIPPING OPTIONS
+    // ------------------------------------------------------------------
+
+    //EWS add 10-17-2017
+    $('.section--shipping-address .review-block__label').css({'text-transform': 'uppercase','font-size':'12px','color':'#999999'});
+
+    $('.step__sections .review-block__label').css({'text-transform': 'uppercase','font-size':'12px','color':'#999999'});
+
+
+    // ------------------------------------------------------------------
+    // -- THANK YOU PAGE
+    // ------------------------------------------------------------------
+    if (checkoutStep == 'thank_you' || !Shopify.Checkout.step) {
+      var $orderSummaryContent = $('.js-order-summary-content');
+
+      $('body').addClass('order-thank-you');
+
+      $('.js-thank-you').show();
+
+      // move order confirmation under sunny image
+      $('.section__header.os-header').insertAfter('#js-order-confirmation');
+
+      // assign unique classes
+      $('.main__content .section:nth-child(2) .section__content .content-box:first-child').addClass('js-order-instructions');
+      $('.main__content .section:nth-child(2) .section__content .content-box:nth-child(2)').addClass('js-order-information');
+
+      {% comment %} $('.order-summary__section--product-list').hide() {% endcomment %}
+      $('.js-order-summary-toggle').on('click', function() {
+        $('.order-summary__section--product-list').slideToggle()
+        $('.js-order-summary-toggle').toggleClass('fa-plus fa-minus')
+      });
+
+      // hide empty sections
+      $('.main__content .section:nth-child(2)').hide();
+
+      //EWS updates 10-16-17
+      $('.content-box h2:contains("Your order is confirmed")').hide();
+      //larger font for step directions
+      $('p.os-step__description').css('font-size','16px').css('padding','10px');
+      //remove larger font size for email address/ emphasis
+      $('p.os-step__description span.emphasis').css('font-size','inherit');
+      //larger SMS button font
+      $('.os-step__description span.btn__content').css('font-size','16px');
+      //larger SMS button icon
+      $('.os-step__description .icon-svg--size-18').css('width','26px').css('height','26px');
+
+      {% comment %} $('.Thankyou__statement').prependTo('.order-thank-you .main__content')
+      $('.Thankyou__banner').prependTo('.order-thank-you .main__content') {% endcomment %}
+      $('.leavereview__banner').prependTo('.order-thank-you .main__content')
+      $('.instagram__banner').prependTo('.order-thank-you .main__content')
+
+      $('.step[data-step="thank_you"] form').appendTo('.Thankyou__box')
+
+      // move order instructions
+      $('.js-order-instructions').insertAfter('#js-order-instructions');
+
+      // COD reveal/hide order summary info
+      if ( orderGateway && orderGateway == 'Manual UPI COD' ) {
+        $('.total-line--subtotal, .total-line-table__footer').hide()
+        $('[data-order-summary-section="cod-prepaid-lines"], [data-order-summary-section="cod-prepaid-due"]').show()
+      }
+
+      // Move Continue Shopping only on desktop after Your Information panel
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        {% comment %} $('.step__footer').after('.Thankyou__box') {% endcomment %}
+        $('.Thankyou__box').after($('.step__footer'))
+      }
+
+      if ( (orderFinancialSatus == 'pending') && (checkoutStep == 'thank_you' || !Shopify.Checkout.step )) {
+
+        let verificationPending = $('.verification-pending')
+
+        if (verificationPending.length > 0) {
+
+          $('.Thankyou__box').before(verificationPending);
+          verificationPending.show()
+
+          let upiFullPaymentThankYouHtml = $('#panel-upi-thankyou')
+          verificationPending.append(upiFullPaymentThankYouHtml);
+          $('#panel-upi-thankyou').show();
+    
+          $('.js-panel-toggle-desktop').on('click', function() {
+            $(this).next('.panel-row').slideToggle()
+            $(this).find('i.fa-minus, i.fa-plus').toggleClass('fa-minus fa-plus')
+          });
+    
+          $('.js-panel-toggle-mobile').on('click', function() {
+            $(this).next('.panel-row').slideToggle()
+            $(this).find('i.fa-minus, i.fa-plus').toggleClass('fa-minus fa-plus')
+          });
+    
+          if ($(window).width() < 750) {
+            $('.js-panel-toggle-mobile').click()
+          } else {
+            $('.js-panel-toggle-desktop').click()
+          }
+
+          if (orderGateway == "Manual UPI") {
+            $(".upi-full-amount").show()
+            $('.upi-full-payment-price').html(formatMoney(checkoutTotalPrice, window.money_format));
+          } else if (orderGateway == "Manual UPI COD") {
+            $(".cod-amount").show()
+            $('.upi-cod-pay-now').html(formatMoney(checkoutCODPrepaidFees, window.money_format));
+            $('.upi-cod-pay-at-delivery').html(formatMoney(checkoutSubTotalPrice, window.money_format));
+          }
+        }
+
+      }
+    }
+
+    /*
+    * DOM manipulation
+    *
+    */
+    var $reviewBlock = $('.review-block');
+    $reviewBlock.find('.review-block__label:contains("Contact")').text('Email');
+    $reviewBlock.find('.review-block__label:contains("Method")').text('Ship via');
+    {% if customer %}
+    if (checkoutStep == 'contact_information') {
+      $('.field.field--required:first').addClass('field--active');
+    }
+    {% endif %}
+    
+    $(document).on('change', '.input-radio', function(){
+      $(this).parents('fieldset').find('.content-box__row').removeClass('field--active');
+      $(this).parents('.content-box__row').addClass('field--active');
+    });
+    wait(100).then(function(){
+      $('.input-radio, .input-checkbox').each(function() {
+        if ($(this).is(':checked')) {
+          $(this).parents('.content-box__row').addClass('field--active');
+          {% comment %} $(this).parents('.content-box__row:not(.content-box__row--secondary)').addClass('field--active');{% endcomment %}
+        };
+      });
+    });
+
+    if (Shopify.Checkout.step != 'payment_method') {
+      $('.step__footer .shown-if-js .step__footer__continue-btn').show();
+      $('.step__footer > .step__footer__continue-btn').show();
+    }
+
+    $('.upi-id-container button').on('click', function() {
+      var btn = $(this);
+      var upi_id = btn.closest('.upi-id-container').find('.upi-id').text();
+      var type = "text/plain";
+      var blob = new Blob([upi_id], { type });
+      var data = [new ClipboardItem({ [type]: blob })];
+      navigator.clipboard.write(data).then(
+        function() {
+          btn.html("copied");
+        },
+        function() {
+          // failed
+        }
+      );
+    });
+
+    $(window).on("scroll", function() {
+      if ($(this).scrollTop() >= 800) { 
+        if (isTrustPilotLoaded == true) return;
+        isTrustPilotLoaded = true;
+        var s = document.createElement("script");
+        s.id = "trustpilot-script-widget";
+        s.src = "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
+        $("body").append(s);
+        var trustPilotWidget = '<div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="593b07d80000ff0005a43c3d" data-style-height="120px" data-style-width="250px" data-theme="dark"><a href="https://www.trustpilot.com/review/www.imbesharam.com" target="_blank" rel="noopener">Trustpilot</a></div>';
+        $("#footer-contact").append(trustPilotWidget);
+      }
+    });
+
+  });
+
+  if (Shopify.Checkout.step == 'contact_information') {
+    
+    $.getScript("//rebuyengine.com/js/rebuy?shop=besharamindia.myshopify.com", function(data, textStatus, jqxhr) {
+    });
+
+    document.addEventListener('rebuy.refresh', function(event) {
+      /* Add again the fake Continue Button after a Rebuy refresh only if it doesn't exists already */
+      var continueButtonAlt = document.getElementById('continue_button_alt');
+      if (!continueButtonAlt) {
+        var continueButton = document.getElementById('continue_button');
+        var clonedButton = continueButton.cloneNode(true);
+        
+        clonedButton.setAttribute('id', 'continue_button_alt');
+        document.getElementById('continue_button_alt_wrapper').appendChild(clonedButton);
+        
+        clonedButton.addEventListener('click', function() {
+          continueButton.click();
+        });
+      }
+    });
+
+    document.addEventListener('rebuy.loaded', function(event) {
+    });
+  
+    document.addEventListener('rebuy.change', function(event) {
+    });
+  }
+
+})(Checkout.$);
+
+</script>

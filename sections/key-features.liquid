@@ -1,0 +1,173 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+{% if product.metafields.custom.key_feature.value != blank %}
+  <link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+  {{ 'section-key-features.css' | asset_url | stylesheet_tag }}
+
+  <div class="section--padding page-width{% if section.settings.show_divider %} section--divider{% endif %} features">
+    <div class="features-top">
+      <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
+        <{{ section.settings.heading_tag }} class="title">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
+      </div>
+    </div>
+
+    <div class="image-features__block-wrapper">
+      {% for i in (1..4) %}
+        {% assign image_key = 'image_feature_image_' | append: i %}
+        {% assign image_value = product.metafields.custom.key_feature.value[image_key].value %}
+        {% assign text_key = 'image_feature_text_' | append: i %}
+        {% assign text_value = product.metafields.custom.key_feature.value[text_key] %}
+
+        {% if image_value != blank %}
+          <div class="image-feature__container">
+            <img src="{{ image_value | image_url }}">
+            <p>{{ text_value }}</p>
+          </div>
+        {%- endif -%}
+      {% endfor %}
+
+    </div>
+
+    <div class="features__block-wrapper">
+      {% for i in (1..6) %}
+        {% assign metafield_key = 'text_feature_' | append: i %}
+        {% assign metafield_value = product.metafields.custom.key_feature.value[metafield_key] %}
+
+        {% if metafield_value != blank %}
+          <div class="feature__container">
+            <p>{{ metafield_value }}</p>
+          </div>
+        {%- endif -%}
+      {% endfor %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Key features",
+  "tag": "section",
+  "class": "section section-features",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": false,
+      "label": "t:sections.all.show_divider.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Key features",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.all.heading_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_tag.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_tag.options__2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_tag.options__3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:sections.all.heading_tag.options__4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:sections.all.heading_tag.options__5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:sections.all.heading_tag.options__6.label"
+        },
+        {
+          "value": "div",
+          "label": "t:sections.all.heading_tag.options__7.label"
+        },
+        {
+          "value": "span",
+          "label": "t:sections.all.heading_tag.options__8.label"
+        },
+        {
+          "value": "p",
+          "label": "t:sections.all.heading_tag.options__9.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_tag.label",
+      "info": "t:sections.all.heading_tag.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.header.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_top.unit",
+      "label": "t:sections.all.padding.padding_top.label",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_bottom.unit",
+      "label": "t:sections.all.padding.padding_bottom.label",
+      "default": 36
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Key features"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  }
+}
+{% endschema %}
