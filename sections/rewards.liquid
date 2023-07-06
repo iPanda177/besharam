@@ -1,0 +1,65 @@
+<style>
+  .rewards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rewards__image-desktop {
+    display: block;
+    flex: 100%;
+  }
+
+  .rewards__img-mobile {
+    display: none;
+  }
+
+  @media(max-width: 768px) {
+    .rewards__image-desktop {
+      display: none;
+    }
+
+    .rewards__img-mobile {
+      display: block;
+      position: relative;
+      scale: 1.06;
+      margin-top: 470px;
+    }
+  }
+</style>
+
+<div class="section--padding">
+  <div class="rewards-wrapper">
+    <img
+      src="{{ section.settings.rewards_image_desktop | img_url: 'master' }}"
+      alt="Rewards"
+      class="rewards__image-desktop">
+    <img
+      src="{{ section.settings.rewards_image_mobile | img_url: 'master' }}"
+      alt="Rewards"
+      class="rewards__img-mobile">
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Rewards",
+    "tag": "section",
+    "class": "section section-reviews",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "rewards_image_desktop",
+        "label": "Rewards desktop image"
+      }, {
+        "type": "image_picker",
+        "id": "rewards_image_mobile",
+        "label": "Rewards mobile image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Rewards"
+      }
+    ]
+  }
+{% endschema %}

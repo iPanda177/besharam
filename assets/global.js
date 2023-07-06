@@ -2505,14 +2505,18 @@ class GMap extends HTMLElement {
   }
 
   loadScript() {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      document.body.appendChild(script);
-      script.onload = resolve;
-      script.onerror = reject;
-      script.async = true;
-      script.src = 'https://maps.googleapis.com/maps/api/js?key=' + this.dataset.apiKey;
-    });
+    if (window.google && window.google.maps) {
+      return Promise.resolve();
+    } else {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        document.body.appendChild(script);
+        script.onload = resolve;
+        script.onerror = reject;
+        script.async = true;
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=' + this.dataset.apiKey;
+      });
+    }
   }
 
   initMap() {

@@ -1,0 +1,163 @@
+<style>
+  .side-images__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+  .side-images__container {
+    width: 40%;
+  }
+
+  .side-images__container .side-images__text p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .side-images__img {
+    position: relative;
+  }
+
+  .side-images__img img {
+    position: absolute;
+  }
+
+  .side-images__first-image img {
+    top: -125px;
+    right: -275px;
+  }
+
+  .side-images__last-image img {
+    top: -570px;
+    left: -500px;
+  }
+
+  @media(max-width: 767px) {
+    .side-images__wrapper {
+      flex-direction: column;
+      background-image: url('{{ 'side-images-elipse.svg' | asset_url }}');
+      background-repeat: no-repeat;
+      padding-bottom: 100px;
+    }
+
+    .side-images__container {
+      display: flex;
+      padding: 0 15px;
+      width: 100%;
+    }
+
+    .side-images__first-container {
+      flex-direction: row-reverse;
+    }
+
+    .side-images__text,
+    .side-images__img {
+      width: 60%;
+    }
+
+    .side-images__img {
+      position: relative;
+    }
+
+    .side-images__img img {
+      position: absolute;
+    }
+
+    .side-images__first-image img {
+      top: -100px;
+      right: -110px;
+    }
+
+    .side-images__last-image img {
+      top: -230px;
+      left: -260px;
+      scale: 0.8;
+      z-index: 1;
+    }
+
+    .side-images__second-container {
+      flex-direction: row-reverse;
+    }
+
+    .side-images__second-container .side-images__text p {
+      text-align: end;
+    }
+
+    .side-images__second-container .side-images__text {
+      flex: 70%;
+    }
+
+    .side-images__container .side-images__text p {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+</style>
+
+<div class="section--padding">
+  <div class="side-images__wrapper">
+    <div class="side-images__container side-images__first-container">
+      <div class="side-images__img side-images__first-image">
+        {% if section.settings.first_image != blank %}
+          <img src="{{ section.settings.first_image | img_url: 'master' }}" alt="">
+        {% endif %}
+      </div>
+
+      <div class="side-images__text">
+        {% if section.settings.first_text != blank %}
+          {{ section.settings.first_text }}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="side-images__container side-images__second-container">
+      <div class="side-images__text">
+        {% if section.settings.second_text != blank %}
+          {{ section.settings.second_text }}
+        {% endif %}
+      </div>
+
+      <div class="side-images__img side-images__last-image">
+        {% if section.settings.second_image != blank %}
+          <img src="{{ section.settings.second_image | img_url: 'master' }}" alt="">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Side images with text",
+    "tag": "section",
+    "class": "section section-reviews",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "first_image",
+        "label": "First image"
+      }, {
+        "type": "richtext",
+        "id": "first_text",
+        "label": "First article"
+      }, {
+        "type": "image_picker",
+        "id": "second_image",
+        "label": "Second image"
+      }, {
+        "type": "richtext",
+        "id": "second_text",
+        "label": "Second article"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Side images with text"
+      }
+    ]
+  }
+{% endschema %}

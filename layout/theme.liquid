@@ -1,31 +1,43 @@
 {%- assign text_direction = 'localization.text_direction_trigger' | t | downcase -%}
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}"
-  {%- if text_direction == 'rtl' %} dir="rtl"{% endif -%}
->
+<html
+  class="no-js"
+  lang="{{ request.locale.iso_code }}"
+  {%- if text_direction == 'rtl' %}
+  dir="rtl"
+  {% endif -%}>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link
+      rel="preconnect"
+      href="https://cdn.shopify.com"
+      crossorigin>
 
     {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link
+        rel="icon"
+        type="image/png"
+        href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     {%- comment -%}
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
     {%- endcomment -%}
 
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if current_tags %}
+        &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %}
+        &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %}
+        &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
     {%- if page_description -%}
@@ -33,13 +45,25 @@
     {%- endif -%}
 
     {% render 'meta-tags' %}
-    {% if template.name == "index"%}
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    {% if template.name == "index" or template.name == "page" %}
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
 
-      <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-      <link rel="stylesheet" href="{{ 'section-main-product.css' | asset_url }}" media="print" onload="this.media='all'">
-      <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-price.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'section-main-product.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-deferred-media.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'">
       <noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
       {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
       {{ 'component-card.css' | asset_url | stylesheet_tag }}
@@ -61,50 +85,99 @@
     -%}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+      <link
+        rel="preload"
+        as="font"
+        href="{{ settings.type_body_font | font_url }}"
+        type="font/woff2"
+        crossorigin>
     {%- endunless -%}
     {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+      <link
+        rel="preload"
+        as="font"
+        href="{{ settings.type_header_font | font_url }}"
+        type="font/woff2"
+        crossorigin>
     {%- endunless -%}
 
-    
+
     {%- if settings.predictive_search_enabled -%}
-      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'">
     {%- endif -%}
     {%- if settings.quick_view_enabled -%}
-      <link rel="stylesheet" href="{{ 'component-quick-view.css' | asset_url }}" media="print" onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-quick-view.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'">
     {%- endif -%}
     {%- if settings.color_swatches_enabled -%}
-      <link rel="stylesheet" href="{{ 'component-color-swatches.css' | asset_url }}" media="print" onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-color-swatches.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'">
     {%- endif -%}
     {%- if linklists.gift-wrapping.links != blank and linklists.gift-wrapping.links.first.type == 'product_link' -%}
-      <link rel="stylesheet" href="{{ 'component-gift-wrapping.css' | asset_url }}" media="print" onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-gift-wrapping.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'">
       <noscript>{{ 'component-gift-wrapping.css' | asset_url | stylesheet_tag }}</noscript>
     {%- endif -%}
 
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-    <link rel="preload" as="style" href="{{ 'font-awesome.min.css' | asset_url }}" />
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    <link
+      rel="preload"
+      as="style"
+      href="{{ 'font-awesome.min.css' | asset_url }}" />
 
     {{ 'geo-codes.js' | asset_url | script_tag }}
 
     {% render 'snize-loader', tpl: template %}
 
     <script src="https://kit.fontawesome.com/16dc2d65b4.js" crossorigin="anonymous"></script>
-    <script src = "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async defer="defer"></script>  
+    <script
+      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+      defer="defer"></script>
 
   </head>
 
-  <body class="template-{{ request.page_type }}{% if request.design_mode %} shopify-design-mode{% endif %}"
-    {%- if settings.image_zoom_effect_enabled %} data-animate-image{% endif -%}
-    {%- if settings.image_loading_bar_enabled %} data-lazy-image{% endif -%}
-    {%- if settings.heading_capitalize %} data-heading-capitalize{% endif -%}
-    {%- if settings.heading_center %} data-heading-center{% endif -%}
-    {%- if settings.price_superscript %} data-price-superscript{% endif -%}
-    {%- if settings.button_corner_radius > 0 %} data-button-round{% endif -%}
-  >
+  <body
+    class="template-{{ request.page_type }}{% if request.design_mode %} shopify-design-mode{% endif %}"
+    {%- if settings.image_zoom_effect_enabled %}
+    data-animate-image
+    {% endif -%}
+    {%- if settings.image_loading_bar_enabled %}
+    data-lazy-image
+    {% endif -%}
+    {%- if settings.heading_capitalize %}
+    data-heading-capitalize
+    {% endif -%}
+    {%- if settings.heading_center %}
+    data-heading-center
+    {% endif -%}
+    {%- if settings.price_superscript %}
+    data-price-superscript
+    {% endif -%}
+    {%- if settings.button_corner_radius > 0 %}
+    data-button-round
+    {% endif -%}>
     <a class="skip-to-content-link button button--small visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -115,7 +188,11 @@
       {% sections 'header-group' %}
 
       <div class="transition-content">
-        <main id="MainContent" class="content-for-layout focus-none shopify-section" role="main" tabindex="-1">
+        <main
+          id="MainContent"
+          class="content-for-layout focus-none shopify-section"
+          role="main"
+          tabindex="-1">
           {{ content_for_layout }}
         </main>
 
@@ -129,10 +206,13 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
     <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-      <symbol id="icon-cart" fill="none" viewBox="0 0 28 29">
-        <path d="M7.93018 23.0289C7.93018 24.2266 8.90487 25.2013 10.1026 25.2013C11.3003 25.2013 12.275 24.2266 12.275 23.0289C12.275 21.8311 11.3003 20.8564 10.1026 20.8564C8.90487 20.8564 7.93018 21.8311 7.93018 23.0289ZM10.8267 23.0289C10.8267 23.4279 10.5016 23.753 10.1026 23.753C9.70359 23.753 9.37845 23.4279 9.37845 23.0289C9.37845 22.6299 9.70359 22.3047 10.1026 22.3047C10.5016 22.3047 10.8267 22.6299 10.8267 23.0289Z" fill="currentColor"/>
-        <path d="M20.9639 23.0289C20.9639 21.8311 19.9892 20.8564 18.7915 20.8564C17.5938 20.8564 16.6191 21.8311 16.6191 23.0289C16.6191 24.2266 17.5938 25.2013 18.7915 25.2013C19.9892 25.2013 20.9639 24.2266 20.9639 23.0289ZM18.0674 23.0289C18.0674 22.6299 18.3925 22.3047 18.7915 22.3047C19.1905 22.3047 19.5156 22.6299 19.5156 23.0289C19.5156 23.4279 19.1905 23.753 18.7915 23.753C18.3925 23.753 18.0674 23.4279 18.0674 23.0289Z" fill="currentColor"/>
-        <path d="M5.82997 5.64994C5.91976 6.50514 6.91907 15.9971 7.07332 17.4635C7.1899 18.5722 8.11897 19.4086 9.23414 19.4086H20.5184C21.5358 19.4086 22.4294 18.6859 22.643 17.6909L24.3824 9.57404C24.4743 9.1439 24.3686 8.70145 24.092 8.36038C23.8154 8.01859 23.4048 7.82235 22.9652 7.82235H7.51504L7.20221 4.85049C7.16311 4.48118 6.85245 4.20166 6.4817 4.20166H4.30928C3.90956 4.20166 3.58514 4.52607 3.58514 4.9258C3.58514 5.32552 3.90956 5.64994 4.30928 5.64994H5.82997ZM22.9652 9.27063L21.2266 17.3875C21.1549 17.7191 20.8573 17.9603 20.5177 17.9603H9.23414C8.86194 17.9603 8.55273 17.6815 8.51363 17.3122L7.66711 9.27063H22.9652Z" fill="currentColor"/>
+      <symbol
+        id="icon-cart"
+        fill="none"
+        viewBox="0 0 28 29">
+        <path d="M7.93018 23.0289C7.93018 24.2266 8.90487 25.2013 10.1026 25.2013C11.3003 25.2013 12.275 24.2266 12.275 23.0289C12.275 21.8311 11.3003 20.8564 10.1026 20.8564C8.90487 20.8564 7.93018 21.8311 7.93018 23.0289ZM10.8267 23.0289C10.8267 23.4279 10.5016 23.753 10.1026 23.753C9.70359 23.753 9.37845 23.4279 9.37845 23.0289C9.37845 22.6299 9.70359 22.3047 10.1026 22.3047C10.5016 22.3047 10.8267 22.6299 10.8267 23.0289Z" fill="currentColor" />
+        <path d="M20.9639 23.0289C20.9639 21.8311 19.9892 20.8564 18.7915 20.8564C17.5938 20.8564 16.6191 21.8311 16.6191 23.0289C16.6191 24.2266 17.5938 25.2013 18.7915 25.2013C19.9892 25.2013 20.9639 24.2266 20.9639 23.0289ZM18.0674 23.0289C18.0674 22.6299 18.3925 22.3047 18.7915 22.3047C19.1905 22.3047 19.5156 22.6299 19.5156 23.0289C19.5156 23.4279 19.1905 23.753 18.7915 23.753C18.3925 23.753 18.0674 23.4279 18.0674 23.0289Z" fill="currentColor" />
+        <path d="M5.82997 5.64994C5.91976 6.50514 6.91907 15.9971 7.07332 17.4635C7.1899 18.5722 8.11897 19.4086 9.23414 19.4086H20.5184C21.5358 19.4086 22.4294 18.6859 22.643 17.6909L24.3824 9.57404C24.4743 9.1439 24.3686 8.70145 24.092 8.36038C23.8154 8.01859 23.4048 7.82235 22.9652 7.82235H7.51504L7.20221 4.85049C7.16311 4.48118 6.85245 4.20166 6.4817 4.20166H4.30928C3.90956 4.20166 3.58514 4.52607 3.58514 4.9258C3.58514 5.32552 3.90956 5.64994 4.30928 5.64994H5.82997ZM22.9652 9.27063L21.2266 17.3875C21.1549 17.7191 20.8573 17.9603 20.5177 17.9603H9.23414C8.86194 17.9603 8.55273 17.6815 8.51363 17.3122L7.66711 9.27063H22.9652Z" fill="currentColor" />
       </symbol>
     </svg>
 
@@ -183,9 +263,15 @@
       };
 
       (function() {
-        // Fixed: Largest Contentful Paint image was lazily loaded
+
+// Fixed: Largest Contentful Paint image was lazily loaded
         const first_image = document.querySelector('#MainContent .shopify-section .media img');
-        if (first_image) first_image.setAttribute('loading', 'auto');
+        if (first_image) 
+          first_image.setAttribute('loading', 'auto');
+        
+
+
+
       })();
     </script>
 
@@ -209,14 +295,13 @@
 
     <script src="{{ 'collection.js' | asset_url }}" defer="defer"></script>
 
-        <!-- Stamped -->
+    <!-- Stamped -->
     <script
-            async
-            type="text/javascript"
-            data-api-key="dNDYq5z1t2uAVfDgixg5j87h54heP7"
-            id="stamped-script-widget"
-            src="https://cdn1.stamped.io/files/widget.min.js">
-    </script>
+      async
+      type="text/javascript"
+      data-api-key="dNDYq5z1t2uAVfDgixg5j87h54heP7"
+      id="stamped-script-widget"
+      src="https://cdn1.stamped.io/files/widget.min.js"></script>
     <!-- End Stamped -->
 
   </body>

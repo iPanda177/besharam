@@ -7,11 +7,177 @@
 
 {{ 'section-follow-us.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .follow-us {
+    background-color: transparent;
+    background-image: url('{{ "follow-us-bg.png" | asset_url }}');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position-x: 175px;
+    background-position-y: -30px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .follow-us__title-wrapper {
+    margin-bottom: 0;
+    justify-content: center;
+    position: relative;
+    top: 55px;
+  }
+
+  .follow-us__wrapper {
+    position: relative;
+    top: -150px;
+  }
+
+  .follow-us__title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 71px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+
+  .follow-us__link {
+    display: flex;
+    gap: 14px;
+    padding: 5px 20px;
+    border: 1px solid rgba(241, 136, 183, 1);
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.4)!important;
+  }
+
+  .follow-us__link span {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 35px;
+    color: #fff;
+  }
+
+  .follow-us__badge {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .follow-us__badge-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .follow-us__facebook {
+    top: 80px;
+    left: 150px;
+  }
+
+  .follow-us__facebook > svg {
+    position: absolute;
+    transform: scaleX(-1);
+    rotate: 90deg;
+    bottom: -100px;
+    left: 30px;
+  }
+
+  .follow-us__instagram {
+    bottom: 90px;
+    left: 47%;
+  }
+
+  .follow-us__instagram > svg {
+    position: absolute;
+    top: -60px;
+    left: -90px;
+  }
+
+  .follow-us__twitter {
+    top: 80px;
+    right: 150px;
+  }
+
+  .follow-us__twitter > svg {
+    position: absolute;
+    rotate: 270deg;
+    top: 40px;
+    right: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .follow-us__wrapper {
+      top: 100px;
+      padding: 0;
+
+      margin-bottom: 100px;
+    }
+
+    .follow-us {
+      background-size: cover;
+      background-position-x: -70px;
+      background-position-y: -20px;
+    }
+
+    .follow-us__title {
+      font-size: 42px;
+      line-height: 30px;
+    }
+
+    .follow-us__title-wrapper {
+      top: 0;
+    }
+
+    .follow-us__link span {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .follow-us__facebook {
+      top: 20px;
+      left: 0;
+    }
+
+    .follow-us__facebook > svg {
+      transform: scaleX(-0.6);
+      bottom: -80px;
+      left: 10px;
+    }
+
+    .follow-us__instagram {
+      bottom: -25px;
+      left: 35%;
+      flex-direction: column-reverse;
+    }
+
+    .follow-us__instagram > svg {
+      top: -85px;
+      left: -10px;
+      scale: 0.6;
+    }
+
+    .follow-us__twitter {
+      top: 20px;
+      right: 0;
+    }
+
+    .follow-us__twitter > svg {
+      scale: 0.7;
+      top: 20px;
+      right: 0;
+    }
+  }
+</style>
+
 {%- if section.settings.show_divider %}<div class="section--divider">{% endif -%}
-  <div class="page-width{% if section.settings.narrow %} page-width--inner{% endif %}">
-    <div class="rich-text section--padding">
-      <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %}">
-        <h2 class="title">{{ section.settings.heading | escape }}</h2>
+  <div class="page-width{% if section.settings.narrow %} page-width--inner{% endif %} follow-us__wrapper">
+    <div class="rich-text section--padding follow-us">
+      <div class="title-wrapper follow-us__title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %}">
+        <h2 class="title follow-us__title">{{ section.settings.heading | escape }}</h2>
       </div>
       {%- if section.settings.image != blank -%}
       {%- assign image = section.settings.image -%}
@@ -46,28 +212,30 @@
             {%- endif -%}
           </use-animate>
           {%- if section.settings.fb_badge != blank -%}
-            <div class="image-badge">
-              <span>FANS ON FACEBOOK</span>
-              <a target="_blank" rel="noopener" href="{{ settings.social_facebook_link }}" class="list-social__link link link--text link-with-icon">
+            <div class="image-badge follow-us__badge follow-us__facebook">
+              {% render 'icon', icon: 'follow-arrow' %}
+              <span class="follow-us__badge-text">FANS ON FACEBOOK</span>
+              <a target="_blank" rel="noopener" href="{{ settings.social_facebook_link }}" class="list-social__link link link--text link-with-icon follow-us__link">
                 {% render 'icon-brand', icon: 'facebook' %}
                 <span>{{ section.settings.fb_badge }}</span>
               </a>
             </div>
           {%- endif -%}
           {%- if section.settings.insta_badge != blank -%}
-            <div class="image-badge">
+            <div class="image-badge follow-us__badge follow-us__instagram">
               {% render 'icon', icon: 'follow-arrow' %}
-              <span>FANS ON INSTAGRAM</span>
-              <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" class="list-social__link link link--text link-with-icon">
+              <span class="follow-us__badge-text">FANS ON INSTAGRAM</span>
+              <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" class="list-social__link link link--text link-with-icon follow-us__link">
                 {% render 'icon-brand', icon: 'instagram' %}
                 <span>{{ section.settings.insta_badge }}</span>
               </a>
             </div>
           {%- endif -%}
           {%- if section.settings.twit_badge != blank -%}
-            <div class="image-badge">
-              <span>FANS ON TWITTER</span>
-              <a target="_blank" rel="noopener" href="{{ settings.social_twitter_link }}" class="list-social__link link link--text link-with-icon">
+            <div class="image-badge follow-us__badge follow-us__twitter">
+              {% render 'icon', icon: 'follow-arrow' %}
+              <span class="follow-us__badge-text">FANS ON TWITTER</span>
+              <a target="_blank" rel="noopener" href="{{ settings.social_twitter_link }}" class="list-social__link link link--text link-with-icon follow-us__link">
                 {% render 'icon-brand', icon: 'twitter' %}
                 <span>{{ section.settings.twit_badge }}</span>
               </a>

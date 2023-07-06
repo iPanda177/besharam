@@ -52,6 +52,238 @@
 
 {{ 'section-image-with-text.css' | asset_url | stylesheet_tag }}
 
+<style>
+  @font-face {
+    font-display: swap;
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('{{ "caveat-v17-latin-700.woff2" | asset_url }}') format("woff2");
+  }
+
+  .image-with-text.image-with-text--alt.page-width {
+    padding-right: 0;
+  }
+
+  .image-sticker {
+    padding: 0 24px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.40);
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+  }
+
+  .image-sticker--first {
+    top: 20%;
+    left: 40%;
+  }
+
+  .image-sticker--last {
+    bottom: -17%;
+    left: 20%;
+  }
+
+  .image-sticker--first::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 35%;
+    top: 110%;
+    background-image: url('{{ "our-story-arrow-first.svg" | asset_url }}');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .image-sticker--last::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: -35%;
+    top: -100%;
+    background-image: url('{{ "our-story-arrow-last.svg" | asset_url }}');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .link-with-icon.our-story--icon .icon {
+    margin-inline-end: 0;
+  }
+
+  .our--story {
+    background-image: url('{{ "our-story-group.svg" | asset_url }}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -275px;
+    padding-bottom: 450px;
+    margin-bottom: -350px;
+    padding-top: 100px;
+  }
+
+  .our-story--title {
+    font: 700 75px / 71px "Quicksand", sans-serif;
+    color: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 72px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .our-story--wrapper {
+    justify-content: flex-start;
+    position: absolute;
+  }
+
+  .image-with-text__subheading {
+    font: 700 24px / 71px "Quicksand", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .image-with-text__heading {
+    font: 700 46px / 71px "Quicksand", sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 36px;
+  }
+
+  .our-story--text-content {
+    position: relative;
+    padding-top: 0 !important;
+  }
+
+  .our-story--text {
+    position: relative;
+    top: 15%;
+    margin: 0 !important;
+  }
+
+  .our-story--text p {
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .our-story--text.image-with-text__text p::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: -3%;
+    background-color: #ea1969;
+    width: 3px;
+    height: 40%;
+    border-radius: 10px;
+  }
+
+  .media .image-fit.our-story--img {
+    object-position: 0 50% !important;
+  }
+
+  .image-with-text__grid.our-story--text-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .image-with-text__grid.our-story--text-grid .grid__item.our-story--img {
+    flex: 60%;
+  }
+
+  .image-with-text__grid.our-story--text-grid .grid__item.our-story--text {
+    flex: 40%;
+  }
+
+  .grid__item.our-story--text .our-story--text-content {
+    padding: 0 0 0 5rem;
+  }
+
+  @media(max-width: 768px) {
+    .our--story {
+      background-image: url('{{ "our-story-group-mobile.svg" | asset_url }}');
+      background-position-y: 0;
+      margin-bottom: 0;
+    }
+
+    .our-story--wrapper {
+      width: 100%;
+      justify-content: center;
+      position: relative;
+    }
+
+    .our-story--title {
+      font-size: 41px;
+    }
+
+    .image-with-text__grid.our-story--text-grid {
+      flex-direction: column-reverse;
+    }
+
+    .image-with-text__subheading {
+      font-size: 20px;
+    }
+
+    .image-with-text__heading {
+      font-size: 30px;
+    }
+
+    .grid__item.our-story--text .our-story--text-content {
+      padding: 0;
+    }
+
+    .image-with-text__text.our-story--text {
+      position: absolute;
+      top: 500px;
+    }
+
+    .image-sticker {
+      font-size: 22px;
+    }
+
+    .image-sticker--first {
+      top: 35%;
+      left: 50%;
+    }
+
+    .image-sticker--first::before {
+      width: 80px;
+      height: 80px;
+      left: 65%;
+      top: 70px;
+      z-index: -1;
+    }
+
+    .image-sticker--last {
+      bottom: -10%;
+      left: 25%;
+    }
+
+    .image-sticker--last::before {
+      width: 80px;
+      height: 80px;
+      z-index: -1;
+    }
+
+    .our-story--text p {
+      font-size: 18px;
+      padding-right: 20px;
+    }
+
+    .our-story--text.image-with-text__text p::after {
+      right: 5%;
+      top: 25%;
+    }
+  }
+</style>
+
 {%- liquid
   assign grid_class = 'image-with-text__grid'
   if section.settings.layout == 'text_first'
@@ -71,15 +303,15 @@
   endif
 -%}
 
-<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %} our--story">
   <div class="image-with-text{% if section.settings.use_custom_colors and section.settings.colors_background != settings.colors_background %} image-with-text--colored{% else %} image-with-text--alt{% endif %}{% if section.settings.enlarge_content %} image-with-text--enlarge{% endif %} page-width{% if section.settings.full_width %} page-width--full-width{% endif %}">
     {%- if section.settings.title != blank -%}
-      <div class="title-wrapper center">
-        <h2 class="title">{{ section.settings.title }}</h2>
+      <div class="title-wrapper our-story--wrapper">
+        <h2 class="title our-story--title">{{ section.settings.title }}</h2>
       </div>
     {%- endif -%}
-    <div class="{{ grid_class }} grid grid--gapless grid--1-col grid--2-col-tablet">
-      <div class="grid__item">
+    <div class="{{ grid_class }} our-story--text-grid grid grid--gapless grid--1-col grid--2-col-tablet">
+      <div class="grid__item our-story--img">
         <use-animate data-animate="zoom-fade" class="media-wrapper">
           <div class="image-animate media--{{ section.settings.image_ratio }} media-mobile--{{ section.settings.mobile_image_ratio }} {% if section.settings.image != blank %}media{% else %}media--placeholder{% endif %}">
             {%- if section.settings.image != blank -%}
@@ -91,10 +323,10 @@
               {%- endcapture -%}
               {%- liquid
                 if section.settings.image_mobile == blank
-                  echo section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', class: 'image-fit', sizes: sizes, widths: '165, 360, 535, 750, 1100, 1500', is: 'lazy-image'
+                  echo section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', class: 'image-fit our-story--img', sizes: sizes, widths: '165, 360, 535, 750, 1100, 1500', is: 'lazy-image'
                 else
-                  echo section.settings.image_mobile | image_url: width: 1500 | image_tag: loading: 'lazy', class: 'image-fit medium-hide large-up-hide', sizes: sizes, widths: '165, 360, 535, 750, 1100, 1500', is: 'lazy-image'
-                  echo section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', class: 'image-fit small-hide', sizes: sizes, widths: '165, 360, 535, 750, 1100, 1500', is: 'lazy-image'
+                  echo section.settings.image_mobile | image_url: width: 1500 | image_tag: loading: 'lazy', class: 'image-fit medium-hide large-up-hide our-story--img', sizes: sizes, widths: '165, 360, 535, 750, 1100, 1500', is: 'lazy-image'
+                  echo section.settings.image | image_url: width: 1500 | image_tag: loading: 'lazy', class: 'image-fit small-hide our-story--img', sizes: sizes, widths: '165, 360, 535, 750, 1100, 1500', is: 'lazy-image'
                 endif
               -%}
             {%- else -%}
@@ -109,14 +341,14 @@
               target="_blank"
               rel="noopener"
               href="{{ settings.sticker_instagram_url_1 }}"
-              class="link-with-icon">
+              class="link-with-icon our-story--icon">
               {% render 'icon-brand', icon: 'instagram' %}
             </a>
             <a
               target="_blank"
               rel="noopener"
               href="{{ settings.sticker_linkedin_url_1 }}"
-              class="link-with-icon">
+              class="link-with-icon our-story--icon">
               {% render 'icon-brand', icon: 'linkedin' %}
             </a>
           </div>
@@ -128,29 +360,29 @@
               target="_blank"
               rel="noopener"
               href="{{ settings.sticker_instagram_url_2 }}"
-              class="link-with-icon">
+              class="link-with-icon our-story--icon">
               {% render 'icon-brand', icon: 'instagram' %}
             </a>
             <a
               target="_blank"
               rel="noopener"
               href="{{ settings.sticker_linkedin_url_2 }}"
-              class="link-with-icon">
+              class="link-with-icon our-story--icon">
               {% render 'icon-brand', icon: 'linkedin' %}
             </a>
           </div>
         {%- endif -%}
       </div>
-      <div class="grid__item">
-        <div class="image-with-text__content {{ section.settings.text_box_position }} {{ section.settings.text_alignment }} mobile-{{ section.settings.mobile_text_alignment }}">
+      <div class="grid__item our-story--text">
+        <div class="image-with-text__content our-story--text-content {{ section.settings.text_box_position }} {{ section.settings.text_alignment }} mobile-{{ section.settings.mobile_text_alignment }}">
           {%- for block in section.blocks -%}
             {% case block.type %}
               {%- when 'heading' -%}
-              <{{ block.settings.heading_tag }} class="image-with-text__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</{{ block.settings.heading_tag }}>
+              <{{ block.settings.heading_tag }} class="image-with-text__heading" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</{{ block.settings.heading_tag }}>
               {%- when 'subheading' -%}
-              <p class="image-with-text__subheading{% if block.settings.secondary_color %} image-with-text__subheading--colored{% endif %} {{ block.settings.subheading_size }}" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</p>
+              <p class="image-with-text__subheading{% if block.settings.secondary_color %} image-with-text__subheading--colored{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</p>
               {%- when 'text' -%}
-              <div class="image-with-text__text{% if block.settings.secondary_color %} image-with-text__text--colored{% endif %} {{ block.settings.text_size }} rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+              <div class="image-with-text__text our-story--text{% if block.settings.secondary_color %} image-with-text__text--colored{% endif %} {{ block.settings.text_size }} rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
               {%- when 'custom_liquid' -%}
               <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
               {%- when 'button' -%}

@@ -65,7 +65,7 @@
         "colors_background": "#ffffff",
         "gradient_background": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     },
     "f73388ac-c410-48d7-89a2-1bab234498de": {
@@ -288,6 +288,116 @@
         "padding_bottom": 36
       }
     },
+    "7ba4e1c0-b332-49f4-b671-a5ac422fc448": {
+      "type": "side-images-with-text",
+      "settings": {
+        "first_image": "shopify:\/\/shop_images\/second-image-png.png",
+        "first_text": "<p>Besharam is India's most loved and talked about Adult Store brand. On its 5th anniversary, we are taking the brand GLOBAL, to reach out to all the Indian's residing outside of India - an affluent 75M population & an unexplored $<\/p>",
+        "second_image": "shopify:\/\/shop_images\/Mask_group.png",
+        "second_text": "<p>200M market. To make this happen, we are seeking partners who can support our vision and invest in this opportunity. This website seeks to showcase that by introducing the brand & its founders, sharing our story, our mission and our plans for next 5 years. Better a big fish in a small pond than a small fish in a big pond.<\/p>"
+      }
+    },
+    "d7ba6a16-9088-4112-a904-9cdfbe0acef6": {
+      "type": "rewards",
+      "settings": {
+        "rewards_image_desktop": "shopify:\/\/shop_images\/Group_3728.png",
+        "rewards_image_mobile": "shopify:\/\/shop_images\/Group_3729_40a51888-a45c-4f33-9819-7fdd17fc708c.png"
+      }
+    },
+    "4a594794-2bc9-4226-9639-13c202eb8b06": {
+      "type": "brands-slider",
+      "blocks": {
+        "deae988b-70b6-4053-bb3b-97370102c581": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/entrepreneur-logo_1.png",
+            "first_link": "",
+            "second_image": "shopify:\/\/shop_images\/gaysi_9da5e51e-0d15-491f-a0be-8c61243b0d87.png",
+            "second_link": "",
+            "third_image": "shopify:\/\/shop_images\/X-BIZ_-nn_97cf7aa3-2203-4b9f-84fc-563b5d22b388.png",
+            "third_link": ""
+          }
+        },
+        "ce90b220-f4ea-4f05-bfd4-d2c4778297ee": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/Economic-Times-12_9daca306-fdc2-4d48-bff0-a0636375ab68.png",
+            "first_link": "",
+            "second_image": "shopify:\/\/shop_images\/hindustan_bd95f8a6-ae2e-4bb7-96f2-a88374e2afe8.png",
+            "second_link": "",
+            "third_image": "shopify:\/\/shop_images\/The_times_of_india.png",
+            "third_link": ""
+          }
+        },
+        "aed594f3-3932-48df-9f61-2860852ce045": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/business-standard-logo_64437a63-d524-4512-a6b0-780fa33fac9e.png",
+            "first_link": "",
+            "second_image": "shopify:\/\/shop_images\/iamwire_51a6dc12-ca8d-450b-9671-fdba17c93f01.png",
+            "second_link": "",
+            "third_image": "shopify:\/\/shop_images\/yourstory_ea80ac03-dca8-46ba-99a4-16c676ba4b4c.png",
+            "third_link": ""
+          }
+        },
+        "f2db8cb3-ec7e-4670-b523-4ff57a33ea16": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/EAN_Logo_ad6b1567-25ed-4dac-a95b-2d45a1b81798.png",
+            "first_link": "",
+            "second_image": "shopify:\/\/shop_images\/india-today_2.png",
+            "second_link": "",
+            "third_image": "shopify:\/\/shop_images\/techcircle_b9ff60d9-4c86-41e8-9024-3b87a8216170.png",
+            "third_link": ""
+          }
+        },
+        "27b4be54-d0ee-4c07-a9f6-a4fbdb11564f": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/firstpost_f896685b-db8a-4d2b-af6a-f5062767cd09.png",
+            "first_link": "",
+            "second_image": "shopify:\/\/shop_images\/international-business-timess_1.png",
+            "second_link": "",
+            "third_image": "shopify:\/\/shop_images\/Tech-In-Asia_5d5c7c49-94e8-4221-9c7c-aef8f5da128e.png",
+            "third_link": ""
+          }
+        },
+        "d2f96581-3f7e-4b95-a0c0-d70fbbc9c047": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/iamwire_51a6dc12-ca8d-450b-9671-fdba17c93f01.png",
+            "first_link": "",
+            "second_image": "shopify:\/\/shop_images\/firstpost_f896685b-db8a-4d2b-af6a-f5062767cd09.png",
+            "second_link": "",
+            "third_image": "shopify:\/\/shop_images\/international-business-timess_1.png",
+            "third_link": ""
+          }
+        },
+        "b314096c-6451-4866-98f6-b5edbeeb31e5": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/yourstory_ea80ac03-dca8-46ba-99a4-16c676ba4b4c.png",
+            "first_link": "",
+            "second_image": "shopify:\/\/shop_images\/X-BIZ_-nn_97cf7aa3-2203-4b9f-84fc-563b5d22b388.png",
+            "second_link": "",
+            "third_image": "shopify:\/\/shop_images\/hindustan_bd95f8a6-ae2e-4bb7-96f2-a88374e2afe8.png",
+            "third_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "deae988b-70b6-4053-bb3b-97370102c581",
+        "ce90b220-f4ea-4f05-bfd4-d2c4778297ee",
+        "aed594f3-3932-48df-9f61-2860852ce045",
+        "f2db8cb3-ec7e-4670-b523-4ff57a33ea16",
+        "27b4be54-d0ee-4c07-a9f6-a4fbdb11564f",
+        "d2f96581-3f7e-4b95-a0c0-d70fbbc9c047",
+        "b314096c-6451-4866-98f6-b5edbeeb31e5"
+      ],
+      "settings": {
+        "section_title": "Featured In"
+      }
+    },
     "b3e1ace6-2e80-4a1c-abf2-99ad0ee1045e": {
       "type": "follow-us",
       "settings": {
@@ -296,6 +406,94 @@
         "image_mobile": "shopify:\/\/shop_images\/Group_3732.png",
         "narrow": false,
         "show_divider": false,
+        "fb_badge": "233k",
+        "insta_badge": "91.3k",
+        "twit_badge": "12k",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "85059528-973b-4247-a127-9821ea538b21": {
+      "type": "locations",
+      "blocks": {
+        "06a18a39-cc92-43e4-87dd-7a029ebe8592": {
+          "type": "location",
+          "settings": {
+            "map_address": "3101 Cobb Pkwy, Suite 124 Atlanta, GA 30339 USA",
+            "flag": "shopify:\/\/shop_images\/usa.png",
+            "title": "USA HEADQUARTERS",
+            "subtitle": "Happy Birds INC LLC dlba IMbesharam.com",
+            "address": "3101 Cobb Pkwy, Suite 124 Atlanta, GA 30339 USA",
+            "phone": "+17 27 4229110",
+            "message": "+13 23 6962347",
+            "email": "hi@imbesharam.com"
+          }
+        },
+        "670eb10c-6114-4b99-816f-cbc87075b9b9": {
+          "type": "location",
+          "settings": {
+            "map_address": "Black L, Connaught Place, New Delhi, Delhi 110001, India",
+            "flag": "shopify:\/\/shop_images\/india.png",
+            "title": "INDIA HEADQUARTERS",
+            "subtitle": "Happy Birds Inc Pvt Ltd AWFIS",
+            "address": "Black L, Connaught Place, New Delhi, Delhi 110001, India",
+            "phone": "+91 22 489 31870",
+            "message": "+91 9020 20 9722",
+            "email": "hi@imbesharam.com"
+          }
+        }
+      },
+      "block_order": [
+        "06a18a39-cc92-43e4-87dd-7a029ebe8592",
+        "670eb10c-6114-4b99-816f-cbc87075b9b9"
+      ],
+      "settings": {
+        "map_api_key": "AIzaSyACtwExfaanIgmOIOgebQetOJcIgH42bio",
+        "map_zoom": 14,
+        "map_style": "silver",
+        "image_position": "center center",
+        "text_box_position": "middle-left",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "400px",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_overlay": "#ffffff",
+        "gradient_overlay": "",
+        "colors_overlay_opacity": 96,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "28f15ace-600f-43ba-857e-05e674f17d07": {
+      "type": "contact-form-simple",
+      "blocks": {
+        "929fd922-99c7-4a1c-8278-d400ca356338": {
+          "type": "text",
+          "settings": {
+            "subject_name": "Example 1"
+          }
+        },
+        "5eb35049-6ac6-4791-8cca-463518b9f6d0": {
+          "type": "text",
+          "settings": {
+            "subject_name": "Example 2"
+          }
+        }
+      },
+      "block_order": [
+        "929fd922-99c7-4a1c-8278-d400ca356338",
+        "5eb35049-6ac6-4791-8cca-463518b9f6d0"
+      ],
+      "settings": {
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Contact us!",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -308,6 +506,11 @@
     "9b6bb55c-7902-4914-a5ae-e731843ddec1",
     "1f92776f-2783-4695-a675-03d4e18f85a9",
     "c1129eed-c2f4-4949-bf6f-5cbfa52bdf02",
-    "b3e1ace6-2e80-4a1c-abf2-99ad0ee1045e"
+    "7ba4e1c0-b332-49f4-b671-a5ac422fc448",
+    "d7ba6a16-9088-4112-a904-9cdfbe0acef6",
+    "4a594794-2bc9-4226-9639-13c202eb8b06",
+    "b3e1ace6-2e80-4a1c-abf2-99ad0ee1045e",
+    "85059528-973b-4247-a127-9821ea538b21",
+    "28f15ace-600f-43ba-857e-05e674f17d07"
   ]
 }

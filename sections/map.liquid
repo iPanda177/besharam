@@ -32,9 +32,15 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'section-map.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .locations .banner__box::after {
+    position: static!important;
+  }
+</style>
+
 <div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full-width{% endif %}">
-    <div id="Banner-{{ section.id }}" class="banner banner--map banner-mobile--{{ section.settings.mobile_text_box_position }}{% if section.settings.image != blank %} banner--stacked{% endif %}">
+    <div id="Banner-{{ section.id }}" class="locations banner banner--map banner-mobile--{{ section.settings.mobile_text_box_position }}{% if section.settings.image != blank %} banner--stacked{% endif %}">
       {%- if section.blocks.size > 0 -%}
         <div class="banner__content banner__content--{{ section.settings.text_box_position }} page-width">
           <use-animate data-animate="fade-up" class="banner__box {{ section.settings.text_alignment }} mobile-{{ section.settings.mobile_text_alignment }}">
@@ -66,6 +72,7 @@
           </use-animate>
         </div>
       {%- endif -%}
+
       <div class="banner__media">
         <div class="media-wrapper">
           <div class="media media--{{ section.settings.image_ratio }} media-mobile--{{ section.settings.mobile_image_ratio }}">
